@@ -1,4 +1,5 @@
 from typing import List, Optional, Tuple
+from functools import partial
 
 import torch
 from torch import nn
@@ -13,13 +14,14 @@ from performer_pytorch import FastAttention
 class PerformerAttention(nn.Module):
     """Multi-headed attention from 'Attention Is All You Need' paper"""
     """A performer version ported from: https://github.com/lucidrains/performer-pytorch/blob/main/performer_pytorch/performer_pytorch.py."""
-    def __init__(self, config: LlamaConfig):
+    def __init__(self, config: LlamaConfig, nb_features, redraw_interval):
         super().__init__()
         self.config = config
         self.hidden_size = config.hidden_size
         self.num_heads = config.num_attention_heads
         self.head_dim = self.hidden_size // self.num_heads
         self.max_position_embeddings = config.max_position_embeddings
+
 
         if (self.head_dim * self.num_heads) != self.hidden_size:
             raise ValueError(
@@ -35,8 +37,8 @@ class PerformerAttention(nn.Module):
         # Adopted from https://github.com/lucidrains/performer-pytorch/blob/main/performer_pytorch/performer_pytorch.py
         # Currently Hardcoded nb_features=256 and redraw_interval=1000.
         # Remember to tune it. These two should influence performance a lot.
-        self.attn_fn = FastAttention(dim_heads = self.head_dim, nb_features = 256, causal = True)
-        self.redraw_interval = 1000
+        self.attn_fn = FastAttention(dim_heads = self.head_dim, nb_features = nb_features, causal = True)
+        self.redraw_interval = redraw_interval
         self.count_since_last_redraw = 0
 
     def _shape(self, tensor: torch.Tensor, seq_len: int, bsz: int):
@@ -73,12 +75,15 @@ class PerformerAttention(nn.Module):
 
         # Should be [bsz, nh, q_len, hd]
         assert query_states.size() == (bsz, self.num_heads, q_len, self.head_dim), "Wrong query shape"
-        self.count_since_last_redraw += 1
-        if self.count_since_last_redraw % self.redraw_interval == 0:
-            self.count_since_last_redraw = 0
-            self.attn_function.redraw_projection_matrix(query.device)
+        if self.redraw_interval != -1:
+            self.count_since_last_redraw += 1
+            if self.count_since_last_redraw % self.redraw_interval == 0:
+                self.count_since_last_redraw = 0
+                self.attn_fn.redraw_projection_matrix(query_states.device)
 
-        attn_output = self.attn_function(query_states, key_states, value_states)
+    #    print(query_states.shape, key_states.shape, value_states.shape)
+    #    print(self.attn_fn)
+        attn_output = self.attn_fn(query_states, key_states, value_states)
 
 #        if attention_mask is not None:
 #            if attention_mask.size() != (bsz, 1, q_len, kv_seq_len):
@@ -88,7 +93,9 @@ class PerformerAttention(nn.Module):
 #            attn_weights = attn_weights + attention_mask
 #            attn_weights = torch.max(attn_weights, torch.tensor(torch.finfo(attn_weights.dtype).min))
         
+    #    print(attn_output.shape)
         attn_output = attn_output.transpose(1, 2)
+    #    print(attn_output.shape)
         attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
 
         attn_output = self.o_proj(attn_output)
@@ -99,5 +106,5 @@ class PerformerAttention(nn.Module):
 
         return attn_output, attn_weights, past_key_value
 
-def replace_llama_attn_with_performer():
-    transformers.models.llama.modeling_llama.LlamaAttention = PerformerAttention #.forward = forward
+def replace_llama_attn_with_performer(nb_features=128, redraw_interval=1000):
+    transformers.models.llama.modeling_llama.LlamaAttention = partial(PerformerAttention, nb_features=nb_features, redraw_interval=redraw_interval) #.forward = forward
