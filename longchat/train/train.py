@@ -40,6 +40,9 @@ class DataArguments:
     data_path: str = field(
         default=None, metadata={"help": "Path to the training data."}
     )
+    num_data: int = field(
+        default=-1, metadata={"help": "Number of training data to use."}
+    )
     lazy_preprocess: bool = False
 
 
@@ -82,16 +85,24 @@ def preprocess(
     # Apply prompt templates
     conversations = []
     for i, source in enumerate(sources):
-        if roles[source[0]["from"]] != conv.roles[0]:
+        #if source[0]["from"] not in roles.keys() or roles[source[0]["from"]] != conv.roles[0]:
+        if  roles[source[0]["from"]] != conv.roles[0]:
             # Skip the first one if it is not from human
             source = source[1:]
 
         conv.messages = []
+        skipped = 0
         for j, sentence in enumerate(source):
             role = roles[sentence["from"]]
-            assert role == conv.roles[j % 2], f"{i}"
+            if role != conv.roles[(j - skipped) % 2]:
+                print("skipping misaligned rounds")
+                skipped += 1
+                continue
+            #assert role == conv.roles[j % 2], f"{i}"
             conv.append_message(role, sentence["value"])
         conversations.append(conv.get_prompt())
+#        print(conversations)
+#        assert False
 
     # Tokenize conversations
     input_ids = tokenizer(
@@ -146,11 +157,13 @@ def preprocess(
 class SupervisedDataset(Dataset):
     """Dataset for supervised fine-tuning."""
 
-    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer):
+    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer, num_data: int):
         super(SupervisedDataset, self).__init__()
         rank0_print("Loading data...")
         list_data_dict = json.load(open(data_path, "r"))
 
+        if num_data != -1:
+            list_data_dict = list_data_dict[:num_data]
         rank0_print("Formatting inputs...")
         sources = [example["conversations"] for example in list_data_dict]
         data_dict = preprocess(sources, tokenizer)
@@ -173,13 +186,16 @@ class SupervisedDataset(Dataset):
 class LazySupervisedDataset(Dataset):
     """Dataset for supervised fine-tuning."""
 
-    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer):
+    def __init__(self, data_path: str, tokenizer: transformers.PreTrainedTokenizer, num_data: int):
         super(LazySupervisedDataset, self).__init__()
         self.tokenizer = tokenizer
 
         rank0_print("Loading data...")
         list_data_dict = json.load(open(data_path, "r"))
-
+        print(len(list_data_dict))
+        if num_data != -1:
+            list_data_dict = list_data_dict[:num_data]
+        print(len(list_data_dict))
         rank0_print("Formatting inputs...Skip in lazy mode")
         self.tokenizer = tokenizer
         self.list_data_dict = list_data_dict
@@ -208,7 +224,7 @@ def make_supervised_data_module(
     dataset_cls = (
         LazySupervisedDataset if data_args.lazy_preprocess else SupervisedDataset
     )
-    train_dataset = dataset_cls(tokenizer=tokenizer, data_path=data_args.data_path)
+    train_dataset = dataset_cls(tokenizer=tokenizer, data_path=data_args.data_path, num_data=data_args.num_data)
     return dict(train_dataset=train_dataset, eval_dataset=None)
 
 
