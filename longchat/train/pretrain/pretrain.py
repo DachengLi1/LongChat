@@ -21,6 +21,7 @@ from typing import Dict, Optional, Sequence
 
 import torch
 from torch.utils.data import Dataset
+
 import transformers
 from transformers import Trainer
 from transformers.trainer_pt_utils import LabelSmoother
@@ -46,6 +47,9 @@ class DataArguments:
     #)
     begin: int = field(
         default=-1, metadata={"help": "Begin Index"}
+    )
+    min_lr_ratio: float = field(
+        default=0.5, metadata={"help": "Minimal Learning rate"}
     )
     lazy_preprocess: bool = False
 
@@ -85,7 +89,7 @@ class LazySupervisedDataset(Dataset):
         super(LazySupervisedDataset, self).__init__()
         self.tokenizer = tokenizer
         self.max_length = self.tokenizer.model_max_length
-        self.stages = {"4096": 200000, "8192": 100000}
+        self.stages = {"8192": 500000, "16384": 500000, "32768": 100000, "65536": 100000}
         self.total_num = self.stages[str(self.max_length)]
 
         rank0_print("Loading data...")
@@ -94,7 +98,9 @@ class LazySupervisedDataset(Dataset):
         
         print(len(list_data_dict))
         if begin != -1:
+            rank0_print("Starting from {begin} out of {len(list_data_dict)}")
             list_data_dict = list_data_dict[begin:]
+        self.begin = begin
         assert (list(self.stages.keys()).index(str(self.max_length)) == 0 or begin != -1), "You have to start in the middle if this is not the first stage!"
         rank0_print("Formatting inputs...Skip in lazy mode")
         self.tokenizer = tokenizer
@@ -106,12 +112,13 @@ class LazySupervisedDataset(Dataset):
         self.prefetch_num = 100
         self.cache = {"input_ids": [], "labels": [], "attention_mask": []}
         self.dataset_index = 0
-        self._prefetch()
+#        self._prefetch()
     
     def __len__(self):
         return self.total_num
 
     def _prefetch(self):
+        orig_index = self.dataset_index
         for i in tqdm(range(self.prefetch_num)):
             cur_data = json.loads(self.list_data_dict[i + self.dataset_index])
             cur_text = cur_data["text"]
@@ -130,7 +137,7 @@ class LazySupervisedDataset(Dataset):
             for k, t in split.items():
                 self.cache[k].extend(t)
             self.dataset_index += 1
-        print(f"Prefetched the next {self.prefetch_num} data to {self.dataset_index}, with {len(self.cache['input_ids'])} cache data")
+        print(f"Prefetched the next {self.prefetch_num} data from {orig_index}, now at {self.dataset_index + self.begin} , with {len(self.cache['input_ids'])} cache data")
 
     def __getitem__(self, i) -> Dict[str, torch.Tensor]:
         # This is a hack: disregard the actual index..
@@ -196,10 +203,10 @@ def pretrain():
     tokenizer.pad_token = tokenizer.unk_token
 
     data_module = make_supervised_data_module(tokenizer=tokenizer, data_args=data_args)
+    print(training_args)
     trainer = Trainer(
         model=model, tokenizer=tokenizer, args=training_args, **data_module
     )
-
     if list(pathlib.Path(training_args.output_dir).glob("checkpoint-*")):
         trainer.train(resume_from_checkpoint=True)
     else:
