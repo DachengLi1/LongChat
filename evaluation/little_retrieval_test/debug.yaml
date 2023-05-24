@@ -1,0 +1,9 @@
+---
+model_name: prajjwal1/bert-tiny
+#model_name: huggyllama/llama-7b
+model_path: None
+do_shuffle: false
+block_size: 10
+n_values: [10, 20]
+num_eval_per_len: 5
+use_gpu: true
