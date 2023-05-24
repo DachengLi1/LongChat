@@ -10,15 +10,11 @@ import re
 import transformers
 import torch
 
-def retrieve_expected(lines, random_line_pos):
-    line_num_in_content = int(lines[random_line_pos - 1].split("Go to line ")[1].split(" and")[0])
 
-    correct_line = None
-    for line in lines:
-        if f"line {line_num_in_content}:" in line:
-            expected_number = int(line.split("REGISTER_CONTENT is <")[1].split(">\n")[0])
-            correct_line = line
-            break
+
+def retrieve_expected(lines, random_line_pos):
+    correct_line = lines[random_line_pos]
+    expected_number = re.search("<\d+>", correct_line).group()[1:-1]
 
     return expected_number, correct_line
 
@@ -46,7 +42,7 @@ def generate_and_modify_text_file(n, shuffle_flag, B, filename=None):
     line_numbers = list(range(1, n + 1))
     if shuffle_flag:
         #if we want random shuffling, B here allows to shuffle every B lines, and within a block there's no shuffle
-        ine_numbers = block_shuffle(n, B)
+        line_numbers = block_shuffle(n, B)
 
     lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_numbers])
     random_line = random.randint(1, n)
@@ -69,39 +65,22 @@ def retrieve_cmd_args():
     args = parser.parse_args()
     return args
 
+
 def retrieve_model_response(model, tokenizer, input, lines, random_line_pos, use_gpu):
     if use_gpu:
-        response = model.generate(input.input_ids.cuda(), max_new_tokens=2096, use_cache=True)
+        response = model.generate(input.input_ids.cuda(), max_new_tokens=256, use_cache=True)
     else:
-        response = model.generate(input.input_ids, max_new_tokens=2096, use_cache=True)
+        response = model.generate(input.input_ids, max_new_tokens=256, use_cache=True)
     response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
     #response = tokenizer.batch_decode([response], skip_special_tokens=True)
-    # response_line_num = parse_response(response) # may not be necessary
-    
-    print("________")
-    print(lines)
-
-    print("________")
-
-    print(response)
-
-    raise NotImplementedError
 
     expected_number, correct_line = retrieve_expected(lines, random_line_pos)
-    
 
-    model_output_str = response['completion'].strip()
-    model_output = int(re.search(r'\d+', model_output_str).group()) if re.search(r'\d+', model_output_str) else None
+    response_number = re.search("<\d+>", correct_line).group()[1:-1]
+    response_line = response
 
-    incorrect_line = None
-    if expected_number != model_output:
-        for line in lines:
-            if f"<{model_output}>" in line:
-                incorrect_line = line
-                break
+    return expected_number, response_number, correct_line, response_line
 
-    return expected_number, model_output, correct_line, incorrect_line
-    
 
 def run_experiment(cfg):
     model_name = cfg["model_name"]
@@ -131,13 +110,11 @@ def run_experiment(cfg):
             model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16)
     
     tokenizer.pad_token = tokenizer.unk_token
-    
-    accuracies = []
-    individual_results = []
 
     for n in n_values:
         correct_count = 0
         n_results = []
+        curr_results = []
         for i in range(num_eval_per_len):
             print(f"Running eval {i+1}/{num_eval_per_len} for n = {n}...")
             
@@ -161,9 +138,11 @@ def run_experiment(cfg):
             if expected_number == model_output:
                 correct_count += 1
                 n_results.append(1)
+                curr_results.append([1, expected_number, model_output, correct_line, incorrect_line])
                 print("Sweet Success!")
             else:
                 n_results.append(0)
+                curr_results.append([0, expected_number, model_output, correct_line, incorrect_line])
                 print("Oopsies! Didn't get that one right.")
                 if correct_line:
                     print(f"Correct result was in this line: {correct_line}")
@@ -172,10 +151,22 @@ def run_experiment(cfg):
             
         accuracy = (correct_count / num_eval_per_len) * 100
         print(f"Accuracy for n = {n}: {accuracy}%")
-        accuracies.append(accuracy)
-        individual_results.append(n_results)
-        save_accuracies(n_values, accuracies, individual_results, model_name, shuffle_flag, block_size)
+        save_results(cfg, curr_results, accuracy, n)
 
+
+def save_results(cfg, results, accuracy, n):
+    name = cfg["model_name"]
+    if name is "None":
+        name = cfg["model_path"].split("/")[0]
+
+    filename = f"{name}_{n}_non_shuffle_{accuracy}.lrt"
+
+    with open(filename, "w") as f:
+        yaml.dump(cfg, f)
+        f.write(f"\naccuracy: {accuracy}\n")
+
+        for r in results:
+            f.write(r)
 
 def main():
     args = retrieve_cmd_args()
@@ -183,24 +174,6 @@ def main():
     eval_cfg = yaml.load(f, Loader=yaml.CLoader)
     print(yaml.dump(eval_cfg))
     
-
-
-    model_name = eval_cfg["model_name"]
-    model_path = eval_cfg["model_path"]
-    shuffle_flag = eval_cfg["do_shuffle"]
-    block_size = eval_cfg["block_size"]
-
-    n_values = eval_cfg["n_values"]
-    num_eval_per_len = eval_cfg["num_eval_per_len"]
-
-    use_gpu = eval_cfg["use_gpu"]
-    lines, random_line = generate_and_modify_text_file(n_values[0], shuffle_flag, block_size)
-    print(lines)
-    # expected_number, correct_line = retrieve_expected(lines, random_line)
-
-
-
-
     run_experiment(eval_cfg)
     
 
