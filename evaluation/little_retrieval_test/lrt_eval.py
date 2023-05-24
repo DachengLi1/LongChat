@@ -1,3 +1,4 @@
+# part of the code retrieved from https://github.com/anadim/the-little-retrieval-test/blob/main/little_retrieval_test.py
 import yaml
 from yaml import load
 
@@ -50,7 +51,8 @@ def generate_and_modify_text_file(n, shuffle_flag, B, filename=None):
     lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_numbers])
     random_line = random.randint(1, n)
     # add the EXECUTE instruction in random line of the text
-    lines.insert(random_line - 1, f"[EXECUTE THIS]: Go to line {random_line} and report only REGISTER_CONTENT, without any context or additional text, just the number, then EXIT\n")
+    # lines.insert(len(lines), f"[EXECUTE THIS]: Go to line {random_line} and report only REGISTER_CONTENT, without any context or additional text, just the number, then EXIT\n")
+    lines.insert(len(lines), f"What is the REGISTER_CONTENT in line {random_line}?\n")
     
     if filename is not None:
         with open(filename, "w") as f:
@@ -69,14 +71,24 @@ def retrieve_cmd_args():
 
 def retrieve_model_response(model, tokenizer, input, lines, random_line_pos, use_gpu):
     if use_gpu:
-        response = model.generate(input.input_ids.cuda(), max_new_tokens=50, use_cache=True)
+        response = model.generate(input.input_ids.cuda(), max_new_tokens=2096, use_cache=True)
     else:
-        response = model.generate(input.input_ids, max_new_tokens=50, use_cache=True)
+        response = model.generate(input.input_ids, max_new_tokens=2096, use_cache=True)
     response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
-    response_line_num = parse_response(response) # may not be necessary
-    # response = tokenizer.batch_decode(response, skip_special_tokens=True)
+    #response = tokenizer.batch_decode([response], skip_special_tokens=True)
+    # response_line_num = parse_response(response) # may not be necessary
     
+    print("________")
+    print(lines)
+
+    print("________")
+
+    print(response)
+
+    raise NotImplementedError
+
     expected_number, correct_line = retrieve_expected(lines, random_line_pos)
+    
 
     model_output_str = response['completion'].strip()
     model_output = int(re.search(r'\d+', model_output_str).group()) if re.search(r'\d+', model_output_str) else None
@@ -102,7 +114,7 @@ def run_experiment(cfg):
 
     use_gpu = cfg["use_gpu"]
     
-    if model_name is not None:
+    if model_name != "None":
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name, use_fast=False)
         
         if use_gpu:
@@ -113,6 +125,7 @@ def run_experiment(cfg):
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, use_fast=False)
 
         if use_gpu:
+            print(torch.cuda.device_count())
             model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16).cuda()
         else:
             model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16)
@@ -168,7 +181,26 @@ def main():
     args = retrieve_cmd_args()
     f = open(args.yaml_path, "r")
     eval_cfg = yaml.load(f, Loader=yaml.CLoader)
+    print(yaml.dump(eval_cfg))
     
+
+
+    model_name = eval_cfg["model_name"]
+    model_path = eval_cfg["model_path"]
+    shuffle_flag = eval_cfg["do_shuffle"]
+    block_size = eval_cfg["block_size"]
+
+    n_values = eval_cfg["n_values"]
+    num_eval_per_len = eval_cfg["num_eval_per_len"]
+
+    use_gpu = eval_cfg["use_gpu"]
+    lines, random_line = generate_and_modify_text_file(n_values[0], shuffle_flag, block_size)
+    print(lines)
+    # expected_number, correct_line = retrieve_expected(lines, random_line)
+
+
+
+
     run_experiment(eval_cfg)
     
 

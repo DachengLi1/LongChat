@@ -1,7 +1,9 @@
 ---
-model_name: prajjwal1/bert-tiny
-#model_name: huggyllama/llama-7b
-model_path: None
+#model_name: prajjwal1/bert-tiny
+model_name: None
+#model_path: /l/users/dacheng.li/axie/llama-7B
+model_path: /l/users/dacheng.li/axie/longchat_partial_book
+# model_path: /l/users/dacheng.li/axie/vicuna_7b_8192
 do_shuffle: false
 block_size: 10
 n_values: [10, 20]
