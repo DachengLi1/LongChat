@@ -10,6 +10,9 @@ import re
 import transformers
 import torch
 
+from pathlib import Path
+import os
+
 def get_tokenizer_model_from_ckpt(cfg):
     ckpt_path = cfg["ckpt_path"]
 
@@ -56,7 +59,7 @@ def block_shuffle(n, B):
     # Flatten the list of blocks into a single list of indices
     shuffled_indices = [i for block in blocks for i in block]
 
-def generate_and_modify_text_file(n, shuffle_flag, B, filename=None):
+def generate_and_modify_text_file(n, shuffle_flag, B, save_file):
     """Generates a text file and inserts an execute line at a random position."""
     lines = [f"Testing Long Context\n\n"]
     line_numbers = list(range(1, n + 1))
@@ -69,12 +72,24 @@ def generate_and_modify_text_file(n, shuffle_flag, B, filename=None):
     # add the EXECUTE instruction in random line of the text
     # lines.insert(len(lines), f"[EXECUTE THIS]: Go to line {random_line} and report only REGISTER_CONTENT, without any context or additional text, just the number, then EXIT\n")
     lines.insert(len(lines), f"Tell me what is the REGISTER_CONTENT in line {random_line}? I need the number.\n")
-    
-    if filename is not None:
-        with open(filename, "w") as f:
-            f.writelines(lines)
+    expected_number, correct_line = retrieve_expected(lines, random_line)
 
-    return lines, random_line
+    from transformers import AutoTokenizer
+    tokenizer = AutoTokenizer.from_pretrained("mosaicml/mpt-7b")
+    input = tokenizer(retrieve_prompt_from_lines(lines), return_tensors="pt")
+    token_size = input.input_ids.shape[-1]
+
+    if save_file:
+        dir = Path(__file__).parents[0] / Path("lrt_prompts")
+        if not dir.exists():
+            dir.mkdir()
+
+        path =  dir / Path(f"{n}_{token_size}_{expected_number}.lrtpt")
+
+        with open(path, "w") as f:
+            f.writelines(lines)
+    
+    return lines, random_line, token_size
 
 def retrieve_cmd_args():
     parser = argparse.ArgumentParser(
@@ -145,7 +160,7 @@ def run_experiment(cfg):
             print(f"Running eval {i+1}/{num_eval_per_len} for n = {n}...")
             
             # prepare prompt
-            lines, random_line = generate_and_modify_text_file(n, shuffle_flag, block_size)
+            lines, random_line, _ = generate_and_modify_text_file(n, shuffle_flag, block_size, save_file = cfg["save_prmpt"])
             expected_number, correct_line = retrieve_expected(lines, random_line)
             prompt = retrieve_prompt_from_lines(lines)
             
@@ -200,7 +215,14 @@ def main():
     eval_cfg = yaml.load(f, Loader=yaml.CLoader)
     print(yaml.dump(eval_cfg))
     
-    run_experiment(eval_cfg)
+    if eval_cfg["eval_model"]:
+        run_experiment(eval_cfg)
+    else:
+        for n in eval_cfg["n_values"]:
+            generate_and_modify_text_file(
+            n, False, eval_cfg["block_size"], 
+            save_file = True)
+        
     
 
 if __name__ == "__main__":

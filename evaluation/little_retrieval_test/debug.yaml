@@ -6,6 +6,8 @@ model_path: /l/users/dacheng.li/axie/longchat_partial_book
 # model_path: /l/users/dacheng.li/axie/vicuna_7b_8192
 do_shuffle: false
 block_size: 10
-n_values: [10, 20]
+n_values: [10, 50, 100, 200]
 num_eval_per_len: 5
 use_gpu: true
+save_prompt: true
+eval_model: false
