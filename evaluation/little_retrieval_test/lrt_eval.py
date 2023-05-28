@@ -89,7 +89,42 @@ def generate_and_modify_text_file(n, shuffle_flag, B, save_file):
         with open(path, "w") as f:
             f.writelines(lines)
     
-    return lines, random_line, token_size
+    return lines, random_line, expected_number, correct_line, token_size
+
+def generate_original_lrt_lines(n, shuffle_flag, B, save_file):
+    """Generates a text file and inserts an execute line at a random position."""
+    lines = [f"Testing Long Context\n\n"]
+    line_numbers = list(range(1, n + 1))
+    if shuffle_flag:
+        #if we want random shuffling, B here allows to shuffle every B lines, and within a block there's no shuffle
+        line_numbers = block_shuffle(n, B)
+
+    lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_numbers])
+    random_line = random.randint(1, n)
+    # add the EXECUTE instruction in random line of the text
+    lines.insert(random_line - 1, f"[EXECUTE THIS]: Go to line {random_line} and report only REGISTER_CONTENT, without any context or additional text, just the number, then EXIT\n")
+    
+    from transformers import AutoTokenizer
+    tokenizer = AutoTokenizer.from_pretrained("mosaicml/mpt-7b")
+    input = tokenizer(retrieve_prompt_from_lines(lines), return_tensors="pt")
+    token_size = input.input_ids.shape[-1]
+
+    for l in lines:
+        if f"line {random_line}: REGISTER_CONTENT is" in l:
+            expected_number = re.search("<\d+>" ,l).group()[1:-1]
+            correct_line = l
+
+    if save_file:
+        dir = Path(__file__).parents[0] / Path("lrt_prompts")
+        if not dir.exists():
+            dir.mkdir()
+
+        path =  dir / Path(f"{n}_{token_size}_{expected_number}.olrtpt")
+    
+        with open(path, "w") as f:
+            f.writelines(lines)
+
+    return lines, random_line, expected_number, correct_line, token_size
 
 def retrieve_cmd_args():
     parser = argparse.ArgumentParser(
@@ -160,8 +195,10 @@ def run_experiment(cfg):
             print(f"Running eval {i+1}/{num_eval_per_len} for n = {n}...")
             
             # prepare prompt
-            lines, random_line, _ = generate_and_modify_text_file(n, shuffle_flag, block_size, save_file = cfg["save_prmpt"])
-            expected_number, correct_line = retrieve_expected(lines, random_line)
+            lines, \
+            random_line, \
+            expected_number, \
+            correct_line, _ = generate_and_modify_text_file(n, shuffle_flag, block_size, save_file = cfg["save_prmpt"])
             prompt = retrieve_prompt_from_lines(lines)
             
             input = tokenizer(prompt, return_tensors="pt")
@@ -219,9 +256,13 @@ def main():
         run_experiment(eval_cfg)
     else:
         for n in eval_cfg["n_values"]:
-            generate_and_modify_text_file(
-            n, False, eval_cfg["block_size"], 
-            save_file = True)
+            generate_original_lrt_lines(n, False, eval_cfg["block_size"], 
+            save_file = eval_cfg["save_prompt"])
+
+
+            # generate_and_modify_text_file(
+            # n, False, eval_cfg["block_size"], 
+            # save_file = True)
         
     
 
