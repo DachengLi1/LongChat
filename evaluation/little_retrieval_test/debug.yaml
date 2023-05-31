@@ -1,13 +1,16 @@
 ---
 #model_name: prajjwal1/bert-tiny
-model_name: None
+# model_name: gpt-3.5-turbo
+model_name: gpt-4
 #model_path: /l/users/dacheng.li/axie/llama-7B
-model_path: /l/users/dacheng.li/axie/longchat_partial_book
+model_path: None
 # model_path: /l/users/dacheng.li/axie/vicuna_7b_8192
 do_shuffle: false
 block_size: 10
-n_values: [10, 50, 100, 200]
-num_eval_per_len: 5
+# n_values: [10, 50, 100, 200]
+n_values: [400]
+num_eval_per_len: 20
 use_gpu: true
 save_prompt: true
 eval_model: false
+prompt_type: original  # can be "original" or "modified"

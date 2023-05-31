@@ -13,6 +13,8 @@ import torch
 from pathlib import Path
 import os
 
+from llms.llm_models import *
+
 def get_tokenizer_model_from_ckpt(cfg):
     ckpt_path = cfg["ckpt_path"]
 
@@ -167,8 +169,11 @@ def run_experiment(cfg):
 
     use_gpu = cfg["use_gpu"]
     
-    if model_name != "None":
+    if model_name == "gpt-3.5-turbo" or "gput-4":
+        pass
+    elif model_name != "None":
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name, use_fast=False)
+        tokenizer.pad_token = tokenizer.unk_token
         
         if use_gpu:
             model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda()
@@ -176,6 +181,7 @@ def run_experiment(cfg):
             model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
     elif model_path != "None":
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, use_fast=False)
+        tokenizer.pad_token = tokenizer.unk_token
 
         if use_gpu:
             model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16).cuda()
@@ -183,8 +189,8 @@ def run_experiment(cfg):
             model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16)
     else:
         tokenizer, model = get_tokenizer_model_from_ckpt(cfg)
+        tokenizer.pad_token = tokenizer.unk_token
     
-    tokenizer.pad_token = tokenizer.unk_token
 
     for n in n_values:
         correct_count = 0
@@ -198,17 +204,26 @@ def run_experiment(cfg):
             lines, \
             random_line, \
             expected_number, \
-            correct_line, _ = generate_and_modify_text_file(n, shuffle_flag, block_size, save_file = cfg["save_prmpt"])
+            correct_line, _ = generate_and_modify_text_file(n, shuffle_flag, block_size, save_file = cfg["save_prompt"])
             prompt = retrieve_prompt_from_lines(lines)
             
-            input = tokenizer(prompt, return_tensors="pt")
-            token_size = input.input_ids.shape[-1]
-            
-            print(f"Number of tokens: {token_size}")
+            if model_name == "gpt-3.5-turbo":
+                token_size, \
+                model_output, \
+                incorrect_line = retrieve_from_openai(prompt, model_name)
+            elif model_name == "gpt-4":
+                token_size, \
+                model_output, \
+                incorrect_line = retrieve_from_openai(prompt, model_name)
+            else:
+                input = tokenizer(prompt, return_tensors="pt")
+                token_size = input.input_ids.shape[-1]
+                
+                print(f"Number of tokens: {token_size}")
 
-            # retrieve model output
-            model_output, \
-            incorrect_line = retrieve_model_response(model, tokenizer, input, prompt, random_line, use_gpu)
+                # retrieve model output
+                model_output, \
+                incorrect_line = retrieve_model_response(model, tokenizer, input, prompt, random_line, use_gpu)
             print(f"Expected number in the prompt: {expected_number}, Model output: {model_output}")
 
             # process results
