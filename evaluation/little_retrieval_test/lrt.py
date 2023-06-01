@@ -88,8 +88,6 @@ def test_model(lines, random_line, model_name):
     return expected_number, model_output, correct_line, incorrect_line
 
 
-
-
 def save_accuracies(n_values, accuracies, individual_results, model_name, shuffle_flag, B):
     """Saves accuracies and individual results to a file."""
     filename = f"accuracies_{model_name}_{'shuffled' if shuffle_flag else 'unshuffled'}_{B}.txt"

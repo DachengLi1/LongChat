@@ -11,7 +11,6 @@ import transformers
 import torch
 
 from pathlib import Path
-import os
 
 from llms.llm_models import *
 
@@ -279,7 +278,6 @@ def main():
             # n, False, eval_cfg["block_size"], 
             # save_file = True)
         
-    
 
 if __name__ == "__main__":
     main()
