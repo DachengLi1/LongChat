@@ -8,9 +8,9 @@ model_path: None
 do_shuffle: false
 block_size: 10
 # n_values: [10, 50, 100, 200]
-n_values: [400]
+n_values: [700]
 num_eval_per_len: 20
 use_gpu: true
 save_prompt: true
-eval_model: false
+eval_model: true
 prompt_type: original  # can be "original" or "modified"
