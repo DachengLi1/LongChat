@@ -5,6 +5,8 @@ import torch
 import transformers
 import numpy as np
 
+from utils import *
+
 #path = "longchat_7b_2048"
 #path = "longchat_7b_4096"
 #path = "longchat_7b_8192"
@@ -16,6 +18,7 @@ name = path.split("/")[-1]
 
 
 output_dir = "evaluation/topics/predictions"
+name = path.split("/")[-1]
 
 if not os.path.exists(output_dir):
     os.mkdir(output_dir)
@@ -39,7 +42,9 @@ for num_topics in [6,7,8,9,10]:
     with open(test_file, 'r') as json_file:
         json_list = list(json_file)
 
-    for test_case in json_list:
+    num_correct = 0
+    num_invalid = 0
+    for test_case in json_list:        
         test_case = json.loads(test_case)
         prompt = test_case["prompt"]
         prompt_length = test_case["prompt_length"]
@@ -48,7 +53,22 @@ for num_topics in [6,7,8,9,10]:
         outputs = model.generate(input.input_ids.cuda(), max_new_tokens=100, use_cache=True)[0]
         outputs = outputs[prompt_length:]
         summary = f"Label: {topics[0]}, Predict: {tokenizer.batch_decode([outputs], skip_special_tokens=True)}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+        
+
+        is_correct = let_gpt_check_response(topics[0], tokenizer.batch_decode([outputs], skip_special_tokens=True), "gpt-3.5-turbo")
+        if is_correct is True:
+            num_correct = num_correct + 1
+            summary = "1 " + summary
+        elif is_correct is None:
+            num_invalid = num_invalid + 1
+            summary = "-1 " + summary
+        else:
+            summary = "0 " + summary
+
         print(summary)
         with open(output_file, "a+") as f: 
             f.write(summary)
             f.write("\n")
+
+    with open(output_file, "a+") as f:
+        f.write(f"\naccuracy: {num_correct/(len(json_list)-num_invalid)}\n")

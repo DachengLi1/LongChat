@@ -5,6 +5,11 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from matplotlib import pyplot as plt
 
+import openai
+import tiktoken
+import time
+import os
+
 def load_model(path, dtype=torch.bfloat16, device="cuda", num_gpus=1):
     if device == "cpu":
         kwargs = {"torch_dtype": torch.float32}
@@ -19,8 +24,9 @@ def load_model(path, dtype=torch.bfloat16, device="cuda", num_gpus=1):
                     i: str(int(available_gpu_memory[i] * 0.85)) + "GiB"
                     for i in range(num_gpus)
                 }
-    model = AutoModelForCausalLM.from_pretrained(path, low_cpu_mem_usage=True, **kwargs)
-    tokenizer = AutoTokenizer.from_pretrained(path)
+    # model = AutoModelForCausalLM.from_pretrained(path, low_cpu_mem_usage=True, **kwargs)
+    model = AutoModelForCausalLM.from_pretrained(path, torch_dtype=torch.float16).cuda()
+    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
     return model, tokenizer
 
 def load_testcases(test_file):
@@ -77,3 +83,52 @@ def visualize_attn(attn_mat, save_path):
     pass
 
 
+# some codes taking reference from Auto-GPT
+def let_gpt_check_response(topic, response, model_name):
+    os.environ['OPENAI_API_KEY'] = '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'
+    openai.api_key = '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'
+
+    prompt = f"Respond True if the following paragraph mentions that the first topic is {topic}, " + \
+                "otherwise respond False: \n" + \
+                f"{response}"
+
+    token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
+    print(f"Number of tokens: {token_size}")
+
+    num_retries = 10
+    completion = None
+    for attempt in range(num_retries):
+        backoff = 2 ** (attempt)
+
+        try:    
+            completion = openai.ChatCompletion.create(
+                model=model_name,
+                messages=[
+                    {"role": "user", "content": f"{prompt}"}        
+                ],
+                temperature = 0.2
+            )
+            break
+        except openai.error.RateLimitError:
+            print("Got rate limit...")
+            pass
+        except openai.error.APIError as e:
+            if e.http_status == 502:
+                pass
+            else:
+                pass
+
+            if attempt == num_retries - 1:
+                raise
+
+        time.sleep(backoff)
+
+    if completion is None:
+        print(f"Failed to get response after {num_retries} retries")
+        return None
+
+    response_line = completion.choices[0].message["content"].lower()
+    if "true" in response_line:
+        return True
+    else:
+        return False
