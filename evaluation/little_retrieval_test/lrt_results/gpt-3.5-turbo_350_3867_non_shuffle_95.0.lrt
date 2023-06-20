@@ -1,0 +1,33 @@
+block_size: 10
+do_shuffle: false
+eval_model: true
+model_name: gpt-3.5-turbo
+model_path: None
+n_values:
+- 350
+num_eval_per_len: 20
+save_prompt: false
+use_gpu: true
+
+accuracy: 95.0
+token_size: 3867
+[1, 43169, 43169, 'line 113: REGISTER_CONTENT is <43169>\n', 'The REGISTER_CONTENT in line 113 is <43169>.']
+[1, 38256, 38256, 'line 185: REGISTER_CONTENT is <38256>\n', 'The REGISTER_CONTENT in line 185 is <38256>.']
+[1, 23710, 23710, 'line 136: REGISTER_CONTENT is <23710>\n', 'The REGISTER_CONTENT in line 136 is <23710>.']
+[1, 42242, 42242, 'line 49: REGISTER_CONTENT is <42242>\n', 'The REGISTER_CONTENT in line 49 is <42242>.']
+[1, 6075, 6075, 'line 200: REGISTER_CONTENT is <6075>\n', 'The REGISTER_CONTENT in line 200 is <6075>.']
+[1, 42826, 42826, 'line 92: REGISTER_CONTENT is <42826>\n', 'The REGISTER_CONTENT in line 92 is <42826>.']
+[1, 37261, 37261, 'line 44: REGISTER_CONTENT is <37261>\n', 'The REGISTER_CONTENT in line 44 is <37261>.']
+[1, 8938, 8938, 'line 314: REGISTER_CONTENT is <8938>\n', 'The REGISTER_CONTENT in line 314 is <8938>.']
+[1, 6037, 6037, 'line 158: REGISTER_CONTENT is <6037>\n', 'The REGISTER_CONTENT in line 158 is <6037>.']
+[1, 5964, 5964, 'line 334: REGISTER_CONTENT is <5964>\n', 'The REGISTER_CONTENT in line 334 is <5964>.']
+[1, 43518, 43518, 'line 244: REGISTER_CONTENT is <43518>\n', 'The REGISTER_CONTENT in line 244 is <43518>.']
+[1, 4933, 4933, 'line 14: REGISTER_CONTENT is <4933>\n', 'The REGISTER_CONTENT in line 14 is <4933>.']
+[1, 17758, 17758, 'line 231: REGISTER_CONTENT is <17758>\n', 'The REGISTER_CONTENT in line 231 is <17758>.']
+[1, 5942, 5942, 'line 108: REGISTER_CONTENT is <5942>\n', 'The REGISTER_CONTENT in line 108 is <5942>.']
+[1, 9139, 9139, 'line 276: REGISTER_CONTENT is <9139>\n', 'The REGISTER_CONTENT in line 276 is <9139>.']
+[1, 32271, 32271, 'line 225: REGISTER_CONTENT is <32271>\n', 'The REGISTER_CONTENT in line 225 is <32271>.']
+[1, 23348, 23348, 'line 126: REGISTER_CONTENT is <23348>\n', 'The REGISTER_CONTENT in line 126 is <23348>.']
+[0, 41147, 41933, 'line 221: REGISTER_CONTENT is <41147>\n', 'The REGISTER_CONTENT in line 221 is <41933>.']
+[1, 3241, 3241, 'line 240: REGISTER_CONTENT is <3241>\n', 'The REGISTER_CONTENT in line 240 is <3241>.']
+[1, 8578, 8578, 'line 121: REGISTER_CONTENT is <8578>\n', 'The REGISTER_CONTENT in line 121 is 8578.']
