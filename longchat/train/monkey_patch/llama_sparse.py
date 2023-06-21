@@ -138,7 +138,7 @@ def model_init(self, config: LlamaConfig):
     for i in range(num_sparse_layers):
         modules.append(LlamaDecoderLayer(sparse_config))
     modules.append(LlamaDecoderLayer(config))
-    modules = [LlamaDecoderLayer(config) for _ in range(config.num_hidden_layers)]
+   # modules = [LlamaDecoderLayer(config) for _ in range(config.num_hidden_layers)]
     self.layers = nn.ModuleList(modules)
     self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
 
