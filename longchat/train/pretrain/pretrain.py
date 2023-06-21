@@ -90,7 +90,7 @@ class LazySupervisedDataset(Dataset):
         self.tokenizer = tokenizer
         self.max_length = self.tokenizer.model_max_length
         #self.stages = {"8192": 500000, "16384": 500000, "32768": 300000, "65536": 100000}
-        self.stages = {"32768": 152500, "65536": 5000}
+        self.stages = {"8192": 500000}#, "16384":1000 ,"32768": 152500, "65536": 5000}
         self.total_num = self.stages[str(self.max_length)]
 
         rank0_print("Loading data...")
@@ -190,15 +190,15 @@ def pretrain():
     )
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
     local_rank = training_args.local_rank
-    #model = transformers.AutoModelForCausalLM.from_pretrained(
-    #    model_args.model_name_or_path,
-    #    cache_dir=training_args.cache_dir,
-    #)
-    from ..monkey_patch.llama_bias_monkey_patch import LlamaForCausalLMBias
-    model = LlamaForCausalLMBias.from_pretrained(
+    model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
     )
+   # from ..monkey_patch.llama_bias_monkey_patch import LlamaForCausalLMBias
+   # model = LlamaForCausalLMBias.from_pretrained(
+   #     model_args.model_name_or_path,
+   #     cache_dir=training_args.cache_dir,
+   # )
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
