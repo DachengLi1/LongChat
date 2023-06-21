@@ -6,6 +6,7 @@ import argparse
 import random
 import json
 from typing import Dict, Sequence, Optional
+import time
 
 import transformers
 from tqdm import tqdm
@@ -19,7 +20,6 @@ def filter_long(args):
             json_list = list(json_file)
 
         for json_str in tqdm(json_list):
-            print(cur_total_token, dump_count)
             if cur_total_token >= args.total_token:
                 break
             
@@ -70,6 +70,8 @@ def main(args):
             cur_sample_token += cur_length
 
 def shuffle(args):
+    time_s = time.time()
+    print("Shuffling Data")
     with open(args.out_file, 'r') as json_file:
         json_list = list(json_file)
 
@@ -79,12 +81,13 @@ def shuffle(args):
         for json_file in json_list:
             json.dump(json_file, outfile)
             outfile.write('\n')
+    print(f"Done shuffle in {time.time() - time_s}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--in_dir", type=str, required=True)
     parser.add_argument("--out_file", type=str, required=True)
-    parser.add_argument("--shuffle_out_file", type=str, required=True)
+    parser.add_argument("--shuffle_out_file", type=str, default="")
     parser.add_argument("--total_token", type=int, required=True)
     parser.add_argument("--per_example_token", type=int, required=True)
     parser.add_argument("--model_name_or_path", type=str, required=True)
@@ -101,3 +104,6 @@ if __name__ == "__main__":
         filter_long(args)
     else:
         main(args)
+
+    if args.shuffle_out_file != "":
+        shuffle(args)
