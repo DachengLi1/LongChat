@@ -76,7 +76,7 @@ def query_model(model_name, model_path, prompt, tokenizer, local_model, gpu_id=1
 
     print("Querying model")
     input = tokenizer(prompt, return_tensors="pt")
-    response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=True)
+    response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=False)
     response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
 
     return response

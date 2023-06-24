@@ -6,6 +6,12 @@ import numpy as np
 from pathlib import Path
 from util.out_eval_util import *
 
+from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
+replace_llama_with_interpolate()
+
+from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
+replace_llama_attn_with_flash_attn()
+
 SCRIPT_PATH = Path(__file__).resolve()
 WORKING_DIR = SCRIPT_PATH.parent
 REPO_DIR = WORKING_DIR / Path("../")
