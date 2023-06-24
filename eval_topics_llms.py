@@ -30,15 +30,10 @@ def run_exp(cfgs):
                 test_file = file
                 break
 
-            # if f"{num_topics}_topics_{cfgs['question_dist']}" in str(file):
-            #     test_file = file
-            #     break
-
         with open(test_file, 'r') as json_file:
             conversation_list = list(json_file)
 
         total_sim_score = 0
-
 
         output_file = output_dir / Path(f"{test_file.stem}.prediction")
         for test_case in conversation_list:

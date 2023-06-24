@@ -4,6 +4,10 @@ import argparse
 import yaml
 import transformers
 import torch
+import openai
+import os
+
+from pathlib import Path
 
 
 def retrieve_cmd_args(): # setup program params from a given path to a yaml file
@@ -11,10 +15,18 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
         prog='lrt_eval',
         description='lrt_eval'
     )
-    parser.add_argument('yaml_path')
+    #parser.add_argument('yaml_path')
+    parser.add_argument('--model', '-m', help='Specify model path')
+    parser.add_argument('--level', '-l', choices=['easy', 'difficult'], help='Specify difficulty of model evaluation')
     args = parser.parse_args()
-    f = open(args.yaml_path, "r")
+
+    # f = open(args.yaml_path, "r")
+    HERE = Path(__file__).resolve()
+    CFG_PATH = HERE.parent / Path("../out_eval_config.yaml")
+    f = open(CFG_PATH, "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
+    cfgs["model_path"] = args.model
+    cfgs["level"] = args.level
     print(yaml.dump(cfgs))
 
     return cfgs
@@ -22,7 +34,7 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
 
 def load_tokenizer(model_name, model_path):
     if "gpt" in model_name:
-        raise NotImplementedError()
+        return None
     elif model_name != None:
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name,
                                                                use_fast=False)
@@ -38,7 +50,7 @@ def load_tokenizer(model_name, model_path):
 
 def token_counter(tokenizer, model_name, model_path, prompt):
     if "gpt" in model_name:
-        raise NotImplementedError()
+        token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
     else:
         input = tokenizer(prompt, return_tensors="pt")
         token_size = input.input_ids.shape[-1]
@@ -49,7 +61,8 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
 def query_model(model_name, model_path, prompt, tokenizer):
     if "gpt" in model_name:
-        raise NotImplementedError
+        _, response = retrieve_from_openai(prompt, model_name, num_retries=10)
+        return response
     elif model_name != None:
         model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda()
     elif model_path != None:
@@ -62,6 +75,58 @@ def query_model(model_name, model_path, prompt, tokenizer):
     response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
 
     return response
+
+def retrieve_from_openai(prompt, model_name, num_retries=10):
+    if "gpt" in model_name:
+        token_size = token_counter(None, model_name, None, prompt)
+        print(f"Number of tokens: {token_size}")
+
+        os.environ['OPENAI_API_KEY'] = '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'
+        openai.api_key = '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'
+    else:
+        token_size = token_counter(model_name, prompt)
+        print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
+
+        os.environ['OPENAI_API_KEY'] = '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'
+        openai.api_key = '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'
+        print("Using openai key as default key")
+    
+    num_retries = 10
+    completion = None
+    for attempt in range(num_retries):
+        backoff = 2 ** (attempt)
+
+        try:    
+            completion = openai.ChatCompletion.create(
+                model=model_name,
+                messages=[
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": f"{prompt}"}    
+                ],
+                temperature = 0
+            )
+            break
+        except openai.error.RateLimitError:
+            print("Got rate limit...")
+            pass
+        except openai.error.APIError as e:
+            if e.http_status == 502:
+                pass
+            else:
+                pass
+
+            if attempt == num_retries - 1:
+                raise
+
+        time.sleep(backoff)
+
+    if completion is None:
+        print(f"Failed to get response after {num_retries} retries")
+        return token_size, -1, "Rate limit"
+
+    response_line = completion.choices[0].message["content"]
+
+    return token_size, response_line
 
 class Conv:
     """a single conversation on a topic"""

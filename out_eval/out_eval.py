@@ -12,7 +12,7 @@ REPO_DIR = WORKING_DIR / Path("../")
 
 
 def run_lrt_exp(cfgs):
-    pass
+    raise NotImplementedError()
 
 
 def run_conv_eval_exp(cfgs, tokenizer):
@@ -46,7 +46,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
             picked_topics = test_case["picked_topics"]
             lenth_dist = [float(i)/sum(test_case["length"]) for i in test_case["length"]]
 
-            _, response = query_model(cfgs["model_name"], cfgs["model_path"], prompt, tokenizer)
+            response = query_model(cfgs["model_name"], cfgs["model_path"], prompt, tokenizer)
             summary = f"Label:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             
             # process the response
@@ -74,7 +74,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
             f.write(f"\naccuracy: {acc}\n")
             f.close()
         output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))
-        print(f"accuracy: {acc}")
+        # print(f"accuracy: {acc}")
 
 
 def generate_conversations(cfgs, tokenizer):
@@ -106,7 +106,6 @@ def generate_conversations(cfgs, tokenizer):
             
             prompt = None
         
-
         # write to output file
         avg_len = 0
         output_path = output_dir / Path(f"{num_topics}_topics_{cfgs['question_dist']}.jsonl")
@@ -128,16 +127,15 @@ def generate_conversations(cfgs, tokenizer):
 
         output_path.rename(output_dir / Path(f"{num_topics}_topics_{cfgs['question_dist']}_{avg_len}.jsonl"))
 
-
 def main():
     cfgs = retrieve_cmd_args()
     tokenizer = load_tokenizer(cfgs["model_name"], cfgs["model_path"])
-
-    if cfgs["generate_conversations"]:
+    
+    if cfgs["level"] == "easy":
         generate_conversations(cfgs, tokenizer)
-
-    if cfgs["run_models"]:
-        run_exp(cfgs, tokenizer)
+        run_conv_eval_exp(cfgs, tokenizer)
+    else:
+        run_lrt_exp(cfgs, tokenizer)
 
 if __name__ == "__main__":
     main()
