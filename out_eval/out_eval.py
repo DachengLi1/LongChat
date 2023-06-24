@@ -46,23 +46,10 @@ def run_conv_eval_exp(cfgs, tokenizer):
             picked_topics = test_case["picked_topics"]
             lenth_dist = [float(i)/sum(test_case["length"]) for i in test_case["length"]]
 
-            response = query_model(cfgs["model_name"], cfgs["model_path"], prompt, tokenizer)
+            response = query_model(cfgs["model_name"], cfgs["model_path"], 
+                                    prompt, tokenizer, cfgs["local_model"],
+                                    cfgs["gpu_id"])
             summary = f"Label:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
-            
-            # process the response
-            # response_topics = []
-            # responses = response[1:-1].split(", ")
-            # if len(responses) != len(conversation_list):
-            #     is_correct = None
-            # else:
-            #     # check topics one by one
-            #     for i in range(len(conversation_list)):
-
-            #     is_correct = let_gpt_check_response(picked_topics, response, "gpt-3.5-turbo")
-
-            # sim_score = let_gpt_check_response(picked_topics, response, "gpt-3.5-turbo")
-            # summary = sim_score + " \n" + summary
-            # total_sim_score += float(sim_score)
 
             print(summary)
             with open(output_file, "a+") as f:
@@ -129,7 +116,7 @@ def generate_conversations(cfgs, tokenizer):
 
 def main():
     cfgs = retrieve_cmd_args()
-    tokenizer = load_tokenizer(cfgs["model_name"], cfgs["model_path"])
+    tokenizer = load_tokenizer(cfgs["model_name"], cfgs["model_path"], cfgs["local_model"])
     
     if cfgs["level"] == "easy":
         generate_conversations(cfgs, tokenizer)

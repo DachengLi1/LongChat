@@ -9,7 +9,6 @@ import os
 
 from pathlib import Path
 
-
 def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     parser = argparse.ArgumentParser(
         prog='lrt_eval',
@@ -25,6 +24,9 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     CFG_PATH = HERE.parent / Path("../out_eval_config.yaml")
     f = open(CFG_PATH, "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
+
+    if cfgs["model_name"] == "None":
+        cfgs["model_name"] = Path(args.model).stem
     cfgs["model_path"] = args.model
     cfgs["level"] = args.level
     print(yaml.dump(cfgs))
@@ -32,14 +34,15 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     return cfgs
 
 
-def load_tokenizer(model_name, model_path):
+def load_tokenizer(model_name, model_path, local_model):
     if "gpt" in model_name:
         return None
-    elif model_name != None:
+    elif local_model is False:
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name,
                                                                use_fast=False)
         tokenizer.pad_token = tokenizer.unk_token
-    elif model_path != None:
+    elif local_model:
+        print("Loading tokenizer")
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, 
                                                                use_fast=False)
         tokenizer.pad_token = tokenizer.unk_token
@@ -59,19 +62,21 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
     return token_size
 
-def query_model(model_name, model_path, prompt, tokenizer):
+def query_model(model_name, model_path, prompt, tokenizer, local_model, gpu_id=1):
     if "gpt" in model_name:
         _, response = retrieve_from_openai(prompt, model_name, num_retries=10)
         return response
-    elif model_name != None:
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda()
-    elif model_path != None:
-         model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16).cuda()
+    elif local_model is False:
+        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda(gpu_id)
+    elif local_model:
+        print("Loading local model")
+        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16).cuda(gpu_id)
     else:
         raise RuntimeError("Unable to load tokenizer")
-         
+
+    print("Querying model")
     input = tokenizer(prompt, return_tensors="pt")
-    response = model.generate(input.input_ids.cuda(), max_new_tokens=1024, use_cache=True)
+    response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=True)
     response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
 
     return response
@@ -81,15 +86,9 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
         token_size = token_counter(None, model_name, None, prompt)
         print(f"Number of tokens: {token_size}")
 
-        os.environ['OPENAI_API_KEY'] = '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'
-        openai.api_key = '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'
     else:
         token_size = token_counter(model_name, prompt)
         print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
-
-        os.environ['OPENAI_API_KEY'] = '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'
-        openai.api_key = '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'
-        print("Using openai key as default key")
     
     num_retries = 10
     completion = None

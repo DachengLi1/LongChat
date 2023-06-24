@@ -136,15 +136,12 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
     if "gpt" in model_name:
         token_size = token_counter(model_name, prompt)
         print(f"Number of tokens: {token_size}")
-
-        os.environ['OPENAI_API_KEY'] = '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'
-        openai.api_key = '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'
+        openai.api_key = os.environ["OPENAI_API_KEY"]
     else:
         token_size = token_counter(model_name, prompt)
         print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
 
-        os.environ['OPENAI_API_KEY'] = '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'
-        openai.api_key = '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'
+        openai.api_key = os.environ["OPENAI_API_KEY"]
         print("Using openai key as default key")
     
     num_retries = 10

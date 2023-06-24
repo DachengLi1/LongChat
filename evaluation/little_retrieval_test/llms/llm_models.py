@@ -10,9 +10,7 @@ def retrieve_from_openai(prompt, model_name):
     token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
     print(f"Number of tokens: {token_size}")
 
-    os.environ['OPENAI_API_KEY'] = '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'
-    openai.api_key = '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'
-
+    openai.api_key = os.environ["OPENAI_API_KEY"]
     num_retries = 10
     completion = None
     for attempt in range(num_retries):

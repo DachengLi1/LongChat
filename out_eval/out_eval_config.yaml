@@ -1,6 +1,6 @@
 ---
 # model_name: gpt-3.5-turbo
-model_name: gpt-3.5-turbo
+model_name: None
 num_topics: [3]  # number of topics to put into the conversation
 num_test_samples: 1 # number of test samples in each test case
 question_dist: 100  # will ask what is the topic discussed every # topics eg. 1st, 4th
@@ -8,4 +8,5 @@ question_dist: 100  # will ask what is the topic discussed every # topics eg. 1s
 run_models: True
 # generate_conversations: True # if set to False, will ask for a path to conversations to form the prompt
 generate_conversations: True
-
+local_model: True
+gpu_id: 1
