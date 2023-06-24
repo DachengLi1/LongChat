@@ -9,6 +9,8 @@ import openai
 import tiktoken
 import time
 import os
+import argparse
+import yaml
 
 def load_model(path, dtype=torch.bfloat16, device="cuda", num_gpus=1):
     if device == "cpu":
@@ -83,17 +85,64 @@ def visualize_attn(attn_mat, save_path):
 
 
 # some codes taking reference from Auto-GPT
-def let_gpt_check_response(topic, response, model_name):
-    os.environ['OPENAI_API_KEY'] = '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'
-    openai.api_key = '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'
+def let_gpt_check_response(topics, response, model_name):
+    topics_list = topics[0]
+    for i in range(len(topics)):
+        if i == 0:
+            continue
+        topics_list = topics_list + "," + topics[i]
 
-    prompt = f"Respond True if the following paragraph mentions that the first topic is {topic}, " + \
-                "otherwise respond False: \n" + \
-                f"{response}"
+    # prompt = f"Respond True if the topic(s) mentioned in the following paragraph " + \
+    #          f"have similar topoics in this list in the same order: {topics_list}; " + \
+    #           "otherwise respond False: \n" + \
+    #          f"{response}"
+    
+    # prompt = f"Given this list of {len(topics)} topics separated by ',': {topics_list} " + \
+    #     f"\nRespond True if the following list contains {len(topics)} similar topics separated by ',' in the " + \
+    #         f"same order. Otherwise, respond False. \n" + \
+    #         f"List: {response}"
 
-    token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
-    print(f"Number of tokens: {token_size}")
+    prompt = "Compare the topics in two lists and determine the similarity of the topics on a " + \
+        "scale of 1 to 100, where 1 indicates very low similarity and 100 indicates " + \
+        "very high similarity. The similarity score will be proportional to the " + \
+        "number of different topics in the lists.\n\n"
+    prompt += f"List 1: {topics} \n"
+    prompt += f"List 2: {response} \n"
+    prompt += "Question: What is the similarity score between the topics of List 1 and List 2? " + \
+        "The score should be proportional to the number of different topics in the lists. \n"
+    prompt += "Answer:"
 
+    _, response_line = retrieve_from_openai(prompt, model_name)
+
+    import re
+    return re.search("\d+", response_line).group()
+
+
+# def ask_gpt_for_similarity_score(topic, response, model_name):
+
+def token_counter(model_name, prompt):
+    if "gpt" in model_name:
+        token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
+        print(f"Number of tokens: {token_size}")
+    else:
+        token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
+        print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
+
+    return token_size
+
+
+def retrieve_from_openai(prompt, model_name, num_retries=10):
+    if "gpt" in model_name:
+        token_size = token_counter(model_name, prompt)
+        print(f"Number of tokens: {token_size}")
+        openai.api_key = os.environ["OPENAI_API_KEY"]
+    else:
+        token_size = token_counter(model_name, prompt)
+        print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
+
+        openai.api_key = os.environ["OPENAI_API_KEY"]
+        print("Using openai key as default key")
+    
     num_retries = 10
     completion = None
     for attempt in range(num_retries):
@@ -103,9 +152,10 @@ def let_gpt_check_response(topic, response, model_name):
             completion = openai.ChatCompletion.create(
                 model=model_name,
                 messages=[
-                    {"role": "user", "content": f"{prompt}"}        
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": f"{prompt}"}    
                 ],
-                temperature = 0.2
+                temperature = 0
             )
             break
         except openai.error.RateLimitError:
@@ -124,10 +174,90 @@ def let_gpt_check_response(topic, response, model_name):
 
     if completion is None:
         print(f"Failed to get response after {num_retries} retries")
-        return None
+        return token_size, -1, "Rate limit"
 
-    response_line = completion.choices[0].message["content"].lower()
-    if "true" in response_line:
-        return True
-    else:
-        return False
+    response_line = completion.choices[0].message["content"]
+
+    return token_size, response_line
+
+def retrieve_cmd_args(): # setup program params from a given path to a yaml file
+    parser = argparse.ArgumentParser(
+        prog='lrt_eval',
+        description='lrt_eval'
+    )
+    parser.add_argument('yaml_path')
+    args = parser.parse_args()
+    f = open(args.yaml_path, "r")
+    cfgs = yaml.load(f, Loader=yaml.CLoader)
+    print(yaml.dump(cfgs))
+
+    return cfgs
+
+class Conv:
+    """a single conversation on a topic"""
+
+    def __init__(self, topic, length, content):
+        self.topic = topic
+        self.length = length
+        self.content = content
+
+class Prompt:
+    """the prompt used for testing, composed of multiple  """
+
+    def __init__(self, model_name, id, question_dist):
+        self.model_name = model_name
+        self.id = id
+        self.conv_list = []
+        self.topic_list = []
+        self.length_list = []
+        self.length = -1
+        self.question_dist = question_dist
+
+    def add_conv(self, conv):
+        self.conv_list.append(conv)
+        self.topic_list.append(conv.topic)
+        self.length_list.append(conv.length)
+    
+    def assemble_prompt(self):
+        order_word = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh",
+                      "eighth", "ninth", "tenth", "eleventh", "twelfth", "thirteenth",
+                      "fourteenth", "fifteenth", "sixteenth", "seventeenth", "eighteenth",
+                      "nineteenth", "twentieth", "twenty-first", "twenty-second", "twenty-third",
+                      "twenty-fourth", "twenty-fifth", "twenty_sixth", "twenty_seventh", "twenty_eigth",
+                      "twenty_ninth", "thritieth"]
+
+        record_prompt = "Below is a record of our previous conversation " + \
+            f"on {len(self.topic_list)} different topics. You are the ASSISTANT, and " + \
+            "I am the USER. At the beginning of each topic, the USER will say " + \
+            "'I would like to discuss the topic of <TOPIC>'. Memorize each " + \
+            "<TOPIC>. At the end of the record, I will ask you to retrieve the " + \
+            "first topic. Now the record start. "
+        
+        for conv in self.conv_list:
+            record_prompt += conv.content
+
+        question_idx = "first"
+        picked_topics = [self.topic_list[0]]
+        i = 1
+        while ((self.question_dist * i) < len(self.conv_list)):
+            question_idx += f", {order_word[(self.question_dist * i)]}"
+            picked_topics.append(self.topic_list[self.question_dist * i])
+            i += 1
+
+        self.prompt = "A chat between a curious user and an artificial intelligence " + \
+            "assistant. The assistant gives helpful, detailed, and polite " + \
+            f"answers to the user\'s questions. USER: {record_prompt} Now " + \
+            "the record ends. What is the " + question_idx + " topic(s) we discussed? Only give " + \
+            "me the topic name(s) in the format of [<topic>, <topic>, ...]. Do not summarize yourself. Do not mention topic order. ASSISTANT:" 
+
+        # self.prompt = "A chat between a curious user and an artificial intelligence " + \
+        #     "assistant. The assistant gives helpful, detailed, and polite " + \
+        #     f"answers to the user\'s questions. USER: {record_prompt} Now " + \
+        #     f"the record ends. What is the {question_idx} topic(s) we discussed? Only give " + \
+        #     "me the topic name(s) in the format of [<topic>, <topic>, ...]. Do not summarize yourself. Do not mention topic order. ASSISTANT:" 
+
+        self.length = token_counter(self.model_name, self.prompt)
+        
+        return self.prompt, picked_topics
+
+

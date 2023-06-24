@@ -168,7 +168,7 @@ def run_experiment(cfg):
 
     use_gpu = cfg["use_gpu"]
     
-    if model_name == "gpt-3.5-turbo" or "gput-4":
+    if model_name == "gpt-3.5-turbo" or "gpt-4":
         pass
     elif model_name != "None":
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name, use_fast=False)
