@@ -19,13 +19,12 @@ def load_model(path, dtype=torch.bfloat16, device="cuda", num_gpus=1):
             kwargs["device_map"] = "auto"
             kwargs["device_map"] = "sequential"  # This is important for not the same VRAM sizes
             # Hard code for A100s
-            available_gpu_memory = [3] * num_gpus
+            available_gpu_memory = [2.5] * num_gpus
             kwargs["max_memory"] = {
                     i: str(int(available_gpu_memory[i] * 0.85)) + "GiB"
                     for i in range(num_gpus)
                 }
-    # model = AutoModelForCausalLM.from_pretrained(path, low_cpu_mem_usage=True, **kwargs)
-    model = AutoModelForCausalLM.from_pretrained(path, torch_dtype=torch.float16).cuda()
+    model = AutoModelForCausalLM.from_pretrained(path, **kwargs).cuda()
     tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
     return model, tokenizer
 

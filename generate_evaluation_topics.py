@@ -6,7 +6,7 @@ import torch
 import transformers
 
 num_test_samples = 50
-num_topics_per_sample_list = [1,2,3,4,5,6,7,8,9,10]
+num_topics_per_sample_list = [15, 20, 30]
 conversations_list = []
 topics_list = []
 
@@ -33,8 +33,8 @@ for num_topics_per_sample in num_topics_per_sample_list:
     output_path = open(os.path.join(output_dir, f"{num_topics_per_sample}_topics.jsonl"), "w")
 
     for i in range(num_test_samples):
-        indices = np.random.choice(list(range(len(conversations_list))), size=num_topics_per_sample, replace=False)
-        record_prompt = f"Below is a record of our previous conversation on {num_topics_per_sample} different topics. You are the ASSISTANT, and I am the USER. At the beginning of each topic, the USER will say 'I would like to discuss the topic of <TOPIC>'. Memorize each <TOPIC>. At the end of the record, I will ask you to retrieve the first topic. Now the record start. "
+        indices = np.random.choice(list(range(len(conversations_list))), size=num_topics_per_sample, replace=True)
+        record_prompt = f"Below is a record of our previous conversation on {num_topics_per_sample} different topics. You are the ASSISTANT, and I am the USER. At the beginning of each topic, the USER will say 'I would like to discuss the topic of <TOPIC>'. Memorize each <TOPIC>. At the end of the record, I will ask you to retrieve the first topic name. Now the record start. "
         topics = []
         for index in indices:
             record_prompt += conversations_list[index]
