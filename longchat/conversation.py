@@ -164,6 +164,16 @@ conv_vicuna_v1_1 = Conversation(
     sep2="</s>",
 )
 
+conv_story = Conversation(
+    system="A chat between a curious user and an artificial intelligence assistant. "
+    "The assistant gives helpful, detailed, and polite answers to the user's questions.",
+    roles=("USER", "ASSISTANT"),
+    messages=(),
+    offset=0,
+    sep_style=SeparatorStyle.TWO,
+    sep=" ",
+    sep2="<|endoftext|>",
+)
 
 conv_koala_v1 = Conversation(
     system="BEGINNING OF CONVERSATION:",

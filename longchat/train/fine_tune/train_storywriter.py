@@ -255,13 +255,13 @@ def train():
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
     local_rank = training_args.local_rank
     config = transformers.MPTConfig.from_pretrained(
-      "DachengLi/7b-story",
+      model_args.model_name_or_path
      #   trust_remote_code=True
     )
     config.attn_config['attn_impl'] = 'triton'
 
     model = transformers.MPTForCausalLM.from_pretrained(
-      'DachengLi/7b-story',
+      model_args.model_name_or_path,
       config=config,
     #  torch_dtype=torch.bfloat16,
     #  trust_remote_code=True

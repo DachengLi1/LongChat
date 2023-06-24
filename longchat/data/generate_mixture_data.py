@@ -79,7 +79,7 @@ def shuffle(args):
 
     with open(args.shuffle_out_file, 'a') as outfile:
         for json_file in json_list:
-            json.dump(json_file, outfile)
+            json.dump(json.loads(json_file), outfile)
             outfile.write('\n')
     print(f"Done shuffle in {time.time() - time_s}")
 
@@ -100,10 +100,10 @@ if __name__ == "__main__":
         args.model_name_or_path,
         use_fast=False,
     )
-    if args.long:
-        filter_long(args)
-    else:
-        main(args)
+  #  if args.long:
+  #      filter_long(args)
+  #  else:
+  #      main(args)
 
     if args.shuffle_out_file != "":
         shuffle(args)
