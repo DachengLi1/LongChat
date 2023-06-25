@@ -59,7 +59,6 @@ def run_conv_eval_exp(cfgs, tokenizer):
         for test_case in conversation_list:
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
-            
             if not cfgs["use_fixed_testcases"]:
                 prompt_length = test_case["total_length"]
                 topics = test_case["topics"]
@@ -69,7 +68,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
                 topics = test_case["topics"]
                 prompt_length = test_case["prompt_length"]
 
-            response = query_model(cfgs["model_name"], model, 
+            token_size, response = query_model(cfgs["model_name"], model, 
                                     prompt, prompt_length, tokenizer, cfgs["gpu_id"])
 
             if not cfgs["use_fixed_testcases"]:
@@ -84,7 +83,8 @@ def run_conv_eval_exp(cfgs, tokenizer):
         
         acc = total_sim_score / len(conversation_list)
         with open(output_file, "a+") as f:
-            f.write(f"\naccuracy: {acc}\n")
+            f.write(f"\naccuracy: {acc}")
+            f.write(f"\ntoken size: {token_size}\n")
             f.close()
         output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))
         # print(f"accuracy: {acc}")

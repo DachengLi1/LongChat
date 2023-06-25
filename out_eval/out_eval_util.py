@@ -80,14 +80,15 @@ def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id=1):
     print("Querying model")
 
     if "gpt" in model_name:
-        _, response = retrieve_from_openai(prompt, model_name, num_retries=10)
-        return response
+        token_size, response = retrieve_from_openai(prompt, model_name, num_retries=10)
+        return token_size, response
     else:
         input = tokenizer(prompt, return_tensors="pt")
+        token_size = input.input_ids.shape[-1]
         response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=False)
         response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
-        response = response[prompt_length]
-    return response
+        response = response[len(prompt):]
+    return token_size, response
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
     if "gpt" in model_name:
