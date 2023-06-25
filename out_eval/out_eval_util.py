@@ -5,6 +5,7 @@ import yaml
 import transformers
 import torch
 import openai
+import re
 
 from pathlib import Path
 
@@ -76,7 +77,7 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
     return token_size
 
-def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id=1):
+def query_model(model_name, model, prompt, tokenizer, gpu_id=1):
     print("Querying model")
 
     if "gpt" in model_name:
@@ -204,3 +205,24 @@ class Prompt:
         self.length = token_counter(self.tokenizer, self.model_name, self.model_path, self.prompt)
         
         return self.prompt, picked_topics
+    
+
+
+
+
+def retrieve_expected(lines, random_line_pos):
+    correct_line = lines[random_line_pos]
+    expected_number = re.search("<\d+>", correct_line)
+    if expected_number is not None:
+        expected_number = int(expected_number.group()[1:-1])
+    else:
+        print(f"Got unparsable line: {correct_line}")
+
+    return expected_number, correct_line
+
+def retrieve_prompt_from_lines(lines):
+    prompt = ""
+    for l in lines:
+        prompt += l
+    
+    return prompt
