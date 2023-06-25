@@ -77,7 +77,7 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
     return token_size
 
-def query_model(model_name, model, prompt, tokenizer, gpu_id=1):
+def query_model(model_name, model, prompt, tokenizer, gpu_id=1, use_flash=False):
     print("Querying model")
 
     if "gpt" in model_name:
@@ -86,7 +86,7 @@ def query_model(model_name, model, prompt, tokenizer, gpu_id=1):
     else:
         input = tokenizer(prompt, return_tensors="pt")
         token_size = input.input_ids.shape[-1]
-        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=False)
+        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=not use_flash)
         response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
         response = response[len(prompt):]
     return token_size, response

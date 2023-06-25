@@ -56,7 +56,7 @@ def run_lrt_exp(cfgs, tokenizer):
             # token_size = test_case["token_size"]
             expected_number = test_case["expected_number"]
 
-            _, response = query_model(cfgs["model_name"], model, prompt, tokenizer, cfgs["gpu_id"])
+            _, response = query_model(cfgs["model_name"], model, prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
             
             response_number = re.findall("\d+", response)
             if response_number is not None:
@@ -128,7 +128,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
                 prompt_length = test_case["prompt_length"]
 
             token_size, response = query_model(cfgs["model_name"], model, 
-                                    prompt, tokenizer, cfgs["gpu_id"])
+                                    prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
 
             if not cfgs["use_fixed_testcases"]:
                 summary = f"Label:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
@@ -235,6 +235,18 @@ def generate_lrt(cfgs, tokenizer):
 
 def main():
     cfgs = retrieve_cmd_args()
+
+    if cfgs["use_monkey_patch"]:
+        if cfgs["use_flash"]:
+            # from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
+            # replace_llama_attn_with_flash_attn()
+
+            from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
+            replace_llama_attn_with_xformer()
+        
+        from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
+        replace_llama_with_interpolate(cfgs["ratio"])
+
     tokenizer = load_tokenizer(cfgs["model_name"], cfgs["model_path"], cfgs["local_model"])
     
     if cfgs["level"] == "easy":
