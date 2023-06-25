@@ -1,54 +1,61 @@
-from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
-replace_llama_with_interpolate()
-
-from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
-replace_llama_attn_with_flash_attn()
-
+import argparse
 import os
 import json
 
 import torch
-import transformers
 import numpy as np
 
-from utils import *
 
-#path = "/data/dacheng/vicuna_ft_32K_scale/"
-path = "/data/dacheng/vicuna-7b/"
-name = path.split("/")[-1]
+from utils import load_model, load_testcases, test
 
-output_dir = "evaluation/topics/predictions"
+# Example usage: python eval_topics.py --model-name-or-path /data/dacheng/longchat_13b_16K/ --flash --ratio 8
 
-if not os.path.exists(output_dir):
-    os.mkdir(output_dir)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model-name-or-path", type=str, required=True, help="model path")
+    parser.add_argument("--ratio", type=int, required=True, help="target sequence lnegth / original sequence length")
+    parser.add_argument("--flash", action='store_true', help="whether to use flash attention to save memory, but slower")
+    args = parser.parse_args()
 
-output_dir = os.path.join(output_dir, name)
-if not os.path.exists(output_dir):
-    os.mkdir(output_dir)
+    # Monkey Patch
+    from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
+    replace_llama_with_interpolate(args.ratio)
 
-model, tokenizer = load_model(path, num_gpus=1)
+    if args.flash:
+        from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
+        replace_llama_attn_with_flash_attn()
 
-for num_topics in [10]:
-    print(f"Start testing {num_topics} per prompt!")
-    test_file = f"evaluation/topics/testcases/{num_topics}_topics.jsonl"
-
-    output_file = os.path.join(output_dir, f"{num_topics}_response.txt")
+    import transformers
     
-    with open(test_file, 'r') as json_file:
-        json_list = list(json_file)
+    path = args.model_name_or_path
+    name = os.path.split(path)[-1]
 
-    for test_case in json_list:        
-        test_case = json.loads(test_case)
-        prompt = test_case["prompt"]
-        prompt_length = test_case["prompt_length"]
-        topics = test_case["topics"]
-        input = tokenizer(prompt, return_tensors="pt")
-        #outputs = model.generate(input.input_ids.cuda(), max_new_tokens=100, use_cache=True)[0]
-        outputs = model.generate(input.input_ids.cuda(), max_new_tokens=100, use_cache=False)[0]
-        outputs = outputs[prompt_length:]
-        summary = f"Label: {topics[0]}, Predict: {tokenizer.batch_decode([outputs], skip_special_tokens=True)}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+    output_dir = "evaluation/topics/predictions"
+    
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+
+    output_dir = os.path.join(output_dir, name)
+    if not os.path.exists(output_dir):
+        os.mkdir(output_dir)
+
+    print(f"output to {output_dir}")
+
+    model, tokenizer = load_model(path, num_gpus=1)
+ 
+    for num_topics in [25]:
+        print(f"Start testing {num_topics} per prompt!")
+        test_file = f"evaluation/topics/testcases/{num_topics}_topics.jsonl"
+
+        output_file = os.path.join(output_dir, f"{num_topics}_response.txt")
         
-        print(summary)
-        with open(output_file, "a+") as f: 
-            f.write(summary)
-            f.write("\n")
+        test_cases = load_testcases(test_file)
+        with open(test_file, 'r') as json_file:
+            json_list = list(json_file)
+
+        for test_case in test_cases:        
+            outputs, summary = test(test_case, model, tokenizer, use_cache=not args.flash, return_summary=True)
+            print(summary)
+            with open(output_file, "a+") as f: 
+                f.write(summary)
+                f.write("\n")
