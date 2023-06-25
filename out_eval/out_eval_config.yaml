@@ -8,5 +8,7 @@ question_dist: 100  # will ask what is the topic discussed every # topics eg. 1s
 run_models: True
 # generate_conversations: True # if set to False, will ask for a path to conversations to form the prompt
 generate_conversations: False
+use_fixed_testcases: True
+testcases_dir: ./evaluation/topics/testcases
 local_model: True
 gpu_id: 1
