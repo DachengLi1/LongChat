@@ -8,6 +8,8 @@ import numpy as np
 
 from utils import load_model, load_testcases, test
 
+# Example usage: python eval_topics.py --model-name-or-path /data/dacheng/longchat_13b_16K/ --flash --ratio 8
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-name-or-path", type=str, required=True, help="model path")
