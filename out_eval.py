@@ -59,10 +59,11 @@ def run_lrt_exp(cfgs, tokenizer):
             _, response = query_model(cfgs["model_name"], model, prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
             
             response_number = re.findall("\d+", response)
-            if response_number is not None:
+            if response_number is not None or len(response_number) > 0:
                 response_number = int(response_number[-1])
             else:
                 print(f"Got unparsable result: {response}")
+                response_number = -1
             
             if expected_number == response_number:
                 summary = "[1]"
@@ -96,7 +97,6 @@ def run_conv_eval_exp(cfgs, tokenizer):
 
     # load model
     model = load_model(cfgs["model_name"], cfgs["model_path"], cfgs["local_model"], cfgs["gpu_id"])
-
     for num_topics in cfgs["num_topics"]:
         print(f"**********Start testing {num_topics} topics per prompt**********")
 
@@ -115,7 +115,6 @@ def run_conv_eval_exp(cfgs, tokenizer):
         total_sim_score = 0
 
         output_file = output_dir / Path(f"{test_file.stem}.prediction")
-        num_correct = 0
         for test_case in conversation_list:
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
@@ -132,14 +131,13 @@ def run_conv_eval_exp(cfgs, tokenizer):
                                     prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
 
             if not cfgs["use_fixed_testcases"]:
-                is_correct = check_model_response_conv_eval(cfgs, response, picked_topics)
-                summary = f"[{is_correct}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
+                score = check_model_response_conv_eval(cfgs, response, picked_topics)
+                summary = f"[{score}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             else:
-                is_correct = check_model_response_conv_eval(cfgs, response, [topics[0]])
-                summary = f"[{is_correct}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+                score = check_model_response_conv_eval(cfgs, response, [topics[0]])
+                summary = f"[{score}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
 
-            if is_correct:
-                num_correct += 1
+            total_sim_score += score
 
             print(summary)
             with open(output_file, "a+") as f:
@@ -148,7 +146,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
         
         acc = total_sim_score / len(conversation_list)
         with open(output_file, "a+") as f:
-            f.write(f"\naccuracy: {acc}")
+            f.write(f"\naccuracy score: {acc}")
             f.write(f"\ntoken size: {token_size}\n")
             f.close()
         output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))

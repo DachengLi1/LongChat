@@ -8,6 +8,7 @@ import openai
 import re
 
 from pathlib import Path
+from nltk.translate.bleu_score import sentence_bleu
 
 def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     parser = argparse.ArgumentParser(
@@ -206,9 +207,28 @@ class Prompt:
         
         return self.prompt, picked_topics
     
+def check_model_response_conv_eval(cfgs, response, label): # only handles 1st topic
+    if cfgs["result_checker"] == "gpt":
+        if query_gpt_for_correctness(response, label):
+            return 1
+        else:
+            return 0
+    else:
+        score = sentence_bleu([label.split()], [response])
+        print(f"BLEU score: {score}")
+        return score
 
+def query_gpt_for_correctness(response, label):
+    prompt = f"Return true if the following two sentences mentioned the same topic, otherwise false.\n" + \
+            f"sentence 1: {response} \n" + \
+            f"sentence 2: {label}"
 
+    _, model_output = retrieve_from_openai(prompt, "gpt-3.5-turbo")
 
+    if "true" in model_output.lower():
+        return True
+    else:
+        return False
 
 def retrieve_expected(lines, random_line_pos):
     correct_line = lines[random_line_pos]
