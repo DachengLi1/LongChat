@@ -115,6 +115,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
         total_sim_score = 0
 
         output_file = output_dir / Path(f"{test_file.stem}.prediction")
+        num_correct = 0
         for test_case in conversation_list:
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
@@ -131,9 +132,14 @@ def run_conv_eval_exp(cfgs, tokenizer):
                                     prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
 
             if not cfgs["use_fixed_testcases"]:
-                summary = f"Label:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
+                is_correct = check_model_response_conv_eval(cfgs, response, picked_topics)
+                summary = f"[{is_correct}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             else:
-                summary = f"Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+                is_correct = check_model_response_conv_eval(cfgs, response, [topics[0]])
+                summary = f"[{is_correct}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+
+            if is_correct:
+                num_correct += 1
 
             print(summary)
             with open(output_file, "a+") as f:
@@ -238,9 +244,10 @@ def main():
 
     if cfgs["use_monkey_patch"]:
         if cfgs["use_flash"]:
-            # from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
-            # replace_llama_attn_with_flash_attn()
+            from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
+            replace_llama_attn_with_flash_attn()
 
+        if cfgs["use_xformers"]:
             from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
             replace_llama_attn_with_xformer()
         
@@ -257,7 +264,7 @@ def main():
         if cfgs["generate_lrt_prompt"] and not cfgs["use_fixed_testcases"]:
             generate_lrt(cfgs, tokenizer)
         
-        # run_lrt_exp(cfgs, tokenizer)
+        run_lrt_exp(cfgs, tokenizer)
 
 if __name__ == "__main__":
     main()
