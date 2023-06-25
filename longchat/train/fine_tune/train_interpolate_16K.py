@@ -3,7 +3,7 @@
 # Need to call this before importing transformers.
 from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
 
-replace_llama_with_interpolate()
+replace_llama_with_interpolate(ratio=8)
 
 from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
 
