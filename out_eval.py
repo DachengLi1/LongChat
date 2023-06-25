@@ -12,8 +12,8 @@ replace_llama_with_interpolate()
 # from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
 # replace_llama_attn_with_flash_attn()
 
-# from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
-# replace_llama_attn_with_xformer()
+from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
+replace_llama_attn_with_xformer()
 
 SCRIPT_PATH = Path(__file__).resolve()
 
