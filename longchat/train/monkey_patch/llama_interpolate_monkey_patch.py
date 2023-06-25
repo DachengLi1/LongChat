@@ -6,7 +6,7 @@ from einops import rearrange
 from ..utils import rank0_print
 
 class InterpolateRotaryEmbedding(torch.nn.Module):
-    def __init__(self, dim, max_position_embeddings=2048, base=10000, ratio=16, device=None):
+    def __init__(self, dim, max_position_embeddings=2048, base=10000, ratio=8, device=None):
         super().__init__()
         inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float().to(device) / dim))
         self.register_buffer("inv_freq", inv_freq)
