@@ -242,13 +242,16 @@ def main():
 
     if cfgs["use_monkey_patch"]:
         if cfgs["use_flash"]:
+            print("flash patch added")
             from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
             replace_llama_attn_with_flash_attn()
 
         if cfgs["use_xformers"]:
+            print("xformer patch added")
             from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
             replace_llama_attn_with_xformer()
         
+        print("interpolate patch added")
         from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
         replace_llama_with_interpolate(cfgs["ratio"])
 

@@ -45,7 +45,7 @@ def load_tokenizer(model_name, model_path, local_model):
                                                                use_fast=False)
         tokenizer.pad_token = tokenizer.unk_token
     elif local_model:
-        print("Loading tokenizer")
+        print("Loading local tokenizer")
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, 
                                                                use_fast=False)
         tokenizer.pad_token = tokenizer.unk_token
@@ -60,6 +60,8 @@ def load_model(model_name, model_path, local_model, gpu_id=1):
     if "gpt" in model_name:
         return None
     elif local_model is False:
+        kwargs = {"torch_dtype": torch.bfloat16}
+        num_gpus = 1
         model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda(gpu_id)
     elif local_model:
         print("Loading local model")
@@ -89,7 +91,7 @@ def query_model(model_name, model, prompt, tokenizer, gpu_id=1, use_flash=False)
     else:
         input = tokenizer(prompt, return_tensors="pt")
         token_size = input.input_ids.shape[-1]
-        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=not use_flash)
+        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=False)
         response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response[0]))
         response = response[len(prompt):]
     return token_size, response

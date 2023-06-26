@@ -14,7 +14,7 @@ local_model: True
 gpu_id: 0
 
 ########LRT configs#######  runs when use difficult option
-num_lines: [200, 300, 400, 500, 600]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
+num_lines: [200]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
 generate_lrt_prompt: True  # generate a new set of lrt prompts, works only if use_fixed_testcases is False
 lrt_testcases_dir: ./evaluation/lrt_testcases  # dir containing fixed test cases
 
