@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser.add_argument("--ratio", type=int, default=8,
             help="target sequence length / original sequence length")
     parser.add_argument("--flash", action='store_true', help="whether to use flash attention to save memory, but slower")
-    parser.add_argument("--dataset", type=str, default="zeros_scrolls")
+    parser.add_argument("--dataset", type=str, default="qasper")
     args = parser.parse_args()
 
     # load model
@@ -51,30 +51,26 @@ if __name__ == "__main__":
 
     # load dataset
     if args.dataset == "zeros_scrolls":
-        data = load_dataset("tau/zero_scrolls", "narrative_qa")
+        data = load_dataset("tau/zero_scrolls", args.dataset)
         test_cases = data["validation"]
     else:
         raise Exception("unrecognized dataset")
-
-    SEQ_LEN = 3000
-    inputs = []
-    for x in test_cases:
-        input_ids = tokenizer(x["input"]).input_ids
-        inputs.append(torch.tensor(input_ids[-SEQ_LEN:]).to(model.device))
-    # inputs = torch.tensor(inputs).to(model.device)
 
     # inference
     print(f"start inference ...")
     tic = time.time()
     scorer = rouge_scorer.RougeScorer(['rouge1'], use_stemmer=True)
+    SEQ_LEN = 4000
     f1 = 0
-    for i in tqdm(range(len(inputs))):
-        outputs = model.generate(inputs[i], max_new_tokens=32, use_cache=True)
+    for x in tqdm(test_cases):
+        prompt = x["input"]
+        input_ids = tokenizer(prompt).input_ids
+        print(len(input_ids))
+        input_ids = torch.tensor([input_ids[-SEQ_LEN:]]).to(model.device)
+        outputs = model.generate(input_ids, max_new_tokens=32, use_cache=True)[0][SEQ_LEN:]
         outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
-
         score = scorer.score(outputs[0], x["output"])
         f1 += score["rouge1"].fmeasure
-
     f1 /= len(test_cases)
     print(f"avg f1 over {len(test_cases)} test cases: {f1}")
     print(f"total inference time: {time.time() - tic}")
