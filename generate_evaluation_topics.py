@@ -6,7 +6,7 @@ import torch
 import transformers
 
 num_test_samples = 50
-num_topics_per_sample_list = [15, 20, 30]
+num_topics_per_sample_list = [1, 5, 10, 15, 20, 25, 30]
 conversations_list = []
 topics_list = []
 
