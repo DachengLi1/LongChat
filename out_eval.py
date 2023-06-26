@@ -281,7 +281,7 @@ def main():
         if cfgs["generate_lrt_prompt"] and not cfgs["use_fixed_testcases"]:
             generate_lrt(cfgs, tokenizer)
         
-        # run_lrt_exp(cfgs, tokenizer)
+        run_lrt_exp(cfgs, tokenizer)
 
 if __name__ == "__main__":
     main()
