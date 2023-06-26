@@ -1,8 +1,0 @@
-Label: The benefits of reading for pleasure, Predict: ['The first topic we discussed was "The benefits of reading for pleasure".'], --- INFO --- Topics: ['The benefits of reading for pleasure'], Length: 757
-Label: The psychology of creativity, Predict: ['The first topic we discussed was "The psychology of creativity".'], --- INFO --- Topics: ['The psychology of creativity'], Length: 683
-Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was "the history and culture of the Middle Ages".'], --- INFO --- Topics: ['The history and culture of the Middle Ages'], Length: 777
-Label: The impact of technology on human connection, Predict: ['The first topic we discussed was "The impact of technology on human connection".'], --- INFO --- Topics: ['The impact of technology on human connection'], Length: 744
-Label: The benefits of reading for pleasure, Predict: ['The first topic we discussed was "The benefits of reading for pleasure".'], --- INFO --- Topics: ['The benefits of reading for pleasure'], Length: 757
-Label: The psychology of creativity, Predict: ['The first topic we discussed was "The psychology of creativity".'], --- INFO --- Topics: ['The psychology of creativity'], Length: 683
-Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was "the history and culture of the Middle Ages".'], --- INFO --- Topics: ['The history and culture of the Middle Ages'], Length: 777
-Label: The impact of technology on human connection, Predict: ['The first topic we discussed was "The impact of technology on human connection".'], --- INFO --- Topics: ['The impact of technology on human connection'], Length: 744
