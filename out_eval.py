@@ -212,12 +212,21 @@ def generate_lrt(cfgs, tokenizer):
         f = open(output_path, "w")
         avg_token_size = 0
         for i in range(cfgs["num_test_samples"]):          
-            lines = [f"Testing Long Context\n\n"]
+            prompt_header = "A chat between a curious user and an artificial intelligence " + \
+                            "assistant. The assistant gives helpful, detailed, and polite " + \
+                            "answers to the user\'s questions. USER: Below is a record of lines I want you to remember. " + \
+                            "Each line begins with 'line <line number>' and contains " + \
+                            "a '<REGISTER_CONTENT>' at the end of the line as a numerical value. " + \
+                            "For each line number, memorize its corresponding <REGISTER_CONTENT>. At " + \
+                            "the end of the record, I will ask you to retrieve the corresponding " + \
+                            "<REGISTER_CONTENT> of a certain line number. Now the record start:\n"
+
+            lines = [f"{prompt_header}"]
             line_numbers = list(range(1, n + 1))
             lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_numbers])
             random_line = random.randint(1, n)
 
-            lines.insert(len(lines), f"Tell me what is the REGISTER_CONTENT in line {random_line}? I need the number.\n")
+            lines.insert(len(lines), f"Now the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_line}? I need the number. ASSISTANT: ")
             expected_number, correct_line = retrieve_expected(lines, random_line)
 
             prompt = retrieve_prompt_from_lines(lines)
