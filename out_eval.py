@@ -53,10 +53,10 @@ def run_lrt_exp(cfgs, tokenizer):
             correct_line = test_case["correct_line"]
             # random_line = test_case["random_line"]
             # num_lines = test_case["num_lines"]
-            # token_size = test_case["token_size"]
+            token_size = test_case["token_size"]
             expected_number = test_case["expected_number"]
 
-            _, response = query_model(cfgs["model_name"], model, prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
+            _, response = query_model(cfgs["model_name"], model, prompt, token_size, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
             
             response_number = re.findall("\d+", response)
             if response_number is not None and len(response_number) > 0:
@@ -83,6 +83,7 @@ def run_lrt_exp(cfgs, tokenizer):
             # f.write(f"\ntoken size: {token_size}\n")
             f.close()
         output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))
+        print(f"acc: {acc}")
 
 
 def run_conv_eval_exp(cfgs, tokenizer):
@@ -128,7 +129,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
                 prompt_length = test_case["prompt_length"]
 
             token_size, response = query_model(cfgs["model_name"], model, 
-                                    prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
+                                    prompt, prompt_length, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
 
             if not cfgs["use_fixed_testcases"]:
                 score = check_model_response_conv_eval(cfgs, response, picked_topics[0])

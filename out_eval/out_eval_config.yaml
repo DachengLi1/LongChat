@@ -11,7 +11,7 @@ generate_conversations: False
 use_fixed_testcases: True
 testcases_dir: ./evaluation/topics/testcases
 local_model: True
-gpu_id: 0
+gpu_id: 3
 
 ########LRT configs#######  runs when use difficult option
 num_lines: [200]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
