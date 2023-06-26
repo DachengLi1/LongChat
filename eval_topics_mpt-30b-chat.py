@@ -5,12 +5,35 @@ import json
 import torch
 import numpy as np
 from utils import  load_testcases, test, test_with_template
-
-from fastchat.model import load_model, get_conversation_template
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 
 # Example usage: python eval_topics_mpt-30b-chat.py --model-name-or-path mosaicml/mpt-30b-chat
 
 if __name__ == "__main__":
+    def load_model_monkey(self, model_path: str, from_pretrained_kwargs: dict):
+        revision = from_pretrained_kwargs.get("revision", "main")
+        print("Using Monkey Patch loading")
+        config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
+     #   config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+        config.max_seq_len = 16384
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            low_cpu_mem_usage=True,
+            trust_remote_code=True,
+            config=config,
+            **from_pretrained_kwargs,
+        )
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_path, trust_remote_code=True, use_fast=True, revision=revision
+        )
+        model.config.eos_token_id = tokenizer.eos_token_id
+        model.config.pad_token_id = tokenizer.pad_token_id
+        return model, tokenizer
+
+    from fastchat import model
+    model.model_adapter.MPTAdapter.load_model = load_model_monkey
+    
+    from fastchat.model import load_model, get_conversation_template
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-name-or-path", type=str, required=True, help="model path")
     args = parser.parse_args()
