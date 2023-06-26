@@ -2,7 +2,7 @@ import json
 import numpy as np
 
 import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
 from matplotlib import pyplot as plt
 
 import openai
@@ -21,13 +21,31 @@ def load_model(path, dtype=torch.bfloat16, device="cuda", num_gpus=1):
             kwargs["device_map"] = "auto"
             kwargs["device_map"] = "sequential"  # This is important for not the same VRAM sizes
             # Hard code for A100s
-            available_gpu_memory = [2.5] * num_gpus
+            available_gpu_memory = [12] * num_gpus
             kwargs["max_memory"] = {
                     i: str(int(available_gpu_memory[i] * 0.85)) + "GiB"
                     for i in range(num_gpus)
                 }
-    model = AutoModelForCausalLM.from_pretrained(path, **kwargs).cuda()
-    tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
+    if "mpt" in path:
+        config = AutoConfig.from_pretrained(path, trust_remote_code=True)
+        config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+        config.init_device = 'meta' # For fast initialization directly on GPU!
+        config.max_seq_len = 8192 # (input + output) tokens can now be up to 16384
+        model = AutoModelForCausalLM.from_pretrained(
+            path,
+            low_cpu_mem_usage=True,
+            trust_remote_code=True,
+            config=config,
+            **kwargs
+        )
+        tokenizer = AutoTokenizer.from_pretrained(
+            path, trust_remote_code=True, use_fast=True
+        )
+        model.config.eos_token_id = tokenizer.eos_token_id
+        model.config.pad_token_id = tokenizer.pad_token_id 
+    else:
+        model = AutoModelForCausalLM.from_pretrained(path, **kwargs).cuda()
+        tokenizer = AutoTokenizer.from_pretrained(path, use_fast=False)
     return model, tokenizer
 
 def load_testcases(test_file):
@@ -41,18 +59,36 @@ def load_testcases(test_file):
 
     return test_cases
 
-def test(test_case, model, tokenizer, return_summary=True):
+def test(test_case, model, tokenizer, use_cache, return_summary=True):
     prompt = test_case["prompt"]
     prompt_length = test_case["prompt_length"]
     topics = test_case["topics"]
     input = tokenizer(prompt, return_tensors="pt")
-    outputs = model.generate(input.input_ids.to(model.device), max_new_tokens=100, use_cache=True)[0]
+    outputs = model.generate(input.input_ids.to(model.device), max_new_tokens=100, use_cache=use_cache)[0]
     outputs = outputs[prompt_length:]
     outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
     if return_summary:
         summary = f"Label: {topics[0]}, Predict: {outputs}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
         return outputs, summary
     else: 
+        return outputs
+
+def test_with_template(test_case, conv, model, tokenizer, use_cache, return_summary=True):
+    prompt = test_case["prompt"]
+    conv.append_message(conv.roles[0], prompt)
+    conv.append_message(conv.roles[1], None)
+    prompt = conv.get_prompt()
+
+    topics = test_case["topics"]
+    input = tokenizer(prompt, return_tensors="pt")
+    prompt_length = input.input_ids.size()[-1]
+    outputs = model.generate(input.input_ids.to(model.device), max_new_tokens=100, use_cache=use_cache)[0]
+    outputs = outputs[prompt_length:]
+    outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
+    if return_summary:
+        summary = f"Label: {topics[0]}, Predict: {outputs}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+        return outputs, summary
+    else:
         return outputs
 
 def attention_span(model, tokenizer, test_case, num_gen_steps=1, raw_attn=False):
