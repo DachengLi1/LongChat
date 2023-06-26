@@ -16,7 +16,8 @@ WORKING_DIR = REPO_DIR / Path("out_eval")
 
 def run_lrt_exp(cfgs, tokenizer):
     TEST_DIR = WORKING_DIR / Path(f"{cfgs['model_name']}_lrt_testcases") \
-        if not cfgs["use_fixed_testcases"] else REPO_DIR / Path(cfgs["lrt_testcases_dir"])
+        if not cfgs["use_fixed_testcases"] else REPO_DIR / Path(cfgs["lrt_testcases_dir"]) / Path(f"{cfgs['line_idx_opt']}")
+
     test_files = list(TEST_DIR.iterdir())
 
     output_dir = WORKING_DIR / Path(f"{cfgs['model_name']}_lrt_predictions")
@@ -48,7 +49,8 @@ def run_lrt_exp(cfgs, tokenizer):
             token_size = test_case["token_size"]
             expected_number = test_case["expected_number"]
 
-            _, response = query_model(cfgs["model_name"], model, prompt, token_size, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
+            _, response = query_model(cfgs["model_name"], model, prompt, token_size, 
+                                      tokenizer, cfgs["gpu_id"], cfgs["use_flash"] or cfgs["use_xformers"])
             
             response_number = re.findall("\d+", response)
             if response_number is not None and len(response_number) > 0:
@@ -63,7 +65,7 @@ def run_lrt_exp(cfgs, tokenizer):
             else:
                 summary = "[0]"
             
-            summary += f"Id: {id}, Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}"
+            summary += f" Id: {id}, Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}"
             print(summary)
             with open(output_file, "a+") as f:
                 f.write(summary)
@@ -71,10 +73,11 @@ def run_lrt_exp(cfgs, tokenizer):
 
         acc = num_correct / len(pt_list)
         with open(output_file, "a+") as f:
-            f.write(f"\naccuracy: {acc}")
+            f.write(f"\naccuracy: {acc}\n")
             # f.write(f"\ntoken size: {token_size}\n")
+            yaml.dump(cfgs, f)
             f.close()
-        output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))
+        output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}_{cfgs['line_idx_opt']}.prediction"))
         print(f"acc: {acc}")
 
 
@@ -121,14 +124,14 @@ def run_conv_eval_exp(cfgs, tokenizer):
                 prompt_length = test_case["prompt_length"]
 
             token_size, response = query_model(cfgs["model_name"], model, 
-                                    prompt, prompt_length, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
+                                    prompt, prompt_length, tokenizer, cfgs["gpu_id"], cfgs["use_flash"] or cfgs["use_xformers"])
 
             if not cfgs["use_fixed_testcases"]:
                 score = check_model_response_conv_eval(cfgs, response, picked_topics[0])
-                summary = f"Id: {id}, [{score}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
+                summary = f"[{score}], Id: {id} \nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             else:
                 score = check_model_response_conv_eval(cfgs, response, topics[0])
-                summary = f"Id: {id}, [{score}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+                summary = f"[{score}], Id: {id} Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
 
             total_sim_score += score
 
@@ -141,6 +144,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
         with open(output_file, "a+") as f:
             f.write(f"\naccuracy score: {acc}")
             f.write(f"\ntoken size: {token_size}\n")
+            yaml.dump(cfgs, f)
             f.close()
         output_file.rename(output_dir / Path(f"{test_file.stem}_{acc}.prediction"))
         # print(f"accuracy: {acc}")
@@ -216,13 +220,13 @@ def generate_lrt(cfgs, tokenizer):
             # lines = [f"{prompt_header}"]
             lines = []
 
-            if cfgs["line_idx_opt"] == "num":
+            if cfgs["line_idx_opt"] == "LRT":
                 line_idxes = list(range(1, n + 1))
                 lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
                 random_idx = random.randint(1, n)
                 random_num = random_idx
             else:
-                line_idxes = generate_line_index(n, cfgs["line_idx_opt"]=="uuid")
+                line_idxes = generate_line_index(n, cfgs["line_idx_opt"])
                 lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
                 random_num = random.randint(0, len(line_idxes)-1)
                 random_idx = line_idxes[random_num]

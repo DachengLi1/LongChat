@@ -84,7 +84,7 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
     return token_size
 
-def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id=1, use_flash=False):
+def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id, use_patch):
     print("Querying model")
 
     if "gpt" in model_name:
@@ -93,7 +93,7 @@ def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id=1, u
     else:
         input = tokenizer(prompt, return_tensors="pt")
         token_size = input.input_ids.shape[-1]
-        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=False)[0]
+        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=not use_patch)[0]
         response = response[prompt_length:]
         response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response))
         
@@ -256,8 +256,8 @@ def generate_prompt_from_lines(lines):
     
     return prompt
 
-def generate_line_index(num_line, use_uuid):
-    if not use_uuid:
+def generate_line_index(num_line, idx_opt):
+    if idx_opt == "LRT-ABCindex":
         ingredients = ["A", "B", "C", "D", "E", "F"]
 
         start = 6
@@ -269,10 +269,12 @@ def generate_line_index(num_line, use_uuid):
         comb = ["".join(i) for i in comb]
 
         return comb[:num_line]
-    else:
+    elif idx_opt == "LRT-UUID":
         comb = []
         for i in range(num_line):
             comb.append(str(uuid.uuid4()))
+    elif idx_opt == "LRT-NL":
+        
         
         return comb
     
