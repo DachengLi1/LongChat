@@ -283,7 +283,7 @@ def generate_line_index(num_line, idx_opt):
 
         comb = []
         for i, (adj, noun) in enumerate(zip(adjs, nouns)):
-            comb.append(f"{adj}-{noun}-{i}")
+            comb.append(f"{adj}-{noun}")
         
         return comb
     
