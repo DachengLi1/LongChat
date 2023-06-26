@@ -59,7 +59,7 @@ def run_lrt_exp(cfgs, tokenizer):
             _, response = query_model(cfgs["model_name"], model, prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
             
             response_number = re.findall("\d+", response)
-            if response_number is not None or len(response_number) > 0:
+            if response_number is not None and len(response_number) > 0:
                 response_number = int(response_number[-1])
             else:
                 print(f"Got unparsable result: {response}")

@@ -21,7 +21,7 @@ lrt_testcases_dir: ./evaluation/lrt_testcases  # dir containing fixed test cases
 
 ########Training configs#######
 use_monkey_patch: True
-ratio: 8
+ratio: 16   # 16 for 7b; 8 for 13b
 use_flash: False
 use_xformers: True
 
