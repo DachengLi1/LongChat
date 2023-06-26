@@ -6,9 +6,11 @@ import transformers
 import torch
 import openai
 import re
+import os
 
 from pathlib import Path
 from nltk.translate.bleu_score import sentence_bleu
+
 
 def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     parser = argparse.ArgumentParser(
@@ -93,6 +95,10 @@ def query_model(model_name, model, prompt, tokenizer, gpu_id=1, use_flash=False)
     return token_size, response
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
+    # openai.api_key = os.environ["OPENAI_API_KEY"]
+    openai.api_key = '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'
+
+
     if "gpt" in model_name:
         token_size = token_counter(None, model_name, None, prompt)
         print(f"Number of tokens: {token_size}")

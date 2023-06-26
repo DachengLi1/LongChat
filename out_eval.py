@@ -131,10 +131,10 @@ def run_conv_eval_exp(cfgs, tokenizer):
                                     prompt, tokenizer, cfgs["gpu_id"], cfgs["use_flash"])
 
             if not cfgs["use_fixed_testcases"]:
-                score = check_model_response_conv_eval(cfgs, response, picked_topics)
+                score = check_model_response_conv_eval(cfgs, response, picked_topics[0])
                 summary = f"[{score}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             else:
-                score = check_model_response_conv_eval(cfgs, response, [topics[0]])
+                score = check_model_response_conv_eval(cfgs, response, topics[0])
                 summary = f"[{score}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
 
             total_sim_score += score
