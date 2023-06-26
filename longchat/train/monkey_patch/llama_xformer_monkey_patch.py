@@ -50,6 +50,8 @@ def forward(
     attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
 
     attn_output = self.o_proj(attn_output)
+    
+    assert not use_cache, "xformer does not support use_cache=True"
 
     if not output_attentions:
         attn_weights = None
