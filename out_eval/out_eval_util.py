@@ -62,10 +62,10 @@ def load_model(model_name, model_path, local_model, gpu_id=1):
     elif local_model is False:
         kwargs = {"torch_dtype": torch.bfloat16}
         num_gpus = 1
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16).cuda(gpu_id)
+        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).cuda(gpu_id)
     elif local_model:
         print("Loading local model")
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.float16).cuda(gpu_id)
+        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16).cuda(gpu_id)
     else:
         raise RuntimeError("Unable to load tokenizer")
     
