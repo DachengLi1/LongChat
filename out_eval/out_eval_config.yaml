@@ -1,22 +1,24 @@
 ---
 # model_name: gpt-3.5-turbo
 model_name: None
-num_topics: [15]  # number of topics to put into the conversation
+num_topics: [20, 30]  # number of topics to put into the conversation
 num_test_samples: 50 # number of test samples in each test case
 question_dist: 100  # will ask what is the topic discussed every # topics eg. 1st, 4th
 # run_models: False   # if set to False, only outputs token size
 run_models: True
 # generate_conversations: True # if set to False, will ask for a path to conversations to form the prompt
 generate_conversations: False
-use_fixed_testcases: True
+use_fixed_testcases: False
 testcases_dir: ./evaluation/topics/testcases
 local_model: True
-gpu_id: 3
+gpu_id: 0
 
 ########LRT configs#######  runs when use difficult option
-num_lines: [200]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
+num_lines: [10, 200, 300, 400, 500, 600]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
+# num_lines: [200]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
 generate_lrt_prompt: True  # generate a new set of lrt prompts, works only if use_fixed_testcases is False
 lrt_testcases_dir: ./evaluation/lrt_testcases  # dir containing fixed test cases
+line_idx_opt: uuid # choose among uuid, ABC, num
 
 
 ########Training configs#######

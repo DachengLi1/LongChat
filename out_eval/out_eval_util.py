@@ -7,6 +7,8 @@ import torch
 import openai
 import re
 import os
+import itertools
+import uuid
 
 from pathlib import Path
 from nltk.translate.bleu_score import sentence_bleu
@@ -247,9 +249,30 @@ def retrieve_expected(lines, random_line_pos):
 
     return expected_number, correct_line
 
-def retrieve_prompt_from_lines(lines):
+def generate_prompt_from_lines(lines):
     prompt = ""
     for l in lines:
         prompt += l
     
     return prompt
+
+def generate_line_index(num_line, use_uuid):
+    if not use_uuid:
+        ingredients = ["A", "B", "C", "D", "E", "F"]
+
+        start = 6
+        comb = list(itertools.product(ingredients, repeat=start))
+        while len(comb) < num_line:
+            start += 1
+            comb = list(itertools.product(ingredients, repeat=start))
+        
+        comb = ["".join(i) for i in comb]
+
+        return comb[:num_line]
+    else:
+        comb = []
+        for i in range(num_line):
+            comb.append(str(uuid.uuid4()))
+        
+        return comb
+    

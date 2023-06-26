@@ -7,14 +7,6 @@ import numpy as np
 from pathlib import Path
 from out_eval.out_eval_util import *
 
-# from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
-# replace_llama_with_interpolate()
-
-# from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
-# replace_llama_attn_with_flash_attn()
-
-# from longchat.train.monkey_patch.llama_xformer_monkey_patch import replace_llama_attn_with_xformer
-# replace_llama_attn_with_xformer()
 
 SCRIPT_PATH = Path(__file__).resolve()
 
@@ -47,7 +39,7 @@ def run_lrt_exp(cfgs, tokenizer):
         
         output_file = output_dir / Path(f"{test_file.stem}_lrt.prediction")
         num_correct = 0
-        for test_case in pt_list:
+        for id, test_case in enumerate(pt_list):
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
             correct_line = test_case["correct_line"]
@@ -71,7 +63,7 @@ def run_lrt_exp(cfgs, tokenizer):
             else:
                 summary = "[0]"
             
-            summary += f"Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}"
+            summary += f"Id: {id}, Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}"
             print(summary)
             with open(output_file, "a+") as f:
                 f.write(summary)
@@ -116,7 +108,7 @@ def run_conv_eval_exp(cfgs, tokenizer):
         total_sim_score = 0
 
         output_file = output_dir / Path(f"{test_file.stem}.prediction")
-        for test_case in conversation_list:
+        for id, test_case in enumerate(conversation_list):
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
             if not cfgs["use_fixed_testcases"]:
@@ -133,10 +125,10 @@ def run_conv_eval_exp(cfgs, tokenizer):
 
             if not cfgs["use_fixed_testcases"]:
                 score = check_model_response_conv_eval(cfgs, response, picked_topics[0])
-                summary = f"[{score}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
+                summary = f"Id: {id}, [{score}]\nLabel:      {picked_topics}, \nPrediction: {response}, \ntopics:     {topics}, \nprompt_length: {prompt_length}, \nlength_dist: {lenth_dist}\n"
             else:
                 score = check_model_response_conv_eval(cfgs, response, topics[0])
-                summary = f"[{score}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
+                summary = f"Id: {id}, [{score}] Label: {topics[0]}, Prediction: {response}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
 
             total_sim_score += score
 
@@ -215,25 +207,35 @@ def generate_lrt(cfgs, tokenizer):
             prompt_header = "A chat between a curious user and an artificial intelligence " + \
                             "assistant. The assistant gives helpful, detailed, and polite " + \
                             "answers to the user\'s questions. USER: Below is a record of lines I want you to remember. " + \
-                            "Each line begins with 'line <line number>' and contains " + \
+                            "Each line begins with 'line <line index>' and contains " + \
                             "a '<REGISTER_CONTENT>' at the end of the line as a numerical value. " + \
-                            "For each line number, memorize its corresponding <REGISTER_CONTENT>. At " + \
+                            "For each line index, memorize its corresponding <REGISTER_CONTENT>. At " + \
                             "the end of the record, I will ask you to retrieve the corresponding " + \
-                            "<REGISTER_CONTENT> of a certain line number. Now the record start:\n"
+                            "<REGISTER_CONTENT> of a certain line index. Now the record start:\n\n"
+            
+            # lines = [f"{prompt_header}"]
+            lines = []
 
-            lines = [f"{prompt_header}"]
-            line_numbers = list(range(1, n + 1))
-            lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_numbers])
-            random_line = random.randint(1, n)
+            if cfgs["line_idx_opt"] == "num":
+                line_idxes = list(range(1, n + 1))
+                lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
+                random_idx = random.randint(1, n)
+                random_num = random_idx
+            else:
+                line_idxes = generate_line_index(n, cfgs["line_idx_opt"]=="uuid")
+                lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
+                random_num = random.randint(0, len(line_idxes)-1)
+                random_idx = line_idxes[random_num]
+            
+            expected_number, correct_line = retrieve_expected(lines, random_num)
+            lines.insert(0, f"{prompt_header}")
+            lines.insert(len(lines), f"\nNow the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_idx}? I need the number. ASSISTANT: ")
+            prompt = generate_prompt_from_lines(lines)
 
-            lines.insert(len(lines), f"Now the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_line}? I need the number. ASSISTANT: ")
-            expected_number, correct_line = retrieve_expected(lines, random_line)
-
-            prompt = retrieve_prompt_from_lines(lines)
             token_size = token_counter(tokenizer, cfgs["model_name"], None, prompt)
             avg_token_size += token_size
             output = {
-                "random_line": random_line, # this is the line to retrieve
+                "random_idx": (random_idx, random_num), # this is the line to retrieve
                 "expected_number": expected_number,
                 "num_lines": n,
                 "token_size": token_size,
