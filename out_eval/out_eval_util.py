@@ -10,6 +10,7 @@ import os
 import itertools
 import uuid
 
+
 from pathlib import Path
 from nltk.translate.bleu_score import sentence_bleu
 
@@ -274,7 +275,15 @@ def generate_line_index(num_line, idx_opt):
         for i in range(num_line):
             comb.append(str(uuid.uuid4()))
     elif idx_opt == "LRT-NL":
-        
+        import wonderwords
+
+        w = wonderwords.RandomWord()
+        adjs = w.random_words(num_line, include_categories=["adjective"])
+        nouns = w.random_words(num_line, include_categories=["noun"])
+
+        comb = []
+        for i, (adj, noun) in enumerate(zip(adjs, nouns)):
+            comb.append(f"{adj}-{noun}-{i}")
         
         return comb
     
