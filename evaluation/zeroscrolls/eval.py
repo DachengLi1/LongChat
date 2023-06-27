@@ -28,6 +28,8 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, default="qasper")
     args = parser.parse_args()
 
+    SEQ_LEN = 15000
+
     # load model
     from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
     replace_llama_with_interpolate(args.ratio)
@@ -47,7 +49,7 @@ if __name__ == "__main__":
     output_dir = os.path.join("predictions", name)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f"{args.dataset}.raw")
+    output_file = os.path.join(output_dir, f"{name}_{args.dataset}_{SEQ_LEN}.raw")
     print(f"output file: {output_file}")
 
     # load dataset
@@ -58,21 +60,25 @@ if __name__ == "__main__":
     print(f"start inference ...")
     tic = time.time()
     scorer = rouge_scorer.RougeScorer(['rouge1'], use_stemmer=True)
-    SEQ_LEN = 15000
     f1 = 0
-    predicts = []
+    predicts = ["Task,ID,Prediction"]
     for x in tqdm(test_cases):
         prompt = x["input"]
         input_ids = tokenizer(prompt).input_ids
-        print(len(input_ids))
         input_ids = torch.tensor([input_ids[-SEQ_LEN:]]).to(model.device)
-        print(input_ids.shape)
+
         outputs = model.generate(input_ids, max_new_tokens=32, use_cache=False)[0][SEQ_LEN:]
         outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
-        predicts.append(outputs[0])
+        predicts.append(f'{args.dataset},{x["id"]},"{outputs[0]}"')
+
         score = scorer.score(outputs[0], x["output"])
         f1 += score["rouge1"].fmeasure
+
     f1 /= len(test_cases)
     print(f"avg f1 over {len(test_cases)} test cases: {f1}")
     print(f"total inference time: {time.time() - tic}")
+
+    with open(output_file, "w") as f:
+        for line in predicts:
+            f.write(line)
 
