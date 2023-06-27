@@ -15,7 +15,7 @@ class InterpolateRotaryEmbedding(torch.nn.Module):
         # Build here to make `torch.jit.trace` work.
         self.ratio = ratio
         max_position_embeddings *= ratio
-        rank0_print(f"building interpolation to {max_position_embeddings}")
+        # rank0_print(f"building interpolation to {max_position_embeddings}")
         self.max_seq_len_cached = max_position_embeddings
         t = torch.arange(self.max_seq_len_cached, device=self.inv_freq.device, dtype=self.inv_freq.dtype) / ratio
         freqs = torch.einsum("i,j->ij", t, self.inv_freq)
