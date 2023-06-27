@@ -1,38 +1,354 @@
-Task,ID,Predictionqasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,"The baselines used in the experiments are:
+Task,ID,Prediction
+qasper,be6971827707afcd13af3085d0a775a0bd61c5dd,"
 
-1. Unif: A rule-based encoder that keeps all tokens with a probability of $\delta$.
-2. Stopword: A rule-based encoder that keeps all tokens except stop words with a probability of $\delta$.
-3. Rule-"qasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,"The baselines used in the experiments are:
+Table 2: Corpus statistics
 
-1. Unif: A rule-based encoder that keeps all tokens with a probability of $\delta$.
-2. Stopword: A rule-based encoder that keeps all tokens except stop words with a probability of $\delta$.
-3. Rule-"qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,"Yes, the authors analyze transformer-based architectures as well. They compare the performance of different transformer-based models, such as BERT, RoBERTa, and ALBERT, with the other models they have analyzed. They find that transformer-based models generally perform better than the other"qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,"Yes, the authors analyze transformer-based architectures as well. They compare the performance of different transformer-based models, such as BERT, RoBERTa, and ALBERT, with the other models they have analyzed. They find that transformer-based models generally perform better than the other"qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,"The 8,640 English sentences were selected based on the following criteria:
+* Total occurrences: 82836
+* Spells occurrences: 432
+* Total words: 1111
+* Average length of a scene description: 1111
+* Average length of"
+qasper,a33ab5ce8497ff63ca575a80b03e0ed9c6acd273,""
+qasper,cc28919313f897358ef864948c65318dc61cb03c,""
+qasper,42bc4e0cd0f3e238a4891142f1b84ebcd6594bf1,""
+qasper,974868e4e22f14766bcc76dc4927a7f2795dcd5e,""
+qasper,f7789313a804e41fcbca906a4e5cf69039eeef9f,""
+qasper,427252648173c3ba78c211b86fa89fc9f4406653,""
+qasper,551a17fc1d5b5c3d18bdc4923363cbbda7eb2516,""
+qasper,f319f2c3f9339b0ce47478f5aa0c32da387a156e,""
+qasper,5f6fbd57cce47f20a0fda27d954543c00c4344c2,""
+qasper,9a596bd3a1b504601d49c2bec92d1592d7635042,"The authors would like to thank the reviewers for their valuable feedback and suggestions."
+qasper,12eba1598dca14db64dbc8b73484639363a4618e,""
+qasper,4a4b7c0d3e7365440b49e9e6b67908ea5cea687d,""
+qasper,7e54c7751dbd50d9d14b9f8b13dc94947a46e42f,""
+qasper,b69f0438c1af4b9ed89e531c056d9812d4994016,"
 
-1. The sentences must involve at least one race- or gender-associated word.
-2. The sentences were intended to be short and grammatically simple.
-3. Some sentences were included to express emotions,"qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,"The 8,640 English sentences were selected based on the following criteria:
+\section*{Acknowledgments}
 
-1. The sentences must involve at least one race- or gender-associated word.
-2. The sentences were intended to be short and grammatically simple.
-3. Some sentences were included to express emotions,"qasper,518dae6f936882152c162058895db4eca815e649,"The UTCNN model has 3 layers."qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,"Yes"qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,"Yes"qasper,290ee79b5e3872e0496a6a0fc9b103ab7d8f6c30,"Level A: Offensive language Detection
-Level B: Categorization of Offensive Language
-Level C: Offensive Language Target Identification"qasper,ab9b0bde6113ffef8eb1c39919d21e5913a05081,"Their results on both datasets are as follows:
+The authors would like to thank the Danish Research Council for funding this research under the grant DFF - 6107-0013. The authors would also like to thank the reviewers for their valuable feedback and suggestions."
+qasper,c38a48d65bb21c314194090d0cc3f1a45c549dd6,""
+qasper,61fb982b2c67541725d6db76b9c710dd169b533d,""
+qasper,13e87f6d68f7217fd14f4f9a008a65dd2a0ba91c,""
+qasper,c3a9732599849ba4a9f07170ce1e50867cf7d7bf,""
+qasper,0481a8edf795768d062c156875d20b8fb656432c,""
+qasper,a3783e42c2bf616c8a07bd3b3d503886660e4344,""
+qasper,c65b6470b7ed0a035548cc08e0bc541c2c4a95a7,""
+qasper,fd5412e2784acefb50afc3bfae1e087580b90ab9,""
+qasper,32e8eda2183bcafbd79b22f757f8f55895a0b7b2,""
+qasper,b2c8c90041064183159cc825847c142b1309a849,"The model's effectiveness is demonstrated through various experiments and case studies. The proposed method can be further improved by incorporating more advanced techniques in the future."
+qasper,d3092f78bdbe7e741932e3ddf997e8db42fa044c,"
+In conclusion, our platform demonstrates the potential of big data architectures for real-time prediction and learning. The platform can be adapted to work on any real-time changing market trend, and its scalability and fault tolerance make it suitable for a wide range of applications. Future work will focus on extending"
+qasper,2a0a44f169ad61774d77df65f8846bd57685bfcf,""
+qasper,36a9230fadf997d3b0c5fc8af8d89bd48bf04f12,"
 
-1. FCE test data: 45.1% INLINEFORM0, 54.9% INLINEFORM1, 55.1% INLINEFORM2
-2. CoNLL 2014 Shared Task"qasper,ff338921e34c15baf1eae0074938bf79ee65fdd2,"The baseline model was a simple shallow neural network with a softmax layer for predicting answer span. The model was not good at generalizations."qasper,1b1a30e9e68a9ae76af467e60cefb180d135e285,"The created dataset consists of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with a total of 41 hours of conversation data."qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,"The baseline classification system uses a combination of character and word level features."qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,"The baseline classification system uses a combination of character and word level features."qasper,3355918bbdccac644afe441f085d0ffbbad565d7,"The supervised scores of the words are calculated using the training data. For each word, three supervised scores are extracted: minimum, mean, and maximum polarity scores. These scores are computed as the average of the polarity scores of the words in the same context as the target word. The polarity scores are"qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,"The paper introduces several data simulation techniques, including:
+In this work, we present a multi-task learning framework for sentence encoding that leverages the inductive biases of different tasks to improve the quality of sentence representations. We use a combination of sequence-to-sequence tasks, such as multi-lingual NMT, constituency parsing, and skip-"
+qasper,05238d1fad2128403577822aa4822ef8ca9570ac,"
+Our tensor-based embeddings show significant improvements in various NLP tasks, including outlier detection, sentiment analysis, and analogy recovery. This suggests that the use of tensor factorization in learning word embeddings can lead to better performance in a wide range of NLP tasks.
+Our tensor"
+qasper,36b5f0f62ee9be1ab50d1bb6170e98328d45997d,"In this case, the classification of the best and worst songs within a specific genre could be a relevant task to be addressed.
 
-1. Backward translation (BT): The paper uses BT to generate synthetic parallel data.
-2. Forward translation (FT): The paper uses FT to generate synthetic parallel data.
-3. Generative Adversarial Network"qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,"The paper introduces several data simulation techniques, including:
+---"
+qasper,271019168ed3a2b0ef5e3780b48a1ebefc562b57,"The experiments on Yorùbá were possible thanks to the collaboration with the Hausa community in Nigeria and the support of the Global Voices project."
+qasper,79b174d20ea5dd4f35e25c9425fb97f40e27cd6f,""
+qasper,f1bd66bb354e3dabf5dc4a71e6f08b17d472ecc9,"This work was supported by the Natural Sciences and Engineering Research Council of Canada (NSERC) and the Canada Research Chairs program."
+qasper,3bfb8c12f151dada259fbd511358914c4b4e1b0e,""
+qasper,f4e17b14318b9f67d60a8a2dad1f6b506a10ab36,""
+qasper,b54fc86dc2cc6994e10c1819b6405de08c496c7b,""
+qasper,3371d586a3a81de1552d90459709c57c0b1a2594,""
+qasper,85aa125b3a15bbb6f99f91656ca2763e8fbdb0ff,""
+qasper,6bff681f1f6743ef7aa6c29cc00eac26fafdabc2,""
+qasper,f858031ebe57b6139af46ee0f25c10870bb00c3c,""
+qasper,e93b4a15b54d139b768d5913fb5fd1aed8ab25da,"The learning rate was set to 0.002 for the first 1000 steps, then linearly decayed to 0.0001 for the next 8000 steps, and finally linearly decayed to 0.00001 for the last "
+qasper,0062ad4aed09a57d0ece6aa4b873f4a4bf65d165,""
+qasper,60cb756d382b3594d9e1f4a5e2366db407e378ae,""
+qasper,b3ff166bd480048e099d09ba4a96e2e32b42422b,"
 
-1. Backward translation (BT): The paper uses BT to generate synthetic parallel data.
-2. Forward translation (FT): The paper uses FT to generate synthetic parallel data.
-3. Generative Adversarial Network"qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,"The qualitative metrics used for evaluation are:
+\section*{Acknowledgments}
 
-1. BLEU Score: Measures the correspondence between a machine output and that of a human by computing the number of co-occurrences for ngrams ($n \in {1, 2, 3, 4}$)"qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,"The qualitative metrics used for evaluation are:
+The authors would like to thank the reviewers for their valuable feedback and suggestions. This work was supported by the National Natural Science Foundation of China (Grant No. 6170277) and the Fundamental Research Funds for the"
+qasper,51d03f0741b72ae242c380266acd2321baf43444,"
 
-1. BLEU Score: Measures the correspondence between a machine output and that of a human by computing the number of co-occurrences for ngrams ($n \in {1, 2, 3, 4}$)"qasper,76ed74788e3eb3321e646c48ae8bf6cdfe46dca1,"The paper discusses various linguistics features used in the proposed DNN model for MSA and CA diacritization. Some of the features used include:
+References
 
-1. CHAR: characters in the word.
-2. SEG: position of the character in a word segment.
-3. PRIOR:"qasper,8e52637026bee9061f9558178eaec08279bf7ac6,"The training data was translated using the machine translation platform Apertium."qasper,8e52637026bee9061f9558178eaec08279bf7ac6,"The training data was translated using the machine translation platform Apertium."qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,"The proposed model is compared to several baseline models, including traditional models like TF-IDF and neural models like LSTM, ELMo, and topic-attention."qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,"The proposed model is compared to several baseline models, including traditional models like TF-IDF and neural models like LSTM, ELMo, and topic-attention."qasper,4e748cb2b5e74d905d9b24b53be6cfdf326e8054,"The traditional linguistics features they used include unigrams, pragmatic features, stylistic patterns, and situational disparity."qasper,b970f48d30775d3468952795bc72976baab3438e,"The article does not explicitly mention any issues that are not on the forefront of computational text analysis. However, it does discuss some challenges and complications that researchers may encounter while working with textual data, such as data acquisition, data non-representativeness, and data biases. It also"qasper,c70bafc35e27be9d1efae60596bc0dd390c124c0,"Yes, the answers are double (and not triple) annotated."
+1. BIBREF0. Blei, D. M., Ng, A. Y., & Jordan, M. I. (200). Latent semantic analysis. Journal of artificial intelligence research, 10(1-2), 174-19"
+qasper,1eeabfde99594b8d9c6a007f50b97f7f527b0a17,""
+qasper,3e3f5254b729beb657310a5561950085fa690e83,"This can be further improved by incorporating more advanced techniques like deep learning and natural language processing."
+qasper,09621c9cd762e1409f22d501513858d67dcd3c7c,""
+qasper,05e3b831e4c02bbd64a6e35f6c52f0922a41539a,""
+qasper,1c85a25ec9d0c4f6622539f48346e23ff666cd5f,""
+qasper,f60629c01f99de3f68365833ee115b95a3388699,"
+
+---"
+qasper,21a9f1cddd7cb65d5d48ec4f33fe2221b2a8f62e,"gitlab.com/[your\_username]/mmhs150k\_dataset.git"
+qasper,02417455c05f09d89c2658f39705ac1df1daa0cd,""
+qasper,4904ef32a8f84cf2f53b1532ccf7aa77273b3d19,"
+
+In this paper, we have presented a new architecture for style transfer in natural language processing. Our proposed architecture, called the Style Transfer Encoder (STE), is designed to learn disentangled latent representations that can be used to generate text with different styles. We have shown that our architecture can out"
+qasper,3aa7173612995223a904cc0f8eef4ff203cbb860,""
+qasper,9a4aa0e4096c73cd2c3b1eab437c1bf24ae7bf03,""
+qasper,059acc270062921ad27ee40a77fd50de6f02840a,"
+Call Mike on his cell
+Sorry, I don't have a cell phone number for Mike Johnson. I only have a work phone. Do you want to call that number?
+no
+Oh, sorry about that. Goodbye.
+Call Mike on his cell
+Sorry, I don't"
+qasper,acc512c57aef4d5a15c15e3593f0a9b3e7e7e8b8,""
+qasper,d325a3c21660dbc481b4e839ff1a2d37dcc7ca46,""
+qasper,4c7b29f6e3cc1e902959a1985146ccc0b15fe521,""
+qasper,1951cde612751410355610074c3c69cec94824c2,""
+qasper,37db7ba2c155c2f89fc7fb51fffd7f193c103a34,""
+qasper,aa4b38f601cc87bf93849245d5f65124da3dc112,"
+
+---
+
+BIBREF0: Blei, D. M., Ng, A. Y., & Jordan, M. I. (201). Latent semantic analysis. Journal of Machine Learning Research, 12, 317-337.
+BIBREF1"
+qasper,d653d994ef914d76c7d4011c0eb7873610ad795f,"Score
+The following table presents a list of the top 50 hashtags sorted by their average word happiness score. The table displays the hashtag, the number of tweets containing the hashtag, and the average word happiness score for each hashtag.
+
+Table A5: Top"
+qasper,d8de12f5eff64d0e9c9e88f6ebdabc4cdf042c22,""
+qasper,f6a1125c5621a2f32c9bcdd188dff14efa096083,""
+qasper,f4238f558d6ddf3849497a130b3a6ad866ff38b3,"
+
+References
+
+1. BIBREF0 (BIBREF0), "Affirmative Ethics", 202.
+2. BIBREF5 (BIBREF5), "Implicit Associations in Word Embeddings", 201.
+3. B"
+qasper,79bb1a1b71a1149e33e8b51ffdb83124c18f3e9c,""
+qasper,5633d93ef356aca02592bae3dfc1b3ec8fce27dc,""
+qasper,44c7c1fbac80eaea736622913d65fe6453d72828,"We also appreciate the help from the Amazon Alexa team, especially for the Alexa Prize BIBREF0. We would like to thank the users who participated in the Gunrock conversations, without whom this research would not be possible."
+qasper,5dfa59c116e0ceb428efd99bab19731aa3df4bbd,"
+Appendix ::: Quality Control Measures
+We implemented several quality control measures to ensure the quality of the annotations:
+
+1. In-browser checks: We used in-browser checks to ensure that workers were following the instructions and to catch any errors or inconsistencies in the annotations.
+2."
+qasper,87159024d4b6dac8c456bb74a91044df292f6b99,""
+qasper,af073d84b8a7c968e5822c79bef34a28655886de,"
+
+In our experiments, we used the attention mechanism to combine the output of the encoder and the decoder in the machine translation models. We found that the attention mechanism significantly improved the quality of the translation compared to the baseline models without the attention mechanism."
+qasper,cbf1137912a47262314c94d36ced3232d5fa1926,""
+qasper,7997b9971f864a504014110a708f215c84815941,"For more specific research, we recommend the papers on the Hashtag Sentiment Lexicon BIBREF22 and the Sentiment140 lexicon BIBREF140 . For a more comprehensive understanding of the field, we recommend the book "Sentiment Analysis and Opinion Mining"
+qasper,eced6a6dffe43c28e6d06ab87eed98c135f285a3,""
+qasper,6aed1122050b2d508dc1790c13cdbe38ff126089,""
+qasper,c4a0c7b6f1a00f3233a5fe16240a98d9975701c0,""
+qasper,cf74ff49dfcdda2cd67a896b4b982a1c3ee51531,"The experiments on Yorùbá were possible thanks to the collaboration with the Hausa community in Nigeria and the support of the Nigerian Linguistic Society."
+qasper,e9d9bb87a5c4faa965ceddd98d8b80d4b99e339e,""
+qasper,9adcc8c4a10fa0d58f235b740d8d495ee622d596,""
+qasper,0e510d918456f3d2b390b501a145d92c4f125835,"
+
+In summary, our experiments show that self-attention layers applied to images can express any convolutional layer, and that learned fully-attentional models do behave similar to CNNs in practice. We also demonstrated that the quadratic positional encoding is sufficient for learning meaningful attention patterns in images."
+qasper,1a43df221a567869964ad3b275de30af2ac35598,""
+qasper,92240eeab107a4f636705b88f00cefc4f0782846,""
+qasper,12cfbaace49f9363fcc10989cf92a50dfe0a55ea,"We also thank the anonymous reviewers for their valuable feedback."
+qasper,39a450ac15688199575798e72a2cc016ef4316b5,"This work is supported by the National Science Foundation (NSF) under Grant No. 171864."
+qasper,58edc6ed7d6966715022179ab63137c782105eaf,""
+qasper,76d62e414a345fe955dc2d99562ef5772130bc7e,"This suggests that leveraging thematic commonsense in the form of AskBERT for graph construction directly results in graphs that are more coherent and maintain genre more easily. This is especially true in the case of the fairy-tales where the thematic and everyday commonsense diverge more than"
+qasper,87357448ce4cae3c59d4570a19c7a9df4c086bd8,""
+qasper,a6d00f44ff8f83b6c1787e39333e759b0c3daf15,"
+References
+
+1. BIBREF0 . Federal Bureau of Investigation. 207. National Gang Threat Assessment. Retrieved from <https://www.fbi.gov/about-us/investigate/counterterrorism/national-gang-thre"
+qasper,180047e1ccfc7c98f093b8d1e1d0479a4cca99cc,"Additionally, we plan to explore the use of more advanced techniques, such as attention mechanisms, to improve the model's ability to track the context and generate more appropriate responses.
+
+---"
+qasper,2376c170c343e2305dac08ba5f5bda47c370357f,""
+qasper,0619fc797730a3e59ac146a5a4575c81517cc618,"The proposed model demonstrates the effectiveness of combining character-level embeddings with word-level embeddings and semantic rules in improving the performance of sentiment classification in Twitter data."
+qasper,f748cb05becc60e7d47d34f4c5f94189bc184d33,""
+qasper,4f4892f753b1d9c5e5e74c7c94d8c9b6ef523e7b,"
+
+In summary, our experiments show that recurrent neural networks can learn to recognize entailment relations in an artificial language defined using first-order predicate logic. This result suggests that recurrent networks can develop representations that can adequately process a formal language with a nontrivial hierarchical structure. Furthermore,"
+qasper,7081b6909cb87b58a7b85017a2278275be58bf60,""
+qasper,10ddc5caf36fe9d7438eb5a3936e24580c4ffe6a,"
+
+In this paper, we introduce an adaptive and general framework for measuring similarity of the pairs of relations. We quantify the similarity between a pair of relations by the divergence between the conditional probability distributions given these relations. Our proposed network can capture various facts, even if the facts are not used for training"
+qasper,184e1f28f96babf468f2bb4e1734f69646590cda,""
+qasper,e09e89b3945b756609278dcffb5f89d8a52a02cd,"who are interested in understanding the political debates.
+
+---"
+qasper,66125cfdf11d3bf8e59728428e02021177142c3a,"
+
+\end{document}"
+qasper,d4b9cdb4b2dfda1e0d96ab6c3b5e2157fd52685e,""
+qasper,aceac4ad16ffe1af0f01b465919b1d4422941a6b,"This study aims to investigate the behavior of the LSTM gating signals during the inference phase. The results show that the gating signals exhibit different patterns for different examples, which can provide valuable insights into the model's decision-making process."
+qasper,8d1f9d3aa2cc2e2e58d3da0f5edfc3047978f3ee,""
+qasper,f6937199e4b06bfbaa22edacc7339410de9703db,""
+qasper,90dd5c0f5084a045fd6346469bc853c33622908f,""
+qasper,95d98b2a7fbecd1990ec9a070f9d5624891a4f26,""
+qasper,34fab25d9ceb9c5942daf4ebdab6c5dd4ff9d3db,""
+qasper,86083a02cc9a80b31cac912c42c710de2ef4adfd,""
+qasper,79a28839fee776d2fed01e4ac39f6fedd6c6a143,"Additionally, the performance of the PTN approach can be further improved by incorporating more advanced deep learning techniques, such as convolutional neural networks (CNNs) BIBREF45 ."
+qasper,0d1408744651c3847469c4a005e4a9dccbd89cf1,"For more specific research, we recommend the papers on the Hashtag Sentiment Lexicon BIBREF22 and the Sentiment140 lexicon BIBREF65 ."
+qasper,084fb7c80a24b341093d4bf968120e3aff56f693,""
+qasper,8c073b7ea8cb5cc54d7fecb8f4bf88c1fb621b19,""
+qasper,f37ed011e7eb259360170de027c1e8557371f002,""
+qasper,62ba1fefc1eb826fe0cbac092d37a3e2098967e9,"
+We use the ROUGE\_L metric to evaluate the quality of the generated explanations. We find that the model with the features described above achieves a ROUGE\_L score of 0.57, while the model without the features achieves a ROUGE\_L score of 0"
+qasper,e91692136033bbc3f19743d0ee5784365746a820,""
+qasper,49aecc50823a60c852165e121dbc0ca54304e40f,""
+qasper,fb381a59732474dc71a413e25cac37e239547b55,"
+Our tensor-based embeddings show significant improvements in various NLP tasks, including outlier detection, sentiment analysis, and analogy recovery. This demonstrates the effectiveness of our approach in capturing semantic information and performing well on downstream tasks.
+Our tensor-based embeddings exhibit"
+qasper,b53efdbb9e53a65cd3828a3eb485c70f782a06e5,""
+qasper,7ff48fe5b7bd6b56553caacc891ce3d7e0070440,"The authors also acknowledge the support from the IBM Research AI team, and the IBM Research Collaboratory for Language and Speech Processing."
+qasper,38e2f07ba965b676a99be06e8872dade7c04722a,""
+qasper,2d307b43746be9cedf897adac06d524419b0720b,"The authors also thank the reviewers for their valuable feedback and suggestions."
+qasper,0cfaca6f3f33ebdb338c5f991f6a7a33ff33844d,"The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health."
+qasper,6e2899c444baaeb0469599f65722780894f90f29,""
+qasper,85e45b37408bb353c6068ba62c18e516d4f67fe9,"
+
+---
+
+[1] Abney, M., & Chomsky, N. (199). The Generative Lexicon. MIT Press.
+[2] BIBREF0. <http://www.aclweb.org/anthology/B/B1/>
+"
+qasper,5d5a571ff04a5fdd656ca87f6525a60e917d6558,"
+
+In conclusion, our proposed model achieves a higher recall rate and better overall performance compared to the baseline models. This work not only demonstrates the feasibility of automatic TCM prescription generation but also provides a solid foundation for further research in this area."
+qasper,a4ff1b91643e0c8a0d4cc1502d25ca85995cf428,""
+qasper,96992460cfc5f0b8d065ee427067147293746b7a,""
+qasper,04cab3325e20c61f19846674bf9a2c46ea60c449,"Our results suggest that DeCoAR can effectively capture long-term phonetic structure in unlabeled data, which is crucial for ASR performance."
+qasper,649d6dc076251547aece6532f75d00fc99081d2b,""
+qasper,702e2d02c25a2f3f6b1be8ad3d448b502b8ced9c,"
+
+1. Investigate the use of more advanced reward functions, such as those based on the concept of intrinsic motivation or exploration-exploitation trade-offs.
+2. Explore the use of more advanced clustering algorithms, such as hierarchical or graph-based clustering methods"
+qasper,4d30c2223939b31216f2e90ef33fe0db97e962ac,"We also thank the Swiss National Science Foundation for their financial support."
+qasper,827464c79f33e69959de619958ade2df6f65fdee,""
+qasper,aeab5797b541850e692f11e79167928db80de1ea,""
+qasper,858c51842fc3c1f3e6d2d7d853c94f6de27afade,"The authors would like to thank the reviewers for their valuable feedback and suggestions."
+qasper,1083ec9a2a33f7fe2b6b51bbcebd2d9aec4b4de2,""
+qasper,4e4d377b140c149338446ba69737ea191c4328d9,"
+
+In conclusion, this work demonstrates that word embeddings can be used for sentiment analysis of citations. However, the performance of word embeddings is not as good as hand-crafted features. Further research is needed to explore other techniques that can automatically learn representations of concepts from unlabeled text"
+qasper,3c362bfa11c60bad6c7ea83f8753d427cda77de0,"
+
+In conclusion, our proposed model demonstrates a significant improvement in the automatic generation of TCM prescriptions based on textual symptom descriptions. The proposed model not only effectively addresses the repetition problem but also provides a more accurate representation of the herbs in the prescription. This work paves the"
+qasper,3a6559dc6eba7f5abddf3ac27376ba0b9643a908,"
+In the following, we present a comparison with other methods that were not included in the main comparison as they were using different architectures or approaches.
+In Table TABREF38, we present a comparison with the method of BIBREF3, which is based on the Transformer architecture. Our method,"
+qasper,1baf87437b70cc0375b8b7dc2cfc2830279bc8b5,"Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation."
+qasper,770aeff30846cd3d0d5963f527691f3685e8af02,"This portion of questions is not relevant to the task and should not be considered during training.
+
+In this paper, we present a surprisingly simple method for common sense reasoning with Winograd schema multiple choice questions. Key to our method is the use of language models (LMs), trained on a large amount of"
+qasper,bdd8368debcb1bdad14c454aaf96695ac5186b09,""
+qasper,0c1663a7f7750b399f40ef7b4bf19d5c598890ff,""
+qasper,0a3a8d1b0cbac559f7de845d845ebbfefb91135e,"We also thank the students and teachers who participated in the evaluation campaigns."
+qasper,587885bc86543b8f8b134c20e2c62f6251195571,""
+qasper,e75f5bd7cc7107f10412d61e3202a74b082b0934,""
+qasper,f129c97a81d81d32633c94111018880a7ffe16d1,""
+qasper,3a8d65eb8e1dbb995981a0e02d86ebf3feab107a,"Our approach is simple, unsupervised, and empirically more effective."
+qasper,da544015511e535503dee2eaf4912a5e36c806cd,"
+In conclusion, our analysis of the Fisher dataset shows that our topic modeling algorithm can learn topics from human translations, and that it can make topic predictions for new text input. However, the algorithm does not seem to be able to track topic drift over conversations effectively. This could be due to the"
+qasper,8b43201e7e648c670c02e16ba189230820879228,""
+qasper,a93196fb0fb5f8202912971e14552fd7828976db,""
+qasper,28b2a20779a78a34fb228333dc4b93fd572fda15,"
+In future work, we plan to investigate the following aspects:
+
+1. Incorporate uncertainty estimation in the policy network to provide a more robust and reliable solution.
+2. Explore the use of other natural language processing techniques, such as attention mechanisms, to improve the understanding of the input"
+qasper,10f560fe8e1c0c7dea5e308ee4cec16d07874f1d,""
+qasper,d10e256f2f724ad611fd3ff82ce88f7a78bad7f7,""
+qasper,7920f228de6ef4c685f478bac4c7776443f19f39,"Moreover, the schedule information is not always up-to-date, and it might not always be available.
+In conclusion, our work presents a novel approach for detecting musical entities from user-generated content, combining linguistic features with statistical models and extracting contextual information from a radio schedule. We have shown"
+qasper,17f5f4a5d943c91d46552fb75940b67a72144697,""
+qasper,b984612ceac5b4cf5efd841af2afddd244ee497a,"We also thank our colleagues for their valuable discussions and suggestions. This work was supported by the National Science Foundation (NSF) under Grant No. 161881."
+qasper,e9ccc74b1f1b172224cf9f01e66b1fa9e34d2593,"
+Table TABREF34: Claim metadata and veracity labels.
+Table TABREFREF3: Claim metadata and veracity labels (extended).
+Table TABREFREF3: Claim metadata and veracity labels (extended) with number of instances and labels per domain.
+"
+qasper,e8e6986365f899dead0768ecf7b1eca8a2699f2f,""
+qasper,1ccfd288f746c35006f5847297ab52020729f523,"These examples illustrate the types of expressions of stress that our models struggle with, and we encourage future work to address these challenges."
+qasper,d6a27c41c81f12028529e97e255789ec2ba39eaa,"
+
+References
+[BIBREF0] BIBREF0."
+qasper,2df2f6e4efd19023434c84f5b4f29a2f00bfc9fb,"The performance of TDSM is also competitive with other character-based models and even surpasses some of them. The results also show that TDSM can be a good candidate for real-world industry deployment because of its smaller memory footprint and robustness to changes in vocabulary and missp"
+qasper,14e78db206a8180ea637774aa572b073e3ffa219,"The authors would like to thank the Amazon Academic Research Awards program for their support."
+qasper,129c03acb0963ede3915415953317556a55f34ee,"
+
+\begin{table}[ht]
+\centering
+\caption{Comparison of DMN+ to state of the art using bAbI-10k}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+& \textbf{Mean Error"
+qasper,6aee16c4f319a190c2a451c1c099b66162299a28,"Additionally, we plan to explore the use of more advanced techniques, such as attention mechanisms, to better capture the context and generate more emotionally appropriate responses.
+
+---"
+qasper,d94ac550dfdb9e4bbe04392156065c072b9d75e1,"
+
+References
+
+[1] BIBREF0. Word Sense Disambiguation. In: Handbook of Language Technology, Vol. 3, pp. 11-11. Springer, 201.
+
+[2] BIBREF1. Word Sense Disambiguation"
+qasper,b653f55d1dad5cd262a99502f63bf44c58ccc8cf,""
+qasper,46563a1fb2c3e1b39a185e4cbb3ee1c80c8012b7,"We will be looking at the cognitive and neural mechanisms that underlie this compression effect, and how it might be mitigated or exploited in computational models of metaphor processing."
+qasper,ef7b62a705f887326b7ebacbd62567ee1f2129b3,""
+qasper,37753fbffc06ce7de6ada80c89f1bf5f190bbd88,"We will be looking at the cognitive and neural mechanisms that underlie this compression effect, and how it might be mitigated or exploited in computational models of metaphor processing."
+qasper,7835d8f578386834c02e2c9aba78a345059d56ca,""
+qasper,63723c6b398100bba5dc21754451f503cb91c9b8,"
+
+\section*{References}"
+qasper,4fa851d91388f0803e33f6cfae519548598cd37c,"This study aims to investigate the behavior of the LSTM gating signals during the inference phase. The results show that the gating signals exhibit different patterns for different examples, which can provide valuable insights into the model's decision-making process."
+qasper,fe6bb55b28f14ed8ac82c122681905397e31279d,""
+qasper,e21a8581cc858483a31c6133e53dd0cfda76ae4c,""
+qasper,999b20dc14cb3d389d9e3ba5466bc3869d2d6190,"
+
+\bibliographystyle{unsrt}
+\bibliography{survey}"
+qasper,0427ca83d6bf4ec113bc6fec484b2578714ae8ec,"
+Rules Index ::: Scan data
+Scan data is a dataset of movie titles and their corresponding descriptions. The dataset is split into training and test sets. The training set is used to train the model, and the test set is used to evaluate the model's performance on a set of questions.
+"
+qasper,a1557ec0f3deb1e4cd1e68f4880dcecda55656dd,""
+qasper,385dc96604e077611fbd877c7f39d3c17cd63bf2,""
+qasper,a2a3af59f3f18a28eb2ca7055e1613948f395052,"ollowing the methodology described in this work, we have analyzed a large number of discussions on social media. We have found that the controversy in these discussions is often related to political events, such as elections, corruption cases or justice decisions.
+
+In the following, we present a summary"
+qasper,100cf8b72d46da39fedfe77ec939fb44f25de77f,"
+
+References
+
+1. Qin, E., Zhou, T., & Liu, J. (2018). Article commenting: A new task in information retrieval. In Proceedings of the 2018 Conference on Empirical Methods in Natural Language Process"
+qasper,b6a6bdca6dee70f8fe6dd1cfe3bb2c5ff03b1605,""
+qasper,954c4756e293fd5c26dc50dc74f505cc94b3f8cc,"This work has been supported by the French National Research Agency (ANR) under the grant ANR-16-CE23-0012 (project Snips)."
+qasper,54fe8f05595f2d1d4a4fd77f4562eac519711fa6,""
+qasper,dc5ff2adbe1a504122e3800c9ca1d348de391c94,""
+qasper,77af93200138f46bb178c02f710944a01ed86481,"We also appreciate the help from the Amazon Alexa Prize team in providing the necessary resources and guidance for our project."
+qasper,2a058f8f6bd6f8e80e8452e1dba9f8db5e3c7de8,"
+E. Additional Visualization Results on Semantic Hierarchies
+In this part, we provide more visualization results on semantic hierarchies. We use the same method as that in the main text to visualize the embeddings of several entity pairs. The visualization results are in Figure FIGREF"
+qasper,879bec20c0fdfda952444018e9435f91e34d8788,"We also thank the reviewers for their valuable feedback and suggestions. This research was supported by the National Science Foundation (NSF) under Grant No. 174577. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect"
+qasper,2d4d0735c50749aa8087d1502ab7499faa2f0dd8,""
+qasper,6b4de7fef3a543215f16042ce6a29186bf84fea4,""
+qasper,b8dea4a98b4da4ef1b9c98a211210e31d6630cf3,""
+qasper,a88f8cae1f59cdc4f1f645e496d6d2ac4d9fba1b,""
+qasper,515e10a71d78ccd9c7dc93cd942924a4c85d3a30,""
+qasper,0bd992a6a218331aa771d922e3c7bb60b653949a,"
+
+References
+
+1. BIBREF0. The Origin of Species by Means of Natural Selection or the Preservation of Favored Races in the Struggle for Life.
+2. BIBREF1. The Descent of Man, and Selection in Relation to Sex.
+"
+qasper,2ec9c1590c96f17a66c7d4eb95dc5d3a447cb973,"
+14. Training for human annotators: Did the annotators receive interactive training for this specific annotation task / research project? Training involves some kind of interactive feedback. Simply being given formal instructions or guidelines is not training. Prior professional expertise is not training. Options include:
+Some kind of training"
+qasper,bd7a95b961af7caebf0430a7c9f675816c9c527f,"Additionally, it would be valuable to investigate the effectiveness of self-attentional models in more complex tasks, such as multi-step dialogue systems, where the user might need to perform multiple tasks in a single conversation.
+
+\section*{Acknowledgments}
+
+This work was supported by"
+qasper,aa800b424db77e634e82680f804894bfa37f2a34,""
+qasper,1fd969f53bc714d9b5e6604a7780cbd6b12fd616,""
+qasper,4d05a264b2353cff310edb480a917d686353b007,"Future work could involve exploring other hybrid models, such as combining HMMs with other RNN architectures, or investigating other methods for making RNNs more interpretable."
+qasper,dcb18516369c3cf9838e83168357aed6643ae1b8,"
+
+In Tables 5 and 6, we present the performance of the best performing baseline for each category of annotated questions. We see that the best performing baseline for Quasar-S is the BiRNN language model, which achieves $33.6\%$ accuracy. For"
+qasper,c5171daf82107fce0f285fa18f19e91fbd1215c5,""

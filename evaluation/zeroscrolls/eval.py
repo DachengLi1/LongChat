@@ -12,8 +12,10 @@ from rouge_score import rouge_scorer
 
 from evaluation.utils import load_model
 
-# Example usage: python eval_topics.py --model-name-or-path /data/dacheng/longchat_13b_16K/ --flash --ratio 8
-
+def fix_prompt(prompt):
+    paragraphs = prompt.split("\n\n")
+    new_prompt = prompt + "\n\nQuestions:\n" + paragraphs[0] + "\n\nAnswer:\n"
+    return new_prompt
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -57,7 +59,7 @@ if __name__ == "__main__":
     # load dataset
     data = load_dataset(args.dataset_version, args.dataset)
     if args.dataset_version=="tau/scrolls":
-        test_cases = data["train"]
+        test_cases = data["validation"]
         test_cases = test_cases.shuffle(seed=1123).select(range(200))
     else:
         test_cases = data["validation"]
@@ -70,16 +72,21 @@ if __name__ == "__main__":
     predicts = ["Task,ID,Prediction"]
     for x in tqdm(test_cases):
         prompt = x["input"]
+        if args.dataset_version == "tau/scrolls":
+            prompt = fix_prompt(prompt)
         input_ids = tokenizer(prompt).input_ids
         new_len = min(SEQ_LEN, len(input_ids))
         input_ids = torch.tensor([input_ids[-new_len:]]).to(model.device)
 
         output_ids = model.generate(input_ids, max_new_tokens=64, use_cache=False)[0][new_len:]
+        # output_ids = model.generate(input_ids, max_new_tokens=64, use_cache=False)[0]
         outputs = tokenizer.batch_decode([output_ids], skip_special_tokens=True)
         predicts.append(f'{args.dataset},{x["id"]},"{outputs[0]}"')
 
         # print("---------------------")
         # print(x["output"])
+        # print("---------------------")
+        # print(prompt)
         # print("---------------------")
         # print(outputs[0])
         # print("=====================")

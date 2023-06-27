@@ -1,3 +1,4 @@
+#scrolls (200 validation samples)
 python eval.py --dataset-version "tau/scrolls" --model-name-or-path "/home/haozhang/LongChat/data/dacheng-data/longchat_32K_interpolate" --flash --dataset qasper
 python eval.py --dataset-version "tau/scrolls" --model-name-or-path "/home/haozhang/LongChat/data/dacheng-data/longchat_7b_16K" --flash --dataset qasper
 python eval.py --dataset-version "tau/scrolls" --model-name-or-path "/home/haozhang/LongChat/data/dacheng-data/longchat_13b_16K" --flash --dataset qasper
