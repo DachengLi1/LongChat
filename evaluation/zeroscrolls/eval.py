@@ -91,7 +91,7 @@ if __name__ == "__main__":
         # print(outputs[0])
         # print("=====================")
         max_score = 0
-        for l in [5, 10, 20, 30, 40, 50, 60]:
+        for l in [512]:
             outputs = tokenizer.batch_decode([output_ids[:l]], skip_special_tokens=True)
             score = scorer.score(outputs[0], x["output"])
             max_score = max(max_score, score["rouge1"].fmeasure)
