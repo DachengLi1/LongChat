@@ -25,6 +25,7 @@ if __name__ == "__main__":
     parser.add_argument("--ratio", type=int, default=8,
             help="target sequence length / original sequence length")
     parser.add_argument("--flash", action='store_true', help="whether to use flash attention to save memory, but slower")
+    parser.add_argument("--dataset-version", type=str, default="tau/zero_scrolls")
     parser.add_argument("--dataset", type=str, default="qasper")
     parser.add_argument("--seq-len", type=int, default=15000)
     args = parser.parse_args()
@@ -54,8 +55,12 @@ if __name__ == "__main__":
     print(f"output file: {output_file}")
 
     # load dataset
-    data = load_dataset("tau/zero_scrolls", args.dataset)
-    test_cases = data["validation"]
+    data = load_dataset(args.dataset_version, args.dataset)
+    if args.dataset_version=="tau/scrolls":
+        test_cases = data["train"]
+        test_cases = test_cases.shuffle(seed=1123).select(range(200))
+    else:
+        test_cases = data["validation"]
 
     # inference
     print(f"start inference ...")
@@ -91,5 +96,5 @@ if __name__ == "__main__":
 
     with open(output_file, "w") as f:
         for line in predicts:
-            f.write(line)
+            f.write(line + "\n")
 

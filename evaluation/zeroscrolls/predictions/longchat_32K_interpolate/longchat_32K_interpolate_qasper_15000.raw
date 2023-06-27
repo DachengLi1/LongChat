@@ -1,1 +1,38 @@
-Task,ID,Predictionqasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,""qasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,""qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,""qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,""qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,""qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,""qasper,518dae6f936882152c162058895db4eca815e649,""qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,""qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,""qasper,290ee79b5e3872e0496a6a0fc9b103ab7d8f6c30,""qasper,ab9b0bde6113ffef8eb1c39919d21e5913a05081,""qasper,ff338921e34c15baf1eae0074938bf79ee65fdd2,""qasper,1b1a30e9e68a9ae76af467e60cefb180d135e285,""qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,""qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,""qasper,3355918bbdccac644afe441f085d0ffbbad565d7,""qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,""qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,""qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,""qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,""qasper,76ed74788e3eb3321e646c48ae8bf6cdfe46dca1,""qasper,8e52637026bee9061f9558178eaec08279bf7ac6,""qasper,8e52637026bee9061f9558178eaec08279bf7ac6,""qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,""qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,""qasper,4e748cb2b5e74d905d9b24b53be6cfdf326e8054,""qasper,b970f48d30775d3468952795bc72976baab3438e,""qasper,c70bafc35e27be9d1efae60596bc0dd390c124c0,""
+Task,ID,Predictionqasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,"The baselines used in the experiments are:
+
+1. Unif: A rule-based encoder that keeps all tokens with a probability of $\delta$.
+2. Stopword: A rule-based encoder that keeps all tokens except stop words with a probability of $\delta$.
+3. Rule-"qasper,3fad42be0fb2052bb404b989cc7d58b440cd23a0,"The baselines used in the experiments are:
+
+1. Unif: A rule-based encoder that keeps all tokens with a probability of $\delta$.
+2. Stopword: A rule-based encoder that keeps all tokens except stop words with a probability of $\delta$.
+3. Rule-"qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,"Yes, the authors analyze transformer-based architectures as well. They compare the performance of different transformer-based models, such as BERT, RoBERTa, and ALBERT, with the other models they have analyzed. They find that transformer-based models generally perform better than the other"qasper,8bf7f1f93d0a2816234d36395ab40c481be9a0e0,"Yes, the authors analyze transformer-based architectures as well. They compare the performance of different transformer-based models, such as BERT, RoBERTa, and ALBERT, with the other models they have analyzed. They find that transformer-based models generally perform better than the other"qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,"The 8,640 English sentences were selected based on the following criteria:
+
+1. The sentences must involve at least one race- or gender-associated word.
+2. The sentences were intended to be short and grammatically simple.
+3. Some sentences were included to express emotions,"qasper,0f12dc077fe8e5b95ca9163cea1dd17195c96929,"The 8,640 English sentences were selected based on the following criteria:
+
+1. The sentences must involve at least one race- or gender-associated word.
+2. The sentences were intended to be short and grammatically simple.
+3. Some sentences were included to express emotions,"qasper,518dae6f936882152c162058895db4eca815e649,"The UTCNN model has 3 layers."qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,"Yes"qasper,58ef2442450c392bfc55c4dc35f216542f5f2dbb,"Yes"qasper,290ee79b5e3872e0496a6a0fc9b103ab7d8f6c30,"Level A: Offensive language Detection
+Level B: Categorization of Offensive Language
+Level C: Offensive Language Target Identification"qasper,ab9b0bde6113ffef8eb1c39919d21e5913a05081,"Their results on both datasets are as follows:
+
+1. FCE test data: 45.1% INLINEFORM0, 54.9% INLINEFORM1, 55.1% INLINEFORM2
+2. CoNLL 2014 Shared Task"qasper,ff338921e34c15baf1eae0074938bf79ee65fdd2,"The baseline model was a simple shallow neural network with a softmax layer for predicting answer span. The model was not good at generalizations."qasper,1b1a30e9e68a9ae76af467e60cefb180d135e285,"The created dataset consists of 353 conversations from 40 speakers (11 nurses, 16 patients, and 13 caregivers) with a total of 41 hours of conversation data."qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,"The baseline classification system uses a combination of character and word level features."qasper,dea9e7fe8e47da5e7f31d9b1a46ebe34e731a596,"The baseline classification system uses a combination of character and word level features."qasper,3355918bbdccac644afe441f085d0ffbbad565d7,"The supervised scores of the words are calculated using the training data. For each word, three supervised scores are extracted: minimum, mean, and maximum polarity scores. These scores are computed as the average of the polarity scores of the words in the same context as the target word. The polarity scores are"qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,"The paper introduces several data simulation techniques, including:
+
+1. Backward translation (BT): The paper uses BT to generate synthetic parallel data.
+2. Forward translation (FT): The paper uses FT to generate synthetic parallel data.
+3. Generative Adversarial Network"qasper,d9980676a83295dda37c20cfd5d58e574d0a4859,"The paper introduces several data simulation techniques, including:
+
+1. Backward translation (BT): The paper uses BT to generate synthetic parallel data.
+2. Forward translation (FT): The paper uses FT to generate synthetic parallel data.
+3. Generative Adversarial Network"qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,"The qualitative metrics used for evaluation are:
+
+1. BLEU Score: Measures the correspondence between a machine output and that of a human by computing the number of co-occurrences for ngrams ($n \in {1, 2, 3, 4}$)"qasper,79a44a68bb57b375d8a57a0a7f522d33476d9f33,"The qualitative metrics used for evaluation are:
+
+1. BLEU Score: Measures the correspondence between a machine output and that of a human by computing the number of co-occurrences for ngrams ($n \in {1, 2, 3, 4}$)"qasper,76ed74788e3eb3321e646c48ae8bf6cdfe46dca1,"The paper discusses various linguistics features used in the proposed DNN model for MSA and CA diacritization. Some of the features used include:
+
+1. CHAR: characters in the word.
+2. SEG: position of the character in a word segment.
+3. PRIOR:"qasper,8e52637026bee9061f9558178eaec08279bf7ac6,"The training data was translated using the machine translation platform Apertium."qasper,8e52637026bee9061f9558178eaec08279bf7ac6,"The training data was translated using the machine translation platform Apertium."qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,"The proposed model is compared to several baseline models, including traditional models like TF-IDF and neural models like LSTM, ELMo, and topic-attention."qasper,3116453e35352a3a90ee5b12246dc7f2e60cfc59,"The proposed model is compared to several baseline models, including traditional models like TF-IDF and neural models like LSTM, ELMo, and topic-attention."qasper,4e748cb2b5e74d905d9b24b53be6cfdf326e8054,"The traditional linguistics features they used include unigrams, pragmatic features, stylistic patterns, and situational disparity."qasper,b970f48d30775d3468952795bc72976baab3438e,"The article does not explicitly mention any issues that are not on the forefront of computational text analysis. However, it does discuss some challenges and complications that researchers may encounter while working with textual data, such as data acquisition, data non-representativeness, and data biases. It also"qasper,c70bafc35e27be9d1efae60596bc0dd390c124c0,"Yes, the answers are double (and not triple) annotated."
