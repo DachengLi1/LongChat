@@ -18,8 +18,9 @@ from evaluation.utils import load_model
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-name-or-path", type=str,
-            # default="/home/ubuntu/LongChat/data/dacheng-data/longchat_13b_16K",
-            default="/home/ubuntu/LongChat/data/dacheng-data/longchat_32K_interpolate",
+            # default="/home/haozhang/LongChat/data/dacheng-data/longchat_32K_interpolate",
+            default="/home/haozhang/LongChat/data/dacheng-data/longchat_7b_16K",
+            # default="/home/haozhang/LongChat/data/dacheng-data/longchat_13b_16K",
             help="model path")
     parser.add_argument("--ratio", type=int, default=8,
             help="target sequence length / original sequence length")
@@ -50,27 +51,28 @@ if __name__ == "__main__":
     print(f"output file: {output_file}")
 
     # load dataset
-    if args.dataset == "zeros_scrolls":
-        data = load_dataset("tau/zero_scrolls", args.dataset)
-        test_cases = data["validation"]
-    else:
-        raise Exception("unrecognized dataset")
+    data = load_dataset("tau/zero_scrolls", args.dataset)
+    test_cases = data["validation"]
 
     # inference
     print(f"start inference ...")
     tic = time.time()
     scorer = rouge_scorer.RougeScorer(['rouge1'], use_stemmer=True)
-    SEQ_LEN = 4000
+    SEQ_LEN = 15000
     f1 = 0
+    predicts = []
     for x in tqdm(test_cases):
         prompt = x["input"]
         input_ids = tokenizer(prompt).input_ids
         print(len(input_ids))
         input_ids = torch.tensor([input_ids[-SEQ_LEN:]]).to(model.device)
-        outputs = model.generate(input_ids, max_new_tokens=32, use_cache=True)[0][SEQ_LEN:]
+        print(input_ids.shape)
+        outputs = model.generate(input_ids, max_new_tokens=32, use_cache=False)[0][SEQ_LEN:]
         outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
+        predicts.append(outputs[0])
         score = scorer.score(outputs[0], x["output"])
         f1 += score["rouge1"].fmeasure
     f1 /= len(test_cases)
     print(f"avg f1 over {len(test_cases)} test cases: {f1}")
     print(f"total inference time: {time.time() - tic}")
+
