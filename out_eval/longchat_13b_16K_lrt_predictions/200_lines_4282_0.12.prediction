@@ -1,0 +1,176 @@
+[0]Label: 2956, Prediction: 11320, Correct_line: line 91: REGISTER_CONTENT is <2956>, Model output: er.
+
+The REGISTER\_CONTENT in line 91 is <11320>.</s>
+[0]Label: 6175, Prediction: 7140, Correct_line: line 191: REGISTER_CONTENT is <6175>, Model output: er.
+
+The REGISTER\_CONTENT in line 191 is <7140>.</s>
+[0]Label: 25234, Prediction: 32, Correct_line: line 63: REGISTER_CONTENT is <25234>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content is a 32-bit integer. The register content is a general-purpose register that can be used to store any data type, including integers, floating-point numbers, and pointers. The register content is typically used to store intermediate results or data that is being processed by the CPU.</s>
+[0]Label: 20017, Prediction: 42349, Correct_line: line 32: REGISTER_CONTENT is <20017>, Model output: er.
+
+The REGISTER\_CONTENT in line 32 is <42349>.</s>
+[0]Label: 2956, Prediction: 11320, Correct_line: line 91: REGISTER_CONTENT is <2956>, Model output: er.
+
+The REGISTER\_CONTENT in line 91 is <11320>.</s>
+[0]Label: 6175, Prediction: 7140, Correct_line: line 191: REGISTER_CONTENT is <6175>, Model output: er.
+
+The REGISTER\_CONTENT in line 191 is <7140>.</s>
+[0]Label: 25234, Prediction: 32, Correct_line: line 63: REGISTER_CONTENT is <25234>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content is a 32-bit integer. The register content is a general-purpose register that can be used to store any data type, including integers, floating-point numbers, and pointers. The register content is typically used to store intermediate results or data that is being processed by the CPU.</s>
+[0]Label: 20017, Prediction: 42349, Correct_line: line 32: REGISTER_CONTENT is <20017>, Model output: er.
+
+The REGISTER\_CONTENT in line 32 is <42349>.</s>
+[0]Label: 2956, Prediction: 11320, Correct_line: line 91: REGISTER_CONTENT is <2956>, Model output: er.
+
+The REGISTER\_CONTENT in line 91 is <11320>.</s>
+[0]Label: 6175, Prediction: 7140, Correct_line: line 191: REGISTER_CONTENT is <6175>, Model output: er.
+
+The REGISTER\_CONTENT in line 191 is <7140>.</s>
+[0]Label: 25234, Prediction: 32, Correct_line: line 63: REGISTER_CONTENT is <25234>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content is a 32-bit integer. The register content is a general-purpose register that can be used to store any data type, including integers, floating-point numbers, and pointers. The register content is typically used to store intermediate results or data that is being processed by the CPU.</s>
+[0]Label: 20017, Prediction: 42349, Correct_line: line 32: REGISTER_CONTENT is <20017>, Model output: er.
+
+The REGISTER\_CONTENT in line 32 is <42349>.</s>
+[0]Label: 43305, Prediction: -1, Correct_line: line 65: REGISTER_CONTENT is <43305>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of registers that are currently available for use in the current context. The number of registers available can vary depending on the context and the number of registers that have been allocated to other variables or functions.</s>
+[0]Label: 38376, Prediction: 40769, Correct_line: line 141: REGISTER_CONTENT is <38376>, Model output: er.
+
+The REGISTER\_CONTENT in line 141 is <40769>.</s>
+[0]Label: 45678, Prediction: 4938, Correct_line: line 148: REGISTER_CONTENT is <45678>, Model output: er.
+
+The REGISTER\_CONTENT in line 148 is <4938>.</s>
+[0]Label: 9745, Prediction: -1, Correct_line: line 67: REGISTER_CONTENT is <9745>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of registers that are currently available for use in the current context. The number of registers available can vary depending on the context and the number of registers that have been allocated to other variables or functions.</s>
+[0]Label: 32909, Prediction: -1, Correct_line: line 80: REGISTER_CONTENT is <32909>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of registers that are currently available for use in the current context. The number of registers available can vary depending on the context and the number of registers that have been allocated to other variables or functions.</s>
+[0]Label: 17466, Prediction: -1, Correct_line: line 184: REGISTER_CONTENT is <17466>, Model output: er.
+
+It seems like you've pasted a large block of text that appears to be a list of numbers. Is there a specific number you're looking for, or are you just curious about the general content of the list?</s>
+[0]Label: 40278, Prediction: 33586, Correct_line: line 182: REGISTER_CONTENT is <40278>, Model output: er.
+
+The REGISTER\_CONTENT in line 182 is <33586>.</s>
+[0]Label: 15658, Prediction: 10277, Correct_line: line 125: REGISTER_CONTENT is <15658>, Model output: er.
+
+The REGISTER\_CONTENT in line 125 is <10277>.</s>
+[0]Label: 12363, Prediction: 104, Correct_line: line 110: REGISTER_CONTENT is <12363>, Model output: er.
+
+The REGISTER\_CONTENT in line 110 is <104>.</s>
+[0]Label: 24391, Prediction: 42011, Correct_line: line 92: REGISTER_CONTENT is <24391>, Model output: er.
+
+The REGISTER\_CONTENT in line 92 is <42011>.</s>
+[1]Label: 40463, Prediction: 40463, Correct_line: line 4: REGISTER_CONTENT is <40463>, Model output: er.
+
+The REGISTER\_CONTENT in line 4 is <40463>.</s>
+[0]Label: 42277, Prediction: 30944, Correct_line: line 118: REGISTER_CONTENT is <42277>, Model output: er.
+
+The REGISTER\_CONTENT in line 118 is <30944>.</s>
+[1]Label: 9223, Prediction: 9223, Correct_line: line 154: REGISTER_CONTENT is <9223>, Model output: er.
+
+The REGISTER\_CONTENT in line 154 is <9223>.</s>
+[0]Label: 32694, Prediction: 48738, Correct_line: line 158: REGISTER_CONTENT is <32694>, Model output: er.
+
+The REGISTER\_CONTENT in line 158 is <48738>.</s>
+[0]Label: 47727, Prediction: 36585, Correct_line: line 39: REGISTER_CONTENT is <47727>, Model output: er.
+
+The REGISTER\_CONTENT in line 39 is <36585>.</s>
+[0]Label: 582, Prediction: 48582, Correct_line: line 48: REGISTER_CONTENT is <582>, Model output: er.
+
+The REGISTER\_CONTENT in line 48 is <48582>.</s>
+[0]Label: 12277, Prediction: 10362, Correct_line: line 71: REGISTER_CONTENT is <12277>, Model output: er.
+
+The REGISTER\_CONTENT in line 71 is <10362>.</s>
+[0]Label: 19105, Prediction: 48760, Correct_line: line 84: REGISTER_CONTENT is <19105>, Model output: er.
+
+The REGISTER\_CONTENT in line 84 is <48760>.</s>
+[0]Label: 8620, Prediction: 32, Correct_line: line 59: REGISTER_CONTENT is <8620>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content is a 32-bit integer. The register content is a general-purpose register that can be used to store any data type, including integers, floating-point numbers, and pointers. The register content is typically used to store intermediate results or data that is being processed by the CPU.</s>
+[0]Label: 6121, Prediction: 38078, Correct_line: line 178: REGISTER_CONTENT is <6121>, Model output: er.
+
+It seems like the REGISTER\_CONTENT in line 178 is <38078>.</s>
+[0]Label: 44841, Prediction: 4304, Correct_line: line 144: REGISTER_CONTENT is <44841>, Model output: er.
+
+The REGISTER\_CONTENT in line 144 is <4304>.</s>
+[0]Label: 1857, Prediction: 19747, Correct_line: line 19: REGISTER_CONTENT is <1857>, Model output: er.
+
+The REGISTER\_CONTENT in line 19 is <19747>.</s>
+[0]Label: 6225, Prediction: 2016, Correct_line: line 80: REGISTER_CONTENT is <6225>, Model output: er.
+
+The REGISTER\_CONTENT in line 80 is <2016>.</s>
+[0]Label: 26130, Prediction: 47072, Correct_line: line 42: REGISTER_CONTENT is <26130>, Model output: er.
+
+The REGISTER\_CONTENT in line 42 is <47072>.</s>
+[0]Label: 44026, Prediction: 18224, Correct_line: line 191: REGISTER_CONTENT is <44026>, Model output: er.
+
+The REGISTER\_CONTENT in line 191 is <18224>.</s>
+[0]Label: 31274, Prediction: 36135, Correct_line: line 97: REGISTER_CONTENT is <31274>, Model output: er.
+
+The REGISTER\_CONTENT in line 97 is <36135>.</s>
+[0]Label: 32503, Prediction: -1, Correct_line: line 168: REGISTER_CONTENT is <32503>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of registers that are currently available for use in the current context. The number of registers available can vary depending on the context and the number of registers that have been allocated to other variables or functions.</s>
+[0]Label: 25653, Prediction: -1, Correct_line: line 178: REGISTER_CONTENT is <25653>, Model output: er.
+
+It seems like you've pasted a large block of text that appears to be a list of numbers. Is there a specific question or problem you're trying to solve? Please provide more context or information so I can better assist you.</s>
+[0]Label: 27443, Prediction: -1, Correct_line: line 65: REGISTER_CONTENT is <27443>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of records in the current context.</s>
+[0]Label: 38759, Prediction: 47865, Correct_line: line 164: REGISTER_CONTENT is <38759>, Model output: er.
+
+The REGISTER\_CONTENT in line 164 is <47865>.</s>
+[0]Label: 15039, Prediction: 30307, Correct_line: line 157: REGISTER_CONTENT is <15039>, Model output: er.
+
+The REGISTER\_CONTENT in line 157 is <30307>.</s>
+[1]Label: 25399, Prediction: 25399, Correct_line: line 60: REGISTER_CONTENT is <25399>, Model output: er.
+
+The REGISTER\_CONTENT in line 60 is <25399>.</s>
+[0]Label: 15478, Prediction: 1, Correct_line: line 179: REGISTER_CONTENT is <15478>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of times a specific word or phrase appears in a given text. In this case, the text is a list of numbers from 1 to 200,000, and the variable is initialized to 0. The code then iterates over the list, and for each number, it checks if the number is a prime number. If it is, the variable is incremented by 1. After the loop, the variable contains the number of prime numbers in the list.</s>
+[1]Label: 14553, Prediction: 14553, Correct_line: line 130: REGISTER_CONTENT is <14553>, Model output: er.
+
+The REGISTER\_CONTENT in line 130 is <14553>.</s>
+[0]Label: 22120, Prediction: 32, Correct_line: line 55: REGISTER_CONTENT is <22120>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content is a 32-bit integer. The register content is a general-purpose register that can be used to store any data type, including integers, floating-point numbers, and pointers. The register content is typically used to store intermediate results or data that is being processed by the CPU.</s>
+[0]Label: 6823, Prediction: -1, Correct_line: line 199: REGISTER_CONTENT is <6823>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content can be any integer.</s>
+[0]Label: 46734, Prediction: -1, Correct_line: line 69: REGISTER_CONTENT is <46734>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the value of the register content. The value of the register content can be any integer.</s>
+[0]Label: 30915, Prediction: 30602, Correct_line: line 158: REGISTER_CONTENT is <30915>, Model output: er.
+
+The REGISTER\_CONTENT in line 158 is <30602>.</s>
+[1]Label: 49295, Prediction: 49295, Correct_line: line 86: REGISTER_CONTENT is <49295>, Model output: er.
+
+The REGISTER\_CONTENT in line 86 is <49295>.</s>
+[0]Label: 14581, Prediction: -1, Correct_line: line 100: REGISTER_CONTENT is <14581>, Model output: er.
+
+Comment: REGISTER\_CONTENT is a variable that contains the number of the current register. It is used to keep track of the current register in a loop.</s>
+[0]Label: 19088, Prediction: 30418, Correct_line: line 30: REGISTER_CONTENT is <19088>, Model output: er.
+
+The REGISTER\_CONTENT in line 30 is <30418>.</s>
+[0]Label: 26518, Prediction: 27815, Correct_line: line 74: REGISTER_CONTENT is <26518>, Model output: er.
+
+The REGISTER\_CONTENT in line 74 is <27815>.</s>
+[0]Label: 33926, Prediction: 27514, Correct_line: line 87: REGISTER_CONTENT is <33926>, Model output: er.
+
+The REGISTER\_CONTENT in line 87 is <27514>.</s>
+[0]Label: 1465, Prediction: 14395, Correct_line: line 118: REGISTER_CONTENT is <1465>, Model output: er.
+
+The REGISTER\_CONTENT in line 118 is <14395>.</s>
+[1]Label: 10698, Prediction: 10698, Correct_line: line 136: REGISTER_CONTENT is <10698>, Model output: er.
+
+The REGISTER\_CONTENT in line 136 is <10698>.</s>
+[0]Label: 4307, Prediction: 36877, Correct_line: line 174: REGISTER_CONTENT is <4307>, Model output: er.
+
+The REGISTER\_CONTENT in line 174 is <36877>.</s>
+
+accuracy: 0.12

@@ -31,48 +31,48 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     f = open(CFG_PATH, "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
 
-    if cfgs["model_name"] == "None":
-        cfgs["model_name"] = Path(args.model).stem
-    cfgs["model_path"] = args.model
+    if cfgs["model_name_or_path"] == "None":
+        cfgs["model_name_or_path"] = Path(args.model).stem
+    cfgs["model_name_or_path_path"] = args.model
     cfgs["level"] = args.level
     print(yaml.dump(cfgs))
 
     return cfgs
 
 
-def load_tokenizer(model_name, model_path, local_model):
-    if "gpt" in model_name:
-        return None
-    elif local_model is False:
-        tokenizer = transformers.AutoTokenizer.from_pretrained(model_name,
-                                                               use_fast=False)
-        tokenizer.pad_token = tokenizer.unk_token
-    elif local_model:
-        print("Loading local tokenizer")
-        tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, 
-                                                               use_fast=False)
-        tokenizer.pad_token = tokenizer.unk_token
-    else:
-        raise RuntimeError("Unable to load tokenizer")
+#def load_tokenizer(model_name, model_path, local_model):
+#    if "gpt" in model_name:
+#        return None
+#    elif local_model is False:
+#        tokenizer = transformers.AutoTokenizer.from_pretrained(model_name,
+#                                                               use_fast=False)
+#        tokenizer.pad_token = tokenizer.unk_token
+#    elif local_model:
+#        print("Loading local tokenizer")
+#        tokenizer = transformers.AutoTokenizer.from_pretrained(model_path, 
+#                                                               use_fast=False)
+#        tokenizer.pad_token = tokenizer.unk_token
+#    else:
+#        raise RuntimeError("Unable to load tokenizer")
 
-    return tokenizer
+#    return tokenizer
 
-def load_model(model_name, model_path, local_model, gpu_id=1):
-    print("Loading model")
+#def load_model(model_name, model_path, local_model, gpu_id=1):
+#    print("Loading model")
 
-    if "gpt" in model_name:
-        return None
-    elif local_model is False:
-        kwargs = {"torch_dtype": torch.bfloat16}
-        num_gpus = 1
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).cuda(gpu_id)
-    elif local_model:
-        print("Loading local model")
-        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16).cuda(gpu_id)
-    else:
-        raise RuntimeError("Unable to load tokenizer")
+#    if "gpt" in model_name:
+#        return None
+#    elif local_model is False:
+#        kwargs = {"torch_dtype": torch.bfloat16}
+#        num_gpus = 1
+#        model = transformers.AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.bfloat16).cuda(gpu_id)
+#    elif local_model:
+#        print("Loading local model")
+#        model = transformers.AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16).cuda(gpu_id)
+#    else:
+#        raise RuntimeError("Unable to load tokenizer")
     
-    return model
+#    return model
 
 def token_counter(tokenizer, model_name, model_path, prompt):
     if "gpt" in model_name:
@@ -85,20 +85,20 @@ def token_counter(tokenizer, model_name, model_path, prompt):
 
     return token_size
 
-def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id, use_patch):
-    print("Querying model")
+#def query_model(model_name, model, prompt, prompt_length, tokenizer, use_patch):
+#    print("Querying model")
 
-    if "gpt" in model_name:
-        token_size, response = retrieve_from_openai(prompt, model_name, num_retries=10)
-        return token_size, response
-    else:
-        input = tokenizer(prompt, return_tensors="pt")
-        token_size = input.input_ids.shape[-1]
-        response = model.generate(input.input_ids.cuda(gpu_id), max_new_tokens=1024, use_cache=not use_patch)[0]
-        response = response[prompt_length:]
-        response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response))
+#    if "gpt" in model_name:
+#        token_size, response = retrieve_from_openai(prompt, model_name, num_retries=10)
+#        return token_size, response
+#    else:
+#        input = tokenizer(prompt, return_tensors="pt")
+#        token_size = input.input_ids.shape[-1]
+#        response = model.generate(input.input_ids.cuda(), max_new_tokens=1024, use_cache=not use_patch)[0]
+#        response = response[prompt_length:]
+#        response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response))
         
-    return token_size, response
+#    return token_size, response
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
     openai.api_key = os.environ["OPENAI_API_KEY"]

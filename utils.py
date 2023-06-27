@@ -87,9 +87,9 @@ def test_with_template(test_case, conv, model, tokenizer, use_cache, return_summ
     outputs = tokenizer.batch_decode([outputs], skip_special_tokens=True)
     if return_summary:
         summary = f"Label: {topics[0]}, Predict: {outputs}, --- INFO --- Topics: {topics}, Length: {prompt_length}"
-        return outputs, summary
+        return outputs, prompt_length, summary
     else:
-        return outputs
+        return outputs, prompt_length
 
 def attention_span(model, tokenizer, test_case, num_gen_steps=1, raw_attn=False):
     assert num_gen_steps == 1, "Only support span for a single generation step now."

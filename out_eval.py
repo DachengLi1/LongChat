@@ -7,24 +7,27 @@ import numpy as np
 from pathlib import Path
 from out_eval.out_eval_util import *
 
+from fastchat.model import load_model, get_conversation_template
 
 SCRIPT_PATH = Path(__file__).resolve()
-
 REPO_DIR = SCRIPT_PATH.parent
 WORKING_DIR = REPO_DIR / Path("out_eval")
 
 
-def run_lrt_exp(cfgs, tokenizer):
-    TEST_DIR = WORKING_DIR / Path(f"{cfgs['model_name']}_lrt_testcases") \
+def run_lrt_exp(cfgs, model, tokenizer):
+    TEST_DIR = WORKING_DIR / Path(f"{cfgs['model_name_or_path']}_lrt_testcases") \
         if not cfgs["use_fixed_testcases"] else REPO_DIR / Path(cfgs["lrt_testcases_dir"]) / Path(f"{cfgs['line_idx_opt']}")
 
     test_files = list(TEST_DIR.iterdir())
 
-    output_dir = WORKING_DIR / Path(f"{cfgs['model_name']}_lrt_predictions")
+    model_name_or_path = cfgs["model_name_or_path"]
+    if model_name_or_path[-1] == "/":
+        model_name_or_path = model_name_or_path[:-1]
+    model_name_or_path  = os.path.split(model_name_or_path)[-1]
+    output_dir = WORKING_DIR / Path(f"{model_name_or_path}_lrt_predictions_with_template")
+    print(output_dir)
     if not output_dir.exists():
         output_dir.mkdir()
-    # load model
-    model = load_model(cfgs["model_name"], cfgs["model_path"], cfgs["local_model"], cfgs["gpu_id"])
 
     for n in cfgs["num_lines"]:
         print(f"**********Start testing {n} lines per LRT prompt**********")
@@ -40,6 +43,7 @@ def run_lrt_exp(cfgs, tokenizer):
         
         output_file = output_dir / Path(f"{test_file.stem}_lrt.prediction")
         num_correct = 0
+        avg_token = 0
         for id, test_case in enumerate(pt_list):
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
@@ -49,9 +53,23 @@ def run_lrt_exp(cfgs, tokenizer):
             token_size = test_case["token_size"]
             expected_number = test_case["expected_number"]
 
-            _, response = query_model(cfgs["model_name"], model, prompt, token_size, 
-                                      tokenizer, cfgs["gpu_id"], cfgs["use_flash"] or cfgs["use_xformers"])
+            if "longchat" in model_name_or_path:
+                conv = get_conversation_template("vicuna")
+            else:
+                conv = get_conversation_template(model_name_or_path)
+            print(f"Using conversation template: {conv.name}")
+
+            conv.append_message(conv.roles[0], prompt)
+            conv.append_message(conv.roles[1], None)
+            prompt = conv.get_prompt()
             
+            input = tokenizer(prompt, return_tensors="pt")
+            token_size = input.input_ids.shape[-1]
+            response = model.generate(input.input_ids.to(model.device), max_new_tokens=100, use_cache=not (cfgs["use_flash"] or cfgs["use_xformers"]))[0]
+            response = response[token_size:]
+            response = tokenizer.batch_decode([response], skip_special_tokens=True)[0]
+            
+            print(response)
             response_number = re.findall("\d+", response)
             if response_number is not None and len(response_number) > 0:
                 response_number = int(response_number[-1])
@@ -65,15 +83,17 @@ def run_lrt_exp(cfgs, tokenizer):
             else:
                 summary = "[0]"
             
-            summary += f" Id: {id}, Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}"
+            summary += f" Id: {id}, Label: {expected_number}, Prediction: {response_number}, Correct_line: {correct_line[:-1]}, Model output: {response}, token_size: {token_size}"
+            avg_token += token_size / len(pt_list)
             print(summary)
             with open(output_file, "a+") as f:
                 f.write(summary)
                 f.write("\n")
-
+        
         acc = num_correct / len(pt_list)
         with open(output_file, "a+") as f:
             f.write(f"\naccuracy: {acc}\n")
+            f.write(f"\navg_token: {avg_token}\n")
             # f.write(f"\ntoken size: {token_size}\n")
             yaml.dump(cfgs, f)
             f.close()
@@ -81,7 +101,7 @@ def run_lrt_exp(cfgs, tokenizer):
         print(f"acc: {acc}")
 
 
-def run_conv_eval_exp(cfgs, tokenizer):
+def run_conv_eval_exp(cfgs, model, tokenizer):
     TEST_DIR = WORKING_DIR / Path(f"{cfgs['model_name']}_testcases") \
         if not cfgs["use_fixed_testcases"] else REPO_DIR / Path(cfgs["testcases_dir"])
 
@@ -271,17 +291,25 @@ def main():
         from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
         replace_llama_with_interpolate(cfgs["ratio"])
 
-    tokenizer = load_tokenizer(cfgs["model_name"], cfgs["model_path"], cfgs["local_model"])
-    
+    model, tokenizer = load_model(
+        cfgs["model_name_or_path"],
+        device="cuda",
+        num_gpus=cfgs["num_gpus"],
+        load_8bit=False,
+        cpu_offloading=False,
+        debug=False,
+    )
+
     if cfgs["level"] == "easy":
         if cfgs["generate_conversations"]:
             generate_conversations(cfgs, tokenizer)
-        run_conv_eval_exp(cfgs, tokenizer)
+        run_conv_eval_exp(cfgs,model, tokenizer)
     else:
         if cfgs["generate_lrt_prompt"] and not cfgs["use_fixed_testcases"]:
+            print("Regenerating testcases, if you would like to use a fixed testcases, set use_fixed_testcases in the yaml file to be true.")
             generate_lrt(cfgs, tokenizer)
         
-        run_lrt_exp(cfgs, tokenizer)
+        run_lrt_exp(cfgs, model, tokenizer)
 
 if __name__ == "__main__":
     main()

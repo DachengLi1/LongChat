@@ -1,0 +1,78 @@
+[1] Id: 0, Label: 24140, Prediction: 24140, Correct_line: line smoggy-paperwork: REGISTER_CONTENT is <24140>, Model output: The <REGISTER\_CONTENT> in line smoggy-paperwork is 24140., token_size: 14085
+[1] Id: 1, Label: 47085, Prediction: 47085, Correct_line: line fresh-buffalo: REGISTER_CONTENT is <47085>, Model output: The <REGISTER\_CONTENT> in line fresh-buffalo is 47085., token_size: 14089
+[1] Id: 2, Label: 45190, Prediction: 45190, Correct_line: line omniscient-cable: REGISTER_CONTENT is <45190>, Model output: The <REGISTER\_CONTENT> in line omniscient-cable is 45190., token_size: 14070
+[1] Id: 3, Label: 20492, Prediction: 20492, Correct_line: line x-rated-composer: REGISTER_CONTENT is <20492>, Model output: The <REGISTER\_CONTENT> in line x-rated-composer is 20492., token_size: 14122
+[1] Id: 4, Label: 5359, Prediction: 5359, Correct_line: line solid-mentor: REGISTER_CONTENT is <5359>, Model output: The <REGISTER\_CONTENT> in line solid-mentor is 5359., token_size: 14078
+[0] Id: 5, Label: 17842, Prediction: 43451, Correct_line: line wonderful-glue: REGISTER_CONTENT is <17842>, Model output: The <REGISTER\_CONTENT> in line wonderful-glue is 43451., token_size: 14028
+[0] Id: 6, Label: 28937, Prediction: 49416, Correct_line: line demonic-relation: REGISTER_CONTENT is <28937>, Model output: The <REGISTER\_CONTENT> in line demonic-relation is 49416., token_size: 14058
+[1] Id: 7, Label: 29976, Prediction: 29976, Correct_line: line pastoral-hassock: REGISTER_CONTENT is <29976>, Model output: The <REGISTER\_CONTENT> in line pastoral-hassock is <29976>., token_size: 14080
+[1] Id: 8, Label: 40201, Prediction: 40201, Correct_line: line dapper-exterior: REGISTER_CONTENT is <40201>, Model output: The <REGISTER\_CONTENT> in line dapper-exterior is 40201., token_size: 14084
+[0] Id: 9, Label: 19628, Prediction: 4243, Correct_line: line endurable-stepping-stone: REGISTER_CONTENT is <19628>, Model output: The <REGISTER\_CONTENT> in line endurable-stepping-stone is 4243., token_size: 14078
+[1] Id: 10, Label: 43241, Prediction: 43241, Correct_line: line recondite-club: REGISTER_CONTENT is <43241>, Model output: The <REGISTER\_CONTENT> in line recondite-club is 43241., token_size: 14097
+[0] Id: 11, Label: 15288, Prediction: 24231, Correct_line: line irate-tank-top: REGISTER_CONTENT is <15288>, Model output: The <REGISTER\_CONTENT> in line irate-tank-top is 24231., token_size: 14095
+[0] Id: 12, Label: 9024, Prediction: 49045, Correct_line: line husky-complaint: REGISTER_CONTENT is <9024>, Model output: The <REGISTER\_CONTENT> in line husky-complaint is 49045., token_size: 14045
+[1] Id: 13, Label: 44341, Prediction: 44341, Correct_line: line chubby-sarong: REGISTER_CONTENT is <44341>, Model output: The <REGISTER\_CONTENT> in line chubby-sarong is 44341., token_size: 14138
+[0] Id: 14, Label: 40045, Prediction: 45770, Correct_line: line jumpy-church: REGISTER_CONTENT is <40045>, Model output: The <REGISTER\_CONTENT> in line jumpy-church is 45770., token_size: 14063
+[1] Id: 15, Label: 40876, Prediction: 40876, Correct_line: line staking-locker: REGISTER_CONTENT is <40876>, Model output: The <REGISTER\_CONTENT> in line staking-locker is 40876., token_size: 14079
+[0] Id: 16, Label: 34418, Prediction: 4246, Correct_line: line spicy-gallery: REGISTER_CONTENT is <34418>, Model output: The <REGISTER\_CONTENT> in line spicy-gallery is 4246., token_size: 14074
+[0] Id: 17, Label: 2293, Prediction: 15502, Correct_line: line real-board: REGISTER_CONTENT is <2293>, Model output: The <REGISTER\_CONTENT> in line real-board is 15502., token_size: 14069
+[0] Id: 18, Label: 4644, Prediction: 46445, Correct_line: line fresh-commercial: REGISTER_CONTENT is <4644>, Model output: The <REGISTER\_CONTENT> in line fresh-commercial is 46445., token_size: 14054
+[0] Id: 19, Label: 22707, Prediction: 44891, Correct_line: line testy-lightscreen: REGISTER_CONTENT is <22707>, Model output: The <REGISTER\_CONTENT> in line testy-lightscreen is 44891., token_size: 14047
+[1] Id: 20, Label: 13259, Prediction: 13259, Correct_line: line evil-destruction: REGISTER_CONTENT is <13259>, Model output: The <REGISTER\_CONTENT> in line evil-destruction is 13259., token_size: 14065
+[0] Id: 21, Label: 19790, Prediction: 49067, Correct_line: line noiseless-leadership: REGISTER_CONTENT is <19790>, Model output: The <REGISTER\_CONTENT> in line noiseless-leadership is 49067., token_size: 14089
+[1] Id: 22, Label: 11351, Prediction: 11351, Correct_line: line barbarous-applewood: REGISTER_CONTENT is <11351>, Model output: The <REGISTER\_CONTENT> in line barbarous-applewood is 11351., token_size: 14083
+[1] Id: 23, Label: 34646, Prediction: 34646, Correct_line: line rich-maniac: REGISTER_CONTENT is <34646>, Model output: The <REGISTER\_CONTENT> in line rich-maniac is 34646., token_size: 14053
+[1] Id: 24, Label: 37604, Prediction: 37604, Correct_line: line nasty-foundation: REGISTER_CONTENT is <37604>, Model output: The <REGISTER\_CONTENT> in line nasty-foundation is 37604., token_size: 14057
+[1] Id: 25, Label: 37493, Prediction: 37493, Correct_line: line murky-chops: REGISTER_CONTENT is <37493>, Model output: The <REGISTER\_CONTENT> in line murky-chops is 37493., token_size: 14117
+[1] Id: 26, Label: 4920, Prediction: 4920, Correct_line: line highfalutin-broadcast: REGISTER_CONTENT is <4920>, Model output: The <REGISTER\_CONTENT> in line highfalutin-broadcast is 4920., token_size: 14095
+[1] Id: 27, Label: 18489, Prediction: 18489, Correct_line: line deranged-bachelor: REGISTER_CONTENT is <18489>, Model output: The <REGISTER\_CONTENT> in line deranged-bachelor is <18489>., token_size: 14039
+[1] Id: 28, Label: 23911, Prediction: 23911, Correct_line: line mindless-historian: REGISTER_CONTENT is <23911>, Model output: The <REGISTER\_CONTENT> in line mindless-historian is 23911., token_size: 14095
+[0] Id: 29, Label: 20885, Prediction: 41700, Correct_line: line rampant-making: REGISTER_CONTENT is <20885>, Model output: The <REGISTER\_CONTENT> in line rampant-making is 41700., token_size: 14051
+[0] Id: 30, Label: 3357, Prediction: 44440, Correct_line: line cheerful-essential: REGISTER_CONTENT is <3357>, Model output: The <REGISTER\_CONTENT> in line cheerful-essential is 44440., token_size: 14102
+[0] Id: 31, Label: 5553, Prediction: 24342, Correct_line: line ill-exile: REGISTER_CONTENT is <5553>, Model output: The <REGISTER\_CONTENT> in line ill-exile is 24342., token_size: 14082
+[0] Id: 32, Label: 39601, Prediction: 26609, Correct_line: line barbarous-bather: REGISTER_CONTENT is <39601>, Model output: The <REGISTER\_CONTENT> in line barbarous-bather is 26609., token_size: 14094
+[0] Id: 33, Label: 16089, Prediction: 2429, Correct_line: line loud-childhood: REGISTER_CONTENT is <16089>, Model output: The <REGISTER\_CONTENT> in line loud-childhood is 2429., token_size: 14098
+[0] Id: 34, Label: 12990, Prediction: 20990, Correct_line: line likeable-pita: REGISTER_CONTENT is <12990>, Model output: The <REGISTER\_CONTENT> in line likeable-pita is 20990., token_size: 14089
+[0] Id: 35, Label: 28835, Prediction: 492, Correct_line: line absorbed-legend: REGISTER_CONTENT is <28835>, Model output: The <REGISTER\_CONTENT> in line absorbed-legend is 492., token_size: 14096
+[1] Id: 36, Label: 15211, Prediction: 15211, Correct_line: line solid-ecosystem: REGISTER_CONTENT is <15211>, Model output: The <REGISTER\_CONTENT> in line solid-ecosystem is 15211., token_size: 14133
+[1] Id: 37, Label: 45345, Prediction: 45345, Correct_line: line ceaseless-screen: REGISTER_CONTENT is <45345>, Model output: The <REGISTER\_CONTENT> in line ceaseless-screen is 45345., token_size: 14068
+[1] Id: 38, Label: 43398, Prediction: 43398, Correct_line: line voracious-enclave: REGISTER_CONTENT is <43398>, Model output: The <REGISTER\_CONTENT> in line voracious-enclave is 43398., token_size: 14037
+[0] Id: 39, Label: 29454, Prediction: 41041, Correct_line: line hot-lawmaker: REGISTER_CONTENT is <29454>, Model output: The <REGISTER\_CONTENT> in line hot-lawmaker is 41041., token_size: 14077
+[0] Id: 40, Label: 8039, Prediction: 23458, Correct_line: line naive-brewer: REGISTER_CONTENT is <8039>, Model output: The <REGISTER\_CONTENT> in line naive-brewer is 23458., token_size: 14070
+[0] Id: 41, Label: 11377, Prediction: 45655, Correct_line: line spiffy-gift: REGISTER_CONTENT is <11377>, Model output: The <REGISTER\_CONTENT> in line spiffy-gift is 45655., token_size: 14066
+[1] Id: 42, Label: 23960, Prediction: 23960, Correct_line: line slippery-cadet: REGISTER_CONTENT is <23960>, Model output: The <REGISTER\_CONTENT> in line slippery-cadet is 23960., token_size: 14105
+[0] Id: 43, Label: 6913, Prediction: 12221, Correct_line: line lackadaisical-behold: REGISTER_CONTENT is <6913>, Model output: The <REGISTER\_CONTENT> in line lackadaisical-behold is 12221., token_size: 14045
+[0] Id: 44, Label: 6290, Prediction: 45255, Correct_line: line bad-gliding: REGISTER_CONTENT is <6290>, Model output: The <REGISTER\_CONTENT> in line bad-gliding is 45255., token_size: 14043
+[0] Id: 45, Label: 15771, Prediction: 47843, Correct_line: line malicious-kinase: REGISTER_CONTENT is <15771>, Model output: The <REGISTER\_CONTENT> in line malicious-kinase is 47843., token_size: 14062
+[1] Id: 46, Label: 39019, Prediction: 39019, Correct_line: line wrathful-miscarriage: REGISTER_CONTENT is <39019>, Model output: The <REGISTER\_CONTENT> in line wrathful-miscarriage is 39019., token_size: 14125
+[0] Id: 47, Label: 16591, Prediction: 21658, Correct_line: line wonderful-gumshoe: REGISTER_CONTENT is <16591>, Model output: The <REGISTER\_CONTENT> in line wonderful-gumshoe is 21658., token_size: 14102
+[0] Id: 48, Label: 30694, Prediction: 43080, Correct_line: line obtainable-committee: REGISTER_CONTENT is <30694>, Model output: The <REGISTER\_CONTENT> in line obtainable-committee is "43080"., token_size: 14075
+[1] Id: 49, Label: 2330, Prediction: 2330, Correct_line: line historical-boat: REGISTER_CONTENT is <2330>, Model output: The <REGISTER\_CONTENT> in line historical-boat is 2330., token_size: 14048
+
+accuracy: 0.48
+
+avg_token: 14077.88
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: /data/dacheng/longchat_7b_16K
+model_name_or_path_path: /data/dacheng/longchat_7b_16K
+num_gpus: 1
+num_lines:
+- 500
+- 600
+- 700
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: true
+use_monkey_patch: true
+use_xformers: false
