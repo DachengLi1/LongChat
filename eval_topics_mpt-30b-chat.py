@@ -14,12 +14,13 @@ if __name__ == "__main__":
         revision = from_pretrained_kwargs.get("revision", "main")
         print("Using Monkey Patch loading")
         config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
-     #   config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+        config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
         config.max_seq_len = 16384
         model = AutoModelForCausalLM.from_pretrained(
             model_path,
             low_cpu_mem_usage=True,
             trust_remote_code=True,
+            max_seq_len = 16384,
             config=config,
             **from_pretrained_kwargs,
         )
@@ -43,7 +44,7 @@ if __name__ == "__main__":
     path = args.model_name_or_path
     name = os.path.split(path)[-1]
 
-    output_dir = "evaluation/topics/predictions"
+    output_dir = "evaluation/topics/predictions_with_template"
     
     if not os.path.exists(output_dir):
         os.mkdir(output_dir)
@@ -58,14 +59,14 @@ if __name__ == "__main__":
     model, tokenizer = load_model(
         path,
         device="cuda",
-        num_gpus=8,
-        max_gpu_memory="30GiB",
+        num_gpus=1,
         load_8bit=False,
         cpu_offloading=False,
         debug=False,
     )
-
-    for num_topics in [15, 20, 25, 30]:
+    
+    avg_token = 0
+    for num_topics in [20, 25, 30]:
         print(f"Start testing {num_topics} per prompt!")
         test_file = f"evaluation/topics/testcases_clean/{num_topics}_topics.jsonl"
 
@@ -77,8 +78,10 @@ if __name__ == "__main__":
 
         for test_case in test_cases:       
             conv = get_conversation_template(args.model_name_or_path)
-            outputs, summary = test_with_template(test_case, conv, model, tokenizer, use_cache=False, return_summary=True)
+            outputs, num_token, summary = test_with_template(test_case, conv, model, tokenizer, use_cache=False, return_summary=True)
             print(summary)
+            avg_token += num_token / len(test_cases)
             with open(output_file, "a+") as f: 
                 f.write(summary)
                 f.write("\n")
+        print(f"{avg_token}")

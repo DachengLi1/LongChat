@@ -31,9 +31,9 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     f = open(CFG_PATH, "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
 
-    if cfgs["model_name_or_path"] == "None":
-        cfgs["model_name_or_path"] = Path(args.model).stem
-    cfgs["model_name_or_path_path"] = args.model
+    #if cfgs["model_name_or_path"] == "None":
+    #    cfgs["model_name_or_path"] = Path(args.model).stem
+    cfgs["model_name_or_path"] = args.model
     cfgs["level"] = args.level
     print(yaml.dump(cfgs))
 

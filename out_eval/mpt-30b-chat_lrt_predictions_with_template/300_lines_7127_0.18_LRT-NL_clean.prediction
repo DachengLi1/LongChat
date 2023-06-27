@@ -1,0 +1,97 @@
+[0] Id: 0, Label: 29324, Prediction: -1, Correct_line: line racial-fedora: REGISTER_CONTENT is <29324>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5480
+[0] Id: 1, Label: 29602, Prediction: -1, Correct_line: line scandalous-typewriter: REGISTER_CONTENT is <29602>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5493
+[0] Id: 2, Label: 34055, Prediction: -1, Correct_line: line measly-pocketbook: REGISTER_CONTENT is <34055>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5510
+[0] Id: 3, Label: 41534, Prediction: -1, Correct_line: line agreeable-cleric: REGISTER_CONTENT is <41534>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line agreeable-cleric, I need the line index., token_size: 5499
+[0] Id: 4, Label: 34230, Prediction: -1, Correct_line: line internal-adulthood: REGISTER_CONTENT is <34230>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5490
+[0] Id: 5, Label: 28113, Prediction: -1, Correct_line: line erratic-dinner: REGISTER_CONTENT is <28113>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5477
+[1] Id: 6, Label: 41644, Prediction: 41644, Correct_line: line dirty-briefly: REGISTER_CONTENT is <41644>, Model output: I will retrieve the <REGISTER_CONTENT> of the line dirty-briefly for you. Please hold on for a moment.
+
+The <REGISTER_CONTENT> of the line dirty-briefly is <41644>., token_size: 5494
+[0] Id: 7, Label: 15711, Prediction: -1, Correct_line: line worried-monitor: REGISTER_CONTENT is <15711>, Model output: I have memorized the lines and their corresponding <REGISTER_CONTENT> values. To retrieve the <REGISTER_CONTENT> value of a certain line index, please provide me with the index., token_size: 5529
+[0] Id: 8, Label: 18766, Prediction: -1, Correct_line: line screeching-testing: REGISTER_CONTENT is <18766>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5474
+[0] Id: 9, Label: 13860, Prediction: -1, Correct_line: line decorous-afterlife: REGISTER_CONTENT is <13860>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need the index of that line. Please give me the index of the line you want to retrieve the <REGISTER_CONTENT> from., token_size: 5485
+[0] Id: 10, Label: 14266, Prediction: -1, Correct_line: line highfalutin-arrogance: REGISTER_CONTENT is <14266>, Model output: I have memorized the lines and their corresponding <REGISTER_CONTENT> values. To retrieve the <REGISTER_CONTENT> value of a certain line index, please provide me with the index., token_size: 5516
+[0] Id: 11, Label: 28264, Prediction: -1, Correct_line: line innocent-pony: REGISTER_CONTENT is <28264>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need the index of that line. Please provide me with the index of the line innocent-pony., token_size: 5474
+[0] Id: 12, Label: 1470, Prediction: -1, Correct_line: line hot-chairperson: REGISTER_CONTENT is <1470>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5520
+[1] Id: 13, Label: 1217, Prediction: 1217, Correct_line: line noisy-ecology: REGISTER_CONTENT is <1217>, Model output: I will retrieve the <REGISTER_CONTENT> of line noisy-ecology for you.
+It is <1217>., token_size: 5493
+[0] Id: 14, Label: 21374, Prediction: -1, Correct_line: line relieved-guacamole: REGISTER_CONTENT is <21374>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line relieved-guacamole, I need the line index. Please provide me with the line index., token_size: 5514
+[1] Id: 15, Label: 5195, Prediction: 5195, Correct_line: line momentous-ruckus: REGISTER_CONTENT is <5195>, Model output: I will retrieve the <REGISTER_CONTENT> of the line momentous-ruckus for you.
+
+The <REGISTER_CONTENT> in line momentous-ruckus is <5195>., token_size: 5494
+[0] Id: 16, Label: 42378, Prediction: -1, Correct_line: line hissing-architect: REGISTER_CONTENT is <42378>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5493
+[0] Id: 17, Label: 39807, Prediction: -1, Correct_line: line apathetic-iris: REGISTER_CONTENT is <39807>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5510
+[0] Id: 18, Label: 38877, Prediction: -1, Correct_line: line talented-military: REGISTER_CONTENT is <38877>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line talented-military, please tell me the line index., token_size: 5465
+[0] Id: 19, Label: 11672, Prediction: -1, Correct_line: line foolish-karate: REGISTER_CONTENT is <11672>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5506
+[0] Id: 20, Label: 800, Prediction: -1, Correct_line: line wet-leptocephalus: REGISTER_CONTENT is <800>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5491
+[1] Id: 21, Label: 2547, Prediction: 2547, Correct_line: line berserk-cappelletti: REGISTER_CONTENT is <2547>, Model output: I will retrieve the <REGISTER_CONTENT> of line berserk-cappelletti for you.
+
+The <REGISTER_CONTENT> of line berserk-cappelletti is <2547>., token_size: 5531
+[1] Id: 22, Label: 41865, Prediction: 41865, Correct_line: line wacky-cob: REGISTER_CONTENT is <41865>, Model output: I will retrieve the <REGISTER_CONTENT> of line wacky-cob for you.
+
+The <REGISTER_CONTENT> of line wacky-cob is <41865>., token_size: 5504
+[0] Id: 23, Label: 3957, Prediction: -1, Correct_line: line obedient-pony: REGISTER_CONTENT is <3957>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line obedient-pony, I need the index of the line., token_size: 5473
+[0] Id: 24, Label: 47089, Prediction: -1, Correct_line: line open-hippodrome: REGISTER_CONTENT is <47089>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5520
+[0] Id: 25, Label: 20619, Prediction: -1, Correct_line: line dull-trap: REGISTER_CONTENT is <20619>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5482
+[0] Id: 26, Label: 38707, Prediction: -1, Correct_line: line young-hair: REGISTER_CONTENT is <38707>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line young-hair, I need to know the index of that line., token_size: 5485
+[0] Id: 27, Label: 48262, Prediction: -1, Correct_line: line capable-ripple: REGISTER_CONTENT is <48262>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5513
+[0] Id: 28, Label: 14845, Prediction: -1, Correct_line: line ignorant-purple: REGISTER_CONTENT is <14845>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need to know the index of the line you want to retrieve., token_size: 5519
+[0] Id: 29, Label: 39683, Prediction: -1, Correct_line: line ugly-real: REGISTER_CONTENT is <39683>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need to know the index of that line. Please tell me the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5507
+[0] Id: 30, Label: 9156, Prediction: -1, Correct_line: line abashed-dulcimer: REGISTER_CONTENT is <9156>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5484
+[0] Id: 31, Label: 41880, Prediction: -1, Correct_line: line sour-sensor: REGISTER_CONTENT is <41880>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5517
+[0] Id: 32, Label: 9659, Prediction: -1, Correct_line: line crabby-lilac: REGISTER_CONTENT is <9659>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line crabby-lilac, I need the line index. Please provide me with the line index., token_size: 5539
+[1] Id: 33, Label: 8559, Prediction: 8559, Correct_line: line macho-cymbal: REGISTER_CONTENT is <8559>, Model output: I will retrieve the <REGISTER_CONTENT> of line macho-cymbal for you.
+
+The <REGISTER_CONTENT> of line macho-cymbal is <8559>., token_size: 5525
+[0] Id: 34, Label: 24384, Prediction: -1, Correct_line: line industrious-discussion: REGISTER_CONTENT is <24384>, Model output: I have memorized the lines and their corresponding <REGISTER_CONTENT> values. To retrieve the <REGISTER_CONTENT> value of a certain line index, please provide me with the index., token_size: 5526
+[1] Id: 35, Label: 18869, Prediction: 18869, Correct_line: line unable-rudiment: REGISTER_CONTENT is <18869>, Model output: I will retrieve the <REGISTER_CONTENT> of the line unable-rudiment for you. The line unable-rudiment is: "line unable-rudiment: REGISTER_CONTENT is <18869>"
+
+The <REGISTER_CONTENT> in the line unable-rudiment is <18869>., token_size: 5520
+[0] Id: 36, Label: 42911, Prediction: -1, Correct_line: line calm-lunge: REGISTER_CONTENT is <42911>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line calm-lunge, I need to know its line index., token_size: 5508
+[0] Id: 37, Label: 47394, Prediction: -1, Correct_line: line tranquil-detective: REGISTER_CONTENT is <47394>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of line tranquil-detective, I need the line index., token_size: 5498
+[0] Id: 38, Label: 5917, Prediction: -1, Correct_line: line flippant-iron: REGISTER_CONTENT is <5917>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5491
+[0] Id: 39, Label: 45363, Prediction: -1, Correct_line: line flagrant-championship: REGISTER_CONTENT is <45363>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need the index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5495
+[0] Id: 40, Label: 2391, Prediction: -1, Correct_line: line tacit-banyan: REGISTER_CONTENT is <2391>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5498
+[0] Id: 41, Label: 6694, Prediction: -1, Correct_line: line lamentable-clarification: REGISTER_CONTENT is <6694>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5519
+[0] Id: 42, Label: 178, Prediction: -1, Correct_line: line impossible-mattress: REGISTER_CONTENT is <178>, Model output: I will now retrieve the corresponding <REGISTER_CONTENT> of the line you mentioned. Please remind me the line index., token_size: 5479
+[0] Id: 43, Label: 40530, Prediction: -1, Correct_line: line low-struggle: REGISTER_CONTENT is <40530>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need to know the index of the line you want to retrieve. Please tell me the index of the line you want to retrieve the <REGISTER_CONTENT> from., token_size: 5475
+[0] Id: 44, Label: 9638, Prediction: -1, Correct_line: line mighty-hemp: REGISTER_CONTENT is <9638>, Model output: I have memorized the lines you have given me. You can now ask me to retrieve the <REGISTER_CONTENT> of any line by providing its line index., token_size: 5487
+[0] Id: 45, Label: 30419, Prediction: -1, Correct_line: line spicy-indicator: REGISTER_CONTENT is <30419>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need the index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5495
+[1] Id: 46, Label: 27954, Prediction: 27954, Correct_line: line bewildered-robe: REGISTER_CONTENT is <27954>, Model output: I will retrieve the <REGISTER_CONTENT> of the line bewildered-robe for you. Please hold on for a moment.
+
+The <REGISTER_CONTENT> of line bewildered-robe is <27954>., token_size: 5491
+[1] Id: 47, Label: 1639, Prediction: 1639, Correct_line: line itchy-satisfaction: REGISTER_CONTENT is <1639>, Model output: I will now retrieve the <REGISTER_CONTENT> of the line you requested:
+
+line itchy-satisfaction: REGISTER_CONTENT is <1639>, token_size: 5501
+[0] Id: 48, Label: 41767, Prediction: -1, Correct_line: line bewildered-craft: REGISTER_CONTENT is <41767>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I will need that index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5483
+[0] Id: 49, Label: 6138, Prediction: -1, Correct_line: line faulty-sushi: REGISTER_CONTENT is <6138>, Model output: I have memorized the lines you have given me. To retrieve the <REGISTER_CONTENT> of a certain line index, I need the index value. Please provide me with the index of the line you want to retrieve the <REGISTER_CONTENT> for., token_size: 5492
+
+accuracy: 0.18
+
+avg_token: 5499.279999999999
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: mosaicml/mpt-30b-chat
+num_gpus: 1
+num_lines:
+- 200
+- 300
+- 400
+- 500
+- 600
+- 700
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: false
+use_monkey_patch: true
+use_xformers: false

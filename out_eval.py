@@ -4,10 +4,12 @@ import re
 import random
 import numpy as np
 
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
+
 from pathlib import Path
 from out_eval.out_eval_util import *
 
-from fastchat.model import load_model, get_conversation_template
+from fastchat.model import get_conversation_template
 
 SCRIPT_PATH = Path(__file__).resolve()
 REPO_DIR = SCRIPT_PATH.parent
@@ -291,10 +293,39 @@ def main():
         from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
         replace_llama_with_interpolate(cfgs["ratio"])
 
+    def load_model_monkey(self, model_path: str, from_pretrained_kwargs: dict):
+        revision = from_pretrained_kwargs.get("revision", "main")
+        print("Using Monkey Patch loading")
+        config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
+        #config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+        #config.max_seq_len = 16384
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            low_cpu_mem_usage=True,
+            trust_remote_code=True,
+            max_seq_len = 16384,
+        #    config=config,
+            **from_pretrained_kwargs,
+        )
+        model.attn_impl = "triton"
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_path, trust_remote_code=True, use_fast=True, revision=revision, model_max_length=16384
+        )
+        model.config.eos_token_id = tokenizer.eos_token_id
+        model.config.pad_token_id = tokenizer.pad_token_id
+        return model, tokenizer
+
+    from fastchat import model
+    model.model_adapter.MPTAdapter.load_model = load_model_monkey
+    
+    from fastchat.model import load_model
+
     model, tokenizer = load_model(
         cfgs["model_name_or_path"],
         device="cuda",
-        num_gpus=cfgs["num_gpus"],
+        #num_gpus=cfgs["num_gpus"],
+        num_gpus=4,
+        max_gpu_memory="20GiB",
         load_8bit=False,
         cpu_offloading=False,
         debug=False,
