@@ -15,7 +15,7 @@ use_fixed_testcases: True
 testcases_dir: ./evaluation/topics/testcases
 
 ########Diffucult track configs#######  runs when use difficult option
-num_lines: [500, 600, 700]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
+num_lines: [400]  # 1 lines is about 10-15 tokens, 500 lines is 5513 tokens
 generate_lrt_prompt: False  # generate a new set of lrt prompts, works only if use_fixed_testcases is False
 lrt_testcases_dir: ./evaluation/lrt_testcases  # dir containing fixed test cases
 line_idx_opt: LRT-NL_clean # choose among LRT, LRT-ABCindex, LRT-UUID, LRT-NL

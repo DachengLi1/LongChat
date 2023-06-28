@@ -1,0 +1,116 @@
+[0] Id: 0, Label: 26308, Prediction: 2818, Correct_line: line mundane-beech: REGISTER_CONTENT is <26308>, Model output: 
+The <REGISTER_CONTENT> in line mundane-beech is <2818>., token_size: 9077
+[0] Id: 1, Label: 15061, Prediction: -1, Correct_line: line nervous-salami: REGISTER_CONTENT is <15061>, Model output: 
+I'm sorry, I am unable to determine the <REGISTER_CONTENT> in line nervous-salami as it is not specified in the given information., token_size: 9040
+[0] Id: 2, Label: 12768, Prediction: 42987, Correct_line: line maddening-latte: REGISTER_CONTENT is <12768>, Model output: 
+The <REGISTER_CONTENT> in line maddening-latte is <42987>., token_size: 9046
+[0] Id: 3, Label: 2835, Prediction: -1, Correct_line: line mysterious-gravitas: REGISTER_CONTENT is <2835>, Model output: 
+I'm sorry, I am unable to understand the context of the lines you've given me. Could you please provide more information or context?, token_size: 9025
+[0] Id: 4, Label: 4141, Prediction: 14178, Correct_line: line angry-knuckle: REGISTER_CONTENT is <4141>, Model output: 
+The <REGISTER_CONTENT> in line angry-knuckle is <14178>., token_size: 9030
+[0] Id: 5, Label: 19495, Prediction: 21960, Correct_line: line learned-communicant: REGISTER_CONTENT is <19495>, Model output: 
+The <REGISTER_CONTENT> in line learned-communicant is <21960>., token_size: 9034
+[0] Id: 6, Label: 37942, Prediction: 13778, Correct_line: line average-porcupine: REGISTER_CONTENT is <37942>, Model output: <REGISTER_CONTENT> in line average-porcupine is <13778>., token_size: 9031
+[0] Id: 7, Label: 9972, Prediction: 10519, Correct_line: line bad-underneath: REGISTER_CONTENT is <9972>, Model output: 
+The <REGISTER_CONTENT> in line bad-underneath is <10519>., token_size: 9055
+[0] Id: 8, Label: 47416, Prediction: 7730, Correct_line: line bashful-saving: REGISTER_CONTENT is <47416>, Model output: 
+The <REGISTER_CONTENT> in line bashful-saving is <7730>., token_size: 9043
+[0] Id: 9, Label: 13612, Prediction: -1, Correct_line: line bloody-suburb: REGISTER_CONTENT is <13612>, Model output: 
+I'm sorry, I can't answer that question because the line "bloody-suburb" does not appear in the record you provided., token_size: 9029
+[1] Id: 10, Label: 13548, Prediction: 13548, Correct_line: line materialistic-diction: REGISTER_CONTENT is <13548>, Model output: 
+The <REGISTER_CONTENT> in line materialistic-diction is <13548>., token_size: 9006
+[0] Id: 11, Label: 28138, Prediction: 14416, Correct_line: line disillusioned-quill: REGISTER_CONTENT is <28138>, Model output: 
+The <REGISTER_CONTENT> in line disillusioned-quill is <14416>., token_size: 9030
+[0] Id: 12, Label: 9890, Prediction: 22052, Correct_line: line determined-embryo: REGISTER_CONTENT is <9890>, Model output: 
+The <REGISTER_CONTENT> in line determined-embryo is <22052>., token_size: 9059
+[0] Id: 13, Label: 41462, Prediction: -1, Correct_line: line cynical-postfix: REGISTER_CONTENT is <41462>, Model output: I'm sorry, I am unable to understand the context of the lines you provided. Could you please provide more information or context?, token_size: 9000
+[0] Id: 14, Label: 175, Prediction: 486, Correct_line: line outrageous-credit: REGISTER_CONTENT is <175>, Model output: The <REGISTER_CONTENT> in line outrageous-credit is 486., token_size: 9007
+[1] Id: 15, Label: 5696, Prediction: 5696, Correct_line: line tan-trim: REGISTER_CONTENT is <5696>, Model output: 
+The <REGISTER_CONTENT> in line tan-trim is <5696>., token_size: 9021
+[0] Id: 16, Label: 10540, Prediction: 43359, Correct_line: line kind-stop: REGISTER_CONTENT is <10540>, Model output: 
+The <REGISTER_CONTENT> in line handsomely-population is 43359., token_size: 9049
+[0] Id: 17, Label: 48884, Prediction: 1163, Correct_line: line afraid-dust storm: REGISTER_CONTENT is <48884>, Model output: 
+The <REGISTER_CONTENT> in line afraid-dust storm is <1163>., token_size: 9018
+[0] Id: 18, Label: 8141, Prediction: -1, Correct_line: line exuberant-wet-bar: REGISTER_CONTENT is <8141>, Model output: 
+I'm sorry, I don't understand what you're asking. Can you please provide more context or clarify your question?, token_size: 8977
+[0] Id: 19, Label: 11592, Prediction: 46599, Correct_line: line delicious-cone: REGISTER_CONTENT is <11592>, Model output: 
+The <REGISTER_CONTENT> in line delicious-cone is <46599>., token_size: 9017
+[0] Id: 20, Label: 39859, Prediction: 9486, Correct_line: line piquant-success: REGISTER_CONTENT is <39859>, Model output: 
+The <REGISTER_CONTENT> in line piquant-success is <9486>., token_size: 8983
+[0] Id: 21, Label: 33449, Prediction: 46674, Correct_line: line alluring-pub: REGISTER_CONTENT is <33449>, Model output: 
+The <REGISTER_CONTENT> in line alluring-pub is <46674>., token_size: 9035
+[0] Id: 22, Label: 38572, Prediction: 45678, Correct_line: line unsuitable-sardine: REGISTER_CONTENT is <38572>, Model output: 
+The <REGISTER_CONTENT> in line unsuitable-sardine is <45678>., token_size: 9060
+[0] Id: 23, Label: 1431, Prediction: 2917, Correct_line: line abortive-hope: REGISTER_CONTENT is <1431>, Model output: 
+The <REGISTER_CONTENT> in line abortive-hope is <2917>., token_size: 9019
+[0] Id: 24, Label: 41345, Prediction: -1, Correct_line: line broken-arrest: REGISTER_CONTENT is <41345>, Model output: 
+I'm sorry, I can't answer that question because the line broken-arrest doesn't exist in the record you provided., token_size: 9022
+[0] Id: 25, Label: 34789, Prediction: 46804, Correct_line: line faulty-island: REGISTER_CONTENT is <34789>, Model output: 
+The <REGISTER_CONTENT> in line faulty-island is <46804>., token_size: 9034
+[0] Id: 26, Label: 29815, Prediction: 46372, Correct_line: line dark-diving: REGISTER_CONTENT is <29815>, Model output: 
+The <REGISTER_CONTENT> in line dark-diving is <46372>., token_size: 8998
+[0] Id: 27, Label: 32039, Prediction: -1, Correct_line: line spurious-tailor: REGISTER_CONTENT is <32039>, Model output: I'm sorry, I cannot answer that question because I do not have access to the context in which the word "spurious-tailor" appears. Could you provide more information or context?, token_size: 9026
+[0] Id: 28, Label: 35163, Prediction: -1, Correct_line: line elite-infix: REGISTER_CONTENT is <35163>, Model output: I'm sorry, I am unable to understand the context of the lines you have given me. Could you please provide more information or context?, token_size: 8978
+[0] Id: 29, Label: 3201, Prediction: 26778, Correct_line: line worthless-thrill: REGISTER_CONTENT is <3201>, Model output: 
+The <REGISTER_CONTENT> in line worthless-thrill is <26778>., token_size: 9031
+[0] Id: 30, Label: 8868, Prediction: -1, Correct_line: line quaint-adapter: REGISTER_CONTENT is <8868>, Model output: I'm sorry, I am unable to understand the context of the lines you have given me. Could you please provide more information or context?, token_size: 9064
+[0] Id: 31, Label: 30872, Prediction: 48131, Correct_line: line fancy-smolt: REGISTER_CONTENT is <30872>, Model output: 
+The <REGISTER_CONTENT> in line fancy-smolt is <48131>., token_size: 9028
+[0] Id: 32, Label: 39419, Prediction: 16423, Correct_line: line hesitant-burn: REGISTER_CONTENT is <39419>, Model output: 
+The <REGISTER_CONTENT> in line hesitant-burn is <16423>., token_size: 8981
+[0] Id: 33, Label: 32649, Prediction: 20538, Correct_line: line warlike-cub: REGISTER_CONTENT is <32649>, Model output: 
+The <REGISTER_CONTENT> in line warlike-cub is <20538>., token_size: 9045
+[0] Id: 34, Label: 47628, Prediction: 7673, Correct_line: line puny-vineyard: REGISTER_CONTENT is <47628>, Model output: 
+The <REGISTER_CONTENT> in line puny-vineyard is <7673>., token_size: 9052
+[0] Id: 35, Label: 35216, Prediction: 1681, Correct_line: line divergent-knitting: REGISTER_CONTENT is <35216>, Model output: 
+The <REGISTER_CONTENT> in line divergent-knitting is <1681>., token_size: 9000
+[0] Id: 36, Label: 24256, Prediction: 26, Correct_line: line plausible-distance: REGISTER_CONTENT is <24256>, Model output: 
+The <REGISTER_CONTENT> in line plausible-distance is <26>., token_size: 9006
+[0] Id: 37, Label: 49590, Prediction: 47829, Correct_line: line sad-ease: REGISTER_CONTENT is <49590>, Model output: The <REGISTER_CONTENT> in line sad-ease is <47829>., token_size: 9003
+[0] Id: 38, Label: 36018, Prediction: 27107, Correct_line: line quack-scholar: REGISTER_CONTENT is <36018>, Model output: 
+The <REGISTER_CONTENT> in line quack-scholar is <27107>., token_size: 9043
+[1] Id: 39, Label: 40221, Prediction: 40221, Correct_line: line envious-cytokine: REGISTER_CONTENT is <40221>, Model output: 
+The <REGISTER_CONTENT> in line envious-cytokine is <40221>., token_size: 9064
+[0] Id: 40, Label: 26783, Prediction: -1, Correct_line: line screeching-azimuth: REGISTER_CONTENT is <26783>, Model output: 
+I'm sorry, I can't answer that question because I don't have enough information., token_size: 9026
+[0] Id: 41, Label: 41992, Prediction: 32573, Correct_line: line immense-special: REGISTER_CONTENT is <41992>, Model output: ambiguous-underestimate: <32573>, token_size: 9025
+[0] Id: 42, Label: 15058, Prediction: 947, Correct_line: line quick-instance: REGISTER_CONTENT is <15058>, Model output: 
+The <REGISTER_CONTENT> in line quick-instance is 947., token_size: 9001
+[0] Id: 43, Label: 34879, Prediction: -1, Correct_line: line glorious-pipeline: REGISTER_CONTENT is <34879>, Model output: I'm sorry, I am unable to understand the context of the lines you provided. Could you please provide more information or ask a different question?, token_size: 9025
+[0] Id: 44, Label: 32386, Prediction: 26181, Correct_line: line numerous-linen: REGISTER_CONTENT is <32386>, Model output: 
+The <REGISTER_CONTENT> in line numerous-linen is <26181>., token_size: 9055
+[0] Id: 45, Label: 36396, Prediction: -1, Correct_line: line acrid-hydrocarb: REGISTER_CONTENT is <36396>, Model output: 
+I'm sorry, I can't answer that question because I don't have enough information. Can you provide more context or details?, token_size: 9045
+[1] Id: 46, Label: 44716, Prediction: 44716, Correct_line: line accessible-mama: REGISTER_CONTENT is <44716>, Model output: 
+The <REGISTER_CONTENT> in line accessible-mama is 44716., token_size: 8999
+[0] Id: 47, Label: 15477, Prediction: -1, Correct_line: line kind-beyond: REGISTER_CONTENT is <15477>, Model output: 
+I am sorry, I am not able to understand the context of your question. Can you please provide more information or rephrase your question in a clearer way?, token_size: 9029
+[0] Id: 48, Label: 42215, Prediction: 44273, Correct_line: line comfortable-rowing: REGISTER_CONTENT is <42215>, Model output: 
+The <REGISTER_CONTENT> in line comfortable-rowing is <44273>., token_size: 9040
+[0] Id: 49, Label: 6291, Prediction: -1, Correct_line: line clean-zucchini: REGISTER_CONTENT is <6291>, Model output: 
+I'm sorry, I don't understand, token_size: 9024
+
+accuracy: 0.08
+
+avg_token: 9026.699999999999
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: mosaicml/mpt-30b-chat
+num_gpus: 1
+num_lines:
+- 500
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: false
+use_monkey_patch: true
+use_xformers: false

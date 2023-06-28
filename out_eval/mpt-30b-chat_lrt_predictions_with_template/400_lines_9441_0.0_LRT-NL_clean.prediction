@@ -1,0 +1,75 @@
+[0] Id: 0, Label: 42828, Prediction: -1, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, please provide the index., token_size: 7289
+[0] Id: 1, Label: 18256, Prediction: -1, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, just tell me the line index., token_size: 7280
+[0] Id: 2, Label: 10346, Prediction: -1, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: I have memorized the lines you provided. Now, please tell me the <REGISTER_CONTENT> of line subsequent-kitty., token_size: 7276
+[0] Id: 3, Label: 3407, Prediction: -1, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: I will need the line index of needless-samovar to retrieve the corresponding <REGISTER_CONTENT>. Please provide the line index., token_size: 7250
+[0] Id: 4, Label: 42562, Prediction: -1, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: I have memorized the lines. You can ask me for any line index and I will give you the corresponding <REGISTER_CONTENT>., token_size: 7300
+[0] Id: 5, Label: 12714, Prediction: 35295, Correct_line: line trashy-hobbit: REGISTER_CONTENT is <12714>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line taboo-cabbage, I will use the line index 'taboo-cabbage'. The <REGISTER_CONTENT> of line taboo-cabbage is <35295>., token_size: 7270
+[0] Id: 6, Label: 39552, Prediction: -1, Correct_line: line smelly-mantel: REGISTER_CONTENT is <39552>, Model output: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, token_size: 7255
+[0] Id: 7, Label: 4733, Prediction: -1, Correct_line: line grandiose-markup: REGISTER_CONTENT is <4733>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line index, just tell me the index and I will look it up for you., token_size: 7287
+[0] Id: 8, Label: 11038, Prediction: -1, Correct_line: line nostalgic-organ: REGISTER_CONTENT is <11038>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., token_size: 7270
+[0] Id: 9, Label: 1206, Prediction: -1, Correct_line: line healthy-plaster: REGISTER_CONTENT is <1206>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7278
+[0] Id: 10, Label: 20783, Prediction: -1, Correct_line: line perfect-opossum: REGISTER_CONTENT is <20783>, Model output: I have memorized the lines. To retrieve the <REGISTER_CONTENT> of line beautiful-beret, please say 'beautiful-beret <REGISTER_CONTENT>'., token_size: 7261
+[0] Id: 11, Label: 9000, Prediction: -1, Correct_line: line loud-effectiveness: REGISTER_CONTENT is <9000>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7268
+[0] Id: 12, Label: 46983, Prediction: -1, Correct_line: line joyous-case: REGISTER_CONTENT is <46983>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line joyous-case, please tell me the value you associated with it., token_size: 7319
+[0] Id: 13, Label: 29497, Prediction: -1, Correct_line: line whimsical-headphones: REGISTER_CONTENT is <29497>, Model output: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, token_size: 7246
+[0] Id: 14, Label: 39668, Prediction: -1, Correct_line: line massive-blogger: REGISTER_CONTENT is <39668>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7279
+[0] Id: 15, Label: 43210, Prediction: -1, Correct_line: line utopian-joke: REGISTER_CONTENT is <43210>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line utopian-joke, please tell me the corresponding line index., token_size: 7252
+[0] Id: 16, Label: 5697, Prediction: -1, Correct_line: line wiry-inscription: REGISTER_CONTENT is <5697>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line wiry-inscription, please say 'line wiry-inscription'., token_size: 7256
+[0] Id: 17, Label: 45243, Prediction: -1, Correct_line: line sad-fairness: REGISTER_CONTENT is <45243>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., token_size: 7262
+[0] Id: 18, Label: 47502, Prediction: -1, Correct_line: line brash-digging: REGISTER_CONTENT is <47502>, Model output: I will remember the lines and their corresponding REGISTER_CONTENT values. If you want me to retrieve the REGISTER_CONTENT value of a certain line, just tell me the line index., token_size: 7280
+[0] Id: 19, Label: 36239, Prediction: -1, Correct_line: line erect-bow: REGISTER_CONTENT is <36239>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., token_size: 7282
+[0] Id: 20, Label: 41470, Prediction: -1, Correct_line: line breakable-clipboard: REGISTER_CONTENT is <41470>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7289
+[0] Id: 21, Label: 11591, Prediction: -1, Correct_line: line swift-mother-in-law: REGISTER_CONTENT is <11591>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7301
+[0] Id: 22, Label: 27360, Prediction: -1, Correct_line: line dramatic-paperback: REGISTER_CONTENT is <27360>, Model output: I have memorized the lines. You can ask me for any line index and I will give you the corresponding REGISTER_CONTENT., token_size: 7275
+[0] Id: 23, Label: 35881, Prediction: -1, Correct_line: line freezing-pumpkinseed: REGISTER_CONTENT is <35881>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, just tell me the index and I will retrieve the corresponding <REGISTER_CONTENT> for you., token_size: 7316
+[0] Id: 24, Label: 6678, Prediction: -1, Correct_line: line faint-overweight: REGISTER_CONTENT is <6678>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7288
+[0] Id: 25, Label: 36991, Prediction: -1, Correct_line: line tall-deposit: REGISTER_CONTENT is <36991>, Model output: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, token_size: 7295
+[0] Id: 26, Label: 43103, Prediction: -1, Correct_line: line abhorrent-knot: REGISTER_CONTENT is <43103>, Model output: I have memorized the lines and their corresponding <REGISTER_CONTENT> values. Please give me the index of the line you want to retrieve the <REGISTER_CONTENT> value for., token_size: 7275
+[0] Id: 27, Label: 40185, Prediction: -1, Correct_line: line callous-fava: REGISTER_CONTENT is <40185>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line callous-fava, please say 'line callous-fava'., token_size: 7278
+[0] Id: 28, Label: 9606, Prediction: -1, Correct_line: line better-corruption: REGISTER_CONTENT is <9606>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index., token_size: 7299
+[0] Id: 29, Label: 31581, Prediction: -1, Correct_line: line aware-chestnut: REGISTER_CONTENT is <31581>, Model output: I will need more information to answer your question. Which line are you referring to in the record?, token_size: 7297
+[0] Id: 30, Label: 19163, Prediction: -1, Correct_line: line nifty-tulip: REGISTER_CONTENT is <19163>, Model output: I will remember the lines and their corresponding REGISTER_CONTENT values. If you want me to retrieve the REGISTER_CONTENT value of a certain line, just tell me the line index., token_size: 7272
+[0] Id: 31, Label: 23081, Prediction: -1, Correct_line: line imaginary-influx: REGISTER_CONTENT is <23081>, Model output: I will need more information to answer your question. Which line are you referring to in the record?, token_size: 7263
+[0] Id: 32, Label: 46620, Prediction: -1, Correct_line: line fortunate-subroutine: REGISTER_CONTENT is <46620>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7264
+[0] Id: 33, Label: 26503, Prediction: -1, Correct_line: line noisy-failure: REGISTER_CONTENT is <26503>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line noisy-failure, please say 'line noisy-failure'., token_size: 7255
+[0] Id: 34, Label: 40391, Prediction: -1, Correct_line: line fallacious-proposition: REGISTER_CONTENT is <40391>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7267
+[0] Id: 35, Label: 46443, Prediction: -1, Correct_line: line green-corporal: REGISTER_CONTENT is <46443>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7317
+[0] Id: 36, Label: 27592, Prediction: -1, Correct_line: line uttermost-carriage: REGISTER_CONTENT is <27592>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7284
+[0] Id: 37, Label: 32456, Prediction: -1, Correct_line: line feigned-bathtub: REGISTER_CONTENT is <32456>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., token_size: 7297
+[0] Id: 38, Label: 20164, Prediction: -1, Correct_line: line jaded-soprano: REGISTER_CONTENT is <20164>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line jaded-soprano, please say 'line jaded-soprano'., token_size: 7291
+[0] Id: 39, Label: 41104, Prediction: -1, Correct_line: line x-rated-pelican: REGISTER_CONTENT is <41104>, Model output: I will need the index of the line you want to retrieve the content for., token_size: 7293
+[0] Id: 40, Label: 11132, Prediction: -1, Correct_line: line steady-greed: REGISTER_CONTENT is <11132>, Model output: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, token_size: 7275
+[0] Id: 41, Label: 16739, Prediction: -1, Correct_line: line gainful-bureau: REGISTER_CONTENT is <16739>, Model output: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., token_size: 7265
+[0] Id: 42, Label: 49111, Prediction: -1, Correct_line: line efficacious-revolver: REGISTER_CONTENT is <49111>, Model output: I have memorized the lines. To retrieve the <REGISTER_CONTENT> of line efficacious-revolver, please say 'efficacious-revolver'., token_size: 7278
+[0] Id: 43, Label: 10707, Prediction: -1, Correct_line: line absorbed-orchid: REGISTER_CONTENT is <10707>, Model output: I will need more information to answer your question. Which line are you referring to?, token_size: 7258
+[0] Id: 44, Label: 48513, Prediction: -1, Correct_line: line excellent-brake: REGISTER_CONTENT is <48513>, Model output: I have memorized the lines you provided. If you give me a line index, I can tell you the corresponding REGISTER_CONTENT. For example, if you give me the index of 'line excellent-brake', I can tell you its corresponding REGISTER_CONTENT., token_size: 7260
+[0] Id: 45, Label: 15766, Prediction: -1, Correct_line: line periodic-singing: REGISTER_CONTENT is <15766>, Model output: I will need more information to answer your question. Which line index do you want to know the <REGISTER_CONTENT> for?, token_size: 7266
+[0] Id: 46, Label: 10880, Prediction: 13, Correct_line: line cool-son: REGISTER_CONTENT is <10880>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index. For example, to retrieve the <REGISTER_CONTENT> of the 13th line, you would say "line 13"., token_size: 7297
+[0] Id: 47, Label: 21164, Prediction: -1, Correct_line: line gruesome-closing: REGISTER_CONTENT is <21164>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., token_size: 7298
+[0] Id: 48, Label: 16957, Prediction: -1, Correct_line: line soggy-contagion: REGISTER_CONTENT is <16957>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index., token_size: 7312
+[0] Id: 49, Label: 24273, Prediction: -1, Correct_line: line overconfident-zoology: REGISTER_CONTENT is <24273>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line overconfident-zoology, please proceed with the next question., token_size: 7276
+
+accuracy: 0.0
+
+avg_token: 7279.219999999998
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: mosaicml/mpt-30b-chat
+num_gpus: 1
+num_lines:
+- 400
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: false
+use_monkey_patch: true
+use_xformers: false

@@ -1,0 +1,108 @@
+[0] Id: 0, Label: 29324, Prediction: 29315, Correct_line: line racial-fedora: REGISTER_CONTENT is <29324>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line racial-fedora for you. Just a moment please...
+
+<racial-fedora> <29315>, token_size: 5497
+[0] Id: 1, Label: 29602, Prediction: -1, Correct_line: line scandalous-typewriter: REGISTER_CONTENT is <29602>, Model output: I will retrieve the <REGISTER_CONTENT> of line <scandalous-typewriter> for you. Please hold on for a moment., token_size: 5511
+[1] Id: 2, Label: 34055, Prediction: 34055, Correct_line: line measly-pocketbook: REGISTER_CONTENT is <34055>, Model output: I will retrieve the <REGISTER_CONTENT> of the line measly-pocketbook for you. Please hold on for a moment.
+
+<measly-pocketbook> <REGISTER_CONTENT> is <34055>., token_size: 5527
+[0] Id: 3, Label: 41534, Prediction: -1, Correct_line: line agreeable-cleric: REGISTER_CONTENT is <41534>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., token_size: 5516
+[1] Id: 4, Label: 34230, Prediction: 34230, Correct_line: line internal-adulthood: REGISTER_CONTENT is <34230>, Model output: I will retrieve the <REGISTER_CONTENT> of the line internal-adulthood for you.
+
+internal-adulthood: REGISTER_CONTENT is <34230>, token_size: 5507
+[0] Id: 5, Label: 28113, Prediction: -1, Correct_line: line erratic-dinner: REGISTER_CONTENT is <28113>, Model output: I will retrieve the <REGISTER_CONTENT> of the line erratic-dinner for you. Please give me a moment., token_size: 5494
+[0] Id: 6, Label: 41644, Prediction: -1, Correct_line: line dirty-briefly: REGISTER_CONTENT is <41644>, Model output: I will retrieve the <REGISTER_CONTENT> of the line with the index 'dirty-briefly' for you. Please give me a moment., token_size: 5510
+[1] Id: 7, Label: 15711, Prediction: 15711, Correct_line: line worried-monitor: REGISTER_CONTENT is <15711>, Model output: I will retrieve the <REGISTER_CONTENT> of the line worried-monitor for you. The <REGISTER_CONTENT> in line worried-monitor is <15711>., token_size: 5545
+[1] Id: 8, Label: 18766, Prediction: 18766, Correct_line: line screeching-testing: REGISTER_CONTENT is <18766>, Model output: I will retrieve the <REGISTER_CONTENT> of line <screeching-testing> for you. Please hold on for a moment.
+
+<screeching-testing> <REGISTER_CONTENT> is <18766>., token_size: 5491
+[0] Id: 9, Label: 13860, Prediction: -1, Correct_line: line decorous-afterlife: REGISTER_CONTENT is <13860>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line decorous-afterlife for you. Please give me a moment., token_size: 5502
+[1] Id: 10, Label: 14266, Prediction: 14266, Correct_line: line highfalutin-arrogance: REGISTER_CONTENT is <14266>, Model output: line highfalutin-arrogance: REGISTER_CONTENT is <14266>, token_size: 5536
+[0] Id: 11, Label: 28264, Prediction: -1, Correct_line: line innocent-pony: REGISTER_CONTENT is <28264>, Model output: I will retrieve the <REGISTER_CONTENT> of the line innocent-pony for you. Please give me a moment., token_size: 5491
+[1] Id: 12, Label: 1470, Prediction: 1470, Correct_line: line hot-chairperson: REGISTER_CONTENT is <1470>, Model output: I will retrieve the <REGISTER_CONTENT> of the line hot-chairperson for you.
+
+hot-chairperson <1470>, token_size: 5536
+[1] Id: 13, Label: 1217, Prediction: 1217, Correct_line: line noisy-ecology: REGISTER_CONTENT is <1217>, Model output: I will retrieve the <REGISTER_CONTENT> of line noisy-ecology for you. Please hold on for a moment.
+
+<noisy-ecology> <REGISTER_CONTENT> is <1217>., token_size: 5510
+[0] Id: 14, Label: 21374, Prediction: -1, Correct_line: line relieved-guacamole: REGISTER_CONTENT is <21374>, Model output: I will retrieve the <REGISTER_CONTENT> of line relieved-guacamole for you. Please remind me by saying 'line relieved-guacamole' when you are ready for me to give you the answer., token_size: 5534
+[1] Id: 15, Label: 5195, Prediction: 5195, Correct_line: line momentous-ruckus: REGISTER_CONTENT is <5195>, Model output: I will retrieve the <REGISTER_CONTENT> of line momentous-ruckus for you. The <REGISTER_CONTENT> in line momentous-ruckus is <5195>., token_size: 5511
+[0] Id: 16, Label: 42378, Prediction: -1, Correct_line: line hissing-architect: REGISTER_CONTENT is <42378>, Model output: I will retrieve the <REGISTER_CONTENT> of line hissing-architect for you. Please give me a moment., token_size: 5511
+[0] Id: 17, Label: 39807, Prediction: -1, Correct_line: line apathetic-iris: REGISTER_CONTENT is <39807>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., token_size: 5527
+[0] Id: 18, Label: 38877, Prediction: 38881, Correct_line: line talented-military: REGISTER_CONTENT is <38877>, Model output: I will retrieve the <REGISTER_CONTENT> of line talented-military for you. The <REGISTER_CONTENT> in line talented-military is <38881>., token_size: 5481
+[0] Id: 19, Label: 11672, Prediction: 7087, Correct_line: line foolish-karate: REGISTER_CONTENT is <11672>, Model output: 0 <7087>, token_size: 5524
+[0] Id: 20, Label: 800, Prediction: -1, Correct_line: line wet-leptocephalus: REGISTER_CONTENT is <800>, Model output: I will retrieve the <REGISTER_CONTENT> of the line wet-leptocephalus for you. Please give me a moment., token_size: 5510
+[0] Id: 21, Label: 2547, Prediction: -1, Correct_line: line berserk-cappelletti: REGISTER_CONTENT is <2547>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line berserk-cappelletti when you ask me., token_size: 5551
+[1] Id: 22, Label: 41865, Prediction: 41865, Correct_line: line wacky-cob: REGISTER_CONTENT is <41865>, Model output: I will retrieve the <REGISTER_CONTENT> of line wacky-cob for you. Please give me a moment.
+
+Here is the <REGISTER_CONTENT> of line wacky-cob: <41865>., token_size: 5522
+[1] Id: 23, Label: 3957, Prediction: 3957, Correct_line: line obedient-pony: REGISTER_CONTENT is <3957>, Model output: I will retrieve the <REGISTER_CONTENT> of line obedient-pony for you. The <REGISTER_CONTENT> in line obedient-pony is <3957>., token_size: 5491
+[1] Id: 24, Label: 47089, Prediction: 47089, Correct_line: line open-hippodrome: REGISTER_CONTENT is <47089>, Model output: I will retrieve the <REGISTER_CONTENT> of line open-hippodrome for you.
+
+open-hippodrome <47089>, token_size: 5538
+[0] Id: 25, Label: 20619, Prediction: -1, Correct_line: line dull-trap: REGISTER_CONTENT is <20619>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, just tell me the line index., token_size: 5499
+[0] Id: 26, Label: 38707, Prediction: -1, Correct_line: line young-hair: REGISTER_CONTENT is <38707>, Model output: I will retrieve the <REGISTER_CONTENT> of line young-hair for you. Please give me a moment., token_size: 5500
+[1] Id: 27, Label: 48262, Prediction: 48262, Correct_line: line capable-ripple: REGISTER_CONTENT is <48262>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line capable-ripple for you. Just a moment please...
+
+capable-ripple <48262>, token_size: 5530
+[0] Id: 28, Label: 14845, Prediction: -1, Correct_line: line ignorant-purple: REGISTER_CONTENT is <14845>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., token_size: 5537
+[1] Id: 29, Label: 39683, Prediction: 39683, Correct_line: line ugly-real: REGISTER_CONTENT is <39683>, Model output: I will retrieve the <REGISTER_CONTENT> of line ugly-real for you. Just a moment please...
+
+line ugly-real: REGISTER_CONTENT is <39683>, token_size: 5523
+[0] Id: 30, Label: 9156, Prediction: -1, Correct_line: line abashed-dulcimer: REGISTER_CONTENT is <9156>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line abashed-dulcimer for you. Please give me a moment., token_size: 5503
+[1] Id: 31, Label: 41880, Prediction: 41880, Correct_line: line sour-sensor: REGISTER_CONTENT is <41880>, Model output: I will retrieve the <REGISTER_CONTENT> of line sour-sensor for you. Please hold on for a moment.
+
+Here is the <REGISTER_CONTENT> for line sour-sensor: <sour-sensor> <41880>., token_size: 5533
+[1] Id: 32, Label: 9659, Prediction: 9659, Correct_line: line crabby-lilac: REGISTER_CONTENT is <9659>, Model output: I will retrieve the <REGISTER_CONTENT> of line crabby-lilac for you. Just a moment please.
+
+<crabby-lilac> <REGISTER_CONTENT> is <9659>., token_size: 5558
+[1] Id: 33, Label: 8559, Prediction: 8559, Correct_line: line macho-cymbal: REGISTER_CONTENT is <8559>, Model output: I will retrieve the <REGISTER_CONTENT> of the line you asked for.
+<macho-cymbal> <8559>, token_size: 5543
+[0] Id: 34, Label: 24384, Prediction: -1, Correct_line: line industrious-discussion: REGISTER_CONTENT is <24384>, Model output: I will respond to your question about the <REGISTER_CONTENT> of a certain line index once you tell me the index of the line you want., token_size: 5542
+[0] Id: 35, Label: 18869, Prediction: -1, Correct_line: line unable-rudiment: REGISTER_CONTENT is <18869>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., token_size: 5537
+[0] Id: 36, Label: 42911, Prediction: -1, Correct_line: line calm-lunge: REGISTER_CONTENT is <42911>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index and I will retrieve the corresponding value., token_size: 5525
+[0] Id: 37, Label: 47394, Prediction: -1, Correct_line: line tranquil-detective: REGISTER_CONTENT is <47394>, Model output: I will retrieve the <REGISTER_CONTENT> of line tranquil-detective for you. Please give me a moment., token_size: 5517
+[0] Id: 38, Label: 5917, Prediction: -1, Correct_line: line flippant-iron: REGISTER_CONTENT is <5917>, Model output: I will retrieve the <REGISTER_CONTENT> of the line 'flippant-iron' for you. Please give me a moment., token_size: 5509
+[1] Id: 39, Label: 45363, Prediction: 45363, Correct_line: line flagrant-championship: REGISTER_CONTENT is <45363>, Model output: I will retrieve the <REGISTER_CONTENT> of line flagrant-championship for you.
+
+<flagrant-championship> <45363>, token_size: 5512
+[1] Id: 40, Label: 2391, Prediction: 2391, Correct_line: line tacit-banyan: REGISTER_CONTENT is <2391>, Model output: I will retrieve the <REGISTER_CONTENT> of line tacit-banyan for you. Please hold on for a moment.
+
+Here is the <REGISTER_CONTENT> for line tacit-banyan: <2391>., token_size: 5517
+[0] Id: 41, Label: 6694, Prediction: -1, Correct_line: line lamentable-clarification: REGISTER_CONTENT is <6694>, Model output: I will retrieve the <REGISTER_CONTENT> of the line with index 'lamentable-clarification' after the record is over., token_size: 5537
+[0] Id: 42, Label: 178, Prediction: -1, Correct_line: line impossible-mattress: REGISTER_CONTENT is <178>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., token_size: 5497
+[0] Id: 43, Label: 40530, Prediction: -1, Correct_line: line low-struggle: REGISTER_CONTENT is <40530>, Model output: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., token_size: 5491
+[1] Id: 44, Label: 9638, Prediction: 9638, Correct_line: line mighty-hemp: REGISTER_CONTENT is <9638>, Model output: I will retrieve the <REGISTER_CONTENT> of line mighty-hemp for you. Just a moment please...
+
+<mighty-hemp> <9638>, token_size: 5503
+[0] Id: 45, Label: 30419, Prediction: -1, Correct_line: line spicy-indicator: REGISTER_CONTENT is <30419>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line spicy-indicator for you. Please give me a moment., token_size: 5512
+[0] Id: 46, Label: 27954, Prediction: -1, Correct_line: line bewildered-robe: REGISTER_CONTENT is <27954>, Model output: I will retrieve the <REGISTER_CONTENT> of the line bewildered-robe for you. Please give me a moment., token_size: 5509
+[0] Id: 47, Label: 1639, Prediction: -1, Correct_line: line itchy-satisfaction: REGISTER_CONTENT is <1639>, Model output: I will retrieve the <REGISTER_CONTENT> of the line you asked for. However, I need you to remind me the line index., token_size: 5518
+[1] Id: 48, Label: 41767, Prediction: 41767, Correct_line: line bewildered-craft: REGISTER_CONTENT is <41767>, Model output: I will retrieve the corresponding <REGISTER_CONTENT> of line bewildered-craft for you. Just a moment...
+
+The <REGISTER_CONTENT> of line bewildered-craft is <41767>., token_size: 5501
+[0] Id: 49, Label: 6138, Prediction: -1, Correct_line: line faulty-sushi: REGISTER_CONTENT is <6138>, Model output: I will retrieve the <REGISTER_CONTENT> of line faulty-sushi for you. Please give me a moment., token_size: 5509
+
+accuracy: 0.4
+
+avg_token: 5516.7
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: mosaicml/mpt-30b-chat
+num_gpus: 1
+num_lines:
+- 300
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: false
+use_monkey_patch: true
+use_xformers: false

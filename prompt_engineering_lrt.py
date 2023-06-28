@@ -137,7 +137,6 @@ def run_conv_eval_exp(cfgs, model, tokenizer):
         for id, test_case in enumerate(conversation_list):
             test_case = json.loads(test_case)
             prompt = test_case["prompt"]
-            prompt += f'Answer in the format <{test_case["random_idx"][0]}> <REGISTER_CONTENT>.'
             if not cfgs["use_fixed_testcases"]:
                 prompt_length = test_case["total_length"]
                 topics = test_case["topics"]
@@ -299,17 +298,15 @@ def main():
         revision = from_pretrained_kwargs.get("revision", "main")
         print("Using Monkey Patch loading")
         config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
-        #config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
-        #config.max_seq_len = 16384
+        config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+        config.max_seq_len = 16384
         model = AutoModelForCausalLM.from_pretrained(
             model_path,
             low_cpu_mem_usage=True,
             trust_remote_code=True,
-            max_seq_len = 16384,
-        #    config=config,
+            config=config,
             **from_pretrained_kwargs,
         )
-        model.attn_impl = "triton"
         tokenizer = AutoTokenizer.from_pretrained(
             model_path, trust_remote_code=True, use_fast=True, revision=revision, model_max_length=16384
         )
@@ -322,16 +319,41 @@ def main():
     
     from fastchat.model import load_model
 
-    model, tokenizer = load_model(
-        cfgs["model_name_or_path"],
-        device="cuda",
-        #num_gpus=cfgs["num_gpus"],
-        num_gpus=8,
-        max_gpu_memory="10GiB",
-        load_8bit=False,
-        cpu_offloading=False,
-        debug=False,
+    #model, tokenizer = load_model(
+    #    cfgs["model_name_or_path"],
+    #    device="cuda",
+    #    #num_gpus=cfgs["num_gpus"],
+    #    num_gpus=2,
+    #    max_gpu_memory="80GiB",
+    #    load_8bit=False,
+    #    cpu_offloading=False,
+    #    debug=False,
+    #)
+    import torch
+    import transformers
+
+    name = 'mosaicml/mpt-30b-chat'
+
+    import torch
+    import transformers
+
+    name = 'mosaicml/mpt-30b-chat'
+
+    config = transformers.AutoConfig.from_pretrained(name, trust_remote_code=True)
+    config.attn_config['attn_impl'] = 'triton'  # change this to use triton-based FlashAttention
+    config.init_device = 'cuda:0' # For fast initialization directly on GPU!
+    config.max_seq_len = 16384
+
+    model = transformers.AutoModelForCausalLM.from_pretrained(
+      name,
+      config=config,
+      torch_dtype=torch.bfloat16, # Load model weights in bfloat16
+      trust_remote_code=True,
     )
+
+    from transformers import AutoTokenizer
+    tokenizer = AutoTokenizer.from_pretrained('mosaicml/mpt-30b')
+ 
 
     if cfgs["level"] == "easy":
         if cfgs["generate_conversations"]:

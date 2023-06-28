@@ -1,0 +1,265 @@
+[0] Id: 0, Label: 42828, Prediction: -1, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: 果, token_size: 7273
+[0] Id: 1, Label: 18256, Prediction: -1, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: , token_size: 7263
+[0] Id: 2, Label: 10346, Prediction: -1, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: , token_size: 7259
+[0] Id: 3, Label: 3407, Prediction: -1, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: , token_size: 7232
+[0] Id: 4, Label: 42562, Prediction: -1, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: , token_size: 7282
+[0] Id: 5, Label: 12714, Prediction: -1, Correct_line: line trashy-hobbit: REGISTER_CONTENT is <12714>, Model output: , token_size: 7251
+[0] Id: 6, Label: 39552, Prediction: -1, Correct_line: line smelly-mantel: REGISTER_CONTENT is <39552>, Model output: , token_size: 7238
+[0] Id: 0, Label: 42828, Prediction: -1, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line changeable-generation, I need to know the index of that line., token_size: 7273
+[0] Id: 1, Label: 18256, Prediction: -1, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line loud-mango, I need to know the index of that line., token_size: 7263
+[0] Id: 2, Label: 10346, Prediction: -1, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., token_size: 7259
+[0] Id: 3, Label: 3407, Prediction: -1, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line number <line index>, I need to know the value of <line index>., token_size: 7232
+[0] Id: 4, Label: 42562, Prediction: -1, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line invincible-turmeric, please give me a moment., token_size: 7282
+[0] Id: 5, Label: 12714, Prediction: -1, Correct_line: line trashy-hobbit: REGISTER_CONTENT is <12714>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line taboo-cabbage, I need to know the line index. Please provide the line index to retrieve the corresponding <REGISTER_CONTENT>., token_size: 7251
+[0] Id: 6, Label: 39552, Prediction: -1, Correct_line: line smelly-mantel: REGISTER_CONTENT is <39552>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line smelly-mantel, I need to know its line index., token_size: 7238
+[0] Id: 7, Label: 4733, Prediction: -1, Correct_line: line grandiose-markup: REGISTER_CONTENT is <4733>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line grandiose-markup, I need to access the corresponding value. Please give me permission to access the necessary information., token_size: 7269
+[0] Id: 8, Label: 11038, Prediction: -1, Correct_line: line nostalgic-organ: REGISTER_CONTENT is <11038>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, I need to know the line index. Please provide the line index you want to retrieve., token_size: 7253
+[0] Id: 0, Label: 42828, Prediction: -1, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line changeable-generation, I need to know the index of that line., token_size: 7273
+[0] Id: 1, Label: 18256, Prediction: -1, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line loud-mango, I need to know the index of that line., token_size: 7263
+[0] Id: 2, Label: 10346, Prediction: -1, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., token_size: 7259
+[0] Id: 3, Label: 3407, Prediction: -1, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line number <line index>, I need to know the value of <line index>., token_size: 7232
+[0] Id: 4, Label: 42562, Prediction: -1, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line invincible-turmeric, please give me a moment., token_size: 7282
+[0] Id: 0, Label: 42828, Prediction: -1, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: ,, token_size: 7289
+[0] Id: 1, Label: 18256, Prediction: -1, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: , token_size: 7280
+[0] Id: 2, Label: 10346, Prediction: -1, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: , token_size: 7276
+[0] Id: 3, Label: 3407, Prediction: -1, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: , token_size: 7250
+[0] Id: 4, Label: 42562, Prediction: -1, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: , token_size: 7300
+[0] Id: 5, Label: 12714, Prediction: -1, Correct_line: line trashy-hobbit: REGISTER_CONTENT is <12714>, Model output: , token_size: 7270
+[0] Id: 0, Label: 42828, Prediction: 42611, Correct_line: line changeable-generation: REGISTER_CONTENT is <42828>, Model output: The <REGISTER_CONTENT> in line changeable-generation is <42611>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is an essential aspect of any home or business. It is the process of changing the features of an area of land, including plants, token_size: 7314
+[0] Id: 1, Label: 18256, Prediction: 16537, Correct_line: line loud-mango: REGISTER_CONTENT is <18256>, Model output: The <REGISTER_CONTENT> in line loud-mango is <16537>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Indiana
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Pest Control Company
+Pests are a common problem that most homeowners have to deal with at some point. Pests can cause a lot of damage to your property and, token_size: 7305
+[0] Id: 2, Label: 10346, Prediction: 3948, Correct_line: line subsequent-kitty: REGISTER_CONTENT is <10346>, Model output: subsequent-kitty: <REGISTER_CONTENT is <3948>>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Company
+Pests are a common problem that most homeowners have to deal with at some point. Pests can cause a lot of damage to your property and also make it, token_size: 7301
+[1] Id: 3, Label: 3407, Prediction: 3407, Correct_line: line needless-samovar: REGISTER_CONTENT is <3407>, Model output: <needless-samovar> <3407>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is a crucial aspect of any home or business. It is the first thing that people notice when they come to your property. It is, therefore, important to ensure, token_size: 7275
+[0] Id: 4, Label: 42562, Prediction: 39219, Correct_line: line invincible-turmeric: REGISTER_CONTENT is <42562>, Model output: invincible-turmeric <REGISTER_CONTENT> is <39219>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Landscaping Company.
+The first impression that people get about your home is from the outside, and this is why it is essential to ensure that your yard is well maintained. You can either choose to do the landscaping on, token_size: 7325
+[0] Id: 5, Label: 12714, Prediction: 26271, Correct_line: line trashy-hobbit: REGISTER_CONTENT is <12714>, Model output: line trashy-hobbit: REGISTER_CONTENT is <26271>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Service
+Pests are a common problem that many homeowners have to deal with. Pests can cause a lot of damage to your property and also make it uncomfortable, token_size: 7295
+[1] Id: 6, Label: 39552, Prediction: 39552, Correct_line: line smelly-mantel: REGISTER_CONTENT is <39552>, Model output: smelly-mantel <REGISTER_CONTENT> is <39552>.<|im_end|><|im_start|>user#include "stdafx.h"
+#include "Game.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Projectile.h"
+#include "Collision.h"
+#include "Input.h", token_size: 7280
+[1] Id: 7, Label: 4733, Prediction: 4733, Correct_line: line grandiose-markup: REGISTER_CONTENT is <4733>, Model output: The <REGISTER_CONTENT> in line grandiose-markup is <4733>.<|im_end|><|im_start|>The Best Advice on Services I've found | IBC
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is an important aspect of any home or business. It is the process of changing the features of an area of land, including plants, trees, and other structures. Landscaping can be, token_size: 7312
+[0] Id: 8, Label: 11038, Prediction: 9139, Correct_line: line nostalgic-organ: REGISTER_CONTENT is <11038>, Model output: The <REGISTER_CONTENT> in line nostalgic-organ is <nostalgic-organ> <9139>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Using a Professional Pest Control Company.
+Pests are a common problem that most homeowners have to deal with at some point. They can be a real nuisance, and they can also cause damage to your, token_size: 7295
+[1] Id: 9, Label: 1206, Prediction: 1206, Correct_line: line healthy-plaster: REGISTER_CONTENT is <1206>, Model output: The <REGISTER_CONTENT> in line healthy-plaster is <1206>.<|im_end|><|im_start|>user#include "stdafx.h"
+#include "CppUnitTest.h"
+#include "..\src\CppML.h"
+#include <iostream>
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace CppMLTest
+{
+	TEST, token_size: 7303
+[1] Id: 10, Label: 20783, Prediction: 20783, Correct_line: line perfect-opossum: REGISTER_CONTENT is <20783>, Model output: line perfect-opossum: REGISTER_CONTENT is <20783><|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Shopping Lastminute
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Roofing Contractor
+A roof is an essential part of any building as it provides protection against harsh weather conditions. It is, therefore, important to ensure that your roof is, token_size: 7286
+[1] Id: 11, Label: 9000, Prediction: 9000, Correct_line: line loud-effectiveness: REGISTER_CONTENT is <9000>, Model output: line loud-effectiveness <REGISTER_CONTENT> is <9000>.The Best Advice About Options I've Ever Written | Health Fitness Illinois
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Roofing Contractor
+A roof is an essential part of any building as it provides protection against harsh weather conditions. It is, therefore, important to ensure that your roof is in good condition at all times. One of the ways to, token_size: 7293
+[0] Id: 12, Label: 46983, Prediction: 9011, Correct_line: line joyous-case: REGISTER_CONTENT is <46983>, Model output: I have memorized the lines you showed me. To answer your question, the <REGISTER_CONTENT> in line joyous-case is <joyous-case> <9011>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | I Want To Wake Up
+The Benefits of Using a Professional Landscaping Company
+Landscaping is an important aspect of any property. It is the process of changing the features, token_size: 7344
+[0] Id: 13, Label: 29497, Prediction: 39021, Correct_line: line whimsical-headphones: REGISTER_CONTENT is <29497>, Model output: whimsical-headphones <REGISTER_CONTENT> is <39021>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | I Want To Break Free
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Roofing Contractor
+A roof is an essential part of any building, and it is crucial to ensure that it is in good condition. A good roof will protect, token_size: 7271
+[1] Id: 14, Label: 39668, Prediction: 39668, Correct_line: line massive-blogger: REGISTER_CONTENT is <39668>, Model output: The <REGISTER_CONTENT> in line massive-blogger is <39668>.<|im_end|><|im_start|>The Best Time to Visit Bali - When to Go to Bali - Travelocity
+Bali is a tropical paradise that's known for its stunning beaches, lush rice terraces, and vibrant culture. The best time to visit Bali depends on your preferences and what you want to do during your trip.
+The peak season in Bali, token_size: 7304
+[1] Id: 15, Label: 43210, Prediction: 43210, Correct_line: line utopian-joke: REGISTER_CONTENT is <43210>, Model output: line utopian-joke <REGISTER_CONTENT> is <43210>.<|im_end|><|im_start|>userThe Best Time to Visit Bali - When to Go to Bali - Travelocity
+Bali is a year-round destination, but the best time to visit Bali depends on your travel preferences. The island's peak tourist season is from June to September and December to March, which means that prices for flights, accommodations, and activities, token_size: 7277
+[0] Id: 16, Label: 5697, Prediction: 49561, Correct_line: line wiry-inscription: REGISTER_CONTENT is <5697>, Model output: line wiry-inscription: <REGISTER_CONTENT> is <wiry-inscription: 49561>#include "stdafx.h"
+#include "CppUnitTest.h"
+#include "..\src\CppML.h"
+#include <iostream>
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace CppMLTest
+{
+    TEST_CLASS(TestCpp, token_size: 7281
+[1] Id: 17, Label: 45243, Prediction: 45243, Correct_line: line sad-fairness: REGISTER_CONTENT is <45243>, Model output: sad-fairness <REGISTER_CONTENT> is <45243>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is an important aspect of any home or business. It is the process of changing the features of an area of land, including plants, trees, token_size: 7287
+[1] Id: 18, Label: 47502, Prediction: 47502, Correct_line: line brash-digging: REGISTER_CONTENT is <47502>, Model output: The <REGISTER_CONTENT> in line brash-digging is <47502>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Beauty
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is an important aspect of any home or business. It is the process of changing the features of the land to make it more attractive and useful. Landscaping can involve the installation of, token_size: 7305
+[0] Id: 19, Label: 36239, Prediction: 24755, Correct_line: line erect-bow: REGISTER_CONTENT is <36239>, Model output: <erect-bow> <REGISTER_CONTENT> is <24755>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | IBCJONA.com
+The Best Advice About Options I've Ever Written
+The Advantages of Using a Professional Pest Control Service
+Pests are a common problem that most homeowners face at one point or another. Pests can cause a lot of damage to your property, token_size: 7307
+[1] Id: 20, Label: 41470, Prediction: 41470, Correct_line: line breakable-clipboard: REGISTER_CONTENT is <41470>, Model output: The <REGISTER_CONTENT> in line breakable-clipboard is <41470>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | I Want To USA
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Company
+Pests are a common problem that most homeowners have to deal with at some point. Pests can cause a lot of damage to your property and, token_size: 7314
+[0] Id: 21, Label: 11591, Prediction: 8587, Correct_line: line swift-mother-in-law: REGISTER_CONTENT is <11591>, Model output: The <REGISTER_CONTENT> in line swift-mother-in-law is <swift-mother-in-law> <8587>.<|im_end|><|im_start|>package com.github.jolice.game.team.team;
+
+import com.github.jolice.game.team.Team;
+
+public interface TeamFactory {
+
+    Team createTeam(String name);
+}
+package com.github, token_size: 7326
+[0] Id: 22, Label: 27360, Prediction: 3, Correct_line: line dramatic-paperback: REGISTER_CONTENT is <27360>, Model output: The <REGISTER_CONTENT> in line dramatic-paperback is <27360>.<|im_end|><|im_start|>user#include "stdafx.h"
+#include "CppUnitTest.h"
+#include "..\src\Math\Vector3.h"
+#include "MathTestHelper.h"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace MathTest
+{
+, token_size: 7300
+[1] Id: 23, Label: 35881, Prediction: 35881, Correct_line: line freezing-pumpkinseed: REGISTER_CONTENT is <35881>, Model output: The <REGISTER_CONTENT> in line <freezing-pumpkinseed> is <35881>.<|im_end|><|im_start|>The Best Advice About Services I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Pest Control Company Pests are..
+Pests are not only a nuisance but can also cause damage to your property and spread diseases. It is essential to have a pest control plan in place to, token_size: 7341
+[0] Id: 24, Label: 6678, Prediction: 46955, Correct_line: line faint-overweight: REGISTER_CONTENT is <6678>, Model output: line faint-overweight <REGISTER_CONTENT> is <46955>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Roofing Contractor
+A roof is an essential part of any building, and it is crucial to ensure that it is in good condition. The roof is responsible for protecting, token_size: 7313
+[1] Id: 25, Label: 36991, Prediction: 36991, Correct_line: line tall-deposit: REGISTER_CONTENT is <36991>, Model output: line tall-deposit REGISTER_CONTENT is <36991>.<|im_end|><|im_start|>userThe Best Time to Visit Bali - When to Go to Bali - Travelocity
+The Best Time to Visit Bali: Weather, Tourism, and More
+Bali is a tropical paradise that attracts millions of visitors each year. The island is known for its beautiful beaches, lush rice terraces, vibrant culture, and friendly locals. But when, token_size: 7320
+[0] Id: 26, Label: 43103, Prediction: 6916, Correct_line: line abhorrent-knot: REGISTER_CONTENT is <43103>, Model output: abhorrent-knot <REGISTER_CONTENT> is <6916>.<|im_end|><|im_start|>The Best Advice About Services I've Ever Written | Health & Beauty
+The Benefits of Hiring a Professional Roofing Company.
+The roof is one of the most important parts of a house, and it is essential that it is in good condition at all times. The roof is responsible for protecting the house and its occupants from harsh weather, token_size: 7300
+[1] Id: 27, Label: 40185, Prediction: 40185, Correct_line: line callous-fava: REGISTER_CONTENT is <40185>, Model output: line callous-fava: REGISTER_CONTENT is <40185>.<|im_end|><|im_start|>#include "stdafx.h"
+#include "Game.h"
+#include "GameObject.h"
+#include "Player.h"
+#include "Enemy.h"
+#include "Projectile.h"
+#include "Collision.h"
+#include "Render.h"
+, token_size: 7303
+[0] Id: 28, Label: 9606, Prediction: 48605, Correct_line: line better-corruption: REGISTER_CONTENT is <9606>, Model output: better-corruption <REGISTER_CONTENT> is <better-corruption> <48605>.<|im_end|><|im_start|>The Best Advice on Options I've found | Health & Beauty
+The Best Advice on Options I've found
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is a crucial aspect of any home or business. It is the first thing that people see when they visit your property, and it, token_size: 7324
+[0] Id: 29, Label: 31581, Prediction: 27054, Correct_line: line aware-chestnut: REGISTER_CONTENT is <31581>, Model output: The <REGISTER_CONTENT> in line aware-chestnut is <aware-chestnut> <27054>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | IBC
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Landscaping Company
+Landscaping is the process of changing the appearance of a given area of land, usually for aesthetic purposes. It is, token_size: 7322
+[0] Id: 30, Label: 19163, Prediction: 44389, Correct_line: line nifty-tulip: REGISTER_CONTENT is <19163>, Model output: nifty-tulip <REGISTER_CONTENT> is <44389>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | I Want To Break Free
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Service
+Pests are a common problem that many homeowners have to deal with. Pests can cause a lot of damage to your property and also make, token_size: 7297
+[0] Id: 31, Label: 23081, Prediction: -1, Correct_line: line imaginary-influx: REGISTER_CONTENT is <23081>, Model output: imaginary-influx <REGISTER_CONTENT> is <imaginary-influx><REGISTER_CONTENT>.<|im_end|><|im_start|>user
+The Best Advice About Services I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Pest Control Company.
+Pests are a common problem that most homeowners have to deal with at one point or another. Pests can be a real nuisance, and they can, token_size: 7288
+[1] Id: 32, Label: 46620, Prediction: 46620, Correct_line: line fortunate-subroutine: REGISTER_CONTENT is <46620>, Model output: The content in line fortunate-subroutine is <fortunate-subroutine> <46620>.<|im_end|><|im_start|>The Best Advice About Services I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Landscaping Company.
+The first impression that people get about your home is from the outside, and this is why it is essential to ensure that your yard is well maintained. The best way to achieve this, token_size: 7289
+[1] Id: 33, Label: 26503, Prediction: 26503, Correct_line: line noisy-failure: REGISTER_CONTENT is <26503>, Model output: The <REGISTER_CONTENT> in line <noisy-failure> is <26503>.The Best Advice About Services I've Ever Written | Health & Beauty
+The Benefits of Hiring a Professional Roofing Contractor.
+The roof is one of the most important parts of a building, and it is essential to ensure that it is in good condition. A good roof will protect the interior of the building from harsh weather conditions, and it will also enhance the overall, token_size: 7280
+[0] Id: 34, Label: 40391, Prediction: 19912, Correct_line: line fallacious-proposition: REGISTER_CONTENT is <40391>, Model output: The content of the line 'fallacious-proposition' is <REGISTER_CONTENT> <19912>.<|im_end|><|im_start|>The Best Advice on Services I've found | I Want To Break Up With My Boyfriend
+The Best Advice on Services I've found
+The Benefits of Hiring a Professional Pest Control Company
+Pests are a common problem that many homeowners have to deal with. Pests can cause a lot of, token_size: 7292
+[1] Id: 35, Label: 46443, Prediction: 46443, Correct_line: line green-corporal: REGISTER_CONTENT is <46443>, Model output: line green-corporal <REGISTER_CONTENT> is <46443>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Landscaping Company.
+One of the ways that you can improve the appearance of your home is by landscaping. The process of landscaping involves the improvement of the appearance of the land by adding features such as plants, trees, token_size: 7342
+[0] Id: 36, Label: 27592, Prediction: -1, Correct_line: line uttermost-carriage: REGISTER_CONTENT is <27592>, Model output: The <REGISTER_CONTENT> in line <|line index|> is <|REGISTER_CONTENT|>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | IBC
+The Benefits of Using a Professional Landscaping Company
+Landscaping is a crucial aspect of any home or business. It is the first thing that people see when they visit your property, and it can greatly impact their first impression, token_size: 7309
+[1] Id: 37, Label: 32456, Prediction: 32456, Correct_line: line feigned-bathtub: REGISTER_CONTENT is <32456>, Model output: The <REGISTER_CONTENT> in line feigned-bathtub is <feigned-bathtub> <32456>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | IBC
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Home Health Care Service
+Home health care services are becoming increasingly popular as more people are looking for ways to take care of their loved ones in, token_size: 7322
+[0] Id: 38, Label: 20164, Prediction: 40168, Correct_line: line jaded-soprano: REGISTER_CONTENT is <20164>, Model output: The <REGISTER_CONTENT> in line jaded-soprano is <jaded-soprano><|im_end|><|im_start|>assistant
+<jaded-soprano> <40168>
+<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | IBC
+The Benefits of Hiring a Professional Landscaping Company
+If you want to have a beautiful and well, token_size: 7316
+[0] Id: 39, Label: 41104, Prediction: 46104, Correct_line: line x-rated-pelican: REGISTER_CONTENT is <41104>, Model output: The <REGISTER_CONTENT> in line x-rated-pelican is <46104>.<|im_end|><|im_start|>The Best Time to Visit Bali - When to Go to Bali - Traveler's Edition
+The Best Time to Visit Bali – When to Go to Bali
+Bali is a tropical paradise that is known for its stunning beaches, lush rice terraces, vibrant culture, and friendly locals. The island is located in, token_size: 7318
+[1] Id: 40, Label: 11132, Prediction: 11132, Correct_line: line steady-greed: REGISTER_CONTENT is <11132>, Model output: <steady-greed> <REGISTER_CONTENT> is <11132>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | I Want To Break Free
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Roofing Contractor
+A roof is an essential part of any building, and it plays a significant role in protecting the people and property inside. It is,, token_size: 7300
+[0] Id: 41, Label: 16739, Prediction: 16261, Correct_line: line gainful-bureau: REGISTER_CONTENT is <16739>, Model output: <gainful-bureau> <REGISTER_CONTENT> is <16261>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Fitness
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Cleaning Service
+It is important to ensure that your home is clean and organized. You may not have the time to do the cleaning yourself, and this is where a professional, token_size: 7290
+[1] Id: 42, Label: 49111, Prediction: 49111, Correct_line: line efficacious-revolver: REGISTER_CONTENT is <49111>, Model output: The <REGISTER_CONTENT> in line efficacious-revolver is <49111>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Beauty
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Home Health Care Agency
+Home health care is a type of health care that is given to individuals who are not able to take care of themselves. Home health care is usually given, token_size: 7303
+[0] Id: 43, Label: 10707, Prediction: 19901, Correct_line: line absorbed-orchid: REGISTER_CONTENT is <10707>, Model output: The <REGISTER_CONTENT> in line absorbed-orchid is <absorbed-orchid> <19901>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Using a Professional Landscaping Company.
+The first impression that people get about your home is from the outside, and this is why it is important to make sure that your yard is well maintained. The, token_size: 7283
+[1] Id: 44, Label: 48513, Prediction: 48513, Correct_line: line excellent-brake: REGISTER_CONTENT is <48513>, Model output: line excellent-brake: <48513>The Best Advice About Options I've Ever Written | I Want To Break Free
+The Benefits of Using a Professional Pest Control Service
+Pests are a common problem that many homeowners face. Pests can cause a lot of damage to your property and also pose health risks to you and your family. It is important to deal with pests as soon as possible to prevent them from causing more damage. One of the best ways to deal, token_size: 7285
+[0] Id: 45, Label: 15766, Prediction: 48069, Correct_line: line periodic-singing: REGISTER_CONTENT is <15766>, Model output: periodic-singing <REGISTER_CONTENT> is <48069>.<|im_end|><|im_start|>userThe Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Service
+Pests are a common problem that most homeowners have to deal with at some point. Pests can cause a lot of damage to your property and also make it, token_size: 7291
+[0] Id: 46, Label: 10880, Prediction: 48233, Correct_line: line cool-son: REGISTER_CONTENT is <10880>, Model output: The <REGISTER_CONTENT> in line cool-son is <48233>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Using a Professional Pest Control Service
+Pests are a common problem that most homeowners have to deal with at some point. Pests can cause a lot of damage to your property and also make, token_size: 7322
+[0] Id: 47, Label: 21164, Prediction: 23475, Correct_line: line gruesome-closing: REGISTER_CONTENT is <21164>, Model output: <gruesome-closing> <REGISTER_CONTENT> is <23475>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health Fitness Wisconsin
+The Best Advice About Options I've Ever Written
+The Benefits of Hiring a Professional Landscaping Company
+Landscaping is a crucial aspect of any property, whether it is a residential or commercial property. It is essential to have a well-maintained, token_size: 7323
+[0] Id: 48, Label: 16957, Prediction: 33753, Correct_line: line soggy-contagion: REGISTER_CONTENT is <16957>, Model output: The <REGISTER_CONTENT> in line soggy-contagion is <soggy-contagion> <33753>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Hiring a Professional Landscaping Company.
+The first impression that people get about your home is from the outside, and this is why it is important to ensure that your landscape is, token_size: 7337
+[1] Id: 49, Label: 24273, Prediction: 24273, Correct_line: line overconfident-zoology: REGISTER_CONTENT is <24273>, Model output: overconfident-zoology <REGISTER_CONTENT> is <24273>.<|im_end|><|im_start|>The Best Advice About Options I've Ever Written | Health & Fitness
+The Benefits of Using a Professional Landscaping Company
+Landscaping is a crucial aspect of any home or business. It is the process of changing the features of an area of land, including plants, trees, buildings, and other structures to achieve a particular aesthetic, token_size: 7301
+
+accuracy: 0.44
+
+avg_token: 7304.219999999998
+generate_conversations: false
+generate_lrt_prompt: false
+level: difficult
+line_idx_opt: LRT-NL_clean
+lrt_testcases_dir: ./evaluation/lrt_testcases
+model_name_or_path: mosaicml/mpt-30b-chat
+num_gpus: 1
+num_lines:
+- 400
+num_test_samples: 50
+num_topics:
+- 20
+- 30
+question_dist: 100
+ratio: 8
+run_models: true
+testcases_dir: ./evaluation/topics/testcases
+use_fixed_testcases: true
+use_flash: false
+use_monkey_patch: true
+use_xformers: false
