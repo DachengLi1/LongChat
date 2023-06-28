@@ -1,0 +1,50 @@
+Label: The role of art in society, Predict: ['The topic of the impact of social media on body image.'], prompt length: 8653
+Label: The benefits of regular exercise, Predict: ['The Benefits of a Plant-Based Diet'], prompt length: 8748
+Label: The impact of social media on mental health in adults, Predict: ['The topic name is: The impact of social media on mental health.'], prompt length: 8607
+Label: The benefits of mindfulness meditation, Predict: ['The topic name is "The Benefits of Reading for Pleasure."'], prompt length: 8572
+Label: The impact of technology on human connection, Predict: ['The topic was: The Benefits of Mindfulness Meditation'], prompt length: 8731
+Label: The impact of technology on human connection, Predict: ['The impact of social media on body image'], prompt length: 8825
+Label: The future of sustainable agriculture, Predict: ['The topic of the benefits of regular exercise.'], prompt length: 8712
+Label: The psychology of creativity, Predict: ['The topic of the impact of technology on privacy and security.'], prompt length: 8651
+Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was "The Benefits of Mindfulness Meditation."'], prompt length: 8653
+Label: The effects of stress on the body and mind, Predict: ['The topic of the impact of social media on mental health in adults.'], prompt length: 9022
+Label: The history and culture of the Middle Ages, Predict: ['The topic is the benefits of spending time in nature.'], prompt length: 8806
+Label: The psychology of happiness, Predict: ['The topic we discussed was "The impact of social media on communication."'], prompt length: 8503
+Label: The psychology of creativity, Predict: ['The topic of the impact of social media on mental health in adults.'], prompt length: 8618
+Label: The impact of technology on human connection, Predict: ['The topic of the impact of climate change on ocean ecosystems.'], prompt length: 8831
+Label: The impact of technology on privacy and security, Predict: ['The topic name is "The impact of technology on communication and social media on society and individuals".'], prompt length: 8581
+Label: The history and culture of the Middle Ages, Predict: ['The topic we discussed was "The Benefits of Learning a New Language".'], prompt length: 8849
+Label: The psychology of happiness, Predict: ['The role of technology in society'], prompt length: 8342
+Label: The history and impact of the Renaissance, Predict: ['The topic was: The history and culture of ancient civilizations.'], prompt length: 8872
+Label: The impact of social media on communication, Predict: ['The topic we discussed was "The Benefits of Mindfulness Meditation".'], prompt length: 8537
+Label: The effects of climate change on ocean ecosystems, Predict: ['The first topic we discussed was the impact of social media on body image.'], prompt length: 8728
+Label: The future of renewable energy storage, Predict: ['The first topic we discussed was the impact of technology on privacy and security.'], prompt length: 8722
+Label: The future of sustainable agriculture, Predict: ['The topic of the history and impact of the Renaissance.'], prompt length: 8931
+Label: The future of sustainable agriculture, Predict: ['The topic of the future of renewable energy storage was discussed.'], prompt length: 8532
+Label: The benefits of reading for pleasure, Predict: ['The Benefits of a Plant-Based Diet'], prompt length: 8431
+Label: The history and culture of the Middle Ages, Predict: ['The topic of the history and impact of the Renaissance.'], prompt length: 8553
+Label: The role of art in society, Predict: ['The topic of the impact of social media on body image.'], prompt length: 8534
+Label: The role of sports in society, Predict: ['The topic of the impact of social media on body image.'], prompt length: 8544
+Label: The benefits of learning a new language, Predict: ['The topic of the benefits of spending time in nature.'], prompt length: 8680
+Label: The effects of air pollution on human health, Predict: ['The topic we discussed was "The impact of technology on privacy and security."'], prompt length: 8818
+Label: The benefits of spending time in nature, Predict: ['The topic of the history and impact of the Renaissance.'], prompt length: 8776
+Label: The role of sports in society, Predict: ['The impact of social media on communication'], prompt length: 8735
+Label: The role of music in society, Predict: ['The topic was: The role of education in society.'], prompt length: 8359
+Label: The benefits of spending time in nature, Predict: ['The topic of the impact of technology on privacy and security.'], prompt length: 8923
+Label: The future of sustainable agriculture, Predict: ['The topic we discussed was "The impact of social media on body image."'], prompt length: 8469
+Label: The benefits of mindfulness meditation, Predict: ['The topic was: The benefits of spending time in nature.'], prompt length: 8593
+Label: The future of renewable energy technology, Predict: ['The topic was: The role of art in society.'], prompt length: 8556
+Label: The psychology of addiction and recovery, Predict: ['The topic of the benefits of a plant-based diet.'], prompt length: 8683
+Label: The benefits of spending time in nature, Predict: ['The topic of the history and culture of ancient civilizations.'], prompt length: 8580
+Label: The benefits of regular exercise, Predict: ['The topic was: The benefits of mindfulness meditation.'], prompt length: 8577
+Label: The psychology of creativity, Predict: ['The topic name is: The Benefits of Meditation.'], prompt length: 8589
+Label: The future of renewable energy technology, Predict: ['The topic is: The benefits of mindfulness meditation.'], prompt length: 8680
+Label: The role of art in society, Predict: ['The topic we discussed was "The Benefits of Sleep".'], prompt length: 8531
+Label: The role of education in society, Predict: ['The role of technology in communication'], prompt length: 8816
+Label: The impact of social media on mental health in adults, Predict: ['The first topic we discussed was the impact of social media on body image.'], prompt length: 8586
+Label: The psychology of addiction and recovery, Predict: ['The topic of the impact of technology on privacy and security.'], prompt length: 8617
+Label: The effects of sleep on overall health, Predict: ['The topic name is: The impact of social media on mental health in adults.'], prompt length: 8520
+Label: The history and impact of the Renaissance, Predict: ['The first topic we discussed was the history and impact of climate change on ocean ecosystems.'], prompt length: 8557
+Label: The benefits of a plant-based diet, Predict: ['The Benefits of Reading for Pleasure'], prompt length: 8920
+Label: The effects of stress on the body and mind, Predict: ['Topic: The Benefits of Learning a New Language'], prompt length: 8778
+Label: The impact of social media on mental health in adults, Predict: ['The impact of social media on body image'], prompt length: 8673

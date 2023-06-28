@@ -1,0 +1,50 @@
+Label: The psychology of creativity, Predict: ['The topic we discussed was "The psychology of creativity".'], prompt length: 3095
+Label: The benefits of learning a new language, Predict: ['The topic we discussed was the benefits of learning a new language.'], prompt length: 2985
+Label: The effects of climate change on ocean ecosystems, Predict: ['The topic we discussed was the impact of climate change on ocean ecosystems.'], prompt length: 3011
+Label: The role of art in society, Predict: ['The topic of the role of art in society.'], prompt length: 2991
+Label: The effects of climate change on ocean ecosystems, Predict: ['The topic we discussed was: The effects of climate change on ocean ecosystems.'], prompt length: 3015
+Label: The benefits of volunteering, Predict: ['The topic we discussed was the benefits of volunteering.'], prompt length: 2844
+Label: The history and impact of the Renaissance, Predict: ['The topic we discussed was "The history and impact of the Renaissance."'], prompt length: 2997
+Label: The role of sports in society, Predict: ['The topic is the role of sports in society.'], prompt length: 2907
+Label: The psychology of happiness, Predict: ['The topic we discussed was: The impact of social media on communication.'], prompt length: 2809
+Label: The history and culture of ancient civilizations, Predict: ['The first topic we discussed was the history and culture of ancient civilizations.'], prompt length: 2885
+Label: The effects of stress on the body and mind, Predict: ['The topic we discussed was the impact of technology on privacy and security.'], prompt length: 3136
+Label: The benefits of spending time in nature, Predict: ['Topic: The benefits of spending time in nature.'], prompt length: 3171
+Label: The psychology of creativity, Predict: ['The topic of the psychology of creativity.'], prompt length: 3202
+Label: The benefits of regular exercise, Predict: ['The topic was: The benefits of regular exercise.'], prompt length: 2935
+Label: The role of education in society, Predict: ['The topic is the role of education in society.'], prompt length: 3060
+Label: The effects of sleep on overall health, Predict: ['The topic of the effects of sleep on overall health.'], prompt length: 2929
+Label: The psychology of happiness, Predict: ['The topic we discussed was: The psychology of happiness.'], prompt length: 2991
+Label: The effects of climate change on ocean ecosystems, Predict: ['The topic we discussed was: The effects of climate change on ocean ecosystems.'], prompt length: 2786
+Label: The future of sustainable agriculture, Predict: ['The topic we discussed was the future of sustainable agriculture.'], prompt length: 2838
+Label: The future of sustainable agriculture, Predict: ['The topic we discussed was the future of sustainable agriculture.'], prompt length: 3056
+Label: The benefits of regular exercise, Predict: ['The topic we discussed was the benefits of regular exercise.'], prompt length: 2886
+Label: The role of sports in society, Predict: ['The topic we discussed was the role of sports in society.'], prompt length: 2980
+Label: The history and culture of ancient civilizations, Predict: ['The first topic we discussed was the history and culture of ancient civilizations.'], prompt length: 2866
+Label: The role of sports in society, Predict: ['The topic we discussed was the role of sports in society.'], prompt length: 2670
+Label: The role of art in society, Predict: ['The topic was: The role of art in society.'], prompt length: 3093
+Label: The effects of sleep on overall health, Predict: ['The topic we discussed was the impact of social media on communication.'], prompt length: 2785
+Label: The impact of technology on human connection, Predict: ['The topic we discussed was "The impact of technology on human connection."'], prompt length: 2873
+Label: The future of sustainable agriculture, Predict: ['The topic of the future of sustainable agriculture.'], prompt length: 2893
+Label: The role of art in society, Predict: ['The topic we discussed was "The role of art in society."'], prompt length: 2964
+Label: The benefits of regular exercise, Predict: ['The topic we discussed was the benefits of regular exercise.'], prompt length: 3040
+Label: The effects of stress on the body and mind, Predict: ['The topic we discussed was the effects of stress on the body and mind.'], prompt length: 2957
+Label: The effects of climate change on ocean ecosystems, Predict: ['The topic we discussed was "The effects of climate change on ocean ecosystems."'], prompt length: 2968
+Label: The benefits of regular exercise, Predict: ['The topic of the benefits of regular exercise.'], prompt length: 2980
+Label: The effects of sleep on overall health, Predict: ['The topic we discussed was the impact of social media on body image.'], prompt length: 2879
+Label: The role of sports in society, Predict: ['The topic is the role of sports in society.'], prompt length: 3052
+Label: The benefits of reading for pleasure, Predict: ['The topic of the benefits of reading for pleasure.'], prompt length: 3222
+Label: The role of sports in society, Predict: ['The topic we discussed was the role of education in society.'], prompt length: 2806
+Label: The effects of air pollution on human health, Predict: ['The topic we discussed was the effects of air pollution on human health.'], prompt length: 2768
+Label: The role of art in society, Predict: ['The topic was: The role of art in society.'], prompt length: 3053
+Label: The impact of social media on communication, Predict: ['The topic of the impact of social media on mental health in adults.'], prompt length: 3235
+Label: The psychology of creativity, Predict: ['The topic we discussed was: The psychology of creativity.'], prompt length: 3006
+Label: The effects of stress on the body and mind, Predict: ['The topic of the effects of stress on the body and mind.'], prompt length: 3199
+Label: The psychology of creativity, Predict: ['The topic we discussed was "The psychology of creativity".'], prompt length: 2821
+Label: The future of renewable energy storage, Predict: ['The topic we discussed was "The future of renewable energy storage."'], prompt length: 3021
+Label: The benefits of a plant-based diet, Predict: ['The topic we discussed was the benefits of a plant-based diet.'], prompt length: 2952
+Label: The benefits of regular exercise, Predict: ['The topic was: "The benefits of regular exercise."'], prompt length: 3092
+Label: The future of sustainable agriculture, Predict: ['The topic we discussed was "The future of sustainable agriculture".'], prompt length: 2748
+Label: The role of sports in society, Predict: ['The topic we discussed was the role of sports in society.'], prompt length: 2837
+Label: The impact of social media on communication, Predict: ['The topic of the impact of social media on communication.'], prompt length: 3160
+Label: The role of education in society, Predict: ['The topic we discussed was the role of education in society.'], prompt length: 2953

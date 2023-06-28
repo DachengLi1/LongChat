@@ -13,10 +13,11 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License",
 ]
 dependencies = [
-    "accelerate", "fastapi", "gradio==3.23", "markdown2[all]", "numpy",
+    "accelerate", "fastapi", "gradio", "markdown2[all]", "numpy",
     "prompt_toolkit>=3.0.0", "requests", "rich>=10.0.0", "sentencepiece",
     "shortuuid", "transformers>=4.28.0", "tokenizers>=0.12.1", "torch",
-    "uvicorn", "wandb", "httpx", "shortuuid", "pydantic"
+    "uvicorn", "wandb", "httpx", "shortuuid", "pydantic", "tiktoken", "openai",
+    "fschat", "cpm_kernels"
 ]
 
 [project.optional-dependencies]

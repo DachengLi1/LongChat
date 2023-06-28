@@ -1,0 +1,50 @@
+Label: The future of sustainable agriculture, Predict: ['The topic was: The role of art in society.'], prompt length: 5877
+Label: The impact of technology on privacy and security, Predict: ['The topic was: The impact of technology on privacy and security.'], prompt length: 5918
+Label: The effects of climate change on ocean ecosystems, Predict: ['The topic was: The benefits of meditation.'], prompt length: 5551
+Label: The role of sports in society, Predict: ['The topic was: The benefits of mindfulness meditation.'], prompt length: 5719
+Label: The benefits of learning a new language, Predict: ['The topic was: The benefits of learning a new language.'], prompt length: 5683
+Label: The history and impact of the Renaissance, Predict: ['The topic was: The benefits of spending time in nature.'], prompt length: 6108
+Label: The impact of technology on human connection, Predict: ['The topic was: The impact of technology on human connection.'], prompt length: 5952
+Label: The benefits of reading for pleasure, Predict: ['The topic is: The benefits of reading for pleasure.'], prompt length: 5964
+Label: The role of sports in society, Predict: ['The topic was: The role of sports in society.'], prompt length: 5684
+Label: The history and culture of ancient civilizations, Predict: ['The topic we discussed was the history and culture of ancient civilizations.'], prompt length: 5482
+Label: The future of renewable energy storage, Predict: ['The topic was: The history and impact of the Renaissance.'], prompt length: 5996
+Label: The benefits of spending time in nature, Predict: ['The topic was: The benefits of spending time in nature.'], prompt length: 5843
+Label: The role of art in society, Predict: ['The topic was: The role of art in society.'], prompt length: 6016
+Label: The history and impact of the Renaissance, Predict: ['The topic was: The impact of social media on mental health in adults.'], prompt length: 5931
+Label: The role of sports in society, Predict: ['The topic of the role of sports in society.'], prompt length: 5964
+Label: The history and culture of the Middle Ages, Predict: ['The topic was: The history and culture of ancient civilizations.'], prompt length: 5821
+Label: The benefits of mindfulness meditation, Predict: ['The topic was: The benefits of mindfulness meditation.'], prompt length: 5723
+Label: The benefits of a plant-based diet, Predict: ['The topic was: The benefits of a plant-based diet.'], prompt length: 5860
+Label: The benefits of learning a new language, Predict: ['The topic was: The benefits of learning a new language.'], prompt length: 5846
+Label: The benefits of a plant-based diet, Predict: ['The topic was: The benefits of a plant-based diet.'], prompt length: 5744
+Label: The benefits of regular exercise, Predict: ['The topic was: The benefits of learning a new language.'], prompt length: 5619
+Label: The impact of social media on mental health in adults, Predict: ['The topic we discussed was the impact of social media on communication.'], prompt length: 6080
+Label: The impact of social media on mental health in adults, Predict: ['The topic was: The impact of social media on mental health in adults.'], prompt length: 5893
+Label: The benefits of volunteering, Predict: ['The topic was: The history and culture of ancient civilizations.'], prompt length: 5687
+Label: The future of sustainable agriculture, Predict: ['The topic was "The history and impact of the Renaissance."'], prompt length: 5891
+Label: The history and culture of the Middle Ages, Predict: ['The topic of the history and culture of the Middle Ages.'], prompt length: 5844
+Label: The psychology of happiness, Predict: ['The topic was: The benefits of a plant-based diet.'], prompt length: 5743
+Label: The benefits of reading for pleasure, Predict: ['The topic is the impact of social media on body image.'], prompt length: 5866
+Label: The history and culture of the Middle Ages, Predict: ['The topic was: The history and impact of the Renaissance.'], prompt length: 6123
+Label: The history and culture of ancient civilizations, Predict: ['The topic was: The history and culture of ancient civilizations.'], prompt length: 5532
+Label: The effects of air pollution on human health, Predict: ['The topic was: The benefits of a plant-based diet.'], prompt length: 5879
+Label: The benefits of volunteering, Predict: ['The topic was: The impact of social media on communication.'], prompt length: 5784
+Label: The impact of social media on mental health in adults, Predict: ['The topic was: The impact of social media on mental health in adults.'], prompt length: 5864
+Label: The history and impact of the Renaissance, Predict: ['The topic was: The history and impact of the Renaissance.'], prompt length: 5690
+Label: The future of sustainable agriculture, Predict: ['The topic was: The impact of social media on privacy and security.'], prompt length: 5607
+Label: The benefits of a plant-based diet, Predict: ['The topic we discussed was "The benefits of a plant-based diet."'], prompt length: 5545
+Label: The benefits of learning a new language, Predict: ['The topic of the benefits of learning a new language.'], prompt length: 5978
+Label: The benefits of learning a new language, Predict: ['The topic was: The psychology of happiness.'], prompt length: 5529
+Label: The impact of technology on human connection, Predict: ['The topic was: The impact of technology on human connection.'], prompt length: 5716
+Label: The benefits of learning a new language, Predict: ['The topic was: The benefits of learning a new language.'], prompt length: 5796
+Label: The history and impact of the Renaissance, Predict: ['The topic was: "The benefits of spending time in nature".'], prompt length: 5701
+Label: The psychology of happiness, Predict: ['The topic of the history and impact of the Renaissance.'], prompt length: 5807
+Label: The effects of sleep on overall health, Predict: ['The topic was: The benefits of mindfulness meditation.'], prompt length: 5673
+Label: The impact of social media on mental health in adults, Predict: ['The topic was: "The history and impact of the Renaissance."'], prompt length: 5753
+Label: The impact of social media on communication, Predict: ['The topic was: The history and impact of the Renaissance.'], prompt length: 5869
+Label: The psychology of happiness, Predict: ['The topic was: The benefits of learning a new language.'], prompt length: 5937
+Label: The role of art in society, Predict: ['The topic was: The history and culture of ancient civilizations.'], prompt length: 5679
+Label: The effects of sleep on overall health, Predict: ['The topic was: The history and impact of the Renaissance.'], prompt length: 5967
+Label: The benefits of reading for pleasure, Predict: ['The topic was: The benefits of reading for pleasure.'], prompt length: 5573
+Label: The benefits of learning a new language, Predict: ['The topic is: The history and culture of the Middle Ages.'], prompt length: 5943

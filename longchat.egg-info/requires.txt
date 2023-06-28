@@ -1,6 +1,6 @@
 accelerate
 fastapi
-gradio==3.23
+gradio
 markdown2[all]
 numpy
 prompt_toolkit>=3.0.0
@@ -8,7 +8,7 @@ requests
 rich>=10.0.0
 sentencepiece
 shortuuid
-transformers<4.29.0,>=4.28.0
+transformers>=4.28.0
 tokenizers>=0.12.1
 torch
 uvicorn
@@ -16,8 +16,9 @@ wandb
 httpx
 shortuuid
 pydantic
-performer-pytorch
-pytorch-fast-transformers>=0.3.0
+tiktoken
+openai
+fschat
 
 [dev]
 black==23.3.0

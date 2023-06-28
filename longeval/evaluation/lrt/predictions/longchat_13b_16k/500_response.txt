@@ -1,0 +1,7 @@
+Label: 26308, Predict: The <REGISTER_CONTENT> in line mundane-beech is <26308>., Parsed: 26308, prompt length: 11803
+Label: 15061, Predict: The <REGISTER_CONTENT> in line nervous-salami is <15061>., Parsed: 15061, prompt length: 11782
+Label: 12768, Predict: The <REGISTER_CONTENT> in line maddening-latte is <12768>., Parsed: 12768, prompt length: 11782
+Label: 2835, Predict: The <REGISTER_CONTENT> in line mysterious-gravitas is <2835>., Parsed: 2835, prompt length: 11738
+Label: 4141, Predict: The <REGISTER_CONTENT> in line angry-knuckle is <4141>., Parsed: 4141, prompt length: 11796
+Label: 19495, Predict: The <REGISTER_CONTENT> in line learned-communicant is <19495>., Parsed: 19495, prompt length: 11773
+Label: 37942, Predict: The <REGISTER_CONTENT> in line average-porcupine is <37942>., Parsed: 37942, prompt length: 11768

@@ -1,0 +1,14 @@
+Label: The future of renewable energy storage, Predict: ['The first topic we discussed was the future of renewable energy storage.'], prompt length: 15681
+Label: The future of sustainable agriculture, Predict: ['The first topic we discussed was The future of sustainable agriculture.'], prompt length: 15807
+Label: The future of space tourism, Predict: ['The first topic we discussed was the future of space tourism.'], prompt length: 15643
+Label: The impact of technology on human connection, Predict: ['The first topic we discussed was The impact of technology on human connection.'], prompt length: 15835
+Label: The benefits of a plant-based diet, Predict: ['The first topic we discussed was the benefits of a plant-based diet.'], prompt length: 15752
+Label: The psychology of creativity, Predict: ['The first topic we discussed was The psychology of creativity.'], prompt length: 15944
+Label: The benefits of volunteering, Predict: ['The first topic we discussed was The benefits of volunteering.'], prompt length: 15842
+Label: The effects of climate change on ocean ecosystems, Predict: ['The first topic we discussed was The impact of climate change on ocean ecosystems.'], prompt length: 15683
+Label: The benefits of mindfulness meditation, Predict: ['The first topic we discussed was The benefits of mindfulness meditation.'], prompt length: 15743
+Label: The benefits of a plant-based diet, Predict: ['The first topic we discussed was the benefits of a plant-based diet.'], prompt length: 15762
+Label: The future of space tourism, Predict: ['The first topic we discussed was the future of space tourism.'], prompt length: 16007
+Label: The effects of stress on the body and mind, Predict: ['The first topic we discussed was the effects of stress on the body and mind.'], prompt length: 15574
+Label: The benefits of regular exercise, Predict: ['The first topic we discussed was The benefits of regular exercise.'], prompt length: 15574
+Label: The history and impact of the Renaissance, Predict: ['The first topic we discussed was The history and impact of the Renaissance.'], prompt length: 15642

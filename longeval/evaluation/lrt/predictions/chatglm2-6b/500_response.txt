@@ -1,0 +1,51 @@
+Label: 26308, Predict: The <REGISTER_CONTENT> for "line mundane-beech" is <44750>., Parsed: 44750, prompt length: 11561
+Label: 15061, Predict: The <REGISTER_CONTENT> for "nervous-salami" is <26498>., Parsed: 26498, prompt length: 11547
+Label: 12768, Predict: The <REGISTER_CONTENT> for "maddening-latte" is <1653>., Parsed: 1653, prompt length: 11550
+Label: 2835, Predict: The <REGISTER_CONTENT> for "mysterious-gravitas" is <44117>., Parsed: 44117, prompt length: 11500
+Label: 4141, Predict: The <REGISTER_CONTENT> for "angry-knuckle" is <7266>., Parsed: 7266, prompt length: 11537
+Label: 19495, Predict: The <REGISTER_CONTENT> for "learned-communicant" is <19495>., Parsed: 19495, prompt length: 11521
+Label: 37942, Predict: The <REGISTER_CONTENT> in line average-porcupine is <37942>., Parsed: 37942, prompt length: 11533
+Label: 9972, Predict: The <REGISTER_CONTENT> of "bad-underneath" is <16685>., Parsed: 16685, prompt length: 11539
+Label: 47416, Predict: The <REGISTER_CONTENT> of "bashful-saving" is <46682>., Parsed: 46682, prompt length: 11535
+Label: 13612, Predict: The <REGISTER_CONTENT> for "bloody-suburb" is <18100>., Parsed: 18100, prompt length: 11506
+Label: 13548, Predict: The <REGISTER_CONTENT> for line "materialistic-diction" is <13558>., Parsed: 13558, prompt length: 11507
+Label: 28138, Predict: The <REGISTER_CONTENT> of line disillusioned-quill is <13676>., Parsed: 13676, prompt length: 11553
+Label: 9890, Predict: The <REGISTER_CONTENT> in line "determined-embryo" is <15147>., Parsed: 15147, prompt length: 11569
+Label: 41462, Predict: The <REGISTER_CONTENT> of "cynical-postfix" is <16729>., Parsed: 16729, prompt length: 11488
+Label: 175, Predict: The <REGISTER_CONTENT> for "outrageous-credit" is <175>., Parsed: 175, prompt length: 11514
+Label: 5696, Predict: The number of lines in the given record is 22., Parsed: 22, prompt length: 11540
+Label: 10540, Predict: The <REGISTER_CONTENT> for "line kind-stop" is <15677>., Parsed: 15677, prompt length: 11549
+Label: 48884, Predict: The <REGISTER_CONTENT> for "afraid-dust storm" is <16257>., Parsed: 16257, prompt length: 11528
+Label: 8141, Predict: The <REGISTER_CONTENT> of "exuberant-wet-bar" is <46666>., Parsed: 46666, prompt length: 11474
+Label: 11592, Predict: The <REGISTER_CONTENT> of "delicious-cone" is <27516>., Parsed: 27516, prompt length: 11518
+Label: 39859, Predict: The <REGISTER_CONTENT> for line "piquant-success" is <44866>., Parsed: 44866, prompt length: 11460
+Label: 33449, Predict: The <REGISTER_CONTENT> for "alluring-pub" is <18108>., Parsed: 18108, prompt length: 11533
+Label: 38572, Predict: The <REGISTER_CONTENT> of line unsuitable-sardine is <15261>., Parsed: 15261, prompt length: 11560
+Label: 1431, Predict: The <REGISTER_CONTENT> for "abortive-hope" is <13450>., Parsed: 13450, prompt length: 11483
+Label: 41345, Predict: The number for the line "broken-arrest" is 18562., Parsed: 18562, prompt length: 11526
+Label: 34789, Predict: The <REGISTER_CONTENT> for "faulty-island" is <46856>., Parsed: 46856, prompt length: 11534
+Label: 29815, Predict: The <REGISTER_CONTENT> for "dark-diving" is <13624>., Parsed: 13624, prompt length: 11497
+Label: 32039, Predict: The corresponding <REGISTER_CONTENT> for line "spurious-tailor" is 16115., Parsed: 16115, prompt length: 11516
+Label: 35163, Predict: The <REGISTER_CONTENT> of "elite-infix" is <12372>., Parsed: 12372, prompt length: 11501
+Label: 3201, Predict: The <REGISTER_CONTENT> for "line worthless-thrill" is <17351>., Parsed: 17351, prompt length: 11496
+Label: 8868, Predict: The <REGISTER_CONTENT> for line "quaint-adapter" is <15532>., Parsed: 15532, prompt length: 11560
+Label: 30872, Predict: The <REGISTER_CONTENT> for line "fancy-smolt" is <3409>, Parsed: 3409, prompt length: 11529
+Label: 39419, Predict: The <REGISTER_CONTENT> in line "hesitant-burn" is <15744>., Parsed: 15744, prompt length: 11464
+Label: 32649, Predict: The <REGISTER_CONTENT> of "warlike-cub" is <19196>., Parsed: 19196, prompt length: 11546
+Label: 47628, Predict: The <REGISTER_CONTENT> for "line puny-vineyard" is <12117>., Parsed: 12117, prompt length: 11570
+Label: 35216, Predict: The <REGISTER_CONTENT> of line divergent-knitting is <43872>., Parsed: 43872, prompt length: 11509
+Label: 24256, Predict: The <REGISTER_CONTENT> of "plausible-distance" is <38972>., Parsed: 38972, prompt length: 11515
+Label: 49590, Predict: The <REGISTER_CONTENT> for line "sad-ease" is <16526>., Parsed: 16526, prompt length: 11482
+Label: 36018, Predict: The number of the line quack-scholar is 48551., Parsed: 48551, prompt length: 11541
+Label: 40221, Predict: The <REGISTER_CONTENT> of "envious-cytokine" is <14659>., Parsed: 14659, prompt length: 11574
+Label: 26783, Predict: The line you mentioned is "screeching-azimuth," and it is <43723>., Parsed: 43723, prompt length: 11487
+Label: 41992, Predict: The line you mentioned is: "line <line index>: REGISTER\_CONTENT is <29586>"., Parsed: 29586, prompt length: 11510
+Label: 15058, Predict: The <REGISTER_CONTENT> for line "quick-instance" is <15058>., Parsed: 15058, prompt length: 11498
+Label: 34879, Predict: The <REGISTER_CONTENT> for "glorious-pipeline" is <28658>., Parsed: 28658, prompt length: 11496
+Label: 32386, Predict: The number of the line that you're asking about is 18., Parsed: 18, prompt length: 11552
+Label: 36396, Predict: The corresponding <REGISTER_CONTENT> for line "acrid-hydrocarb" is <18439>., Parsed: 18439, prompt length: 11514
+Label: 44716, Predict: The <REGISTER_CONTENT> for "accessible-mama" is <10736>., Parsed: 10736, prompt length: 11500
+Label: 15477, Predict: The <REGISTER_CONTENT> in line kind-beyond is <14037>., Parsed: 14037, prompt length: 11523
+Label: 42215, Predict: The <REGISTER_CONTENT> for "comfortable-rowing" is <23151>., Parsed: 23151, prompt length: 11534
+Label: 6291, Predict: The <REGISTER_CONTENT> for "clean-zucchini" is <29659>., Parsed: 29659, prompt length: 11533
+Accuracy: 0.08

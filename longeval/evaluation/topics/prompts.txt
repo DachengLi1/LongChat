@@ -1,0 +1,7 @@
+This file contains the prompt we use to query ChatGPT to generate topic names.
+
+### Generate Topics ###
+Generate 50 interesting and general topics for me, each topic in a row, do not use any numbers or bullet point, return them in plain text. do not include any political and sexual topics, or any topic related to a specific country or person.
+
+### Generate conversations on a topic ###
+Generate a conversation on a topic <TOPIC> between the USER and the ASSISTANT. Do not include any header. The conversation will be started by the USER by "I would like to discuss the topic of <TOPIC>" The conversation will be ended by the USER by "Great, let's talk about the next topic". the <TOPIC> is xxx.
