@@ -1,94 +1,2083 @@
-Task,ID,Predictionnarrative_qa,3858,"The Project Gutenberg-tm, the Project Guten-tm, the 1.
-1.
-The Project Gutenberg Foundation
-1.org
-1. 1. 1. 1. 1. 1. 1. 1. 1. 1. "narrative_qa,3858,"The Project Gutenberg-tm, the Project Guten-tm, the 1.
-1.
-The Project Gutenberg Foundation
-1.org
-1. 1. 1. 1. 1. 1. 1. 1. 1. 1. "narrative_qa,5947,"Project Guten-tm, the Project Guten-tm, the Foundation
-1.
-The Project Guten-tm, the Project Guten-tm, the Project
-1.org
-The Project Guten-tm, the Project Guten-org
-The Project Guten-org
-The Project G"narrative_qa,5947,"Project Guten-tm, the Project Guten-tm, the Foundation
-1.
-The Project Guten-tm, the Project Guten-tm, the Project
-1.org
-The Project Guten-tm, the Project Guten-org
-The Project Guten-org
-The Project G"narrative_qa,12164,"Project Guten-tm, the Project Guten-tm, the 1.
-The Project Guten-tions of the Foundation
-1.
-1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1."narrative_qa,12164,"Project Guten-tm, the Project Guten-tm, the 1.
-The Project Guten-tions of the Foundation
-1.
-1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1."narrative_qa,23148,"Project Gutenberg-tm, the Project
-The Project Guten-tm, the
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***"narrative_qa,23148,"Project Gutenberg-tm, the Project
-The Project Guten-tm, the
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***
-***"narrative_qa,25278,"CRIT: I am
-CR: I am
-CR: I am
+Task,ID,Prediction
+narrative_qa,d285c6beb3dc935411fd3297b02602b8afc7170c_14,""I's
+"I'm not
+"
+"I'm
+"
+"I
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"
+"I
+"
+"
+"
+"
+"
+""
+narrative_qa,c5165082a52b8427b974f0ed3152862f0d51ffb7_19,"</b>	<b>	<b>	<b>	<	<	<	<	
+		<	<	<	
+>	<	<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,8ec2acc82d024a645fe81f51270d6dbba8b7981e_15,"
+
+
+
+
+Translated by Jow
+
+
+
+
+PERSON OF
+DIC
+
+DUE
+IT
+
+
+RO
+
+Socrates"
+narrative_qa,6cfe7052daf187b667538b2858849a84c1f6b049_10,"
+
+
+
+
+"I'sorry, she's not
+
+
+
+
+
+
+"I'm
+
+
+
+"I
+
+"
+
+"
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+narrative_qa,94dc6d01df88f97843813efb11e5d7e48562c869_15,""I am, the man, the boat, the boat, and the
+" ether, and the
+" ether, and the
+" ether, and the
+"
+" ether, and the
+" ether
+" ether
+" ether
+" ether
+" "
+narrative_qa,336e272847df32ee6f87eca63ee800c5add03639_17,"<b>                  1.
+<b> I'm
+>                 1.
+b> The
+>                 1.
+> 1.
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+>"
+narrative_qa,d802901218c1f792295cb1565a2a922b4ff9294a_6,"[1.
+[1: 1. 1. 1. 2. 2. 2. 3. 3. 4. 4. 4. 5. 6. 7. 8. 9. 10. 10. "
+narrative_qa,f90f97c9ae38be55921b5e8a93d06ddada82dd1f_13,""I am not, he said, "I'm not to be
+"--the Church, and the Church
+"--the Church
+"--the Church
+"--the Church
+"--the Church
+"--the Church
+"--the Church
+"--the Church
+"--the Church"
+narrative_qa,4f485054f9d450534fddba184f0996e32575d1be_10,"b>	</b>	</b>	I	</b>	I	<
+</b>	<
+b>	b>	<
+>	<
+>	b>	<	<
+>	<	b>
+>	<	<	<	b"
+narrative_qa,4b30ab1c49b62dc59b9773954958d9ac6807a865_0,"<b>          <b>
+</b>
+</b>
+</b>
+</b>
+<b>
+<b>
+<b>
+<b>
+<
+<b>1
+>
+</b>
+</b>
+</b>
+</b>"
+narrative_qa,edb92e9d9fe05242da8ead459d53853c8815716b_11,"
+
+
+
+MYRand
+
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+THE
+
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE"
+narrative_qa,56434e4849e679e4089c33a5f5bd3050e71c5ec1_4,"
+
+
+The story is a young woman, the
+The story is about a young man,
+Claude
+The story of the
+The story is a young man
+The story is a young man
+The story of the young man
+The story is a young man
+The story of the young man
+"
+narrative_qa,926198f64d64f2bf796feddd42a4aa1714ddf5b2_20,"Siddha
+Siddha's friend, Vasude
+Siddha, Vasude
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha"
+narrative_qa,f75db432fbc79913fb56349cfdb7ec5446e9941e_15,"p>
+<p>	P<p>	P<p>	P>	P>
+<p>
+<p>
+
+
+
+
+
+
+</p>
+
+
+</p>
+>
+>"
+narrative_qa,5b074da81e9086fe8761ecfc0f79ff30d07d57c0_16,"<1.
+                         
+                         
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+                 
+"
+narrative_qa,f94253b4b5f8cfb2afea5f0b9d6bb87de266d11c_22,"The peas the superint, the
+The superintendent, the
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superintendent
+The superint"
+narrative_qa,a21137785e9a0e86d9cefd3fda385199fd9da232_4,"
+
+
+
+
+
+The Witch
+
+
+
+The Witch
+
+
+The
+
+The
+Witch
+of
+Hering
+Towling
+Poem
+Towling
+Towing
+Towing
+T
+The
+The
+Con
+Towing
+Po"
+narrative_qa,ea371ba9cc41bf32aa8b37549662d2d3a38f084d_20,"I'm not know, I'm not sure.
+I'm not sure.
+I'm not
+I'm not sure.
+I'm not
+I'm not sure.
+I'm not
+I'm not
+I'm not
+I'm not
+"
+narrative_qa,ebfad83ccf1214df566432798c54deb17e91d958_11,"The doctor, the
+The doctor's wife, the
+The doctor, the
+The doctor's wife
+The doctor's wife
+The doctor's wife
+The doctor's wife
+The doctor's husband
+The doctor's wife
+The doctor's husband
+The doctor's"
+narrative_qa,c63c5b96aac5c5c1d059d839580344f80e456bd4_26,"<	</b>	</b>	I	b>	I
+</b>	I
+<	<	b>	I
+<	b>	b>	b>	b>
+<	b>	b>	b>	b>
+<	b>"
+narrative_qa,9d8ddfe86beba149b3463eeb1bae92919e179fed_26,"<b>                   I's the
+<b>
+>                 1
+> 1
+> 2
+> 2
+> 3
+> 4
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+>"
+narrative_qa,57523a482ae81616899feaff7497fa962edef9b6_5,""I am, my dearest, my dearest, I am
+"
+"I have a good, and you are
+"
+"I have a good
+"
+"I am not, my dearest, my dearest
+"
+"I am
+"I am
+"I am
+"
+narrative_qa,a32f354788dd1f1411b9745200cb330d9b556373_19,"<b>                     <b> the
+<b> the
+<
+<
+>                     <
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+"
+narrative_qa,6a02d46e87865ba5b033c56c658af2bfdd182093_13,"<b>	<b>	A	<b>	I
+<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,e0c74cdf270ebe29a2139e7319fc7314738c88ee_30,"<b>                 1
+<b>
+<b>
+<b>ON
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,ea371ba9cc41bf32aa8b37549662d2d3a38f084d_7,"I'm not know what's
+I'm not sure, I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not"
+narrative_qa,15618d16f20e7ba33352f06e210f42ef59d84d74_10,"<b>                     <b>                 1
+<b>                 1
+<b>
+>                 1
+> 1
+<b>
+>                 1
+<b>
+> 1
+>
+>                 1
+> 1
+> 1
+"
+narrative_qa,c5165082a52b8427b974f0ed3152862f0d51ffb7_20,"</b>	<b>	<b>	<b>	<b>	<
+		<	<	
+		<	<	
+		<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,f70edecebfabbfaa65fb58ada2a6642453d217a9_24,"I's
+I'm afraid, the
+"s
+"I'm afraid
+"
+"I'm afraid
+"
+"I'm
+"
+"I'm
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"
+narrative_qa,f94253b4b5f8cfb2afea5f0b9d6bb87de266d11c_23,"The peas the superint, the superintendent, the
+The superintendent, the superintendent, the superintendent, the superintendent, the superintendent, the superintendent
+The superintendent, the superintendent
+The superintendent, the superintendent,"
+narrative_qa,ea371ba9cc41bf32aa8b37549662d2d3a38f084d_1,"The girl, she's
+"I'm not sure, I'm not sure
+"
+"I'm not
+"
+"I'm not
+"
+"I'm not
+"
+"I'm not
+"
+"I'm
+"
+"I'"
+narrative_qa,6d3020e7252fb731314bad3522cd416af124a3f0_14,"CH.
+
+
+
+I's the earth, the
+
+
+
+
+X.
+
+I
+
+I
+X.
+
+X
+XI
+XI
+XI
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+"
+narrative_qa,922ac7cfbc0ffe736ce42b2f0035caed42364bed_10,"</b>																																																													"
+narrative_qa,336e272847df32ee6f87eca63ee800c5add03639_1,"<b>                 1.
+<b>
+>                 1.
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+"
+narrative_qa,f69d861b4aed53f6bd9069c588a641929c840ae5_0,"Their
+Their
+Their
+Their
+Their
+Their
+Their
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,c6bf28c8adbc7b8fb371bc7cb38d1be353597147_19,"The-
+The-rather, the
+Their-ar
+Their
+Their
+Their-
+Their-
+Their
+Their
+Their
+Their
+Their
+Their
+Their
+Their
+Their
+Their
+Their
+Their"
+narrative_qa,09c9afb4abbd6064c1f26c3632edbe6d92a34206_7,"<b>                 1.
+<b> 1.
+<b>
+>                 1.
+>
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+>"
+narrative_qa,b3d5cd530ffd1b3e55e1ac07b7e21c7134387d94_10,"
+
+Theodor Herzl, 19-8-6
+
+
+
+
+Theodor, 19-8-
+
+
+
+Theodor
+
+
+Theodor
+
+Theodor
+Theodor Herzl
+Theodor
+Theodor Herzl
+Theodor Herzl
+Theodor"
+narrative_qa,b7ea3185c6be5ea8d603fe5c4c54268c8b42605a_4,"
+
+
+
+
+The first, the first, the
+
+
+
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,01502137e4276712d118bd4bdaf481c89aed163b_11,"<b>          <b>2 8/3
+          <b> 8RING 10N
+         1T
+<b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+"
+narrative_qa,b7ea3185c6be5ea8d603fe5c4c54268c8b42605a_12,"
+
+
+
+
+Thee'sighsighing to the court
+
+
+
+
+
+The court
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,3513ebaa62106c8e80a0c9723eb456f28950adb8_0,"
+
+
+
+
+"I'sir
+
+
+
+"I
+
+"I
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+narrative_qa,0ae0524cd381087ff94afe5d3fcd807f1708e488_8,"The Exhibition
+The Exhibition
+The Louvre
+The Louvre
+The Salon
+The Salon
+The Salon
+The Louvre
+The Louvre
+The Louvre
+The Salon
+The Louvre
+The Salon
+The Louvre
+The Louvre
+The Sal"
+narrative_qa,00fb61fa7bee266ad995e52190ebb73606b60b70_27," 
+  
+  
+  
+WO, 
+WIT, 
+WIT, 
+WIT, 
+WIT,
+WIT,
+WIT,
+WIT,
+WIT,
+WIT,
+WIT, WIT, WIT, WIT,"
+narrative_qa,ed524405685e79384ca61daa883a2c0da21cfc9c_9,"LORD. 1. 1. What is the
+2. What is the
+2. Who is
+3. Whose
+4. Whose
+5. Whose
+6. Whose
+7. Whom
+8. Whom
+9. Whom
+10. Who’"
+narrative_qa,edb92e9d9fe05242da8ead459d53853c8815716b_8,"
+
+
+
+
+THE Archde
+
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+
+THE
+
+THE
+
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+"
+narrative_qa,afa2f47d178398d3f3c9515662fc5bbd71b15ccd_13,"
+
+
+
+
+
+The
+The
+
+
+The
+
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,51f816f54645196b0a8f588f9ae955de103565f7_2,"<b>                 1.
+</b>                 1
+</b>
+<b>
+<b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</"
+narrative_qa,a21137785e9a0e86d9cefd3fda385199fd9da232_9,"
+
+
+
+
+Who does the Witch
+
+
+The Witch
+
+
+The
+
+The
+Witch
+Produced
+TOWitch
+
+
+The
+Boring
+Towling
+Towing
+Towing
+Poem
+T
+T
+T
+ing
+"
+narrative_qa,a21137785e9a0e86d9cefd3fda385199fd9da232_10,"
+
+
+
+
+The witch
+
+Where does the
+Where does the
+myster
+Produce
+
+
+The
+In
+The
+con
+ing
+th
+ing
+to
+m
+ing
+ing
+to
+ing
+ing
+ing
+ing
+ing
+ing
+ing"
+narrative_qa,042bb7019f583cebe3290795149fdc70412ad813_12,"<b>                     N
+</b>
+N</b>
+<b> I'm
+<
+>                  
+<b>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>"
+narrative_qa,845186ccb0a481e73525e98cbef89279c2f5721e_26,""I's
+"I'm not a moment of the
+"
+"I'm not
+"
+"I'm not
+"
+"I'm not
+"
+"I'm
+"
+"I
+"'m
+"I
+"'m
+"
+"
+narrative_qa,0ae0524cd381087ff94afe5d3fcd807f1708e488_17,"The Exhibition of Art
+The Salon
+The Salon
+The Salon
+The Louvre
+The Louvre
+The Salon
+The Louvre
+The Louvre
+The Louvre
+The Louvre
+The Louvre
+The Louvre
+The Louvre
+The Louvre
+The"
+narrative_qa,408d3b92b889218d73adddf502b5f7f9d002f4ab_8,"{
+{ 1}
+{ 1.
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+{ 1
+"
+narrative_qa,9d8ddfe86beba149b3463eeb1bae92919e179fed_24,"<b>                   I'm
+<b>                 1
+> I'm not
+<b>
+>                 1
+> 1
+> 2
+> 2
+> 3
+> 4
+> 
+> 
+> 
+> 
+>"
+narrative_qa,de42ec88ce00d0f1e21ad4ad719d1d64499e5166_16,"<b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,ebfad83ccf1214df566432798c54deb17e91d958_11,"The doctor, the
+The doctor's wife, the
+The doctor, the
+The doctor's wife
+The doctor's wife
+The doctor's wife
+The doctor's wife
+The doctor's husband
+The doctor's wife
+The doctor's husband
+The doctor's"
+narrative_qa,3c5a131da6f43e2f92dce91aa238e6782e428748_23,"</b>                        I'm not
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b"
+narrative_qa,5339e9db4aca0b74b644e736274989344864f0ba_1,"<b>                  1.
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,69add8ffcf964d23243ac02b7282d57beb63c355_12,"<b>RET</b>
+Ellips, the ground
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,199ec80c97f752cd8e00d2ca6f8e5f48603fefb8_29,"<b>                     ST</b> I'm
+<
+>                 1
+</b> I'm not
+<
+b>
+>                 1
+<b> 1
+> 2
+> 2
+> 3
+> 
+> 
+> "
+narrative_qa,d285c6beb3dc935411fd3297b02602b8afc7170c_22,""I's
+"I'm not,
+"
+"I'm
+"
+"I
+"I
+"
+"I
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"
+"I
+"
+"
+narrative_qa,c49589b75550f66772acbdb86b26b1fd38a3249e_4,"SI: I'm
+Less
+Tell, I'm
+The
+SIST: I'm
+SIR
+SIR.
+SIR.
+SIR.
+SIR.
+SI.
+SI.
+SI.
+SI.
+SI.
+SI.
+SI."
+narrative_qa,441f692c3e288cd8b6411e792e629ae8b362c649_16,"<	b>		 	 	 	<b>	<b>	I
+>	I
+</	<
+b>	I
+b>	<	I
+b>	<	b>
+b>	b>
+>	b>	b>
+"
+narrative_qa,6a02d46e87865ba5b033c56c658af2bfdd182093_26,"<b>	<b>	<b>	I
+</b>	<
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,a32f354788dd1f1411b9745200cb330d9b556373_12,"<                     I's the
+<b>
+<b>                 1
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</"
+narrative_qa,d802901218c1f792295cb1565a2a922b4ff9294a_28,"[1.
+[1.e.e.e. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1."
+narrative_qa,ccdf8c8c07e95675fae3591714061ecacfd5ad2e_2,"<b>                 1.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<
+<b>
+<
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,26118a3592e63a620bed0d65d1b0943d502e55ef_19,"
+
+
+
+
+
+"I'money,0
+
+
+
+
+
+"I'll
+
+
+
+
+"
+
+"
+
+
+"
+
+
+
+"
+
+
+
+"
+
+
+"
+
+
+"
+
+
+"
+
+"
+
+""
+narrative_qa,7235e7853e8ea8ba99b6d7a386d8de03b3887ace_4,"
+
+
+
+<8.
+
+
+<8.
+
+
+
+<b>
+
+
+
+
+<
+
+
+<
+
+
+<
+
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+<
+"
+narrative_qa,9990281afdfbf883d53ac7540acfcbb375380f75_11,"<		J>	I
+>			I
+>			<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,6a02d46e87865ba5b033c56c658af2bfdd182093_18,"<b>	<b>	<b>	I
+<b>	<	<
+>	<
+>	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,81db4f3e5fe29c02fd7b7a702aa4847db6a04613_0,"<	b>	b>	I	I	b>	I
+</b>	I'll
+b	ask
+b>	you
+b>	I	ask
+b>	her
+b>	I	b>	I	ask
+b>	I	ask"
+narrative_qa,08a5821c3e1845f6112f2114e61b717ca8ee79ac_16,"								</b>	<b>	I	I
+</	look
+	the	of	the	statue
+b>	of	the	city
+b>	of	the	statue
+b>	of	the	statue
+<"
+narrative_qa,8ec2acc82d024a645fe81f51270d6dbba8b7981e_6,"
+
+
+
+Translated by Jow
+
+
+
+PERSON OF
+DIC
+
+
+THE
+DION
+
+
+CRIT
+
+Socrates"
+narrative_qa,08a5821c3e1845f6112f2114e61b717ca8ee79ac_14,"											</b>
+</b>
+</				<b>
+</	<	<	<
+>
+>				<	<	<	
+>
+>
+>									"
+narrative_qa,6a02d46e87865ba5b033c56c658af2bfdd182093_2,"<b>	b>	<b>	I
+</b>	<
+<	<	<	b>	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,ffa719867c77cfd8fc661fdb6d8c8d266746e15f_12,"<                     LET
+<b>                 8
+</b>
+<b>
+<b>
+>                 8
+<b>
+>
+<b>
+<
+<b>
+<
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,3513ebaa62106c8e80a0c9723eb456f28950adb8_4,"
+
+
+
+
+"I'sir
+
+
+
+"I
+
+"
+"
+
+"
+
+"
+
+"
+
+"
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+""
+narrative_qa,b833410a8ff29952ca664319cb3462f2fd07d4f9_2,"</b>                 1
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</"
+narrative_qa,dd2d1de84e1da738d7e13f2288e75f0ca49dd1f7_18,"                   <i> 1.
+<b> 1.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,1dfe627a09345ed564805313858dc89daf4a2283_2,""I'll be
+"I'll be
+"I'll be
+"
+"I'll be
+"
+"I'll be
+"
+"I'll be
+"
+"I'll
+"
+"I'll
+"
+"I'll
+""
+narrative_qa,0ac0e7c55534399855675cf41872ae6c5a8a32dd_18,""I'm not, I'm not a scholar, I'm not a scholar, I'm not a scholar
+"
+" said the
+"I'm not a scholar, I'm not a scholar
+"
+"I'm not a scholar
+" I'm not a"
+narrative_qa,ed524405685e79384ca61daa883a2c0da21cfc9c_2,"Lady, I’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady’s
+Lady"
+narrative_qa,6d2e1b95ed2a00e16e046b6f3d0b03e687c7f7f7_16,"</b>                 1.
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,57523a482ae81616899feaff7497fa962edef9b6_14,""I am, my dearest, my dearest, I am
+"
+"I have a good, and you are
+"
+"I am not, my dearest, my dearest
+"
+"I am
+"I am
+"I am
+"I am
+"I am
+"
+narrative_qa,214651e1fc210afdc48cb7272a4d06b79d172708_27,"Transcribed by Mary Mehapter
+Produced by Greg Wehan
+Transcribed by Online
+Team at pg.net
+
+
+
+
+
+
+
+
+========================================================================================================================================
+
+
+
+
+
+
+
+
+
+The End of
+================================================================================="
+narrative_qa,ccdf8c8c07e95675fae3591714061ecacfd5ad2e_5,"<b>                 1.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,127e1efe32b11e606a0c8f49a2399abb4a52f9d9_12,"<b>                 1
+<b>                 1
+<b>
+<b>
+<b>
+<b>
+<
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,b1813716c996049c8a1402af0982489b5bc21d21_10,"<b>                   <b> 2. I'm
+<b>
+<b> 2.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b"
+narrative_qa,3aebde6419420eb6b02f3d21541565001cc7c695_14,"<b>                 1.
+<b> 1.
+<b> 10MIT                 1T
+<
+<b>
+<b>2
+<b>2
+<b>
+<b>3
+<b>3
+<b>1
+<b"
+narrative_qa,56434e4849e679e4089c33a5f5bd3050e71c5ec1_14,"
+
+
+
+The text: 1. 1. What is the title of the poem?
+2. What is the poem about?
+2. What is the main idea?
+3. What is the title of the poem?
+4. Who is the speaker?
+5. Who is the"
+narrative_qa,b2091fab7149af1b52bdd0a2bc28e60a2092a16a_3,"
+
+
+
+
+PRODUDublin
+
+
+
+
+
+THE
+
+THE
+
+
+
+THE
+
+
+SEA
+ACT
+ON
+PLAY
+
+ON
+A
+S
+Y
+R
+ONE
+
+S
+ACT
+It
+
+I
+N
+ON"
+narrative_qa,b833410a8ff29952ca664319cb3462f2fd07d4f9_6,"</b>                   <b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>"
+narrative_qa,5b074da81e9086fe8761ecfc0f79ff30d07d57c0_8,"<1.
+<1. 1. 1. 1.
+<
+<
+<1. 1. 1.
+<
+<1. 1.
+<1.
+<1. 1.
+<1.
+<1. 1.
+<1"
+narrative_qa,d431326bd5a673425316a46ced23563a00d3e45c_13,"
+
+
+
+
+What type of wreckage of ship from the dark,
+
+
+
+
+
+What type of dark
+
+
+What type
+of
+
+What type
+of
+dark
+of
+dark
+was
+the
+the
+dark
+was
+the
+was
+the
+ve"
+narrative_qa,7235e7853e8ea8ba99b6d7a386d8de03b3887ace_5,"
+
+
+
+<b>                  1.
+
+
+
+
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+"
+narrative_qa,5806789ebca66b68e86317d0e09b8a433c236280_17,"</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,5806789ebca66b68e86317d0e09b8a433c236280_24,"</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,3c5a131da6f43e2f92dce91aa238e6782e428748_27,"<b>                        I's
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>"
+narrative_qa,ccdf8c8c07e95675fae3591714061ecacfd5ad2e_7,"<b>                 1.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b"
+narrative_qa,26118a3592e63a620bed0d65d1b0943d502e55ef_28,"
+
+
+
+
+
+"I'money, I'll be a million
+
+
+
+
+
+
+"I'll be
+
+
+
+
+"I'll
+
+
+
+"
+
+"
+
+"
+
+"
+
+"
+
+"
+"
+"
+"
+narrative_qa,c63c5b96aac5c5c1d059d839580344f80e456bd4_25,"<	</b>	b>	I	b>	I
+</b>	I
+</b>	I
+<	need
+b>	b>	I
+b>	<	I
+b>	b>	b>	I
+<	b>	b"
+narrative_qa,926198f64d64f2bf796feddd42a4aa1714ddf5b2_20,"Siddha
+Siddha's friend, Vasude
+Siddha, Vasude
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha"
+narrative_qa,f75db432fbc79913fb56349cfdb7ec5446e9941e_4,"p>
+<p>	P<p>	P<p>	P>
+<p>
+>
+
+
+
+
+
+
+</p>
+
+>"
+narrative_qa,31c7eca71291b68f55dec4af7e61b6bcae8c5a8a_13,"
+
+
+
+
+
+The
+The
+
+
+The
+
+The
+
+
+The
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,2a74184610bf91866dbdf37cba0b874dfc748a86_5,"CRAT: I am not
+CRAT: I am
+CR: I
+CR: I
 CR:
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-CR: I am
-"narrative_qa,25278,"CRIT: I am
-CR: I am
-CR: I am
 CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR:
+CR"
+narrative_qa,8cb9a3afd8d542c798c3a34fd1a9afa0a77931c2_0,"I am not the young, I am not, I am not a young, I am not to be
+I am not, and the
+I am not, I am not, I am not
+I am not, I am not
+I am not, I am not, I am not, I am not"
+narrative_qa,afa2f47d178398d3f3c9515662fc5bbd71b15ccd_17,"
+
+
+
+
+
+The
+The
+
+
+The
+
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,408d3b92b889218d73adddf502b5f7f9d002f4ab_2,"{
+{ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. "
+narrative_qa,b2091fab7149af1b52bdd0a2bc28e60a2092a16a_6,"
+
+
+
+
+
+PRODUDRA
+
+
+
+
+THE
+
+TER
+S
+S
+S
+
+ACT
+ON
+A
+A
+ACT
+ON
+It was
+Y
+A
+P
+P
+L
+E
+ONE
+A
+R
+ACT
+E
+"
+narrative_qa,862799d267213ae12ec7925feea1faf82358cec9_25,"The first, the
+The first
+The first
+The first, the
+The second,
+The third,
+The fourth
+The fifth
+The sixth
+The seventh
+The ninth
+The eighth
+The ninth
+The ninth
+The tenth
+The ninth
+The ninth"
+narrative_qa,e0c74cdf270ebe29a2139e7319fc7314738c88ee_28,"<b>                 1
+<b>
+<b>ON
+<b>ON
+<b> 
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b"
+narrative_qa,72e366771c3ae8c0249571021764dec1e19094f4_11,"<b>                 1   A
+b> 1. A
+b</b> 1.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+"
+narrative_qa,d431326bd5a673425316a46ced23563a00d3e45c_4,"Produced by Stephen Blund and the Online Proofreading Team
+Distributed at <https://dp.net>"
+narrative_qa,a6dfeb4977cc8ba862878693664d326d7c6049e7_38,"I's a rose, a rose, a rose, a rose, a bird, a word
+The sun, a tree, a word
+I's a star, a flower
+I's
+I'llow, a word, a tree, a bird, a sound
+I's a"
+narrative_qa,f69d861b4aed53f6bd9069c588a641929c840ae5_22,"
+
+
+CHAP
+XIII.
+VIII
+TION
+AFF
+T
+CHAP
+TION
+E
+X
+X
+V
+I
+AG
+I
+N
+AG
+E
+I
+N
+O
+N
+I
+N
+G
+E
+R"
+narrative_qa,01502137e4276712d118bd4bdaf481c89aed163b_16,"<b>          <b>2 8R>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+          <b>
+         "
+narrative_qa,2a74184610bf91866dbdf37cba0b874dfc748a86_12,"CRAT: I am not the
+CR: I am not
+CR: I am
+CR: I am
+AT: I am
 CR: I am
 CR: I am
 CR: I am
@@ -96,84 +2085,1461 @@ CR: I am
 CR: I am
 CR: I am
 CR: I am
-CR: I am
-CR: I am
-"narrative_qa,33068,"<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<table width="0" cellpadding: 0" cellpadding="0" style="0" cellpadding="0" border="0" align="0"
-<br><img src"narrative_qa,33068,"<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<table width="0" cellpadding: 0" cellpadding="0" style="0" cellpadding="0" border="0" align="0"
-<br><img src"narrative_qa,35134,"Project Guten-tm, the Project Guten-tm, the copyrights, the Project
-Project, and donations, and
-Project Guten-tm, and
-Project Guten-tm, Project
-The Project Guten-tm, Project
-The Project Guten-tm, Project Guten"narrative_qa,35134,"Project Guten-tm, the Project Guten-tm, the copyrights, the Project
-Project, and donations, and
-Project Guten-tm, and
-Project Guten-tm, Project
-The Project Guten-tm, Project
-The Project Guten-tm, Project Guten"narrative_qa,38322,"Project Gutenberg-tm, the Project Guten-tm, the
-The Project Guten Foundation
-1.
-The Project Gutenberg-tm, the Project
-The Project Guten-tm
+"
+narrative_qa,b833410a8ff29952ca664319cb3462f2fd07d4f9_26,"</b>                   <b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>"
+narrative_qa,441f692c3e288cd8b6411e792e629ae8b362c649_16,"<	b>		 	 	 	<b>	<b>	I
+>	I
+</	<
+b>	I
+b>	<	I
+b>	<	b>
+b>	b>
+>	b>	b>
+"
+narrative_qa,94dc6d01df88f97843813efb11e5d7e48562c869_14,""I am, the man, the other
+" ether
+" ether
+"I am not.
+" ether
+" ether
+" ether
+" ether
+" ether
+" ether
+" ether
+" ether
+" ether
+" ether
+"
+narrative_qa,15618d16f20e7ba33352f06e210f42ef59d84d74_26,"<b>                    1
+<b>                 1
+<b>                 1
+<b> 1
+> 1
+<b> 1
+<b> 1
+<
+<b> 1
+< 1
+< 1
+< 1
+<"
+narrative_qa,c7c075c49018828bf6027da5c5534834779d1adf_24,"</b>                 2.
+</b>
+</b>                 1.
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,31c7eca71291b68f55dec4af7e61b6bcae8c5a8a_7,"
+
+
+
+
 The Project Gutenberg
+
+
+
+
+
 The Project Gutenberg
-The Project Gutenberg
-The Project G"narrative_qa,38322,"Project Gutenberg-tm, the Project Guten-tm, the
-The Project Guten Foundation
-1.
-The Project Gutenberg-tm, the Project
-The Project Guten-tm
-The Project Gutenberg
-The Project Gutenberg
-The Project Gutenberg
-The Project G"narrative_qa,42586,"Project Guten-tm, the Project Guten-tm, the
-1.
-The Project Guten-tm, the Project
-1.
-The Project-Guten-tm
-The Project-tm
-The Project-Guten
-The Project-Guten
-The Project-Guten
-The Project"narrative_qa,42586,"Project Guten-tm, the Project Guten-tm, the
-1.
-The Project Guten-tm, the Project
-1.
-The Project-Guten-tm
-The Project-tm
-The Project-Guten
-The Project-Guten
-The Project-Guten
-The Project"narrative_qa,16886,"<br>
-<br>
-<br>
-<br>
-<br>
-<table border="0" cellspacing="0" cellpadding="0" align="0"
-<br>
-<td>
-<td>
-<table border="0"
-<td>"narrative_qa,16886,"<br>
-<br>
-<br>
-<br>
-<br>
-<table border="0" cellspacing="0" cellpadding="0" align="0"
-<br>
-<td>
-<td>
-<table border="0"
-<td>"
+
+
+
+
+Project
+
+Guten
+
+
+Project
+
+Project
+
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+Project
+"
+narrative_qa,f69d861b4aed53f6bd9069c588a641929c840ae5_7,"CHAP
+XIV
+XI
+V
+T
+The _
+CHAP
+T
+V
+X
+I
+X
+V
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X"
+narrative_qa,845186ccb0a481e73525e98cbef89279c2f5721e_17,"The desert, the world was a moment of the
+"
+"I's
+"I"
+"I"
+"I"
+"
+"I"
+"I"
+"I"
+"
+"I"
+"I"
+"
+"I"
+"I"
+"
+narrative_qa,a6dfeb4977cc8ba862878693664d326d7c6049e7_24,"
+
+
+The winds, the sun, the sun, the light, and I's
+
+
+
+
+
+
+The wind,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                "
+narrative_qa,56434e4849e679e4089c33a5f5bd3050e71c5ec1_16,"
+
+
+
+The text: 1. What is the
+2. What is the title of the poem?
+2. What is the poem about?
+3. What is the poem about?
+4. Who is the speaker?
+5. Who is the speaker?
+6. Who is the"
+narrative_qa,2132babdf6d70933760a9d8e9c6ac5c3305ed253_3,"<b>                   I
+>
+>                   I'm
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+>
+"
+narrative_qa,69add8ffcf964d23243ac02b7282d57beb63c355_2,"<b>RET</b>
+Ellips
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>"
+narrative_qa,26118a3592e63a620bed0d65d1b0943d502e55ef_23,"
+
+
+
+
+
+"I's
+
+
+
+
+"I's
+
+
+
+
+"I
+
+
+"
+
+"
+
+"
+
+"
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+"
+""
+narrative_qa,f1c34596be81d736e30489c95e62a198b02d9fac_18,""I'll be
+"I'll be," he said, "I'll be
+"
+"
+"I'll be
+"
+"I'll be
+"
+"I'll be
+"
+"I'll be
+"
+"I'll be
+""
+narrative_qa,87bf382f6852f12cd8342a47c813cd51bed992ad_10,"The door
+The door
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door is
+The door"
+narrative_qa,11c498b404bec5dee6cbf41e54a8b682851fb934_17,"The story is a story of Conan, the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of the
+The story of"
+narrative_qa,bfaf8bc1a86d524c9431e855c139da705730f165_24,"“I’surely, the
+“I’m not
+“I’m afraid
+“I’m afraid
+“I’m afraid
+“I’m
+“I’m
+“I’m
+“I’m
+“I’m
+“I’m
+“"
+narrative_qa,c5165082a52b8427b974f0ed3152862f0d51ffb7_26,"</b>	<b>	<b>	<b>	<	<	<	
+		<	<	
+		<	<	
+>		<	<	<	<	<	<	<	<	<	<	<	<	"
+narrative_qa,845186ccb0a481e73525e98cbef89279c2f5721e_28,"The
+"I's
+"I'm not a moment of the
+"
+"
+"I'm not
+"
+"I'm not
+"
+"I'm
+"
+"I
+"'m
+"I
+"
+"I
+"
+"I
+"
+narrative_qa,afa2f47d178398d3f3c9515662fc5bbd71b15ccd_22,"
+
+
+
+
+
+The Little
+
+
+
+The
+
+The
+
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+"
+narrative_qa,39c5eed544ceeb78eb3202d040eb35361d96945f_1,"         <b> 0 - 2 - 5/5/1
+         
+          <b>
+          <b> 0
+> 
+          <b> 0
+          <b>
+> 0
+          <b>
+          <b>
+          <b>"
+narrative_qa,afa2f47d178398d3f3c9515662fc5bbd71b15ccd_15,"
+
+
+
+
+
+The Projects
+
+
+
+The
+
+The
+
+
+The
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+"
+narrative_qa,6d3020e7252fb731314bad3522cd416af124a3f0_17,"CH.
+I's
+
+
+
+I's
+
+
+XI
+
+I
+X
+X
+XI
+XI
+XI
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X"
+narrative_qa,9d8ddfe86beba149b3463eeb1bae92919e179fed_8,"<b>                   I'm not
+<b>
+<b>                 1
+> I'm not
+<b>
+<b>
+>                 1
+> 1
+>
+> 
+> 
+> 
+> 
+> 
+> 
+"
+narrative_qa,4e959a5d22e1968a1950ac836a1ba0cc3edffa41_19,"[ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1."
+narrative_qa,6cfe7052daf187b667538b2858849a84c1f6b049_24,"
+
+
+
+
+The
+
+The
+
+
+The
+
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,879287f285743b08d86c3bd0831ec1e49fa92e39_6,"
+
+
+
+"I't is not
+"I'm afraid
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"
+"I
+"
+"
+"
+"
+"
+"
+narrative_qa,f70edecebfabbfaa65fb58ada2a6642453d217a9_28,""I's a
+"I'm afraid, the
+"
+"I'm afraid
+"
+"I'm afraid
+"
+"not
+"I's
+"
+"of
+"I
+"
+"I
+"
+"
+"
+"
+"
+""
+narrative_qa,ab1da932cda3b43d4b44a7083b23787b62f4526c_17,""I'm,
+"I'm afraid,
+"I'm afraid
+"
+"I'm afraid
+"
+"I'm afraid
+"
+"I'm afraid
+"
+"I'm
+"re
+"you
+"re
+"I
+"re"
+narrative_qa,a6dfeb4977cc8ba862878693664d326d7c6049e7_7,"
+I'sighing to-
+
+
+
+I'llow, I'm not know
+
+
+
+
+I'm not know
+
+I'm not
+I'm not
+I'm
+I'm
+I'm
+I'm
+I'm
+"
+narrative_qa,879287f285743b08d86c3bd0831ec1e49fa92e39_9,"The world is a moment of the
+The
+The world is nothings of the
+The
+The is nothings of the
+The ish
+The ish
+The ish
+The ish
+The ish
+The ish
+The ish
+The ish
+The ish"
+narrative_qa,a6dfeb4977cc8ba862878693664d326d7c6049e7_37,"I's a rose, I's not a rose, I's not a rose
+The sun, but a
+I's not a rose
+I's not a bird
+I's not a bird, but a rose
+I's not a rose
+I's not a flower"
+narrative_qa,12ec522e344ec19702bc8bc74d85b4e5adf2d229_16,"She was not, she was not to be, she could not the
+She was not, but the
+She was not, but the
+She was not, she was not, she was not
+She was not, she was not
+She was not, she was not
+She was not, she was not"
+narrative_qa,51f816f54645196b0a8f588f9ae955de103565f7_7,"<b>                 1.
+<b>                 1
+</b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<"
+narrative_qa,b1813716c996049c8a1402af0982489b5bc21d21_23,"<b>                   <b> 2. I'm
+<b> 2.
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b"
+narrative_qa,c63c5b96aac5c5c1d059d839580344f80e456bd4_0,"<	</b>	</b>	I
+</b>	b>	I
+</b>	I
+<	<	b>	b>	I
+<	b>	b>	b>
+<	b>	b>	b>
+<	b"
+narrative_qa,8cb9a3afd8d542c798c3a34fd1a9afa0a77931c2_3,"I am not, I am not a young, I am not to be
+I am not, I am not
+I am not, I am not
+I am not, I am not
+I am not, I am not
+I am not, I am not, I am not, I am not,"
+narrative_qa,ebbac675f4d13527d9d6af2aeddff8f92b7e3e4d_20,"<b>                 1
+<b> Mr.
+>                 1
+<b> I'm not
+<b>
+> 
+<b> 
+> 
+> 
+
+
+> 
+
+> 
+>
+>"
+narrative_qa,f90f97c9ae38be55921b5e8a93d06ddada82dd1f_28,""I's not, he is not the same, he said, "I'm not
+"
+"I'm not, and the
+" ether
+"I'm not
+"
+"I'm not
+"
+"I'm not
+"
+"I'm"
+narrative_qa,ea371ba9cc41bf32aa8b37549662d2d3a38f084d_28,"The sun, she was a moment of the
+The sun, she was
+The sun, she was
+The sun, she was
+The sun, she was
+The sun, she was
+The sun, she was
+The sun, she was
+The sun, she
+The sun, she
+The sun"
+narrative_qa,8a7a91b669cd6a37e96abcf846ef45a9c4cbb692_18,"
+
+The story of the
+
+
+
+The story of the
+
+
+
+The
+
+The
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,87bf382f6852f12cd8342a47c813cd51bed992ad_11,"The
+The 1.
+The 1st
+The 1st
+The 2nd
+The 2nd
+The 3rd
+The 3rd
+The 4th
+The 4th
+The 5th
+The 5th
+The 6th
+The "
+narrative_qa,12ec522e344ec19702bc8bc74d85b4e5adf2d229_17,"She was not the time, the time, she was not to be, but the
+She was not to be
+The time of her; she was not, and the
+She was not to be
+She was not, but the
+She was not, the
+She was not, the
+She was not"
+narrative_qa,69add8ffcf964d23243ac02b7282d57beb63c355_15,"<b>RET</b>
+Ellips
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>"
+narrative_qa,c5165082a52b8427b974f0ed3152862f0d51ffb7_27,"</b>	<b>	<b>	<b>	<b>	<	<
+		<	<	
+		<	<	<	<	<	<	<	<	<	<	<	<	<	<	<	<"
+narrative_qa,09c9afb4abbd6064c1f26c3632edbe6d92a34206_20,"<b>                  6</b>
+<b>
+<b>
+>                 1.
+<b>
+>                 1.
+>
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+>"
+narrative_qa,31c7eca71291b68f55dec4af7e61b6bcae8c5a8a_40,"
+
+
+
+
+The
+
+The
+
+The
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,26118a3592e63a620bed0d65d1b0943d502e55ef_15,"
+
+
+
+
+
+"I'money
+
+
+
+
+"I'll
+
+
+
+
+"
+
+"
+
+"
+
+
+"
+
+
+"
+
+"
+
+"
+"
+"
+"
+"
+"
+"
+"
+"
+""
+narrative_qa,e5514678c3a6ac0dad17b96993ea231da4fecd0a_18,""I'm not
+"I'm not
+"
+"I'm not
+"
+"I'm not
+"
+"I'm
+"
+"I
+"I
+"
+"I
+"I
+"
+"I
+"I
+"
+"I
+"
+narrative_qa,199ec80c97f752cd8e00d2ca6f8e5f48603fefb8_9,"<b>                 1.
+<b>                 1.
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,926198f64d64f2bf796feddd42a4aa1714ddf5b2_0,"Siddhar is a friend
+Siddha, Vasude
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Siddha
+Sidd"
+narrative_qa,ebfad83ccf1214df566432798c54deb17e91d958_14,"The crowd, the doctor, the
+
+
+
+
+
+The crowd, the crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd, the
+The crowd,"
+narrative_qa,754184dec0d686d0b8b9ad7e1dc15bf0eb5027f5_12,"<b>B</b>I'm not
+<b>I'm not
+<b>
+<b>
+<b>AN
+<b>I'm
+<b>
+<b>I
+<b>
+<b>
+<b>
+<b>"
+narrative_qa,ea371ba9cc41bf32aa8b37549662d2d3a38f084d_11,"I'm not know.
+I'm not sure, I'm not sure
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+I'm not
+"
+narrative_qa,e0c74cdf270ebe29a2139e7319fc7314738c88ee_27,"<b>                 1
+<b>
+<b>ON
+<b>ON
+<b>
+<b>ON
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b"
+narrative_qa,ebbac675f4d13527d9d6af2aeddff8f92b7e3e4d_13,"<b>                 1.
+<b> Mr. Orange
+<b> I'm
+<
+<b>
+>                 1
+<b>
+> 
+
+
+> 
+
+
+> 
+
+
+> 
+
+>"
+narrative_qa,127e1efe32b11e606a0c8f49a2399abb4a52f9d9_13,"<b>                 1
+<b>
+<b>
+<b>
+<b>
+<b>
+<
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>"
+narrative_qa,0ecd1d809dabb7dab891d9c8a9e19a5f76397d2d_27,"<b> 1
+</b> 1
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,ebbac675f4d13527d9d6af2aeddff8f92b7e3e4d_6,"<b>                 1
+<b> Mr.
+> 6
+> 1
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+>"
+narrative_qa,2a74184610bf91866dbdf37cba0b874dfc748a86_8,"CRAT: I am not the
+CR: I am not
+CR: I am
+AT: I
+CR: I am
+CR: I am
+AT: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR"
+narrative_qa,de42ec88ce00d0f1e21ad4ad719d1d64499e5166_25,"</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+"
+narrative_qa,922ac7cfbc0ffe736ce42b2f0035caed42364bed_27,"</b>	    </b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>"
+narrative_qa,afa2f47d178398d3f3c9515662fc5bbd71b15ccd_12,"
+
+
+
+
+The
+
+The
+
+
+The
+
+
+The
+
+
+The
+
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The
+The"
+narrative_qa,5b074da81e9086fe8761ecfc0f79ff30d07d57c0_26,"<1.
+<1. 1. 1.
+<
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1.
+<1
+<"
+narrative_qa,69add8ffcf964d23243ac02b7282d57beb63c355_39,"<b>
+<b>RET</b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>"
+narrative_qa,d431326bd5a673425316a46ced23563a00d3e45c_21,"
+
+
+
+[The Mystery of this great ship from the dark reaches
+of space?
+By J.
+
+Illustrated by Edsh
+Sabo
+John Wynd
+Saber
+Sabo illustrated by
+Distributed by Pgreading Team
+at
+
+
+
+"
+narrative_qa,ab1da932cda3b43d4b44a7083b23787b62f4526c_15,""I'might be the
+"--their
+"--the
+"I're
+"--the
+"--the
+"--
+"--
+"--
+"--
+"--
+"--
+"--
+"--
+"--
+"--
+"--
+""
+narrative_qa,214651e1fc210afdc48cb7272a4d06b79d172708_17,"Transcribed by Greg
+<http://dp.net
+
+
+
+
+
+
+
+
+==============================="
+narrative_qa,0ecd1d809dabb7dab891d9c8a9e19a5f76397d2d_17,"<b> 1
+<b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b>
+</b"
+narrative_qa,2a74184610bf91866dbdf37cba0b874dfc748a86_19,"CRAT: I am not
+CR: I am not
+CR: I am
+AT: I
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR: I am
+CR:"
+narrative_qa,86fc18a4b6b2079beea7ee8c92ec1850d24a04e2_28,"
+
+
+
+
+
+She is not
+
+
+
+She is
+
+
+ She
+
+ She
+
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+ She
+"
+narrative_qa,8ec2acc82d024a645fe81f51270d6dbba8b7981e_23,"
+
+
+
+
+Translated by Jow
+
+
+
+
+Du
+
+
+
+Sue
+
+
+Sue
+
+
+Trans"
+narrative_qa,69add8ffcf964d23243ac02b7282d57beb63c355_25,"<b>
+Ellips, the ground
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<b>
+<"
+narrative_qa,f94253b4b5f8cfb2afea5f0b9d6bb87de266d11c_4,"The superint, the
+The superintendent, "I am
+"
+"I am not
+"
+"I am
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+" I
+"
+narrative_qa,ffa719867c77cfd8fc661fdb6d8c8d266746e15f_8,"<b>                     LET
+<b>                 8
+<b>
+<b>
+>                 8
+>
+>
+>                 8
+<b>
+>
+>
+>                 
+> 
+> 
+> 
+> 
+> 
+"
+narrative_qa,ebfad83ccf1214df566432798c54deb17e91d958_26,"1.
+1. What is the name of the main character in the story?
+2.
+2. What is the name of the character's husband?
+3. What is the name of the character's husband?
+3. What is the name of the character's
+4. What"
+narrative_qa,961902ae5bc5f08fcdf4807552d423f7596f5695_29,"<			A	<	K	b>	I
+>	b>	I
+>	I
+b	<	I
+b	I
+b	I	<	I
+b>	I
+b>	I
+b>	I
+b>	I
+"
+narrative_qa,d285c6beb3dc935411fd3297b02602b8afc7170c_6,""I's
+"I'm not
+"
+"I'm
+"
+"I
+"I
+"
+"I
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"I
+"
+"
+"I
+"
+""
+narrative_qa,edb92e9d9fe05242da8ead459d53853c8815716b_2,"MY
+
+
+
+
+THE Archde
+
+
+
+THE
+
+
+THE
+
+THE
+
+
+THE
+
+THE
+
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+THE
+"
+narrative_qa,ebbac675f4d13527d9d6af2aeddff8f92b7e3e4d_1,"<b>                 1.
+<b> I'm not
+>
+>                 1
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> 
+> "
+narrative_qa,08a5821c3e1845f6112f2114e61b717ca8ee79ac_18,"<														CUT>
+</b>
+</b>			<b>	<	<
+>
+>													
+</			
+>
+>
+>"
