@@ -61,18 +61,18 @@ def longeval_load_model(args):
     elif "mosaicml/mpt-30b-chat" in args.model_name_or_path:
         config = transformers.AutoConfig.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         model = transformers.AutoModelForCausalLM.from_pretrained(
-            model_path,
+            args.model_name_or_path,
             low_cpu_mem_usage=True,
             trust_remote_code=True,
             max_seq_len = 16384,
-            num_gpus=args.num_gpus,
-            max_gpu_memory=f"{args.max_gpu_memory}GiB",
+            device_map = "auto",
+            max_memory= {i: f"{args.max_gpu_memory}GiB" for i in range(args.num_gpus)},
             torch_dtype=torch.bfloat16
         )
         model.attn_impl = "triton"
 
         tokenizer = transformers.AutoTokenizer.from_pretrained(
-            model_path, trust_remote_code=True, use_fast=True, revision=revision, model_max_length=16384
+            args.model_name_or_path, trust_remote_code=True, use_fast=True, model_max_length=16384
         )
         model.config.eos_token_id = tokenizer.eos_token_id
         model.config.pad_token_id = tokenizer.pad_token_id
