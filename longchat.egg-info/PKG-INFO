@@ -1,9 +1,0 @@
-Metadata-Version: 2.1
-Name: longchat
-Version: 0.2.3
-Summary: An open platform for training, serving, and evaluating large language model based chatbots.
-Classifier: Programming Language :: Python :: 3
-Classifier: License :: OSI Approved :: Apache Software License
-Requires-Python: >=3.8
-Description-Content-Type: text/markdown
-Provides-Extra: dev
