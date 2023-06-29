@@ -21,8 +21,8 @@ from fastchat.model import load_model, get_conversation_template
 
 def maybe_monkey_patch(args):
     if "longchat" in args.model_name_or_path:
-        from longchat.train.monkey_patch.llama_interpolate_monkey_patch import replace_llama_with_interpolate
-        replace_llama_with_interpolate(args.longchat_ratio)
+        from longchat.train.monkey_patch.llama_condense_monkey_patch import replace_llama_with_condense
+        replace_llama_with_condense(args.longchat_ratio)
 
         if args.longchat_flash_attn:
             from longchat.train.monkey_patch.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
@@ -154,7 +154,7 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
     
     return None, prompt_length, summary
 
-def test_lrt_one_sample(model, tokenizer, test_case, output_file, idx, args):
+def test_lines_one_sample(model, tokenizer, test_case, output_file, idx, args):
     prompt = test_case["prompt"]
     correct_line = test_case["correct_line"]
     expected_number = test_case["expected_number"]
