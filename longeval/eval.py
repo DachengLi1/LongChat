@@ -25,7 +25,7 @@ def longeval_test(model, tokenizer, output_dir, args):
 
             print(f"************ Finish testing {num_topics} topics per prompt with average prompt length {avg_length} ************")
     elif args.task == "lrt":
-        for num_lines in [200, 300, 400, 500, 600, 680]:
+        for num_lines in [ 200, 300, 400, 500, 600, 680]:
             print(f"************ Start testing {num_lines} lines per LRT prompt ************")
             test_file = f"evaluation/lrt/testcases/{num_lines}_lines.jsonl"
             
