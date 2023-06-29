@@ -24,6 +24,9 @@ def longeval_test(model, tokenizer, output_dir, args):
                 avg_length += prompt_length / len(test_cases)
 
             print(f"************ Finish testing {num_topics} topics per prompt with average prompt length {avg_length} ************")
+            if args.eval_shortest_only:
+                break
+            
     elif args.task == "lines":
         for num_lines in [200, 300, 400, 500, 600, 680]:
             print(f"************ Start testing {num_lines} lines per LRT prompt ************")
@@ -44,6 +47,8 @@ def longeval_test(model, tokenizer, output_dir, args):
                 f.write(f"Accuracy: {accuracy}")
 
             print(f"************ Finish testing {num_lines} lines per prompt with average prompt length {avg_length}, accuracy: {accuracy} ************")
+            if args.eval_shortest_only:
+                break
     else:
         print(f"Unsupported task: {args.task}")
 
@@ -55,6 +60,7 @@ if __name__ == "__main__":
     parser.add_argument("--max_gpu_memory", type=int, default=40, help="max per gpu memory in GiB. A100 is 40 or 80.")
     parser.add_argument("--longchat_flash_attn", action='store_true', help="Only apply to longchat models. Whether to enable flash attention to save memory, but slower.")
     parser.add_argument("--longchat_ratio", type=int, default=8, help="Only apply to longchat models. Use ratio=8 for 16K context length model. Only ratio=8 is supported now.")
+    parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
     args = parser.parse_args()
 
     maybe_monkey_patch(args)
