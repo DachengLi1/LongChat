@@ -5,10 +5,10 @@ LongChat supports training and benchmarking long-context large language model ba
 - [2023/06]🔥 We introduced LongChat models and the evaluation benchmark longeval.
 
 ## Contents
-- [Install] (#install)
-- [Training] (#longchat)
-- [Model Weights] (#model-weights)
-- [Evaluation] (#longeval)
+- [Install](#install)
+- [longchat](#longchat)
+- [Model Weights](#model-weights)
+- [longeval](#longeval)
 
 ## Install
 ```bash
@@ -76,9 +76,26 @@ python3 eval.py --model-name-or-path  lmsys/longchat-7b-16k --task <task> --long
 python3 eval.py --model-name-or-path  lmsys/longchat-13b-16k --task <task> --longchat_flash_attn
 python3 eval.py --model-name-or-path  mosaicml/mpt-7b-storywriter --task <task>
 python3 eval.py --model-name-or-path  mosaicml/mpt-30b-chat --task <task> --num_gpus 8 --max_gpu_memory 10
-python3 eval.py --model-name-or-path  THUDM/chatglm2-6b --task <task> 
+python3 eval.py --model-name-or-path  THUDM/chatglm2-6b --task <task>
 ```
-All experiments can be run on a single A100 40GB GPU except mpt-30b-chat.
+The output will be stored under evaluation/`<task>`/predictions/`<your-model>`.
+
+### Obtaining accuracy
+The lines experiment directly outputs an accuracy. The topic experiment outputs natural language, you can:
+- manually inspect the model output and calculate an accuracy.
+- (or) use chatgpt to automatically calculate it.
+
+To use gpt-3.5-turbo for automatic topipc evalution, follow the steps below:
+Please set OPENAI_API_KEY accordingly, following [here](https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety), e.g.
+```bash
+export OPENAI_API_KEY=<YOUR_KEY>
+```
+Run:
+```bash
+python auto_topic_eval.py  --test_file <generated_output>
+```
+Replace <generated_output> with the generated topic prediction, e.g. evaluation/topics/predictions/longchat_13b_16k/5_response.txt.
+
 
 
 
