@@ -4,11 +4,6 @@ import os
 import re
 import sys
 
-import argparse
-import yaml
-
-import numpy as np
-
 import torch
 import transformers
 from transformers import logging
