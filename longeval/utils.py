@@ -67,7 +67,7 @@ def longeval_load_model(args):
             max_seq_len = 16384,
             device_map = "auto",
             max_memory= {i: f"{args.max_gpu_memory}GiB" for i in range(args.num_gpus)},
-            torch_dtype=torch.bfloat16
+            torch_dtype=torch.float16
         )
         model.attn_impl = "triton"
 
