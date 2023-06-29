@@ -2,7 +2,7 @@
 LongChat supports training and benchmarking long-context large language model based chatbots. The library is named longchat and longeval respectively.
 
 ## News
-- [2023/06]🔥 We introduced LongChat models and the evaluation benchmark longeval.
+- [2023/06]🔥 We introduced LongChat models and the evaluation benchmark longeval. Check our [blog](https://lmsys.org/blog/2023-06-29-longchat)!
 
 ## Contents
 - [Install](#install)
@@ -60,6 +60,8 @@ This script assumes 8xA100 GPUs and use the dummy data in the repository for exa
 Model Weights are available through HuggingFace Hub: [LongChat-13b-16k](https://huggingface.co/lmsys/longchat-13b-16k) and [LongChat-7b-16k](https://huggingface.co/lmsys/longchat-7b-16k).
 
 ## longeval
+We provided a simple [notebook](https://github.com/DachengLi1/LongChat/blob/longeval/longeval/topics_lines_demo.ipynb) to show how to run our evaluation.
+
 To evaluate the LongChat model on the coarsed-grained topics benchmark:
 ```bash
 cd longeval
@@ -95,6 +97,18 @@ Run:
 python auto_topic_eval.py  --test_file <generated_output>
 ```
 Replace <generated_output> with the generated topic prediction, e.g. evaluation/topics/predictions/longchat_13b_16k/5_response.txt.
+
+### Citation
+If you find this repo to be useful, plese cite:
+```
+@misc{longchat2023,
+    title = {LongChat: How Long Can Context Length of Open-Source LLMs truly Promise?},
+    url = {https://lmsys.org/blog/2023-06-29-longchat},
+    author = {Dacheng Li*, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Ion Stoica, Xuezhe Ma, and Hao Zhang},
+    month = {June},
+    year = {2023}
+}
+```
 
 
 
