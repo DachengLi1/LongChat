@@ -1,0 +1,51 @@
+Label: 42828, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, please provide the index., Parsed: -1, prompt length: 7289
+Label: 18256, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, just tell me the line index., Parsed: -1, prompt length: 7280
+Label: 10346, Predict: I have memorized the lines you provided. Now, please tell me the <REGISTER_CONTENT> of line subsequent-kitty., Parsed: -1, prompt length: 7276
+Label: 3407, Predict: I will need the line index of needless-samovar to retrieve the corresponding <REGISTER_CONTENT>. Please provide the line index., Parsed: -1, prompt length: 7250
+Label: 42562, Predict: I have memorized the lines. You can ask me for any line index and I will give you the corresponding <REGISTER_CONTENT>., Parsed: -1, prompt length: 7300
+Label: 12714, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line taboo-cabbage, I will use the line index 'taboo-cabbage'. The <REGISTER_CONTENT> of line taboo-cabbage is <35295>., Parsed: 35295, prompt length: 7270
+Label: 39552, Predict: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, Parsed: -1, prompt length: 7255
+Label: 4733, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line index, just tell me the index and I will look it up for you., Parsed: -1, prompt length: 7287
+Label: 11038, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., Parsed: -1, prompt length: 7270
+Label: 1206, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7278
+Label: 20783, Predict: I have memorized the lines. To retrieve the <REGISTER_CONTENT> of line beautiful-beret, please say 'beautiful-beret <REGISTER_CONTENT>'., Parsed: -1, prompt length: 7261
+Label: 9000, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7268
+Label: 46983, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line joyous-case, please tell me the value you associated with it., Parsed: -1, prompt length: 7319
+Label: 29497, Predict: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, Parsed: -1, prompt length: 7246
+Label: 39668, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7279
+Label: 43210, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line utopian-joke, please tell me the corresponding line index., Parsed: -1, prompt length: 7252
+Label: 5697, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line wiry-inscription, please say 'line wiry-inscription'., Parsed: -1, prompt length: 7256
+Label: 45243, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., Parsed: -1, prompt length: 7262
+Label: 47502, Predict: I will remember the lines and their corresponding REGISTER_CONTENT values. If you want me to retrieve the REGISTER_CONTENT value of a certain line, just tell me the line index., Parsed: -1, prompt length: 7280
+Label: 36239, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., Parsed: -1, prompt length: 7282
+Label: 41470, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7289
+Label: 11591, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7301
+Label: 27360, Predict: I have memorized the lines. You can ask me for any line index and I will give you the corresponding REGISTER_CONTENT., Parsed: -1, prompt length: 7275
+Label: 35881, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line index, just tell me the index and I will retrieve the corresponding <REGISTER_CONTENT> for you., Parsed: -1, prompt length: 7316
+Label: 6678, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7288
+Label: 36991, Predict: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, Parsed: -1, prompt length: 7295
+Label: 43103, Predict: I have memorized the lines and their corresponding <REGISTER_CONTENT> values. Please give me the index of the line you want to retrieve the <REGISTER_CONTENT> value for., Parsed: -1, prompt length: 7275
+Label: 40185, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line callous-fava, please say 'line callous-fava'., Parsed: -1, prompt length: 7278
+Label: 9606, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index., Parsed: -1, prompt length: 7299
+Label: 31581, Predict: I will need more information to answer your question. Which line are you referring to in the record?, Parsed: -1, prompt length: 7297
+Label: 19163, Predict: I will remember the lines and their corresponding REGISTER_CONTENT values. If you want me to retrieve the REGISTER_CONTENT value of a certain line, just tell me the line index., Parsed: -1, prompt length: 7272
+Label: 23081, Predict: I will need more information to answer your question. Which line are you referring to in the record?, Parsed: -1, prompt length: 7263
+Label: 46620, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7264
+Label: 26503, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line noisy-failure, please say 'line noisy-failure'., Parsed: -1, prompt length: 7255
+Label: 40391, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7267
+Label: 46443, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7317
+Label: 27592, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7284
+Label: 32456, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please provide the line index., Parsed: -1, prompt length: 7297
+Label: 20164, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line jaded-soprano, please say 'line jaded-soprano'., Parsed: -1, prompt length: 7291
+Label: 41104, Predict: I will need the index of the line you want to retrieve the content for., Parsed: -1, prompt length: 7293
+Label: 11132, Predict: I will need more information to answer your question. Which line do you want to know the <REGISTER_CONTENT> for?, Parsed: -1, prompt length: 7275
+Label: 16739, Predict: I have memorized the lines you provided. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, please give me the line index., Parsed: -1, prompt length: 7265
+Label: 49111, Predict: I have memorized the lines. To retrieve the <REGISTER_CONTENT> of line efficacious-revolver, please say 'efficacious-revolver'., Parsed: -1, prompt length: 7278
+Label: 10707, Predict: I will need more information to answer your question. Which line are you referring to?, Parsed: -1, prompt length: 7258
+Label: 48513, Predict: I have memorized the lines you provided. If you give me a line index, I can tell you the corresponding REGISTER_CONTENT. For example, if you give me the index of 'line excellent-brake', I can tell you its corresponding REGISTER_CONTENT., Parsed: -1, prompt length: 7260
+Label: 15766, Predict: I will need more information to answer your question. Which line index do you want to know the <REGISTER_CONTENT> for?, Parsed: -1, prompt length: 7266
+Label: 10880, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index. For example, to retrieve the <REGISTER_CONTENT> of the 13th line, you would say "line 13"., Parsed: 13, prompt length: 7297
+Label: 21164, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line index, please provide me with the index., Parsed: -1, prompt length: 7298
+Label: 16957, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of a certain line, please provide me with the line index., Parsed: -1, prompt length: 7312
+Label: 24273, Predict: I have memorized the lines you provided. To retrieve the <REGISTER_CONTENT> of line overconfident-zoology, please proceed with the next question., Parsed: -1, prompt length: 7276
+Accuracy: 0.0

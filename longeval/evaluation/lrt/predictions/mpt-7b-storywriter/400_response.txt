@@ -1,0 +1,51 @@
+Label: 42828, Predict:  <28190>  Okay, then: I want you to memor, Parsed: 28190, prompt length: 7200
+Label: 18256, Predict:  <28491>.  Right, now we have done learning the register, Parsed: 28491, prompt length: 7191
+Label: 10346, Predict:  <46855>.  I am ready.  The next question, Parsed: 46855, prompt length: 7187
+Label: 3407, Predict:  <10672>. Here is a list of <REGISTER_CONTENTS, Parsed: 10672, prompt length: 7161
+Label: 42562, Predict:  <42644>!  ### CHAPTER  ## 16  , Parsed: 16, prompt length: 7211
+Label: 12714, Predict:  <3046> now. Take time here:  When you are, Parsed: 3046, prompt length: 7181
+Label: 39552, Predict:  <39552>. What is the answer of your question?"  ", Parsed: 39552, prompt length: 7166
+Label: 4733, Predict:  <4733>  ### **B.2.1.** , Parsed: 1, prompt length: 7198
+Label: 11038, Predict:  <11691>  Now get ready. I will now recite, Parsed: 11691, prompt length: 7181
+Label: 1206, Predict:  <1206>.  I will test you now. When I say, Parsed: 1206, prompt length: 7189
+Label: 20783, Predict:  <13944>  It is correct. Now read the rest of, Parsed: 13944, prompt length: 7172
+Label: 9000, Predict: : <8773>  There is nothing but a murmur in, Parsed: 8773, prompt length: 7179
+Label: 46983, Predict:  what is<REGISTER_CONTENT>?  I know the, Parsed: -1, prompt length: 7230
+Label: 29497, Predict:  <29497>  The number is <29497>, which you, Parsed: 29497, prompt length: 7157
+Label: 39668, Predict:  <465864>. Now memorize the following lines:  line, Parsed: 465864, prompt length: 7190
+Label: 43210, Predict:  <43210>.  Q: <43210>. Very good,, Parsed: 43210, prompt length: 7163
+Label: 5697, Predict:  <5697>. The number is <5697>. I already memorized, Parsed: 5697, prompt length: 7167
+Label: 45243, Predict:  <45243>  **Question:**  What is the number, Parsed: 45243, prompt length: 7173
+Label: 47502, Predict:  <45845> Question Number Twelve: At the top of page three, Parsed: 45845, prompt length: 7191
+Label: 36239, Predict:  <36239>  I don't understand.  **E, Parsed: 36239, prompt length: 7193
+Label: 41470, Predict:  <41470>. Good, can you tell me what is the <REG, Parsed: 41470, prompt length: 7200
+Label: 11591, Predict:  <28>  You are done. Thank you.  ###, Parsed: 28, prompt length: 7212
+Label: 27360, Predict:  <27360>  # Line 2736: Yes, line 27, Parsed: 27, prompt length: 7186
+Label: 35881, Predict:  <32998>  > <32998>  That line, Parsed: 32998, prompt length: 7227
+Label: 6678, Predict:   Now tell what is the <REGISTER_CONTENT> in, Parsed: -1, prompt length: 7199
+Label: 36991, Predict:  18. Line <tall-deposit>: <REGISTER_CONT, Parsed: 18, prompt length: 7206
+Label: 43103, Predict:  <32681>  <REGISTER_CONTENT> of <, Parsed: 32681, prompt length: 7186
+Label: 40185, Predict:  <40185> Now retrieve that line index's <REGISTER_CONT, Parsed: 40185, prompt length: 7189
+Label: 9606, Predict:  <9606>. Now you have memorized it. The next line is, Parsed: 9606, prompt length: 7210
+Label: 31581, Predict:  4-6-0-2  That is correct. Now,, Parsed: 2, prompt length: 7208
+Label: 19163, Predict:  <19163>.  #  #  #  , Parsed: 19163, prompt length: 7183
+Label: 23081, Predict:  <34212> line <imaginary-influx> contains a number, Parsed: 34212, prompt length: 7174
+Label: 46620, Predict:  <40188>.  **Mental Retrace.** Ask yourself what, Parsed: 40188, prompt length: 7175
+Label: 26503, Predict:  <46166>  The <REGISTER_CONTENT> is, Parsed: 46166, prompt length: 7166
+Label: 40391, Predict:  <40391>.  #### CHAPTER 4  ## How to Rec, Parsed: 4, prompt length: 7178
+Label: 46443, Predict:  23 So I know the <REGISTER_CONTENT>  , Parsed: 23, prompt length: 7228
+Label: 27592, Predict:  <2656>  Line 3: <REGISTER_CONTENT, Parsed: 3, prompt length: 7195
+Label: 32456, Predict: ?  ### **HENRY**  I will repeat the, Parsed: -1, prompt length: 7208
+Label: 20164, Predict:  <20164>.  ###  ### BUDDHALLAS, Parsed: 20164, prompt length: 7202
+Label: 41104, Predict:  <3957>  Tell me what is the smallest positive integer less, Parsed: 3957, prompt length: 7204
+Label: 11132, Predict:  <13552>.  Now the record is over. Tell me what, Parsed: 13552, prompt length: 7186
+Label: 16739, Predict:  <16739>  Now I want you to recall the corresponding line, Parsed: 16739, prompt length: 7176
+Label: 49111, Predict:  15.  * * *  Aha! My answer was, Parsed: 15, prompt length: 7189
+Label: 10707, Predict:  <10707>  OK, I got it. Now start from, Parsed: 10707, prompt length: 7169
+Label: 48513, Predict:  <48513>.  # 6.3  We can add, Parsed: 3, prompt length: 7171
+Label: 15766, Predict:  <<21867>.  Now I'll ask you to retrieve the, Parsed: 21867, prompt length: 7177
+Label: 10880, Predict:  5357  ## 5  #  [A]  , Parsed: 5, prompt length: 7208
+Label: 21164, Predict:  what? Oh wait, it is 177620. This isn't it, Parsed: 177620, prompt length: 7209
+Label: 16957, Predict:  <3612>. Now try line picayune-purpose: <REG, Parsed: 3612, prompt length: 7223
+Label: 24273, Predict: : <48379>  Good. <REGISTER_CONTENT, Parsed: 48379, prompt length: 7187
+Accuracy: 0.28

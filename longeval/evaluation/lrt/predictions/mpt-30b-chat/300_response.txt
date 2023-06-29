@@ -1,0 +1,51 @@
+Label: 29324, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line racial-fedora for you. Just a moment please...  <racial-fedora> <29315>, Parsed: 29315, prompt length: 5497
+Label: 29602, Predict: I will retrieve the <REGISTER_CONTENT> of line <scandalous-typewriter> for you. Please hold on for a moment., Parsed: -1, prompt length: 5511
+Label: 34055, Predict: I will retrieve the <REGISTER_CONTENT> of the line measly-pocketbook for you. Please hold on for a moment.  <measly-pocketbook> <REGISTER_CONTENT> is <34055>., Parsed: 34055, prompt length: 5527
+Label: 41534, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., Parsed: -1, prompt length: 5516
+Label: 34230, Predict: I will retrieve the <REGISTER_CONTENT> of the line internal-adulthood for you.  internal-adulthood: REGISTER_CONTENT is <34230>, Parsed: 34230, prompt length: 5507
+Label: 28113, Predict: I will retrieve the <REGISTER_CONTENT> of the line erratic-dinner for you. Please give me a moment., Parsed: -1, prompt length: 5494
+Label: 41644, Predict: I will retrieve the <REGISTER_CONTENT> of the line with the index 'dirty-briefly' for you. Please give me a moment., Parsed: -1, prompt length: 5510
+Label: 15711, Predict: I will retrieve the <REGISTER_CONTENT> of the line worried-monitor for you. The <REGISTER_CONTENT> in line worried-monitor is <15711>., Parsed: 15711, prompt length: 5545
+Label: 18766, Predict: I will retrieve the <REGISTER_CONTENT> of line <screeching-testing> for you. Please hold on for a moment.  <screeching-testing> <REGISTER_CONTENT> is <18766>., Parsed: 18766, prompt length: 5491
+Label: 13860, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line decorous-afterlife for you. Please give me a moment., Parsed: -1, prompt length: 5502
+Label: 14266, Predict: line highfalutin-arrogance: REGISTER_CONTENT is <14266>, Parsed: 14266, prompt length: 5536
+Label: 28264, Predict: I will retrieve the <REGISTER_CONTENT> of the line innocent-pony for you. Please give me a moment., Parsed: -1, prompt length: 5491
+Label: 1470, Predict: I will retrieve the <REGISTER_CONTENT> of the line hot-chairperson for you.  hot-chairperson <1470>, Parsed: 1470, prompt length: 5536
+Label: 1217, Predict: I will retrieve the <REGISTER_CONTENT> of line noisy-ecology for you. Please hold on for a moment.  <noisy-ecology> <REGISTER_CONTENT> is <1217>., Parsed: 1217, prompt length: 5510
+Label: 21374, Predict: I will retrieve the <REGISTER_CONTENT> of line relieved-guacamole for you. Please remind me by saying 'line relieved-guacamole' when you are ready for me to give you the answer., Parsed: -1, prompt length: 5534
+Label: 5195, Predict: I will retrieve the <REGISTER_CONTENT> of line momentous-ruckus for you. The <REGISTER_CONTENT> in line momentous-ruckus is <5195>., Parsed: 5195, prompt length: 5511
+Label: 42378, Predict: I will retrieve the <REGISTER_CONTENT> of line hissing-architect for you. Please give me a moment., Parsed: -1, prompt length: 5511
+Label: 39807, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., Parsed: -1, prompt length: 5527
+Label: 38877, Predict: I will retrieve the <REGISTER_CONTENT> of line talented-military for you. The <REGISTER_CONTENT> in line talented-military is <38881>., Parsed: 38881, prompt length: 5481
+Label: 11672, Predict: 0 <7087>, Parsed: 7087, prompt length: 5524
+Label: 800, Predict: I will retrieve the <REGISTER_CONTENT> of the line wet-leptocephalus for you. Please give me a moment., Parsed: -1, prompt length: 5510
+Label: 2547, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line berserk-cappelletti when you ask me., Parsed: -1, prompt length: 5551
+Label: 41865, Predict: I will retrieve the <REGISTER_CONTENT> of line wacky-cob for you. Please give me a moment.  Here is the <REGISTER_CONTENT> of line wacky-cob: <41865>., Parsed: 41865, prompt length: 5522
+Label: 3957, Predict: I will retrieve the <REGISTER_CONTENT> of line obedient-pony for you. The <REGISTER_CONTENT> in line obedient-pony is <3957>., Parsed: 3957, prompt length: 5491
+Label: 47089, Predict: I will retrieve the <REGISTER_CONTENT> of line open-hippodrome for you.  open-hippodrome <47089>, Parsed: 47089, prompt length: 5538
+Label: 20619, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> of a certain line, just tell me the line index., Parsed: -1, prompt length: 5499
+Label: 38707, Predict: I will retrieve the <REGISTER_CONTENT> of line young-hair for you. Please give me a moment., Parsed: -1, prompt length: 5500
+Label: 48262, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line capable-ripple for you. Just a moment please...  capable-ripple <48262>, Parsed: 48262, prompt length: 5530
+Label: 14845, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index., Parsed: -1, prompt length: 5537
+Label: 39683, Predict: I will retrieve the <REGISTER_CONTENT> of line ugly-real for you. Just a moment please...  line ugly-real: REGISTER_CONTENT is <39683>, Parsed: 39683, prompt length: 5523
+Label: 9156, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line abashed-dulcimer for you. Please give me a moment., Parsed: -1, prompt length: 5503
+Label: 41880, Predict: I will retrieve the <REGISTER_CONTENT> of line sour-sensor for you. Please hold on for a moment.  Here is the <REGISTER_CONTENT> for line sour-sensor: <sour-sensor> <41880>., Parsed: 41880, prompt length: 5533
+Label: 9659, Predict: I will retrieve the <REGISTER_CONTENT> of line crabby-lilac for you. Just a moment please.  <crabby-lilac> <REGISTER_CONTENT> is <9659>., Parsed: 9659, prompt length: 5558
+Label: 8559, Predict: I will retrieve the <REGISTER_CONTENT> of the line you asked for. <macho-cymbal> <8559>, Parsed: 8559, prompt length: 5543
+Label: 24384, Predict: I will respond to your question about the <REGISTER_CONTENT> of a certain line index once you tell me the index of the line you want., Parsed: -1, prompt length: 5542
+Label: 18869, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., Parsed: -1, prompt length: 5537
+Label: 42911, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want to retrieve the <REGISTER_CONTENT> value of a certain line, just tell me the line index and I will retrieve the corresponding value., Parsed: -1, prompt length: 5525
+Label: 47394, Predict: I will retrieve the <REGISTER_CONTENT> of line tranquil-detective for you. Please give me a moment., Parsed: -1, prompt length: 5517
+Label: 5917, Predict: I will retrieve the <REGISTER_CONTENT> of the line 'flippant-iron' for you. Please give me a moment., Parsed: -1, prompt length: 5509
+Label: 45363, Predict: I will retrieve the <REGISTER_CONTENT> of line flagrant-championship for you.  <flagrant-championship> <45363>, Parsed: 45363, prompt length: 5512
+Label: 2391, Predict: I will retrieve the <REGISTER_CONTENT> of line tacit-banyan for you. Please hold on for a moment.  Here is the <REGISTER_CONTENT> for line tacit-banyan: <2391>., Parsed: 2391, prompt length: 5517
+Label: 6694, Predict: I will retrieve the <REGISTER_CONTENT> of the line with index 'lamentable-clarification' after the record is over., Parsed: -1, prompt length: 5537
+Label: 178, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., Parsed: -1, prompt length: 5497
+Label: 40530, Predict: I will remember the lines and their corresponding <REGISTER_CONTENT> values. If you want me to retrieve the <REGISTER_CONTENT> value of a certain line, please provide the line index., Parsed: -1, prompt length: 5491
+Label: 9638, Predict: I will retrieve the <REGISTER_CONTENT> of line mighty-hemp for you. Just a moment please...  <mighty-hemp> <9638>, Parsed: 9638, prompt length: 5503
+Label: 30419, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line spicy-indicator for you. Please give me a moment., Parsed: -1, prompt length: 5512
+Label: 27954, Predict: I will retrieve the <REGISTER_CONTENT> of the line bewildered-robe for you. Please give me a moment., Parsed: -1, prompt length: 5509
+Label: 1639, Predict: I will retrieve the <REGISTER_CONTENT> of the line you asked for. However, I need you to remind me the line index., Parsed: -1, prompt length: 5518
+Label: 41767, Predict: I will retrieve the corresponding <REGISTER_CONTENT> of line bewildered-craft for you. Just a moment...  The <REGISTER_CONTENT> of line bewildered-craft is <41767>., Parsed: 41767, prompt length: 5501
+Label: 6138, Predict: I will retrieve the <REGISTER_CONTENT> of line faulty-sushi for you. Please give me a moment., Parsed: -1, prompt length: 5509
+Accuracy: 0.4

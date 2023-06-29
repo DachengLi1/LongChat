@@ -1,0 +1,51 @@
+Label: 29324, Predict:  <28673>.  Now the record is over. I need the, Parsed: 28673, prompt length: 5408
+Label: 29602, Predict:  <46704>.  Now to retrieve the corresponding <REGISTER_, Parsed: 46704, prompt length: 5422
+Label: 34055, Predict:  <30382>.  The record is correct. Now let's play, Parsed: 30382, prompt length: 5438
+Label: 41534, Predict:  <41534>.  What about line loquacious-pract, Parsed: 41534, prompt length: 5427
+Label: 34230, Predict:  <34230>.  Now the record is over. Tell me what, Parsed: 34230, prompt length: 5418
+Label: 28113, Predict:  <16458>  Line number is <16458>.  , Parsed: 16458, prompt length: 5405
+Label: 41644, Predict:  <47623>  Good. Now: line <erratic-, Parsed: 47623, prompt length: 5421
+Label: 15711, Predict:  <26>."  You have to come up with the answer on, Parsed: 26, prompt length: 5456
+Label: 18766, Predict:  <4158> There were no <REGISTER_CONTENT>, Parsed: 4158, prompt length: 5402
+Label: 13860, Predict:  <13871>.  In line domineering-fishing,, Parsed: 13871, prompt length: 5413
+Label: 14266, Predict: ...  <REGISTER_CONTENT> of line <highfal, Parsed: -1, prompt length: 5447
+Label: 28264, Predict:  <28176>  No no no no no no. Where is, Parsed: 28176, prompt length: 5402
+Label: 1470, Predict:  <32694>.  What about line <jammed-conscience, Parsed: 32694, prompt length: 5447
+Label: 1217, Predict:  <1660>.  #    Now, the remaining lines all, Parsed: 1660, prompt length: 5421
+Label: 21374, Predict: ...  <REGISTER_CONTENT> is 47359  , Parsed: 47359, prompt length: 5445
+Label: 5195, Predict: <5788>  Okay, that's it. Now I'll, Parsed: 5788, prompt length: 5422
+Label: 42378, Predict:  <7752>  No, that's not right. The number, Parsed: 7752, prompt length: 5422
+Label: 39807, Predict:  <39807> correct. That's the answer. If you do not, Parsed: 39807, prompt length: 5438
+Label: 38877, Predict:  <38877>  "That's correct! Your turn for the, Parsed: 38877, prompt length: 5392
+Label: 11672, Predict:  <12678>  Retrieve it. The line <fool, Parsed: 12678, prompt length: 5435
+Label: 800, Predict:  <800>  Ace has the correct answer.  Now, Parsed: 800, prompt length: 5421
+Label: 2547, Predict:  <49> _ber_ _s_ ker_ _ek_, Parsed: 49, prompt length: 5462
+Label: 41865, Predict:  <41865>.  Right.  #  # THE, Parsed: 41865, prompt length: 5433
+Label: 3957, Predict:  <3957>  Yes. Then what is the <REGISTER, Parsed: 3957, prompt length: 5402
+Label: 47089, Predict:  <5> Now the record ends. This ends the experiment. In, Parsed: 5, prompt length: 5449
+Label: 20619, Predict:  <3636>.  It's the number from 2 to 300,, Parsed: 300, prompt length: 5410
+Label: 38707, Predict:  <1678>  Correct, your answer is <8443>., Parsed: 8443, prompt length: 5411
+Label: 48262, Predict: :  ## The line I want is line capable-ripple., Parsed: -1, prompt length: 5441
+Label: 14845, Predict:  <REGISTER_CONTENT_ignorant-purple> , Parsed: -1, prompt length: 5448
+Label: 39683, Predict:  <39683>.  ## 17  It was a big day, Parsed: 17, prompt length: 5434
+Label: 9156, Predict:  <9617>  I would like to give you some help-, Parsed: 9617, prompt length: 5414
+Label: 41880, Predict:  <1386>  <1386>  Now the record, Parsed: 1386, prompt length: 5444
+Label: 9659, Predict:  <9659>.  Question 5: What <REGISTER_CONT, Parsed: 5, prompt length: 5469
+Label: 8559, Predict:  <26884>  > Line <macho-cymbal, Parsed: 26884, prompt length: 5454
+Label: 24384, Predict:  <24384>. Now you can try it yourself.  If it, Parsed: 24384, prompt length: 5453
+Label: 18869, Predict:  _49199_  #  **D**  This line, Parsed: 49199, prompt length: 5448
+Label: 42911, Predict:  <2862>. Now the records starts over.  line obsequ, Parsed: 2862, prompt length: 5436
+Label: 47394, Predict: :  You got it!  Congratulations. You are very, Parsed: -1, prompt length: 5428
+Label: 5917, Predict:  <1025>  The right one is <1025>. <, Parsed: 1025, prompt length: 5420
+Label: 45363, Predict:  <2825>.  ### **PART FOUR**  ### **, Parsed: 2825, prompt length: 5423
+Label: 2391, Predict:  <2391>  Answer: The number of line tacit-, Parsed: 2391, prompt length: 5428
+Label: 6694, Predict:  42 <--Next line -->  line shaggy-hy, Parsed: 42, prompt length: 5448
+Label: 178, Predict:  <178>. And now one more question. I don't know the corresponding, Parsed: 178, prompt length: 5408
+Label: 40530, Predict:  <40530>  OK. Now retrieve line <40237>,, Parsed: 40237, prompt length: 5402
+Label: 9638, Predict:  <9638>. Now, at your table, take the <REGISTER, Parsed: 9638, prompt length: 5414
+Label: 30419, Predict:  <40802>  Spicy is it? Yes it is., Parsed: 40802, prompt length: 5423
+Label: 27954, Predict: : what is <REGISTER_CONTENT>?  Answer:, Parsed: -1, prompt length: 5420
+Label: 1639, Predict:  <1639>.  Now this is your turn. Retrieve the, Parsed: 1639, prompt length: 5429
+Label: 41767, Predict:  <38304>  ## ALEX  So I need to, Parsed: 38304, prompt length: 5412
+Label: 6138, Predict:    <43.9646625161599>  , Parsed: 9646625161599, prompt length: 5420
+Accuracy: 0.24

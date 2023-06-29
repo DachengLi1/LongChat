@@ -61,18 +61,18 @@ def longeval_load_model(args):
     elif "mosaicml/mpt-30b-chat" in args.model_name_or_path:
         config = transformers.AutoConfig.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         model = transformers.AutoModelForCausalLM.from_pretrained(
-            model_path,
+            args.model_name_or_path,
             low_cpu_mem_usage=True,
             trust_remote_code=True,
             max_seq_len = 16384,
-            num_gpus=args.num_gpus,
-            max_gpu_memory=f"{args.max_gpu_memory}GiB",
-            torch_dtype=torch.bfloat16
+            device_map = "auto",
+            max_memory= {i: f"{args.max_gpu_memory}GiB" for i in range(args.num_gpus)},
+            torch_dtype=torch.float16
         )
         model.attn_impl = "triton"
 
         tokenizer = transformers.AutoTokenizer.from_pretrained(
-            model_path, trust_remote_code=True, use_fast=True, revision=revision, model_max_length=16384
+            args.model_name_or_path, trust_remote_code=True, use_fast=True, model_max_length=16384
         )
         model.config.eos_token_id = tokenizer.eos_token_id
         model.config.pad_token_id = tokenizer.pad_token_id
@@ -112,7 +112,7 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
     if "mosaicml/mpt-7b-storywriter" in args.model_name_or_path:
         from transformers import pipeline
         pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')
-        # Use next word prediction to get zero-shot storywriter answer
+        # Use next word prediction to get storywriter answer
         prompt += '\n ASSISTANT: The first topic is'
         prompt_length = len(tokenizer(prompt).input_ids)
         with torch.autocast('cuda', dtype=torch.bfloat16):
@@ -159,7 +159,15 @@ def test_lrt_one_sample(model, tokenizer, test_case, output_file, idx, args):
     correct_line = test_case["correct_line"]
     expected_number = test_case["expected_number"]
 
-    if "THUDM/chatglm2-6b" in args.model_name_or_path:
+    if "mosaicml/mpt-7b-storywriter" in args.model_name_or_path:
+        from transformers import pipeline
+        pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')
+        # Use next word prediction to get storywriter answer
+        prompt += f'Line <{test_case["random_idx"][0]}>: <REGISTER_CONTENT> is'
+        prompt_length = len(tokenizer(prompt).input_ids)
+        with torch.autocast('cuda', dtype=torch.bfloat16):
+            output = pipe(prompt, max_new_tokens=15, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
+    elif "THUDM/chatglm2-6b" in args.model_name_or_path:
         prompt_length = len(tokenizer(prompt).input_ids)
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
     else:

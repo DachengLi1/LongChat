@@ -1,0 +1,51 @@
+Label: 2416, Predict:  <2416>  <46,323,567,983, Parsed: 983, prompt length: 3658
+Label: 41869, Predict:  <4669>.  #### 8  Now I am going to, Parsed: 8, prompt length: 3671
+Label: 14564, Predict:  <14109>  'Seventy-six,' you stam, Parsed: 14109, prompt length: 3675
+Label: 42229, Predict:  <5989>  And finally, I will ask you to retrieve, Parsed: 5989, prompt length: 3650
+Label: 41019, Predict:  <41019>  ## **2**  'This is, Parsed: 2, prompt length: 3677
+Label: 40933, Predict:  <40933> Answer: <40570>  And there are, Parsed: 40570, prompt length: 3679
+Label: 2874, Predict:  <3224>. <REGISTER_CONTENT> can help with this, Parsed: 3224, prompt length: 3655
+Label: 12602, Predict:  <12602>.  Now the record is over. You still, Parsed: 12602, prompt length: 3645
+Label: 45710, Predict:  <45710> Now tell me the number of the next line., Parsed: 45710, prompt length: 3670
+Label: 25551, Predict:  <25551>. Now it is you who has two of the following:, Parsed: 25551, prompt length: 3687
+Label: 36337, Predict:  <26292>  You are correct. The number is <26, Parsed: 26, prompt length: 3639
+Label: 4676, Predict:  <4676>.  I am sorry this is so difficult. You, Parsed: 4676, prompt length: 3672
+Label: 40004, Predict:   <REGISTER_CONTENT is <40004> [, Parsed: 40004, prompt length: 3646
+Label: 35101, Predict:  <322088>.  This will be the most easy quiz you, Parsed: 322088, prompt length: 3700
+Label: 23765, Predict:  <23765>  ####  **2**  ####, Parsed: 2, prompt length: 3649
+Label: 16484, Predict:  <16484>.  Now for line ugly-dog. What is, Parsed: 16484, prompt length: 3663
+Label: 35908, Predict:  <27791>  That's correct! Good! What is the, Parsed: 27791, prompt length: 3657
+Label: 36087, Predict:  <36367>  Now memorize the <REGISTER_CONT, Parsed: 36367, prompt length: 3655
+Label: 2702, Predict:  <2702>.  Good. Line <defective-origin, Parsed: 2702, prompt length: 3687
+Label: 1777, Predict:  <1777>. End of the session. **CHAPTER 5** , Parsed: 5, prompt length: 3679
+Label: 31290, Predict:  <16608>  <REGISTER_CONTENT> is <, Parsed: 16608, prompt length: 3660
+Label: 11530, Predict:  <7292> is the correct answer. The time-sequence of, Parsed: 7292, prompt length: 3670
+Label: 21575, Predict:  <21040>  Now the record is over. Tell me what, Parsed: 21040, prompt length: 3662
+Label: 9771, Predict:  <13165>  Right. That is correct. As I instructed, Parsed: 13165, prompt length: 3653
+Label: 839, Predict:  <839>.  Now the register is closed. Please remember what, Parsed: 839, prompt length: 3658
+Label: 29079, Predict: ...  <42000>  <44227>  , Parsed: 44227, prompt length: 3659
+Label: 1836, Predict:  <14906>  (line disturbed-mastication: <, Parsed: 14906, prompt length: 3692
+Label: 14486, Predict:  <14486>. Line numberless-id: <REGISTER_CONT, Parsed: 14486, prompt length: 3645
+Label: 31934, Predict:  _7167>  <REGISTER_CONTENT> is correct, Parsed: 7167, prompt length: 3669
+Label: 47936, Predict:  <47936>. You understood, yes? Now, ask me what is, Parsed: 47936, prompt length: 3664
+Label: 36145, Predict:  <36145>.  OK. Now I will ask you to retrieve, Parsed: 36145, prompt length: 3662
+Label: 30114, Predict:  <30114>.  I repeat, line <heavenly-, Parsed: 30114, prompt length: 3636
+Label: 32851, Predict:  <32851>. That is correct. Your ability must be improving very gradually, Parsed: 32851, prompt length: 3654
+Label: 333, Predict:  <33>.  ## 12. ##  So, we, Parsed: 12, prompt length: 3650
+Label: 18152, Predict:  <18152>. Then recall all the other words and numbers from the previous, Parsed: 18152, prompt length: 3682
+Label: 49178, Predict:  <49178>  ### SEVEN  **A** s, Parsed: 49178, prompt length: 3672
+Label: 37243, Predict:  <13363>    Please, open the book and scroll down to, Parsed: 13363, prompt length: 3663
+Label: 23545, Predict:  <35316>.  Now I will give you five lines I want, Parsed: 35316, prompt length: 3654
+Label: 7156, Predict:  <7156>  **The Questioner's Hand** (left, Parsed: 7156, prompt length: 3694
+Label: 18185, Predict:  _<34>._  Yes, line #<34>, your, Parsed: 34, prompt length: 3659
+Label: 12739, Predict:  4866  Which line index is 'noisy-tree', please, Parsed: 4866, prompt length: 3633
+Label: 30737, Predict:  <30737>  That seems right. Now tell me the <, Parsed: 30737, prompt length: 3658
+Label: 4193, Predict:  <7681>  (Yes.) Thank you. I'll take, Parsed: 7681, prompt length: 3686
+Label: 47424, Predict:  <47424>. What is the <REGISTER_CONTENT> in, Parsed: 47424, prompt length: 3668
+Label: 37903, Predict:  <35563>.  Now I will ask you for the <REG, Parsed: 35563, prompt length: 3659
+Label: 27303, Predict:  <27303>  How did you do?  I'm, Parsed: 27303, prompt length: 3649
+Label: 49764, Predict:  <38357>.  Now the record begin again. Here is the, Parsed: 38357, prompt length: 3649
+Label: 1086, Predict: : REGISTER_CONTENT is <75>.  My father's, Parsed: 75, prompt length: 3705
+Label: 4432, Predict:  <4432>.  # The first part is over  ##, Parsed: 4432, prompt length: 3683
+Label: 6729, Predict: : <4021>, line <barking-dungarees, Parsed: 4021, prompt length: 3648
+Accuracy: 0.4

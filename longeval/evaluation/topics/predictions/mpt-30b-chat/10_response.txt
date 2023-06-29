@@ -1,0 +1,50 @@
+Label: The future of sustainable agriculture, Predict: ['The first topic we discussed is The future of sustainable agriculture.'], prompt length: 5766
+Label: The impact of technology on privacy and security, Predict: ['The first topic we discussed was the impact of technology on privacy and security.'], prompt length: 5791
+Label: The effects of climate change on ocean ecosystems, Predict: ['The first topic we discussed is The effects of climate change on ocean ecosystems.'], prompt length: 5411
+Label: The role of sports in society, Predict: ['The first topic we discussed was the role of sports in society.'], prompt length: 5591
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed was the benefits of learning a new language.'], prompt length: 5549
+Label: The history and impact of the Renaissance, Predict: ['The first topic we discussed is The history and impact of the Renaissance.'], prompt length: 6004
+Label: The impact of technology on human connection, Predict: ['The first topic we discussed was "The impact of technology on human connection".'], prompt length: 5811
+Label: The benefits of reading for pleasure, Predict: ['The first topic we discussed is The benefits of reading for pleasure.'], prompt length: 5837
+Label: The role of sports in society, Predict: ['The first topic we discussed was the role of sports in society.'], prompt length: 5558
+Label: The history and culture of ancient civilizations, Predict: ['The first topic we discussed was "The history and culture of ancient civilizations".'], prompt length: 5363
+Label: The future of renewable energy storage, Predict: ['The first topic we discussed was the future of renewable energy storage.'], prompt length: 5850
+Label: The benefits of spending time in nature, Predict: ['The first topic we discussed is the benefits of spending time in nature.'], prompt length: 5713
+Label: The role of art in society, Predict: ['The first topic we discussed is The role of art in society.'], prompt length: 5888
+Label: The history and impact of the Renaissance, Predict: ['The first topic we discussed was "The history and impact of the Renaissance".'], prompt length: 5784
+Label: The role of sports in society, Predict: ['The first topic we discussed was the role of sports in society.'], prompt length: 5843
+Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was the history and culture of the Middle Ages.'], prompt length: 5675
+Label: The benefits of mindfulness meditation, Predict: ['The first topic we discussed is The benefits of mindfulness meditation.'], prompt length: 5607
+Label: The benefits of a plant-based diet, Predict: ['The first topic we discussed is The benefits of a plant-based diet.'], prompt length: 5729
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed was the benefits of learning a new language.'], prompt length: 5713
+Label: The benefits of a plant-based diet, Predict: ['The first topic we discussed is The benefits of a plant-based diet.'], prompt length: 5623
+Label: The benefits of regular exercise, Predict: ['The first topic we discussed was "The benefits of regular exercise".'], prompt length: 5501
+Label: The impact of social media on mental health in adults, Predict: ['The first topic we discussed is The impact of social media on mental health in adults.'], prompt length: 5969
+Label: The impact of social media on mental health in adults, Predict: ['The first topic we discussed is The impact of social media on mental health in adults.'], prompt length: 5779
+Label: The benefits of volunteering, Predict: ['The first topic we discussed was the benefits of volunteering.'], prompt length: 5560
+Label: The future of sustainable agriculture, Predict: ['The first topic we discussed was "The future of sustainable agriculture".'], prompt length: 5788
+Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was the history and culture of the Middle Ages.'], prompt length: 5696
+Label: The psychology of happiness, Predict: ['The first topic we discussed was "The psychology of happiness".'], prompt length: 5634
+Label: The benefits of reading for pleasure, Predict: ['The first topic we discussed is The benefits of reading for pleasure.'], prompt length: 5738
+Label: The history and culture of the Middle Ages, Predict: ['The first topic we discussed was the history and culture of the Middle Ages.'], prompt length: 5979
+Label: The history and culture of ancient civilizations, Predict: ['The first topic we discussed was "The history and culture of ancient civilizations".'], prompt length: 5389
+Label: The effects of air pollution on human health, Predict: ['The first topic we discussed is the effects of air pollution on human health.'], prompt length: 5744
+Label: The benefits of volunteering, Predict: ['The first topic we discussed is the benefits of volunteering.'], prompt length: 5673
+Label: The impact of social media on mental health in adults, Predict: ['The first topic we discussed is The impact of social media on mental health in adults.'], prompt length: 5749
+Label: The history and impact of the Renaissance, Predict: ['The first topic we discussed was "The history and impact of the Renaissance".'], prompt length: 5547
+Label: The future of sustainable agriculture, Predict: ['The first topic we discussed is "The future of sustainable agriculture".'], prompt length: 5496
+Label: The benefits of a plant-based diet, Predict: ['The first topic we discussed was "The benefits of a plant-based diet".'], prompt length: 5415
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed was the benefits of learning a new language.'], prompt length: 5846
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed was the benefits of learning a new language.'], prompt length: 5373
+Label: The impact of technology on human connection, Predict: ['The first topic we discussed was "The impact of technology on human connection".'], prompt length: 5557
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed is the benefits of learning a new language.'], prompt length: 5649
+Label: The history and impact of the Renaissance, Predict: ['The history and impact of the Renaissance.'], prompt length: 5551
+Label: The psychology of happiness, Predict: ['The first topic we discussed is The psychology of happiness.'], prompt length: 5658
+Label: The effects of sleep on overall health, Predict: ['The first topic we discussed was the effects of sleep on overall health.'], prompt length: 5534
+Label: The impact of social media on mental health in adults, Predict: ['The first topic we discussed was "The impact of social media on mental health in adults".'], prompt length: 5623
+Label: The impact of social media on communication, Predict: ['The first topic we discussed was "The impact of social media on communication".'], prompt length: 5716
+Label: The psychology of happiness, Predict: ['The first topic we discussed is The psychology of happiness.'], prompt length: 5811
+Label: The role of art in society, Predict: ['The first topic we discussed was "The role of art in society".'], prompt length: 5524
+Label: The effects of sleep on overall health, Predict: ['The first topic we discussed is the effects of sleep on overall health.'], prompt length: 5832
+Label: The benefits of reading for pleasure, Predict: ['The first topic we discussed is The benefits of reading for pleasure.'], prompt length: 5453
+Label: The benefits of learning a new language, Predict: ['The first topic we discussed was the benefits of learning a new language.'], prompt length: 5819

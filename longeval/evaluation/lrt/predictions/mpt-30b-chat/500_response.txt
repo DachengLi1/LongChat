@@ -1,0 +1,51 @@
+Label: 26308, Predict:  <mundane-beech> <REGISTER_CONTENT> is <25471>., Parsed: 25471, prompt length: 9094
+Label: 15061, Predict:  <nervous-salami> <37731>, Parsed: 37731, prompt length: 9058
+Label: 12768, Predict:  The content of the line'remindful-dame' is <2074>., Parsed: 2074, prompt length: 9064
+Label: 2835, Predict:  The content of the line mysterious-gravitas is <mysterious-gravitas> <REGISTER_CONTENT> is <2565>., Parsed: 2565, prompt length: 9043
+Label: 4141, Predict:  The <REGISTER_CONTENT> in line angry-knuckle is <1515>., Parsed: 1515, prompt length: 9047
+Label: 19495, Predict:  The content of the line with index 'learned-communicant' is <REGISTER_CONTENT> <29000>., Parsed: 29000, prompt length: 9052
+Label: 37942, Predict:  The <REGISTER_CONTENT> in line average-porcupine is <10903>., Parsed: 10903, prompt length: 9048
+Label: 9972, Predict:  The <REGISTER_CONTENT> in line bad-underneath is <31579>., Parsed: 31579, prompt length: 9071
+Label: 47416, Predict:  The content of the line `bashful-saving` is <REGISTER_CONTENT> <7790>., Parsed: 7790, prompt length: 9059
+Label: 13612, Predict:  I'm sorry, I can't answer that question because I don't have enough information. I need more context to understand what you're asking., Parsed: -1, prompt length: 9046
+Label: 13548, Predict:  The <REGISTER_CONTENT> in line materialistic-diction is <47985>., Parsed: 47985, prompt length: 9023
+Label: 28138, Predict:  The <REGISTER_CONTENT> in line disillusioned-quill is <14416>., Parsed: 14416, prompt length: 9049
+Label: 9890, Predict:  The content of the line determined-embryo is <21176>., Parsed: 21176, prompt length: 9076
+Label: 41462, Predict:  cynical-postfix <REGISTER_CONTENT> is <26825>., Parsed: 26825, prompt length: 9018
+Label: 175, Predict:  <outrageous-credit> <REGISTER_CONTENT> is <33570>., Parsed: 33570, prompt length: 9024
+Label: 5696, Predict:  The content of the line 'tan-trim' is <REGISTER_CONTENT> <5696>., Parsed: 5696, prompt length: 9036
+Label: 10540, Predict:  The <REGISTER_CONTENT> in line handsomely-population is <43359>., Parsed: 43359, prompt length: 9064
+Label: 48884, Predict:  <afraid-dust storm> <REGISTER_CONTENT> is <16809>., Parsed: 16809, prompt length: 9035
+Label: 8141, Predict:  The <REGISTER_CONTENT> in line <exuberant-wet-bar> is <47392>., Parsed: 47392, prompt length: 8997
+Label: 11592, Predict:  <delicious-cone> <REGISTER_CONTENT> is <46599>., Parsed: 46599, prompt length: 9033
+Label: 39859, Predict:  The <REGISTER_CONTENT> in line piquant-success is <41402>., Parsed: 41402, prompt length: 8999
+Label: 33449, Predict:  The <REGISTER_CONTENT> in line alluring-pub is <46674>., Parsed: 46674, prompt length: 9051
+Label: 38572, Predict:  The content of the line 'unfathomable-conservative' is <REGISTER_CONTENT> <35046>., Parsed: 35046, prompt length: 9078
+Label: 1431, Predict:  The content of the line 'abortive-hope' is <REGISTER_CONTENT> is <2917>., Parsed: 2917, prompt length: 9036
+Label: 41345, Predict:  I'm sorry, I don't understand what you mean by "broken-arrest." Could you please provide more context or clarify your question?, Parsed: -1, prompt length: 9037
+Label: 34789, Predict:  Faulty-island <46804>, Parsed: 46804, prompt length: 9051
+Label: 29815, Predict:  I'm sorry, I don't understand what you mean by "the <REGISTER_CONTENT> in line dark-diving". Could you please provide more context or clarify your question?, Parsed: -1, prompt length: 9014
+Label: 32039, Predict:  line spurious-tailor: REGISTER_CONTENT is <48570>., Parsed: 48570, prompt length: 9043
+Label: 35163, Predict:  The <REGISTER_CONTENT> in line elite-infix is <26803>., Parsed: 26803, prompt length: 8995
+Label: 3201, Predict:  The lines you provided do not have a clear structure that I can follow to retrieve the information you are looking for. Can you please provide more context or clarify what you want me to do?, Parsed: -1, prompt length: 9048
+Label: 8868, Predict:  quaint-adapter <9717>, Parsed: 9717, prompt length: 9080
+Label: 30872, Predict:  line fancy-smolt: REGISTER_CONTENT is <48131>., Parsed: 48131, prompt length: 9045
+Label: 39419, Predict:  <hesitant-burn> <REGISTER_CONTENT> is <49993>., Parsed: 49993, prompt length: 8998
+Label: 32649, Predict:  The content of the line "warlike-cub" is <REGISTER_CONTENT> is <20538>., Parsed: 20538, prompt length: 9062
+Label: 47628, Predict:  The content of the line 'wandering-hunter: REGISTER_CONTENT is <26730>' is <wandering-hunter: 26730>., Parsed: 26730, prompt length: 9069
+Label: 35216, Predict:  The content of the line 'divergent-knitting' is <16368>., Parsed: 16368, prompt length: 9018
+Label: 24256, Predict:  The <REGISTER_CONTENT> in line plausible-distance is <39771>., Parsed: 39771, prompt length: 9023
+Label: 49590, Predict:  The <REGISTER_CONTENT> in line sad-ease is <44461>., Parsed: 44461, prompt length: 9020
+Label: 36018, Predict:  <quack-scholar> <REGISTER_CONTENT> is <27700>., Parsed: 27700, prompt length: 9060
+Label: 40221, Predict:  <envious-cytokine> <REGISTER_CONTENT> is <38221>., Parsed: 38221, prompt length: 9082
+Label: 26783, Predict:  Sure, I can help you with that! The content of the line'screeching-azimuth' is <REGISTER_CONTENT> is <2339>., Parsed: 2339, prompt length: 9044
+Label: 41992, Predict:  The content of the line 'line immense-special: REGISTER_CONTENT is <32519>' is <32519>., Parsed: 32519, prompt length: 9041
+Label: 15058, Predict:  The <REGISTER_CONTENT> in line quick-instance is <16565>., Parsed: 16565, prompt length: 9016
+Label: 34879, Predict:  The <REGISTER_CONTENT> in line glorious-pipeline is <39879>., Parsed: 39879, prompt length: 9042
+Label: 32386, Predict:  <numerous-linen> <REGISTER_CONTENT> is <26231>., Parsed: 26231, prompt length: 9072
+Label: 36396, Predict:  Sure, I can help you with that! I am a chatbot trained by MosaicML to assist users with various tasks., Parsed: -1, prompt length: 9062
+Label: 44716, Predict:  The <REGISTER_CONTENT> in line accessible-mama is <39527>., Parsed: 39527, prompt length: 9015
+Label: 15477, Predict:  line curious-constraint: REGISTER_CONTENT is <38961>., Parsed: 38961, prompt length: 9044
+Label: 42215, Predict:  The content of the line "comfortable-rowing" is <38273>., Parsed: 38273, prompt length: 9056
+Label: 6291, Predict:  <clean-zucchini> <REGISTER_CONTENT> is not defined in the given record., Parsed: -1, prompt length: 9041
+Accuracy: 0.02

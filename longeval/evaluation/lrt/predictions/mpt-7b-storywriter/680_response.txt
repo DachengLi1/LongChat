@@ -1,0 +1,51 @@
+Label: 35148, Predict:  <45651>  I have now asked you to retrieve the <, Parsed: 45651, prompt length: 12160
+Label: 49425, Predict:  <48279>. Do you get it? Are you sure you understood the, Parsed: 48279, prompt length: 12116
+Label: 42381, Predict:  what? <<11851>  * * *  As, Parsed: 11851, prompt length: 12115
+Label: 456, Predict:  <164360>.  Now I ask you to find an <, Parsed: 164360, prompt length: 12106
+Label: 17193, Predict:  <17193>  All right, it is line knotty-, Parsed: 17193, prompt length: 12125
+Label: 18839, Predict:  <13082>.  #### Question 2  Now memorize the, Parsed: 2, prompt length: 12123
+Label: 32950, Predict:  <45335>  I know that. You don't need to, Parsed: 45335, prompt length: 12107
+Label: 37967, Predict:  <33858>  Now give me the <REGISTER_CONT, Parsed: 33858, prompt length: 12114
+Label: 9455, Predict: : 48170  ## [5]  Tell me the <, Parsed: 5, prompt length: 12122
+Label: 18084, Predict:  <1090>  Answer: <1090>  I, Parsed: 1090, prompt length: 12100
+Label: 18691, Predict:  <18691>.  My goodness. What a mess. I'm, Parsed: 18691, prompt length: 12104
+Label: 46892, Predict:  <5197>  I have it! How about the next line, Parsed: 5197, prompt length: 12111
+Label: 21430, Predict:  <5454>  Now the record start:  line <, Parsed: 5454, prompt length: 12129
+Label: 24653, Predict:  <24653>.  Now I will give you the next line ', Parsed: 24653, prompt length: 12104
+Label: 8962, Predict:  <27855>  <REGISTER_CONTENT> is what, Parsed: 27855, prompt length: 12119
+Label: 18013, Predict:  <18013>.  No, it is line <cheerful, Parsed: 18013, prompt length: 12091
+Label: 29728, Predict:  <148>  It is so-o-o-o., Parsed: 148, prompt length: 12130
+Label: 38666, Predict:  <7>  That was right. Now that is line <w, Parsed: 7, prompt length: 12132
+Label: 47524, Predict:  <47524>  Which line of the record do you refer to, Parsed: 47524, prompt length: 12152
+Label: 41994, Predict:  <44344>. That's it. Good job, dear son. , Parsed: 44344, prompt length: 12129
+Label: 38389, Predict:  <10706>  > I don't know. It isn't, Parsed: 10706, prompt length: 12127
+Label: 24817, Predict:  <15887>  The number of the <REGISTER_CONT, Parsed: 15887, prompt length: 12105
+Label: 18839, Predict:  <18839>.  A: <REGISTER_CONTENT>, Parsed: 18839, prompt length: 12090
+Label: 43066, Predict:  <23643>  Now the record is over. Tell me where, Parsed: 23643, prompt length: 12123
+Label: 40327, Predict:  <40327>  <REGISTER_CONTENT> is correct, Parsed: 40327, prompt length: 12132
+Label: 37818, Predict:  <36658>. Line <deferent-array> and line <de, Parsed: 36658, prompt length: 12117
+Label: 15706, Predict:  <7024>.  Now the record begin again; I want you, Parsed: 7024, prompt length: 12124
+Label: 22149, Predict:  <33362>.  Question: Please tell me the number of the, Parsed: 33362, prompt length: 12150
+Label: 15639, Predict:  <38655>. So, what is the answer? Please click the following, Parsed: 38655, prompt length: 12077
+Label: 43712, Predict:  <43538>.  Bruno  You need to repeat, Parsed: 43538, prompt length: 12098
+Label: 35951, Predict:  <39257>. What is the <REGISTER_CONTENT> in, Parsed: 39257, prompt length: 12073
+Label: 9524, Predict:  <37851>  Thank you for your submission. Check the next, Parsed: 37851, prompt length: 12122
+Label: 27321, Predict:  <582>  # Part II A-Hunting We Will, Parsed: 582, prompt length: 12103
+Label: 47059, Predict:  <2502>  Now what is the <REGISTER_CONT, Parsed: 2502, prompt length: 12118
+Label: 21997, Predict:  _<49878>.  The correct answer was <modern-w, Parsed: 49878, prompt length: 12134
+Label: 6408, Predict:  <6408>.  Well done. Next, I will ask you, Parsed: 6408, prompt length: 12104
+Label: 43758, Predict:  <43958>  Tell me what is the <REGISTER_, Parsed: 43958, prompt length: 12067
+Label: 43547, Predict:  <43547>  What is the line hilarious-temptation, Parsed: 43547, prompt length: 12135
+Label: 26975, Predict:  <26975>  # Chapter Seventeen  As a teacher, Parsed: 26975, prompt length: 12138
+Label: 30820, Predict:  <30820>  **Answer:** <30820>  , Parsed: 30820, prompt length: 12136
+Label: 29318, Predict:  <10542>  Answer: 4230.  You got, Parsed: 4230, prompt length: 12151
+Label: 18480, Predict:  <3484>  Yes, it is.  Now,, Parsed: 3484, prompt length: 12113
+Label: 40259, Predict:  <40259>.  Okay, I am going to test your skills, Parsed: 40259, prompt length: 12082
+Label: 18913, Predict:  <<26656>.  Now I will ask you to memorize, Parsed: 26656, prompt length: 12136
+Label: 31798, Predict:  a 9 (index number is 36). What is <REGISTER_CONT, Parsed: 36, prompt length: 12078
+Label: 28761, Predict:  <28761>.  The other lines are not important and you can, Parsed: 28761, prompt length: 12116
+Label: 36981, Predict:  <131073>.  Tell me what is the <REGISTER, Parsed: 131073, prompt length: 12110
+Label: 13190, Predict:  <13190>  Okay. I will ask you to recall all, Parsed: 13190, prompt length: 12116
+Label: 5906, Predict:  <46378>  I don't understand. The answer is unknown, Parsed: 46378, prompt length: 12131
+Label: 4959, Predict:  <16691> Ahh, I remember. The <REGISTER, Parsed: 16691, prompt length: 12096
+Accuracy: 0.28
