@@ -1,0 +1,51 @@
+Label: 24140, Predict:  <24140>.  The <REGISTER_CONTENT> for, Parsed: 24140, prompt length: 10702
+Label: 47085, Predict:  10.  Answer me the remaining contents:  line exult, Parsed: 10, prompt length: 10719
+Label: 45190, Predict:  <36285>. **2**. The <REGISTER_CONTENT, Parsed: 2, prompt length: 10721
+Label: 20492, Predict:  11. Good! Then, tell me what is the <REGISTER_, Parsed: 11, prompt length: 10748
+Label: 5359, Predict:  <5359>. That is correct. Now it's time to check out, Parsed: 5359, prompt length: 10708
+Label: 17842, Predict:  <7055>. Well done. I will ask you to retrieve the number, Parsed: 7055, prompt length: 10696
+Label: 28937, Predict:  <47916>.  **Q. What is the <REGISTER, Parsed: 47916, prompt length: 10701
+Label: 29976, Predict:  <1406> As we can see, this is the number of, Parsed: 1406, prompt length: 10694
+Label: 40201, Predict:  <28756>  Yes, I got it.  Now, Parsed: 28756, prompt length: 10726
+Label: 19628, Predict:  <19628>. That is correct. Now I will ask you to retrieve, Parsed: 19628, prompt length: 10747
+Label: 43241, Predict:  <38343>  Next, I will ask you to retrieve the, Parsed: 38343, prompt length: 10733
+Label: 15288, Predict:  <15288>.  #### **Answer:**  ### **Day, Parsed: 15288, prompt length: 10735
+Label: 9024, Predict:  <16888>.  All correct. What are the words of line, Parsed: 16888, prompt length: 10679
+Label: 44341, Predict:  <44341>  Now the record is over. Tell me what, Parsed: 44341, prompt length: 10760
+Label: 40045, Predict:  <37133>  It was you who said, '37133, Parsed: 37133, prompt length: 10705
+Label: 40876, Predict:  <25453: 4851>. Now tell me all the <REGISTER, Parsed: 4851, prompt length: 10690
+Label: 34418, Predict: :  **<1393>:** Spicy Gallery <REGISTER, Parsed: 1393, prompt length: 10706
+Label: 2293, Predict:  <34186>  How about now, what is the <REG, Parsed: 34186, prompt length: 10719
+Label: 4644, Predict:  <44954>  Now the record is over. Tell me what, Parsed: 44954, prompt length: 10696
+Label: 22707, Predict:  <10357>.  Now I will ask you to retrieve the same, Parsed: 10357, prompt length: 10700
+Label: 13259, Predict:  <4863>  You know the answer. I now ask you, Parsed: 4863, prompt length: 10708
+Label: 19790, Predict:  <45690>.  Now I will ask you to recall the other, Parsed: 45690, prompt length: 10721
+Label: 11351, Predict:  <13366> OK.  Tell me the <REGISTER_, Parsed: 13366, prompt length: 10708
+Label: 34646, Predict:  <1607>  Answer: 1607.  Correct., Parsed: 1607, prompt length: 10698
+Label: 37604, Predict: : <REGISTER_CONTENT> is <37604> and line, Parsed: 37604, prompt length: 10700
+Label: 37493, Predict:  <39493>  The number is 39493.  Now, Parsed: 39493, prompt length: 10742
+Label: 4920, Predict:  <4920>  This is not the answer. The number of, Parsed: 4920, prompt length: 10732
+Label: 18489, Predict:  <18489>  I thought of it just in time! What, Parsed: 18489, prompt length: 10701
+Label: 23911, Predict:  <1805>  Correct!  Now I need two more, Parsed: 1805, prompt length: 10731
+Label: 20885, Predict:  <18853>.  ## 11  Your memory is improving., Parsed: 11, prompt length: 10670
+Label: 3357, Predict:  <8473>.  Now that you've memorized the <REG, Parsed: 8473, prompt length: 10724
+Label: 5553, Predict:  845  Yes, that's right. Now tell me the <, Parsed: 845, prompt length: 10700
+Label: 39601, Predict:  <36224>.  ### 1.0  ### Contents , Parsed: 0, prompt length: 10698
+Label: 16089, Predict:  <16089>.  Now the record is over. Retrieve me, Parsed: 16089, prompt length: 10703
+Label: 12990, Predict:  <4030>  Line <likeable-pita> is, Parsed: 4030, prompt length: 10703
+Label: 28835, Predict:  <35283>.  Now let's do it again.  , Parsed: 35283, prompt length: 10724
+Label: 15211, Predict:  <15211>.  The number is <15211>. Well done, Parsed: 15211, prompt length: 10748
+Label: 45345, Predict: <48763>.  Here we go. Answer: <48763, Parsed: 48763, prompt length: 10709
+Label: 43398, Predict:  <43398>. Now I will start from line numbered <1> and, Parsed: 1, prompt length: 10677
+Label: 29454, Predict: <9017>  #3  The record is below., Parsed: 3, prompt length: 10706
+Label: 8039, Predict:  <8039>  Now that's all I require of you for, Parsed: 8039, prompt length: 10697
+Label: 11377, Predict:  <12612>.  ## LISTENING QUESTION -, Parsed: 12612, prompt length: 10692
+Label: 23960, Predict:  <23960>  Correct! That was easy! The answer was, Parsed: 23960, prompt length: 10741
+Label: 6913, Predict:  <12487>.  My turn: For the line <lack, Parsed: 12487, prompt length: 10690
+Label: 6290, Predict:  <3> Now the record is over. Tell me what is the, Parsed: 3, prompt length: 10701
+Label: 15771, Predict:  <35>  Now the record is over. Tell me what is, Parsed: 35, prompt length: 10716
+Label: 39019, Predict:  <32458>. Now answer. You must answer in a way you can, Parsed: 32458, prompt length: 10748
+Label: 16591, Predict:   The correct answer is  Answer: 5686  I, Parsed: 5686, prompt length: 10713
+Label: 30694, Predict:  <4678>  Fine. Now this phrase: 'Now that, Parsed: 4678, prompt length: 10714
+Label: 2330, Predict:  <2330>. The register start from line 1 to the end. , Parsed: 1, prompt length: 10702
+Accuracy: 0.24

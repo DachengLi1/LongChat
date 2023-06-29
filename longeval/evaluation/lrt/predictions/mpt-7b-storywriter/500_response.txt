@@ -1,0 +1,51 @@
+Label: 26308, Predict:  <26308>.  ###  #### GAME NOUN 1, Parsed: 1, prompt length: 9005
+Label: 15061, Predict:  <28>  OK, it is. Tell me what is the, Parsed: 28, prompt length: 8969
+Label: 12768, Predict:  <12768>  And now we take a break. Look around, Parsed: 12768, prompt length: 8975
+Label: 2835, Predict:  <2835>.  ## The End  ## **Contents**, Parsed: 2835, prompt length: 8954
+Label: 4141, Predict:  <4541>  And line [36325] of what register, Parsed: 36325, prompt length: 8958
+Label: 19495, Predict:  <19495>  I have. The number is <19495, Parsed: 19495, prompt length: 8963
+Label: 37942, Predict:  <37942>  ##   13:   Lucky number, Parsed: 13, prompt length: 8959
+Label: 9972, Predict:  <27001>  The number is: 1,001  , Parsed: 1, prompt length: 8982
+Label: 47416, Predict:  <47416>  The answer is line <bashful-saving, Parsed: 47416, prompt length: 8970
+Label: 13612, Predict:  <3442>  ## CHAPTER ELEVEN  It was, Parsed: 3442, prompt length: 8957
+Label: 13548, Predict:  <9190>  Yes, line number <materialistic-d, Parsed: 9190, prompt length: 8934
+Label: 28138, Predict:  <36380>  **Now** tell me the following: I, Parsed: 36380, prompt length: 8960
+Label: 9890, Predict: :  determined-embryo: REGISTER_CONTENT is, Parsed: -1, prompt length: 8987
+Label: 41462, Predict:  what?  B. The answer is:  A. 3, Parsed: 3, prompt length: 8929
+Label: 175, Predict:  <3271>. Now you can turn the page back to the previous page, Parsed: 3271, prompt length: 8935
+Label: 5696, Predict:  <5696>.  > Tan trim:  > <5, Parsed: 5, prompt length: 8947
+Label: 10540, Predict:  <36654>  Good.  Now your turn. , Parsed: 36654, prompt length: 8975
+Label: 48884, Predict:  46377  The one in line <afraid-dust storm>, Parsed: 46377, prompt length: 8946
+Label: 8141, Predict:  <29454>  Now I will give you a single line to, Parsed: 29454, prompt length: 8908
+Label: 11592, Predict:  <32209>. What's the number?  A: 1265, Parsed: 1265, prompt length: 8944
+Label: 39859, Predict:  <3336>  I see. So you have memorized the, Parsed: 3336, prompt length: 8910
+Label: 33449, Predict:  <1141>  Okay, good. I will give you another, Parsed: 1141, prompt length: 8962
+Label: 38572, Predict:  <26655>  Good. You're a genius. Below is, Parsed: 26655, prompt length: 8989
+Label: 1431, Predict:  <15379> (HINT #1)  Now I know, Parsed: 1, prompt length: 8947
+Label: 41345, Predict:  <broken-arrest>is 69040>  What is the, Parsed: 69040, prompt length: 8948
+Label: 34789, Predict:  <3489>  # 3  Below is a record of, Parsed: 3, prompt length: 8962
+Label: 29815, Predict:  <29815>  Good. Now, for each of the remaining, Parsed: 29815, prompt length: 8925
+Label: 32039, Predict:  <32039>  <REGISTER_CONTENT> = <, Parsed: 32039, prompt length: 8954
+Label: 35163, Predict:  <14574>   Table of Contents  Title Page , Parsed: 14574, prompt length: 8906
+Label: 3201, Predict:  <15150>.  Now I will ask you to memorize the, Parsed: 15150, prompt length: 8959
+Label: 8868, Predict:  <32716>  Aren't you going to go and get, Parsed: 32716, prompt length: 8991
+Label: 30872, Predict:  <2924>  <48397>  The answer correct, Parsed: 48397, prompt length: 8956
+Label: 39419, Predict:  <49932>.  Great, now for the second question of today, Parsed: 49932, prompt length: 8909
+Label: 32649, Predict:  <32649>.  **The correct answer is line <warlike, Parsed: 32649, prompt length: 8973
+Label: 47628, Predict:  <27379>. Thank you.  #  ## **H, Parsed: 27379, prompt length: 8980
+Label: 35216, Predict:  <35216>.  I want the REGISTER_CONTENT of, Parsed: 35216, prompt length: 8929
+Label: 24256, Predict:  <15004>  Now do the same with line <jolly, Parsed: 15004, prompt length: 8934
+Label: 49590, Predict:  <13388>  Done. Now is ready for the final., Parsed: 13388, prompt length: 8931
+Label: 36018, Predict:  the <26218>. This question can be found between line number <27, Parsed: 27, prompt length: 8971
+Label: 40221, Predict: <3175>.  Thank you! That is the <REGISTER, Parsed: 3175, prompt length: 8993
+Label: 26783, Predict:  <3482>  <REGISTER_CONTENT> in line, Parsed: 3482, prompt length: 8955
+Label: 41992, Predict:  <15781>.  There is no error.  Great,, Parsed: 15781, prompt length: 8952
+Label: 15058, Predict:  <15058>  <Q>  Line <quick-, Parsed: 15058, prompt length: 8927
+Label: 34879, Predict:  1532.  Thank you. Now I am going to tell you, Parsed: 1532, prompt length: 8953
+Label: 32386, Predict:  <34368>  Now the record is over. Tell me what, Parsed: 34368, prompt length: 8983
+Label: 36396, Predict:  <2715>  You are doing well. Line <acrid, Parsed: 2715, prompt length: 8973
+Label: 44716, Predict:  <4043>.  Which of the following words begins with the letter, Parsed: 4043, prompt length: 8926
+Label: 15477, Predict:  <33333>  Now the record is over. Tell me what, Parsed: 33333, prompt length: 8955
+Label: 42215, Predict:  <40946>  Good. It is line <comfortable-, Parsed: 40946, prompt length: 8967
+Label: 6291, Predict:  <34194>. I won't tell you <REGISTER_CONTENT, Parsed: 34194, prompt length: 8952
+Accuracy: 0.18
