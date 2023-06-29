@@ -43,6 +43,8 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
 def load_tokenizer(model_name, model_path, local_model):
     if "gpt" in model_name:
         return None
+    elif "claude" in model_name:
+        return None
     elif local_model is False:
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name,
                                                                use_fast=False)
@@ -62,6 +64,8 @@ def load_model(model_name, model_path, local_model, gpu_id=1):
 
     if "gpt" in model_name:
         return None
+    elif "claude" in model_name:
+        return None
     elif local_model is False:
         kwargs = {"torch_dtype": torch.bfloat16}
         num_gpus = 1
@@ -75,7 +79,7 @@ def load_model(model_name, model_path, local_model, gpu_id=1):
     return model
 
 def token_counter(tokenizer, model_name, model_path, prompt):
-    if "gpt" in model_name:
+    if "gpt" in model_name or "claude" in model_name:
         token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
     else:
         input = tokenizer(prompt, return_tensors="pt")
@@ -91,6 +95,8 @@ def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id, use
     if "gpt" in model_name:
         token_size, response = retrieve_from_openai(prompt, model_name, num_retries=10)
         return token_size, response
+    elif "claude" in model_name:
+        token_size, response = retrieve_from_anthropic(prompt)
     else:
         input = tokenizer(prompt, return_tensors="pt")
         token_size = input.input_ids.shape[-1]
@@ -99,6 +105,22 @@ def query_model(model_name, model, prompt, prompt_length, tokenizer, gpu_id, use
         response = tokenizer.convert_tokens_to_string(tokenizer.convert_ids_to_tokens(response))
         
     return token_size, response
+
+def retrieve_from_anthropic(prompt):
+    import anthropic
+    from anthropic import HUMAN_PROMPT, AI_PROMPT
+
+    client = anthropic.Client(os.environ["ANTHROPIC_API_KEY"])
+
+    completion = client.completion(
+        model='claude-1.3-100k',
+        max_retries=20,
+        max_tokens_to_sample=300,
+        temperature=0,
+        prompt=f"{HUMAN_PROMPT} {prompt} {AI_PROMPT}"
+    )
+    
+    return -1, completion["completion"]
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
     openai.api_key = os.environ["OPENAI_API_KEY"]
