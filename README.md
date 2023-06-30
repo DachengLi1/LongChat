@@ -69,7 +69,7 @@ If you find this repo to be useful, plese cite:
 @misc{longchat2023,
     title = {How Long Can Open-Source LLMs Truly Promise on Context Length?},
     url = {https://lmsys.org/blog/2023-06-29-longchat},
-    author = {Dacheng Li*, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Ion Stoica, Xuezhe Ma, and Hao Zhang},
+    author = {Dacheng Li*, Rulin Shao*, Anze Xie, Ying Sheng, Lianmin Zheng, Joseph E. Gonzalez, Ion Stoica, Xuezhe Ma, and Hao Zhang},
     month = {June},
     year = {2023}
 }
