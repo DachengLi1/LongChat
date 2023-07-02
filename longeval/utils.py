@@ -75,6 +75,9 @@ def longeval_load_model(args):
         tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         model = transformers.AutoModel.from_pretrained(args.model_name_or_path, trust_remote_code=True).half().cuda()
         model = model.eval()
+    elif "gpt-" in args.model_name_or_path:
+        tokenizer = None
+        model = None
     else:
         # Use fastchat load_model API
         model, tokenizer = load_model(
@@ -116,6 +119,8 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
         prompt_length = len(tokenizer(prompt).input_ids)
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
         output = [output]
+    elif "gpt-" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -165,6 +170,8 @@ def test_lines_one_sample(model, tokenizer, test_case, output_file, idx, args):
     elif "THUDM/chatglm2-6b" in args.model_name_or_path:
         prompt_length = len(tokenizer(prompt).input_ids)
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
+    elif "gpt-" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -221,16 +228,8 @@ def token_counter(model_name, prompt):
     return token_size
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
-    if "gpt" in model_name:
-        token_size = token_counter(model_name, prompt)
-        print(f"Number of tokens: {token_size}")
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-    else:
-        token_size = token_counter(model_name, prompt)
-        print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
-
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-        print("Using openai key as default key")
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+    token_size = len(tiktoken.encoding_for_model(model).encode(prompt))
     
     num_retries = 10
     completion = None
@@ -247,18 +246,34 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
                 temperature = 0
             )
             break
-        except openai.error.RateLimitError:
-            print("Got rate limit...")
-            pass
         except openai.error.APIError as e:
-            if e.http_status == 502:
-                pass
-            else:
-                pass
-
+            print(f"OpenAI API returned an API Error: {e}")
             if attempt == num_retries - 1:
                 raise
-
+        except openai.error.APIConnectionError as e:
+            print(f"Failed to connect to OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.RateLimitError as e:
+            print(f"OpenAI API request exceeded rate limit: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.Timeout as e:
+            print(f"OpenAI API request timed out: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.InvalidRequestError as e:
+            print(f"Invalid request to OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.AuthenticationError as e:
+            print(f"Authentication error with OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.ServiceUnavailableError as e:
+            print(f"OpenAI API service unavailable: {e}")
+            if attempt == num_retries - 1:
+                raise
         time.sleep(backoff)
 
     if completion is None:
