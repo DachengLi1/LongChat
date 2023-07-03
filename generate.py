@@ -26,7 +26,8 @@ def eval_scrolls(model, tokenizer, args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-name-or-path", default="lmsys/longchat-7b-16k", type=str, help="model path")
+    parser.add_argument("--model-name-or-path", default="mosaicml/mpt-7b-storywriter", type=str, help="model path")
+    parser.add_argument("--benchmark", default="tau/scrolls", choices=["tau/scrolls", "ghomasHudson/muld"])
     parser.add_argument("--dataset", default="qasper", type=str, help="Which evaluation task to use. currently support [topics, lines]")
     parser.add_argument("--num_gpus", type=int, default=1, help="number of gpus to use")
     parser.add_argument("--max_gpu_memory", type=int, default=40, help="max per gpu memory in GiB. A100 is 40 or 80.")
@@ -35,21 +36,26 @@ if __name__ == "__main__":
     parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
     args = parser.parse_args()
 
-    args.model_name_or_path = "mosaicml/mpt-7b-storywriter"
-
     model, tokenizer = longeval_load_model(args)
     pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')
 
-    dataset = load_dataset("tau/scrolls", args.dataset)
-    dataset = dataset["validation"]
+    dataset = load_dataset(args.benchmark, args.dataset)
+    if args.benchmark == "tau/scrolls":
+        dataset = dataset["validation"]
+    elif args.benchmark == "ghomasHudson/muld":
+        dataset = dataset["test"]
 
     prediction = {}
     for idx in range(len(dataset)):
         prompt = dataset[idx]["input"]
         with torch.autocast('cuda', dtype=torch.bfloat16):
             output = pipe(prompt, max_new_tokens=500, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
-        prediction.update({dataset[idx]["id"]: output})
-        print(dataset[idx]["id"], output)
+        if args.benchmark == "tau/scrolls":
+            unique_id = dataset[idx]["id"]
+        elif args.benchmark == "ghomasHudson/muld":
+            unique_id = str(idx)
+        prediction.update({unique_id: output})
+        print(unique_id, output)
     
     json_object = json.dumps(prediction, indent=4)
     with open(f"{args.model_name_or_path.replace('/','-')}-{args.dataset}.json", "w") as f:
