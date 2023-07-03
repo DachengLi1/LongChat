@@ -121,6 +121,8 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
         output = [output]
     elif "gpt-" in args.model_name_or_path:
         prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
+    elif "claude" in args.mode_name_or_path:
+        prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -172,6 +174,8 @@ def test_lines_one_sample(model, tokenizer, test_case, output_file, idx, args):
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
     elif "gpt-" in args.model_name_or_path:
         prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
+    elif "claude" in args.mode_name_or_path:
+        prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -283,6 +287,22 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
     response_line = completion.choices[0].message["content"]
 
     return token_size, response_line
+
+def retrieve_from_anthropic(prompt, model_name, num_retries=10):
+    import anthropic
+    from anthropic import HUMAN_PROMPT, AI_PROMPT
+
+    client = anthropic.Client(os.environ["ANTHROPIC_API_KEY"])
+
+    completion = client.completion(
+        model = model_name,
+        max_retries=num_retries,
+        max_tokens_to_sample=300,
+        temperature=0,
+        prompt=f"{HUMAN_PROMPT} {prompt} {AI_PROMPT}"
+    )
+
+    return -1, completion["completion"]
 
 def filter_string():
     class FilteredStream:
