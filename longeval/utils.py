@@ -9,6 +9,7 @@ import openai
 import tiktoken
 import random
 import itertools
+import uuid
 
 import torch
 import transformers
@@ -464,16 +465,9 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     parser.add_argument('yaml_path', help='path to the yaml configuration')
     args = parser.parse_args()
 
-    # f = open(args.yaml_path, "r")
-    # HERE = Path(__file__).resolve()
-    # CFG_PATH = HERE.parent / Path("out_eval_config.yaml")
     f = open(Path(args.yaml_path), "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
 
-    # if cfgs["model_name"] == "None":
-    #     cfgs["model_name"] = Path(args.model).stem
-    # cfgs["model_path"] = args.model
-    # cfgs["level"] = args.level
     print(yaml.dump(cfgs))
 
     return cfgs
