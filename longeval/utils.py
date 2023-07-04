@@ -371,7 +371,8 @@ def generate_topics_testcases(cfgs, output_dir):
             
             curr_output = {"test_id": p.id, 
                            "prompt": pt,
-                           "topics": p.topic_list[0]}
+                           "topics": p.topic_list,
+                           "prompt_length": -1}
             json.dump(curr_output, f)
             f.write("\n")
         f.close()
@@ -439,7 +440,7 @@ class Prompt:
     
     def assemble_prompt(self):
         record_prompt = "Below is a record of our previous conversation " + \
-            "on 1 different topics. You are the ASSISTANT, and " + \
+            f"on {len(self.topic_list)} different topics. You are the ASSISTANT, and " + \
             "I am the USER. At the beginning of each topic, the USER will say " + \
             "'I would like to discuss the topic of <TOPIC>'. Memorize each " + \
             "<TOPIC>. At the end of the record, I will ask you to retrieve the " + \
