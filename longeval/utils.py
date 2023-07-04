@@ -12,7 +12,7 @@ logging.set_verbosity_error()
 import openai
 import tiktoken
 
-from fastchat.model import load_model, get_conversation_template
+# from fastchat.model import load_model, get_conversation_template
 
 def maybe_monkey_patch(args):
     if "longchat" in args.model_name_or_path:
@@ -78,6 +78,9 @@ def longeval_load_model(args):
     elif "gpt-" in args.model_name_or_path:
         tokenizer = None
         model = None
+    elif "claude" in args.model_name_or_path:
+        tokenizer = None
+        model = None
     else:
         # Use fastchat load_model API
         model, tokenizer = load_model(
@@ -121,7 +124,7 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
         output = [output]
     elif "gpt-" in args.model_name_or_path:
         prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
-    elif "claude" in args.mode_name_or_path:
+    elif "claude" in args.model_name_or_path:
         prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
@@ -233,7 +236,7 @@ def token_counter(model_name, prompt):
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
     openai.api_key = os.environ["OPENAI_API_KEY"]
-    token_size = len(tiktoken.encoding_for_model(model).encode(prompt))
+    token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
     
     num_retries = 10
     completion = None
@@ -303,6 +306,7 @@ def retrieve_from_anthropic(prompt, model_name, num_retries=10):
     )
 
     return -1, completion["completion"]
+
 
 def filter_string():
     class FilteredStream:
