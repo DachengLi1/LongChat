@@ -6,7 +6,7 @@ if __name__ == "__main__":
 
     output_dir = os.path.join(cfgs["output_dir"], cfgs["task"], "testcases/")
     if not os.path.exists(output_dir):
-        os.mkdirs(output_dir)
+        os.makedirs(output_dir)
 
     if cfgs["task"] == "topics":
         generate_topics_testcases(cfgs, output_dir)

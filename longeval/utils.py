@@ -404,7 +404,7 @@ def generate_lines_testcases(cfgs, output_dir):
 
             expected_number, correct_line = retrieve_expected(lines, random_num)
             lines.insert(0, f"{prompt_header}")
-            lines.insert(len(lines), f"\nNow the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_idx}? I need the number. ASSISTANT: ")
+            lines.insert(len(lines), f"\nNow the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_idx}? I need the number.")
             prompt = generate_prompt_from_lines(lines)
 
             output = {
@@ -489,6 +489,8 @@ def generate_line_index(num_line, idx_opt):
         comb = []
         for i in range(num_line):
             comb.append(str(uuid.uuid4()))
+        
+        return comb
     elif idx_opt == "LRT-NL":
         import wonderwords
 
