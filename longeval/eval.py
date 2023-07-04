@@ -6,7 +6,7 @@ from tqdm import tqdm
 import torch
 import numpy as np
 
-# from fastchat.model import get_conversation_template
+from fastchat.model import get_conversation_template
 from utils import maybe_monkey_patch, get_output_dir, longeval_load_model, load_testcases, test_topics_one_sample, test_lines_one_sample 
 
 def longeval_test(model, tokenizer, output_dir, args):
@@ -63,7 +63,7 @@ if __name__ == "__main__":
     parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
     args = parser.parse_args()
 
-    # maybe_monkey_patch(args)
+    maybe_monkey_patch(args)
     output_dir = get_output_dir(args)
 
     model, tokenizer = longeval_load_model(args)
