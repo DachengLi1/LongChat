@@ -16,12 +16,11 @@ import transformers
 import numpy as np
 from transformers import logging
 logging.set_verbosity_error()
-from pathlib import Path
 
 from fastchat.model import load_model, get_conversation_template
 
-HERE = Path(__file__).resolve()
-REPO_DIR = HERE.parent / Path("../")
+HERE = __file__
+REPO_DIR = os.path.join(os.path.dirname(HERE), "../")
 
 
 def maybe_monkey_patch(args):
@@ -341,7 +340,7 @@ def filter_string():
 def generate_topics_testcases(cfgs, output_dir):
     conv_list = []
     
-    with open(REPO_DIR / Path("longeval/evaluation/topics/conversations.jsonl"), 'r') as json_file:
+    with open(os.path.join(REPO_DIR, "longeval/evaluation/topics/conversations.jsonl"), 'r') as json_file:
         conv_obj_list = list(json_file)
 
     for conv_obj in conv_obj_list:
@@ -364,7 +363,8 @@ def generate_topics_testcases(cfgs, output_dir):
         
         # write to output file
         avg_len = 0
-        output_path = output_dir / Path(f"{num_topics}_topics.jsonl")
+
+        output_path = os.path.join(output_dir, f"{num_topics}_topics.jsonl")
         f = open(output_path, "w")
         for i, p in enumerate(prompt_list):
             pt = p.assemble_prompt()
@@ -378,7 +378,7 @@ def generate_topics_testcases(cfgs, output_dir):
 
 def generate_lines_testcases(cfgs, output_dir):
     for n in cfgs["num_lines"]:
-        output_path = output_dir / Path(f"{n}_lines.jsonl")
+        output_path = os.path.join(output_dir, f"{n}_lines.jsonl")
         f = open(output_path, "w")
 
         for i in range(cfgs["num_test_samples"]):          
@@ -465,7 +465,7 @@ def retrieve_cmd_args(): # setup program params from a given path to a yaml file
     parser.add_argument('yaml_path', help='path to the yaml configuration')
     args = parser.parse_args()
 
-    f = open(Path(args.yaml_path), "r")
+    f = open(args.yaml_path, "r")
     cfgs = yaml.load(f, Loader=yaml.CLoader)
 
     print(yaml.dump(cfgs))
