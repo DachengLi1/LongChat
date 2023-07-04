@@ -31,7 +31,7 @@ def longeval_test(model, tokenizer, output_dir, args):
     elif args.task == "lines":
         for num_lines in [200, 300, 400, 500, 600, 680]:
             print(f"************ Start testing {num_lines} lines per LRT prompt ************")
-            test_file = os.path.join(args.test_dir, f"lines/testcases/{num_topics}_lines.jsonl")
+            test_file = os.path.join(args.test_dir, f"lines/testcases/{num_lines}_lines.jsonl")
             
             output_file = os.path.join(output_dir, f"{num_lines}_response.txt")
             num_correct = 0
