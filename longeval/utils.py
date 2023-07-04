@@ -186,7 +186,7 @@ def test_lines_one_sample(model, tokenizer, test_case, output_file, idx, args):
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
     elif "gpt-" in args.model_name_or_path:
         prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
-    elif "claude" in args.mode_name_or_path:
+    elif "claude" in args.model_name_or_path:
         prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
