@@ -3,16 +3,25 @@ import time
 import os
 import re
 import sys
+import argparse
+import yaml
+import openai
+import tiktoken
+import random
+import itertools
 
 import torch
 import transformers
+import numpy as np
 from transformers import logging
 logging.set_verbosity_error()
-
-import openai
-import tiktoken
+from pathlib import Path
 
 from fastchat.model import load_model, get_conversation_template
+
+HERE = Path(__file__).resolve()
+REPO_DIR = HERE.parent / Path("../")
+
 
 def maybe_monkey_patch(args):
     if "longchat" in args.model_name_or_path:
@@ -328,20 +337,15 @@ def filter_string():
     filtered_stream = FilteredStream(sys.stdout, filter_string)
     sys.stdout = filtered_stream
 
-def generate_conversations(cfgs, tokenizer):
+def generate_topics_testcases(cfgs, output_dir):
     conv_list = []
-
-    output_dir = WORKING_DIR / Path(f"{cfgs['model_name']}_conveval_testcases")
-    if not output_dir.exists():
-        output_dir.mkdir()
     
-    with open(REPO_DIR / Path("evaluation/topics/conversations.jsonl"), 'r') as json_file:
+    with open(REPO_DIR / Path("longeval/evaluation/topics/conversations.jsonl"), 'r') as json_file:
         conv_obj_list = list(json_file)
 
     for conv_obj in conv_obj_list:
         conv_obj = json.loads(conv_obj)
-        conv_len = token_counter(tokenizer, cfgs["model_name"], cfgs["model_path"], conv_obj["conversation"])
-        conv_list.append(Conv(conv_obj["topic"], conv_len, conv_obj["conversation"]))
+        conv_list.append(Conv(conv_obj["topic"], conv_obj["conversation"]))
 
     # generate prompts for each num_topics
     for num_topics in cfgs["num_topics"]:
@@ -349,7 +353,7 @@ def generate_conversations(cfgs, tokenizer):
         prompt_list = []
         
         for i in range(cfgs["num_test_samples"]):
-            prompt = Prompt(cfgs["model_name"], cfgs["model_path"], i, cfgs["question_dist"], tokenizer)
+            prompt = Prompt(i)
             indices = np.random.choice(list(range(len(conv_list))), size=num_topics, replace=False)
             for idx in indices:
                 prompt.add_conv(conv_list[idx])
@@ -359,74 +363,164 @@ def generate_conversations(cfgs, tokenizer):
         
         # write to output file
         avg_len = 0
-        output_path = output_dir / Path(f"{num_topics}_topics_{cfgs['question_dist']}.jsonl")
+        output_path = output_dir / Path(f"{num_topics}_topics.jsonl")
         f = open(output_path, "w")
         for i, p in enumerate(prompt_list):
-            pt, picked_topics = p.assemble_prompt()
+            pt = p.assemble_prompt()
             
             curr_output = {"test_id": p.id, 
-                           "picked_topics": picked_topics,
-                           "topics": p.topic_list, 
-                           "length": p.length_list, 
-                           "total_length": p.length,
-                           "prompt": pt}
-            avg_len += p.length
+                           "prompt": pt,
+                           "topics": p.topic_list[0]}
             json.dump(curr_output, f)
             f.write("\n")
-        avg_len = math.ceil(avg_len/len(prompt_list))
         f.close()
-        output_path.rename(output_dir / Path(f"{num_topics}_topics_{cfgs['question_dist']}_{avg_len}.jsonl"))
 
-def generate_lrt(cfgs, tokenizer):
-    output_dir = WORKING_DIR / Path(f"{cfgs['model_name']}_lrt_testcases")
-    if not output_dir.exists():
-        output_dir.mkdir()
-
+def generate_lines_testcases(cfgs, output_dir):
     for n in cfgs["num_lines"]:
         output_path = output_dir / Path(f"{n}_lines.jsonl")
         f = open(output_path, "w")
-        avg_token_size = 0
+
         for i in range(cfgs["num_test_samples"]):          
-            prompt_header = "A chat between a curious user and an artificial intelligence " + \
-                            "assistant. The assistant gives helpful, detailed, and polite " + \
-                            "answers to the user\'s questions. USER: Below is a record of lines I want you to remember. " + \
+            prompt_header = "Below is a record of lines I want you to remember. " + \
                             "Each line begins with 'line <line index>' and contains " + \
                             "a '<REGISTER_CONTENT>' at the end of the line as a numerical value. " + \
                             "For each line index, memorize its corresponding <REGISTER_CONTENT>. At " + \
                             "the end of the record, I will ask you to retrieve the corresponding " + \
                             "<REGISTER_CONTENT> of a certain line index. Now the record start:\n\n"
-            
-            # lines = [f"{prompt_header}"]
+    
             lines = []
 
             if cfgs["line_idx_opt"] == "LRT":
                 line_idxes = list(range(1, n + 1))
                 lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
                 random_idx = random.randint(1, n)
-                random_num = random_idx
+                random_num = random_idx - 1
             else:
                 line_idxes = generate_line_index(n, cfgs["line_idx_opt"])
                 lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
                 random_num = random.randint(0, len(line_idxes)-1)
                 random_idx = line_idxes[random_num]
-            
+
             expected_number, correct_line = retrieve_expected(lines, random_num)
             lines.insert(0, f"{prompt_header}")
             lines.insert(len(lines), f"\nNow the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_idx}? I need the number. ASSISTANT: ")
             prompt = generate_prompt_from_lines(lines)
 
-            token_size = token_counter(tokenizer, cfgs["model_name"], None, prompt)
-            avg_token_size += token_size
             output = {
                 "random_idx": (random_idx, random_num), # this is the line to retrieve
                 "expected_number": expected_number,
                 "num_lines": n,
-                "token_size": token_size,
                 "correct_line": correct_line,
                 "prompt": prompt}
 
             json.dump(output, f)
             f.write("\n")
         f.close()
-        avg_token_size = math.ceil(avg_token_size / cfgs["num_test_samples"])
-        output_path.rename(output_dir / Path(f"{n}_lines_{avg_token_size}.jsonl"))
+
+class Conv:
+    """a single conversation on a topic"""
+
+    def __init__(self, topic, content):
+        self.topic = topic
+        self.content = content
+
+class Prompt:
+    """the prompt used for testing, composed of multiple  """
+
+    def __init__(self, id):
+        self.id = id
+        self.conv_list = []
+        self.topic_list = []
+
+    def add_conv(self, conv):
+        self.conv_list.append(conv)
+        self.topic_list.append(conv.topic)
+    
+    def assemble_prompt(self):
+        record_prompt = "Below is a record of our previous conversation " + \
+            "on 1 different topics. You are the ASSISTANT, and " + \
+            "I am the USER. At the beginning of each topic, the USER will say " + \
+            "'I would like to discuss the topic of <TOPIC>'. Memorize each " + \
+            "<TOPIC>. At the end of the record, I will ask you to retrieve the " + \
+            "first topic. Now the record start. "
+        
+        for conv in self.conv_list:
+            record_prompt += conv.content
+
+        self.prompt = f"{record_prompt} Now " + \
+            "the record ends. What is the first topic(s) we discussed? Only give " + \
+            "me the topic name. Do not summarize yourself." 
+
+        # self.prompt = "A chat between a curious user and an artificial intelligence " + \
+        #     "assistant. The assistant gives helpful, detailed, and polite " + \
+        #     f"answers to the user\'s questions. USER: {record_prompt} Now " + \
+        #     f"the record ends. What is the {question_idx} topic(s) we discussed? Only give " + \
+        #     "me the topic name(s) in the format of [<topic>, <topic>, ...]. Do not summarize yourself. Do not mention topic order. ASSISTANT:" 
+        
+        return self.prompt
+    
+def retrieve_cmd_args(): # setup program params from a given path to a yaml file
+    parser = argparse.ArgumentParser()
+    parser.add_argument('yaml_path', help='path to the yaml configuration')
+    args = parser.parse_args()
+
+    # f = open(args.yaml_path, "r")
+    # HERE = Path(__file__).resolve()
+    # CFG_PATH = HERE.parent / Path("out_eval_config.yaml")
+    f = open(Path(args.yaml_path), "r")
+    cfgs = yaml.load(f, Loader=yaml.CLoader)
+
+    # if cfgs["model_name"] == "None":
+    #     cfgs["model_name"] = Path(args.model).stem
+    # cfgs["model_path"] = args.model
+    # cfgs["level"] = args.level
+    print(yaml.dump(cfgs))
+
+    return cfgs
+
+def generate_line_index(num_line, idx_opt):
+    if idx_opt == "LRT-ABCindex":
+        ingredients = ["A", "B", "C", "D", "E", "F"]
+
+        start = 6
+        comb = list(itertools.product(ingredients, repeat=start))
+        while len(comb) < num_line:
+            start += 1
+            comb = list(itertools.product(ingredients, repeat=start))
+        
+        comb = ["".join(i) for i in comb]
+
+        return comb[:num_line]
+    elif idx_opt == "LRT-UUID":
+        comb = []
+        for i in range(num_line):
+            comb.append(str(uuid.uuid4()))
+    elif idx_opt == "LRT-NL":
+        import wonderwords
+
+        w = wonderwords.RandomWord()
+        adjs = w.random_words(num_line, include_categories=["adjective"])
+        nouns = w.random_words(num_line, include_categories=["noun"])
+
+        comb = []
+        for i, (adj, noun) in enumerate(zip(adjs, nouns)):
+            comb.append(f"{adj}-{noun}")
+        
+        return comb
+    
+def retrieve_expected(lines, random_line_pos):
+    correct_line = lines[random_line_pos]
+    expected_number = re.search("<\d+>", correct_line)
+    if expected_number is not None:
+        expected_number = int(expected_number.group()[1:-1])
+    else:
+        print(f"Got unparsable line: {correct_line}")
+
+    return expected_number, correct_line
+
+def generate_prompt_from_lines(lines):
+    prompt = ""
+    for l in lines:
+        prompt += l
+    
+    return prompt
