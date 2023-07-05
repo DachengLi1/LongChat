@@ -9,13 +9,14 @@ import numpy as np
 from fastchat.model import get_conversation_template
 from utils import maybe_monkey_patch, get_output_dir, longeval_load_model, load_testcases, test_topics_one_sample, test_lines_one_sample 
 
+
 def longeval_test(model, tokenizer, output_dir, args):
     if args.task == "topics":
         for num_topics in [5, 10, 15, 20, 25]:
             print(f"************ Start testing {num_topics} topics per prompt ***********")
             avg_length = 0
 
-            test_file = f"evaluation/topics/testcases/{num_topics}_topics.jsonl"
+            test_file = os.path.join(args.test_dir, f"topics/testcases/{num_topics}_topics.jsonl")
             output_file = os.path.join(output_dir, f"{num_topics}_response.txt")
             
             test_cases = load_testcases(test_file)
@@ -30,7 +31,7 @@ def longeval_test(model, tokenizer, output_dir, args):
     elif args.task == "lines":
         for num_lines in [200, 300, 400, 500, 600, 680]:
             print(f"************ Start testing {num_lines} lines per LRT prompt ************")
-            test_file = f"evaluation/lines/testcases/{num_lines}_lines.jsonl"
+            test_file = os.path.join(args.test_dir, f"lines/testcases/{num_lines}_lines.jsonl")
             
             output_file = os.path.join(output_dir, f"{num_lines}_response.txt")
             num_correct = 0
@@ -61,6 +62,7 @@ if __name__ == "__main__":
     parser.add_argument("--longchat_flash_attn", action='store_true', help="Only apply to longchat models. Whether to enable flash attention to save memory, but slower.")
     parser.add_argument("--longchat_ratio", type=int, default=8, help="Only apply to longchat models. Use ratio=8 for 16K context length model. Only ratio=8 is supported now.")
     parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
+    parser.add_argument("--test_dir", type=str, default="evaluation", help="Directory of the testcases")
     args = parser.parse_args()
 
     maybe_monkey_patch(args)

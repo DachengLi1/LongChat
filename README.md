@@ -63,6 +63,17 @@ python auto_topic_eval.py  --test_file <generated_output>
 ```
 Replace <generated_output> with the generated topic prediction, e.g. evaluation/topics/predictions/longchat_13b_16k/5_response.txt.
 
+To generate new testcases:
+```bash
+python3 generate_testcases.py <path-to-generate-testcases-configuration>
+```
+Replace \<path-to-generate-testcases-configuration> with the path to a yaml file containing the 
+configurations for generating testcases. ``longeval/generate_testcases_configs.yaml`` is a configuration file provides default options. To customize the testcases generated, users can tune the options in 
+the configuration file.
+
+Warning: Please set the ``output_dir`` optionin in the configuration file to some other location that does
+not overlaps with ``longeval/evaluation/``. Otherwise the original testcases could be overwritten.
+
 ### Citation
 If you find this repo to be useful, plese cite:
 ```

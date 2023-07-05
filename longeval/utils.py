@@ -3,16 +3,25 @@ import time
 import os
 import re
 import sys
+import argparse
+import yaml
+import openai
+import tiktoken
+import random
+import itertools
+import uuid
 
 import torch
 import transformers
+import numpy as np
 from transformers import logging
 logging.set_verbosity_error()
 
-import openai
-import tiktoken
-
 from fastchat.model import load_model, get_conversation_template
+
+HERE = __file__
+REPO_DIR = os.path.join(os.path.dirname(HERE), "../")
+
 
 def maybe_monkey_patch(args):
     if "longchat" in args.model_name_or_path:
@@ -75,6 +84,12 @@ def longeval_load_model(args):
         tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         model = transformers.AutoModel.from_pretrained(args.model_name_or_path, trust_remote_code=True).half().cuda()
         model = model.eval()
+    elif "gpt-" in args.model_name_or_path:
+        tokenizer = None
+        model = None
+    elif "claude" in args.model_name_or_path:
+        tokenizer = None
+        model = None
     else:
         # Use fastchat load_model API
         model, tokenizer = load_model(
@@ -116,6 +131,10 @@ def test_topics_one_sample(model, tokenizer, test_case, output_file, idx, args):
         prompt_length = len(tokenizer(prompt).input_ids)
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
         output = [output]
+    elif "gpt-" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
+    elif "claude" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -165,6 +184,10 @@ def test_lines_one_sample(model, tokenizer, test_case, output_file, idx, args):
     elif "THUDM/chatglm2-6b" in args.model_name_or_path:
         prompt_length = len(tokenizer(prompt).input_ids)
         output, _ = model.chat(tokenizer, prompt, history=[], max_length=16384)
+    elif "gpt-" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_openai(prompt, args.model_name_or_path)
+    elif "claude" in args.model_name_or_path:
+        prompt_length, output = retrieve_from_anthropic(prompt, args.model_name_or_path)
     else:
         if "longchat" in args.model_name_or_path:
             conv = get_conversation_template("vicuna")
@@ -221,16 +244,8 @@ def token_counter(model_name, prompt):
     return token_size
 
 def retrieve_from_openai(prompt, model_name, num_retries=10):
-    if "gpt" in model_name:
-        token_size = token_counter(model_name, prompt)
-        print(f"Number of tokens: {token_size}")
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-    else:
-        token_size = token_counter(model_name, prompt)
-        print(f"Number of tokens: {token_size} by using gpt tokenizer as default")
-
-        openai.api_key = os.environ["OPENAI_API_KEY"]
-        print("Using openai key as default key")
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+    token_size = len(tiktoken.encoding_for_model(model_name).encode(prompt))
     
     num_retries = 10
     completion = None
@@ -247,18 +262,34 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
                 temperature = 0
             )
             break
-        except openai.error.RateLimitError:
-            print("Got rate limit...")
-            pass
         except openai.error.APIError as e:
-            if e.http_status == 502:
-                pass
-            else:
-                pass
-
+            print(f"OpenAI API returned an API Error: {e}")
             if attempt == num_retries - 1:
                 raise
-
+        except openai.error.APIConnectionError as e:
+            print(f"Failed to connect to OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.RateLimitError as e:
+            print(f"OpenAI API request exceeded rate limit: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.Timeout as e:
+            print(f"OpenAI API request timed out: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.InvalidRequestError as e:
+            print(f"Invalid request to OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.AuthenticationError as e:
+            print(f"Authentication error with OpenAI API: {e}")
+            if attempt == num_retries - 1:
+                raise
+        except openai.error.ServiceUnavailableError as e:
+            print(f"OpenAI API service unavailable: {e}")
+            if attempt == num_retries - 1:
+                raise
         time.sleep(backoff)
 
     if completion is None:
@@ -268,6 +299,23 @@ def retrieve_from_openai(prompt, model_name, num_retries=10):
     response_line = completion.choices[0].message["content"]
 
     return token_size, response_line
+
+def retrieve_from_anthropic(prompt, model_name, num_retries=10):
+    import anthropic
+    from anthropic import HUMAN_PROMPT, AI_PROMPT
+
+    client = anthropic.Client(os.environ["ANTHROPIC_API_KEY"])
+
+    completion = client.completion(
+        model = model_name,
+        max_retries=num_retries,
+        max_tokens_to_sample=300,
+        temperature=0,
+        prompt=f"{HUMAN_PROMPT} {prompt} {AI_PROMPT}"
+    )
+
+    return -1, completion["completion"]
+
 
 def filter_string():
     class FilteredStream:
@@ -288,3 +336,188 @@ def filter_string():
     # Create the filtered stream and replace sys.stdout with it
     filtered_stream = FilteredStream(sys.stdout, filter_string)
     sys.stdout = filtered_stream
+
+def generate_topics_testcases(cfgs, output_dir):
+    conv_list = []
+    
+    with open(os.path.join(REPO_DIR, "longeval/evaluation/topics/conversations.jsonl"), 'r') as json_file:
+        conv_obj_list = list(json_file)
+
+    for conv_obj in conv_obj_list:
+        conv_obj = json.loads(conv_obj)
+        conv_list.append(Conv(conv_obj["topic"], conv_obj["conversation"]))
+
+    # generate prompts for each num_topics
+    for num_topics in cfgs["num_topics"]:
+
+        prompt_list = []
+        
+        for i in range(cfgs["num_test_samples"]):
+            prompt = Prompt(i)
+            indices = np.random.choice(list(range(len(conv_list))), size=num_topics, replace=False)
+            for idx in indices:
+                prompt.add_conv(conv_list[idx])
+            prompt_list.append(prompt)
+            
+            prompt = None
+        
+        # write to output file
+        avg_len = 0
+
+        output_path = os.path.join(output_dir, f"{num_topics}_topics.jsonl")
+        f = open(output_path, "w")
+        for i, p in enumerate(prompt_list):
+            pt = p.assemble_prompt()
+            
+            curr_output = {"test_id": p.id, 
+                           "prompt": pt,
+                           "topics": p.topic_list,
+                           "prompt_length": -1}
+            json.dump(curr_output, f)
+            f.write("\n")
+        f.close()
+
+def generate_lines_testcases(cfgs, output_dir):
+    for n in cfgs["num_lines"]:
+        output_path = os.path.join(output_dir, f"{n}_lines.jsonl")
+        f = open(output_path, "w")
+
+        for i in range(cfgs["num_test_samples"]):          
+            prompt_header = "Below is a record of lines I want you to remember. " + \
+                            "Each line begins with 'line <line index>' and contains " + \
+                            "a '<REGISTER_CONTENT>' at the end of the line as a numerical value. " + \
+                            "For each line index, memorize its corresponding <REGISTER_CONTENT>. At " + \
+                            "the end of the record, I will ask you to retrieve the corresponding " + \
+                            "<REGISTER_CONTENT> of a certain line index. Now the record start:\n\n"
+    
+            lines = []
+
+            if cfgs["line_idx_opt"] == "LRT":
+                line_idxes = list(range(1, n + 1))
+                lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
+                random_idx = random.randint(1, n)
+                random_num = random_idx - 1
+            else:
+                line_idxes = generate_line_index(n, cfgs["line_idx_opt"])
+                lines.extend([f"line {i}: REGISTER_CONTENT is <{random.randint(1, 50000)}>\n" for i in line_idxes])
+                random_num = random.randint(0, len(line_idxes)-1)
+                random_idx = line_idxes[random_num]
+
+            expected_number, correct_line = retrieve_expected(lines, random_num)
+            lines.insert(0, f"{prompt_header}")
+            lines.insert(len(lines), f"\nNow the record is over. Tell me what is the <REGISTER_CONTENT> in line {random_idx}? I need the number.")
+            prompt = generate_prompt_from_lines(lines)
+
+            output = {
+                "random_idx": (random_idx, random_num), # this is the line to retrieve
+                "expected_number": expected_number,
+                "num_lines": n,
+                "correct_line": correct_line,
+                "prompt": prompt}
+
+            json.dump(output, f)
+            f.write("\n")
+        f.close()
+
+class Conv:
+    """a single conversation on a topic"""
+
+    def __init__(self, topic, content):
+        self.topic = topic
+        self.content = content
+
+class Prompt:
+    """the prompt used for testing, composed of multiple  """
+
+    def __init__(self, id):
+        self.id = id
+        self.conv_list = []
+        self.topic_list = []
+
+    def add_conv(self, conv):
+        self.conv_list.append(conv)
+        self.topic_list.append(conv.topic)
+    
+    def assemble_prompt(self):
+        record_prompt = "Below is a record of our previous conversation " + \
+            f"on {len(self.topic_list)} different topics. You are the ASSISTANT, and " + \
+            "I am the USER. At the beginning of each topic, the USER will say " + \
+            "'I would like to discuss the topic of <TOPIC>'. Memorize each " + \
+            "<TOPIC>. At the end of the record, I will ask you to retrieve the " + \
+            "first topic. Now the record start. "
+        
+        for conv in self.conv_list:
+            record_prompt += conv.content
+
+        self.prompt = f"{record_prompt} Now " + \
+            "the record ends. What is the first topic(s) we discussed? Only give " + \
+            "me the topic name. Do not summarize yourself." 
+
+        # self.prompt = "A chat between a curious user and an artificial intelligence " + \
+        #     "assistant. The assistant gives helpful, detailed, and polite " + \
+        #     f"answers to the user\'s questions. USER: {record_prompt} Now " + \
+        #     f"the record ends. What is the {question_idx} topic(s) we discussed? Only give " + \
+        #     "me the topic name(s) in the format of [<topic>, <topic>, ...]. Do not summarize yourself. Do not mention topic order. ASSISTANT:" 
+        
+        return self.prompt
+    
+def retrieve_cmd_args(): # setup program params from a given path to a yaml file
+    parser = argparse.ArgumentParser()
+    parser.add_argument('yaml_path', help='path to the yaml configuration')
+    args = parser.parse_args()
+
+    f = open(args.yaml_path, "r")
+    cfgs = yaml.load(f, Loader=yaml.CLoader)
+
+    print(yaml.dump(cfgs))
+
+    return cfgs
+
+def generate_line_index(num_line, idx_opt):
+    if idx_opt == "LRT-ABCindex":
+        ingredients = ["A", "B", "C", "D", "E", "F"]
+
+        start = 6
+        comb = list(itertools.product(ingredients, repeat=start))
+        while len(comb) < num_line:
+            start += 1
+            comb = list(itertools.product(ingredients, repeat=start))
+        
+        comb = ["".join(i) for i in comb]
+
+        return comb[:num_line]
+    elif idx_opt == "LRT-UUID":
+        comb = []
+        for i in range(num_line):
+            comb.append(str(uuid.uuid4()))
+        
+        return comb
+    elif idx_opt == "LRT-NL":
+        import wonderwords
+
+        w = wonderwords.RandomWord()
+        adjs = w.random_words(num_line, include_categories=["adjective"])
+        nouns = w.random_words(num_line, include_categories=["noun"])
+
+        comb = []
+        for i, (adj, noun) in enumerate(zip(adjs, nouns)):
+            comb.append(f"{adj}-{noun}")
+        
+        return comb
+    
+def retrieve_expected(lines, random_line_pos):
+    correct_line = lines[random_line_pos]
+    expected_number = re.search("<\d+>", correct_line)
+    if expected_number is not None:
+        expected_number = int(expected_number.group()[1:-1])
+    else:
+        print(f"Got unparsable line: {correct_line}")
+
+    return expected_number, correct_line
+
+def generate_prompt_from_lines(lines):
+    prompt = ""
+    for l in lines:
+        prompt += l
+    
+    return prompt
