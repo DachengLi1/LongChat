@@ -44,15 +44,17 @@ def longeval_load_model(args):
         filter_string()
         config = transformers.AutoConfig.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         config.attn_config['attn_impl'] = 'triton'
+        config.max_seq_len = args.max_seq_len
 
         model = transformers.AutoModelForCausalLM.from_pretrained(
           args.model_name_or_path,
           config=config,
           torch_dtype=torch.bfloat16, # Load model weights in bfloat16
-          trust_remote_code=True
+          trust_remote_code=True,
+          #device_map='auto',
         )
 
-        tokenizer = transformers.AutoTokenizer.from_pretrained("EleutherAI/gpt-neox-20b")
+        tokenizer = transformers.AutoTokenizer.from_pretrained("EleutherAI/gpt-neox-20b", model_max_length=args.max_seq_len)
     elif "mosaicml/mpt-30b-chat" in args.model_name_or_path:
         config = transformers.AutoConfig.from_pretrained(args.model_name_or_path, trust_remote_code=True)
         model = transformers.AutoModelForCausalLM.from_pretrained(
