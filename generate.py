@@ -15,7 +15,7 @@ class Pipeline:
     def __init__(self, model, tokenizer, args):
         self.args = args
         if args.model_name_or_path == "mosaicml/mpt-7b-storywriter":
-            self.pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')
+            self.pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')  #TODO: hardcoded it to truncate the inputs in the pipeline
         elif args.model_name_or_path == "mosaicml/mpt-30b-chat":
             self.model = model
             self.tokenizer = tokenizer
@@ -33,7 +33,7 @@ class Pipeline:
             conv.append_message(conv.roles[1], None)
             prompt = conv.get_prompt()
 
-            inputs = self.tokenizer(prompt, return_tensors="pt", model_max_length=self.args.model_max_length)
+            inputs = self.tokenizer(prompt, return_tensors="pt")
             prompt_length = inputs.input_ids.size()[-1]
 
             use_cache = not ("longchat" in self.args.model_name_or_path and self.args.longchat_flash_attn)
@@ -98,7 +98,6 @@ if __name__ == '__main__':
     parser.add_argument("--max_gpu_memory", type=int, default=40, help="max per gpu memory in GiB. A100 is 40 or 80.")
     parser.add_argument("--longchat_flash_attn", action='store_true', help="Only apply to longchat models. Whether to enable flash attention to save memory, but slower.")
     parser.add_argument("--longchat_ratio", type=int, default=8, help="Only apply to longchat models. Use ratio=8 for 16K context length model. Only ratio=8 is supported now.")
-    parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
     parser.add_argument("--max_seq_len", type=int, default=65000, help="Truncate the inputs to this max sequence lenght")
     parser.add_argument("--max_new_tokens", type=int, default=1000, help="The maximum tokens of generation")
     args = parser.parse_args()
