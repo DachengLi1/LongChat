@@ -11,51 +11,80 @@ from longeval.utils import maybe_monkey_patch, get_output_dir, longeval_load_mod
 
 
 
-def eval_scrolls(model, tokenizer, args):
+class Pipeline:
+    def __init__(self, model, tokenizer, args):
+        self.args = args
+        if args.model_name_or_path == "mosaicml/mpt-7b-storywriter":
+            self.pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0')
+        elif args.model_name_or_path == "mosaicml/mpt-30b-chat":
+            self.model = model
+            self.tokenizer = tokenizer
+    
+    def generate(self, prompt):
+        if self.args.model_name_or_path == "mosaicml/mpt-7b-storywriter":
+            with torch.autocast('cuda', dtype=torch.bfloat16):
+                output = pipe(prompt, max_new_tokens=self.args.max_new_tokens, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
+        else:
+            if "longchat" in args.model_name_or_path:
+                conv = get_conversation_template("vicuna")
+            else:
+                conv = get_conversation_template(self.args.model_name_or_path)
+            conv.append_message(conv.roles[0], prompt)
+            conv.append_message(conv.roles[1], None)
+            prompt = conv.get_prompt()
+
+            inputs = self.tokenizer(prompt, return_tensors="pt")
+            prompt_length = inputs.input_ids.size()[-1]
+
+            use_cache = not ("longchat" in self.args.model_name_or_path and self.args.longchat_flash_attn)
+            output = self.model.generate(inputs.input_ids.to(self.model.device), max_new_tokens=self.args.max_new_tokens, use_cache=use_cache)[0]
+            output = output[prompt_length:]
+            output = tokenizer.batch_decode([output], skip_special_tokens=True)[0]
+        return output
+
+
+def eval_scrolls(pipe, args):
     dataset = load_dataset(args.benchmark, args.dataset)
     dataset = dataset["validation"]
     prediction = {}
     for idx in range(len(dataset)):
         prompt = dataset[idx]["input"]
-        with torch.autocast('cuda', dtype=torch.bfloat16):
-            output = pipe(prompt, max_new_tokens=args.max_new_tokens, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
+        output = pipe.generate(prompt)
         unique_id = dataset[idx]["id"]
         prediction.update({unique_id: output})
-        print(unique_id, output)
     json_object = json.dumps(prediction, indent=4)
     with open(f"{args.model_name_or_path.replace('/','-')}-{args.dataset}.json", "w") as f:
         f.write(json_object)
 
-def eval_muld():
+def eval_muld(pipe, args):
     dataset = load_dataset(args.benchmark, args.dataset)
     dataset = dataset["test"]
     prediction = {}
     for idx in range(len(dataset)):
         prompt = dataset[idx]["input"]
-        with torch.autocast('cuda', dtype=torch.bfloat16):
-            output = pipe(prompt, max_new_tokens=args.max_new_tokens, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
+        output = pipe.generate(prompt)
         unique_id = str(idx)
         prediction.update({unique_id: output})
-        print(unique_id, output)
     json_object = json.dumps(prediction, indent=4)
     with open(f"{args.model_name_or_path.replace('/','-')}-{args.dataset}.json", "w") as f:
         f.write(json_object)
         
 
-def eval_zero_scrolls(model, tokenizer,pipe, args):
+def eval_zero_scrolls(pipe, args):
     dataset = load_dataset(args.benchmark, args.dataset)
     dataset = dataset['validation']
     prediction = {}
     for idx in range(len(dataset)):
         prompt = dataset[idx]["input"]
-        with torch.autocast('cuda', dtype=torch.bfloat16):
-            output = pipe(prompt, max_new_tokens=args.max_new_tokens, do_sample=True, use_cache=True)[0]['generated_text'][len(prompt):]
+        output = pipe.generate(prompt)
         unique_id = str(idx)
         prediction.update({unique_id: output})
+        
         print("=========== Question ==========")
         print(prompt[:1000].replace('\n', ' '))
         print("=========== Answer ===========")
         print(unique_id, output.replace('\n', ' '))
+    
     json_object = json.dumps(prediction, indent=4)
     with open(f"{args.model_name_or_path.replace('/','-')}-{args.dataset}.json", "w") as f:
         f.write(json_object)
@@ -75,7 +104,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     model, tokenizer = longeval_load_model(args)
-    pipe = pipeline('text-generation', model=model, tokenizer=tokenizer) #, device_map="auto")
+    pipe = Pipeline(model, tokenizer, args)
 
-    eval_zero_scrolls(model, tokenizer, pipe, args)
+    eval_zero_scrolls(pipe, args)
 
