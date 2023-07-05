@@ -33,7 +33,7 @@ class Pipeline:
             conv.append_message(conv.roles[1], None)
             prompt = conv.get_prompt()
 
-            inputs = self.tokenizer(prompt, return_tensors="pt")
+            inputs = self.tokenizer(prompt, return_tensors="pt", model_max_length=self.args.model_max_length)
             prompt_length = inputs.input_ids.size()[-1]
 
             use_cache = not ("longchat" in self.args.model_name_or_path and self.args.longchat_flash_attn)
