@@ -4,7 +4,7 @@ import torch
 import numpy as np
 import pandas as pd
 from mmlu_categories import subcategories, categories
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, AutoModelForCausalLM
 import time
 from longeval.utils import longeval_load_model
 from fastchat.model import get_conversation_template
@@ -21,13 +21,15 @@ def format_subject(subject):
 
 
 def format_example(df, idx, include_answer=True):
-    prompt = df.iloc[idx, 0]
+    prompt = "USER: "
+    prompt += df.iloc[idx, 0]
     k = df.shape[1] - 2
     for j in range(k):
-        prompt += "\n{}. {}".format(choices[j], df.iloc[idx, j + 1])
-    prompt += "\nAnswer:"
+        prompt += "\n{}. {}\n".format(choices[j], df.iloc[idx, j + 1])
     if include_answer:
-        prompt += " {}\n\n".format(df.iloc[idx, k + 1])
+        prompt += "ASSISTANT: " + " {}\n\n".format(df.iloc[idx, k + 1])
+    else:
+        prompt += "ASSISTANT: "
     return prompt
 
 
@@ -56,10 +58,9 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
         train_prompt = gen_prompt(dev_df, subject, k)
         prompt = train_prompt + prompt_end
 
-        conv = get_conversation_template("vicuna")
-        conv.append_message(conv.roles[0], prompt)
-        conv.append_message(conv.roles[1], None)
-        prompt = conv.get_prompt()
+        #conv = get_conversation_template("vicuna")
+        #conv.append_message(conv.roles[0], prompt)
+        #prompt = conv.get_prompt()
 
         input_ids = tokenizer(prompt, return_tensors="pt").input_ids.cuda()
 
@@ -107,21 +108,9 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
 
 
 def main(args):
-
-    #model = AutoModelForSeq2SeqLM.from_pretrained(args.model)
-    #tokenizer = AutoTokenizer.from_pretrained(args.model)
-    model, tokenizer = longeval_load_model(args)
-    #heads_per_gpu = len(model.encoder.block) // args.ngpu
-    #device_map = {
-    #    gpu: list(
-    #        range(
-    #            0 + (gpu * heads_per_gpu),
-    #            (0 + (gpu * heads_per_gpu)) + heads_per_gpu,
-    #        )
-    #    )
-    #    for gpu in range(args.ngpu)
-    #}
-    #model.parallelize(device_map)
+    #model, tokenizer = longeval_load_model(args)
+    tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.3")
+    model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.3").to("cuda")
     model.eval()
     subjects = sorted(
         [
