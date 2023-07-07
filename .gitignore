@@ -5,3 +5,5 @@ longchat.egg-info/
 outputs/
 academic-eval/predictions/
 *predictions/
+*.json
+*.csv

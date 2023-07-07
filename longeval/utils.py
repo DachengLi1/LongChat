@@ -69,12 +69,12 @@ def longeval_load_model(args):
         model.attn_impl = "triton"
 
         tokenizer = transformers.AutoTokenizer.from_pretrained(
-            args.model_name_or_path, trust_remote_code=True, use_fast=True, model_max_length=16384
+            args.model_name_or_path, trust_remote_code=True, use_fast=True, model_max_length=args.max_seq_len
         )
         model.config.eos_token_id = tokenizer.eos_token_id
         model.config.pad_token_id = tokenizer.pad_token_id
     elif "THUDM/chatglm2-6b" in args.model_name_or_path:
-        tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True)
+        tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True, model_max_length=args.max_seq_len)
         model = transformers.AutoModel.from_pretrained(args.model_name_or_path, trust_remote_code=True).half().cuda()
         model = model.eval()
     else:
@@ -87,7 +87,7 @@ def longeval_load_model(args):
             load_8bit=False,
             cpu_offloading=False,
             debug=False,
-        )
+        )  #TODO: enable dynamically setting the max seq len for truncation
 
     return model, tokenizer
 
