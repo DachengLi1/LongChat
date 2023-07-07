@@ -108,9 +108,9 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
 
 
 def main(args):
-    #model, tokenizer = longeval_load_model(args)
-    tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.3")
-    model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.3").to("cuda")
+    model, tokenizer = longeval_load_model(args)
+    #tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.3")
+    #model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.3").to("cuda")
     model.eval()
     subjects = sorted(
         [
