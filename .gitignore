@@ -4,3 +4,4 @@ longchat.egg-info/
 */.nfs*
 outputs/
 academic-eval/predictions/
+*predictions/
