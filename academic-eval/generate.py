@@ -75,7 +75,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     model, tokenizer = longeval_load_model(args)
-    pipe = pipeline('text-generation', model=model, tokenizer=tokenizer) #, device_map="auto")
+    pipe = pipeline('text-generation', model=model, tokenizer=tokenizer, device='cuda:0', device_map="auto")
 
     eval_zero_scrolls(model, tokenizer, pipe, args)
 

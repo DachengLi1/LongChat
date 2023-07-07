@@ -2,4 +2,5 @@ wandb
 **pycache**
 longchat.egg-info/
 */.nfs*
-outputs
+outputs/
+academic-eval/predictions/
