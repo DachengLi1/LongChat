@@ -8,6 +8,7 @@ from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, AutoModelForCausa
 import time
 from longeval.utils import longeval_load_model
 from fastchat.model import get_conversation_template
+from pipeline import Pipeline
 
 choices = ["A", "B", "C", "D"]
 
@@ -45,11 +46,10 @@ def gen_prompt(train_df, subject, k=-1):
 
 
 @torch.no_grad()
-def eval(args, subject, model, tokenizer, dev_df, test_df):
+def eval(args, subject, pipe, dev_df, test_df):
     cors = []
     all_probs = []
     answers = choices[: test_df.shape[1] - 2]
-    model = model.eval()
 
     for i in range(test_df.shape[0]):
         # get prompt and make sure it fits
@@ -58,43 +58,12 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
         train_prompt = gen_prompt(dev_df, subject, k)
         prompt = train_prompt + prompt_end
 
-        #conv = get_conversation_template("vicuna")
-        #conv.append_message(conv.roles[0], prompt)
-        #prompt = conv.get_prompt()
-
-        input_ids = tokenizer(prompt, return_tensors="pt").input_ids.cuda()
-
-        while input_ids.shape[-1] > 2048:
-            k -= 1
-            train_prompt = gen_prompt(dev_df, subject, k)
-            prompt = train_prompt + prompt_end
-            input_ids = tokenizer(prompt, return_tensors="pt").input_ids.cuda()
-
         label = test_df.iloc[i, test_df.shape[1] - 1]
 
-        logits = model(
-            input_ids=input_ids
-        ).logits.flatten()
+        pred = pipe.mmlu_generate(prompt)
+        cor = pred.strip().startswith(label)
+        probs = [0 for _ in ["A", "B", "C", "D"]]
 
-        probs = (
-            torch.nn.functional.softmax(
-                torch.tensor(
-                    [
-                        logits[tokenizer("A").input_ids[0]],
-                        logits[tokenizer("B").input_ids[0]],
-                        logits[tokenizer("C").input_ids[0]],
-                        logits[tokenizer("D").input_ids[0]],
-                    ]
-                ).float(),
-                dim=0,
-            )
-            .detach()
-            .cpu()
-            .numpy()
-        )
-        pred = {0: "A", 1: "B", 2: "C", 3: "D"}[np.argmax(probs)]
-
-        cor = pred == label
         cors.append(cor)
         all_probs.append(probs)
 
@@ -109,9 +78,9 @@ def eval(args, subject, model, tokenizer, dev_df, test_df):
 
 def main(args):
     model, tokenizer = longeval_load_model(args)
-    #tokenizer = AutoTokenizer.from_pretrained("lmsys/vicuna-7b-v1.3")
-    #model = AutoModelForCausalLM.from_pretrained("lmsys/vicuna-7b-v1.3").to("cuda")
     model.eval()
+    pipe = Pipeline(model,tokenizer, args)
+
     subjects = sorted(
         [
             f.split("_test.csv")[0]
@@ -139,7 +108,7 @@ def main(args):
             os.path.join(args.data_dir, "test", subject + "_test.csv"), header=None
         )
 
-        cors, acc, probs = eval(args, subject, model, tokenizer, dev_df, test_df)
+        cors, acc, probs = eval(args, subject, pipe, dev_df, test_df)
         subcats = subcategories[subject]
         for subcat in subcats:
             subcat_cors[subcat].append(cors)
