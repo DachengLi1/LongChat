@@ -44,17 +44,19 @@ def forward(
     query_states = query_states.transpose(1, 2)
     key_states = key_states.transpose(1, 2)
     value_states = value_states.transpose(1, 2)
-    attn_output = xops.memory_efficient_attention(
-        query_states, key_states, value_states, attn_bias=xops.LowerTriangularMask(), p=0
-    )
+    if attention_mask is None:
+        attn_output = xops.memory_efficient_attention(
+            query_states, key_states, value_states, attn_bias=xops.LowerTriangularMask(), p=0
+        )
+    else:
+        attn_output = xops.memory_efficient_attention(
+            query_states, key_states, value_states, attn_bias=xops.LowerTriangularMaskWithTensorBias(attention_mask), p=0
+        )
     attn_output = attn_output.reshape(bsz, q_len, self.hidden_size)
 
     attn_output = self.o_proj(attn_output)
     
-    assert not use_cache, "xformer does not support use_cache=True"
-
-    if not output_attentions:
-        attn_weights = None
+    assert not output_attentions, "xformer does not support output_attentions=True"
 
     return attn_output, attn_weights, past_key_value
 
