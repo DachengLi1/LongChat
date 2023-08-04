@@ -1,6 +1,9 @@
 # LongChat
 The official repository for LongChat and LongEval, which supports training and evaluating long-context LLM based chatbots. Check out our [post](https://lmsys.org/blog/2023-06-29-longchat/) for scientific findings!
 
+## News
+- [2023/08] 🔥 We released **LongChat v1.5** based on Llama 2 with 32K context lengths. Download [weights](https://github.com/lm-sys/FastChat#longchat).
+
 ## Environment setup
 ```bash
 conda create -n longeval python=3.10
