@@ -63,6 +63,7 @@ if __name__ == "__main__":
     parser.add_argument("--longchat_ratio", type=int, default=8, help="Only apply to longchat models. Use ratio=8 for 16K context length model. Only ratio=8 is supported now.")
     parser.add_argument("--eval_shortest_only", action='store_true', default=0, help="Only eval the shortest case for illustration purpose")
     parser.add_argument("--test_dir", type=str, default="evaluation", help="Directory of the testcases")
+    parser.add_argument("--framework", type=str, default=None, help="Framework for serving")
     args = parser.parse_args()
 
     maybe_monkey_patch(args)
