@@ -8,6 +8,10 @@ The official repository for LongChat and LongEval, which supports training and e
 ```bash
 conda create -n longeval python=3.10
 conda activate longeval
+pip install longchat
+```
+If you want to build from source, use:
+```
 git clone https://github.com/DachengLi1/LongChat/
 cd LongChat/
 pip install -e .
@@ -87,8 +91,3 @@ If you find this repo to be useful, plese cite:
     month = {June},
     year = {2023}
 }
-```
-
-
-
-
